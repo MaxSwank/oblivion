@@ -1,7 +1,18 @@
+import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: AppComponent
+  },
+  {
+    path: 'landing-page',
+    component: LandingPageComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
