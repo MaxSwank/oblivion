@@ -28,3 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://github.com/scullyio/scully/issues/1319
 run npm run scully.scan after ng build
+
+Static Web App Deployment
+https://github.com/anfibiacreativa/balloonapp
+https://www.youtube.com/watch?v=ESKi1d3aBzM
