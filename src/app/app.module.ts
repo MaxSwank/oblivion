@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { TestComponent } from './test/test.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    TestComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
