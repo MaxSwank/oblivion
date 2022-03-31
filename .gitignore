@@ -48,3 +48,5 @@ scullyStats.json
 /scully/**/*.js.map
 /scully/**/*.d.ts
 .vs/**
+.vs/slnx.sqlite
+.vs/slnx.sqlite
