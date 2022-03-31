@@ -1,5 +1,5 @@
 import { ScullyConfig } from '@scullyio/scully';
-
+import '@scullyio/scully-plugin-puppeteer';
 /** this loads the default render plugin, remove when switching to something else. */
 
 
