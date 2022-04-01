@@ -1,7 +1,7 @@
 import { ScullyConfig } from '@scullyio/scully';
 import '@scullyio/scully-plugin-puppeteer';
 /** this loads the default render plugin, remove when switching to something else. */
-
+// C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe
 
 export const config: ScullyConfig = {
   projectRoot: "./src",
