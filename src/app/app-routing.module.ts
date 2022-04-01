@@ -7,10 +7,6 @@ import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: AppComponent
-  },
-  {
     path: 'test',
     component: TestComponent
   },
@@ -21,6 +17,14 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'lame-route',
+    component: AboutComponent
+  },
+  {
+    path: '',
+    component: AppComponent
   }
 ];
 
