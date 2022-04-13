@@ -8,6 +8,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TestComponent } from './test/test.component';
 import { AboutComponent } from './about/about.component';
 import { LameRouteComponent } from './lame-route/lame-route.component';
+import { CafeComponent } from './cafe/cafe.component';
+import { ContactComponent } from './landing-page/contact/contact.component';
+import { OrderPageComponent } from './landing-page/order-page/order-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { LameRouteComponent } from './lame-route/lame-route.component';
     LandingPageComponent,
     TestComponent,
     AboutComponent,
-    LameRouteComponent
+    LameRouteComponent,
+    CafeComponent,
+    OrderPageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
