@@ -11,7 +11,7 @@ import { LameRouteComponent } from './lame-route/lame-route.component';
 import { CafeComponent } from './cafe/cafe.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScullyInterceptModule } from 'scully-interceptor';
 import { MaterialModule } from './material.module';
 
 @NgModule({
@@ -29,8 +29,8 @@ import { MaterialModule } from './material.module';
     BrowserModule,
     AppRoutingModule,
     ScullyLibModule,
-    BrowserAnimationsModule,
-    MaterialModule,
+    ScullyInterceptModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

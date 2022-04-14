@@ -1,3 +1,4 @@
+import { LameRouteComponent } from './lame-route/lame-route.component';
 import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
@@ -12,11 +13,18 @@ import { ContactComponent } from './landing-page/contact/contact.component';
 const routes: Routes = [
   {
     path: 'test',
-    component: TestComponent
+    component: TestComponent,
+    data: {
+      'title': 'testing'
+    }
   },
   {
-    path: '',
-    component: LandingPageComponent
+    path: 'landing-page',
+    component: LandingPageComponent,
+    data: {
+      'title': "About me",
+      'desc': 'I am Bassem, a management engineer, professional software developer, instructor, blogger .. whatever the role, my passions are software development and programming.'
+    }
   },
   {
     path: 'cafe',
@@ -36,7 +44,7 @@ const routes: Routes = [
   },
   {
     path: 'lame-route',
-    component: AboutComponent
+    component: LameRouteComponent
   },
   {
     path: '',
@@ -45,7 +53,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'corrected' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

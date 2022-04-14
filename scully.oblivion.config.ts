@@ -1,17 +1,19 @@
 import { ScullyConfig } from '@scullyio/scully';
+import { MinifyHtml } from 'scully-plugin-minify-html';
 import '@scullyio/scully-plugin-puppeteer';
 /** this loads the default render plugin, remove when switching to something else. */
-// C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe
+// Dev path: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe
+// Production path: /usr/bin/google-chrome
 
 export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "oblivion",
   outDir: './dist/static',
-  defaultPostRenderers: [],
+  defaultPostRenderers: [ MinifyHtml ],
   routes: {
   },
   puppeteerLaunchOptions: {
-    executablePath: "/usr/bin/google-chrome",
+    executablePath: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
     args: [
       "--disable-gpu",
       "--renderer",
