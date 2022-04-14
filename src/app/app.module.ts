@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TestComponent } from './test/test.component';
 import { AboutComponent } from './about/about.component';
 import { LameRouteComponent } from './lame-route/lame-route.component';
+import { ScullyInterceptModule } from 'scully-interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LameRouteComponent } from './lame-route/lame-route.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScullyLibModule
+    ScullyLibModule,
+    ScullyInterceptModule
   ],
   providers: [],
   bootstrap: [AppComponent]

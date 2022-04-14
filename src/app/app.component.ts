@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SocialTagsService } from './services/social-tag-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'oblivion';
+
+  public constructor(private tagsService: SocialTagsService) {
+    this.tagsService.setTitleAndTags();
+  }
 }

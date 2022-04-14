@@ -29,6 +29,7 @@
     "@scullyio/scully-plugin-puppeteer": "^2.1.29",
     "puppeteer-core": "^1.9.0",
     "rxjs": "~7.5.0",
+    "scully-interceptor": "^0.0.8",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -44,6 +45,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "scully-plugin-minify-html": "^6.0.0",
     "typescript": "~4.6.2"
   }
 }
