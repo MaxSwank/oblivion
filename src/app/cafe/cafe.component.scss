@@ -1,0 +1,85 @@
+.cafe-container {
+  max-height: 100vh;
+  width: auto;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  .image-wrapper {
+    width: fit-content; 
+    position: relative;
+    .cafe-interior {
+      width: auto;
+      max-width: 100vw;
+      max-height: calc(100vh - 20px);
+    }
+    div {
+      cursor: pointer;
+      position: absolute;
+    }
+    a {
+      div {
+        cursor: pointer;
+        position: absolute;
+      }
+    }
+    .eye {
+      height: 140px;
+      width: 100px;
+    }
+    .typewriter {
+      left: 9%;
+      top: 59%;
+    }
+    .window {
+      left: 21%;
+      top: 43%;
+    }
+    .wall-minor-authors {
+      left: 50%;
+      top: 30%;
+    }
+    .fancy-lady {
+      left: 63%;
+      top: 42%;
+      width: 60px !important;
+      height: 160px !important;
+    }
+    .preorder {
+        height: 125px;
+        width: 338px;
+        left: 19px;
+        top: 8px;
+
+        img {
+          height: 126px;
+          width: auto;
+          transition: .3s;
+          box-shadow: var(--boxshadow);
+        }
+
+        img:hover {
+          transform: scale(1.02);
+          filter: brightness(110%);
+          transition: .3s;
+        }
+    }
+    .preorder2 {
+        height: 28px;
+        width: 105px;
+        top: 1%;
+        right: 1%;
+    }
+    .contact {
+        height: 60px;
+        width: 64px;
+        bottom: 2%;
+        left: 1%;
+    }
+    .info {
+      bottom: 13px;
+      right: 9px;
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
