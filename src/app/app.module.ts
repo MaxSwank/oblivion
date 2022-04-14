@@ -11,6 +11,8 @@ import { LameRouteComponent } from './lame-route/lame-route.component';
 import { CafeComponent } from './cafe/cafe.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { OrderPageComponent } from './landing-page/order-page/order-page.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScullyLibModule
+    ScullyLibModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
