@@ -11,6 +11,7 @@ import { LameRouteComponent } from './lame-route/lame-route.component';
 import { CafeComponent } from './cafe/cafe.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
+import { ScullyInterceptModule } from 'scully-interceptor';
 
 @NgModule({
   declarations: [
