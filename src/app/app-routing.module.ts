@@ -43,7 +43,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: AppComponent
+    component: LandingPageComponent
   }
 ];
 
