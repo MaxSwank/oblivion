@@ -1,10 +1,8 @@
-import { LameRouteComponent } from './lame-route/lame-route.component';
 import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { TestComponent } from './test/test.component';
 import { CafeComponent } from './cafe/cafe.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
@@ -12,23 +10,24 @@ import { ContactComponent } from './landing-page/contact/contact.component';
 
 const routes: Routes = [
   {
-    path: 'test',
-    component: TestComponent,
-    data: {
-      'title': 'testing'
-    }
-  },
-  {
     path: 'landing-page',
     component: LandingPageComponent,
     data: {
-      'title': "About me",
-      'desc': 'I am Bassem, a management engineer, professional software developer, instructor, blogger .. whatever the role, my passions are software development and programming.'
+      'title': 'Oblivion home',
+      'desc': 'Peer into the window and see what awaits',
+      'url': 'https://mango-rock-072624310.1.azurestaticapps.net',
+      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/temp-cafe.jpg'
     }
   },
   {
     path: 'cafe',
-    component: CafeComponent
+    component: CafeComponent,
+    data: {
+      'title': 'Oblivion cafe',
+      'desc': 'Stylish hotel cafe',
+      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe',
+      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/cafe-interior.jpg'
+    }
   },
   {
     path: 'order',
@@ -41,10 +40,6 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
-  },
-  {
-    path: 'lame-route',
-    component: LameRouteComponent
   },
   {
     path: '',
