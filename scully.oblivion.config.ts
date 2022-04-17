@@ -13,7 +13,7 @@ export const config: ScullyConfig = {
   routes: {
   },
   puppeteerLaunchOptions: {
-    executablePath: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    executablePath: "/usr/bin/google-chrome",
     args: [
       "--disable-gpu",
       "--renderer",

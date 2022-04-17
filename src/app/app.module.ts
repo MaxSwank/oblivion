@@ -5,9 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { TestComponent } from './test/test.component';
 import { AboutComponent } from './about/about.component';
-import { LameRouteComponent } from './lame-route/lame-route.component';
 import { CafeComponent } from './cafe/cafe.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
@@ -28,9 +26,7 @@ import { ArbiterDialogComponent } from './cafe/cafe-dialogs/arbiter-dialog/arbit
   declarations: [
     AppComponent,
     LandingPageComponent,
-    TestComponent,
     AboutComponent,
-    LameRouteComponent,
     CafeComponent,
     OrderPageComponent,
     ContactComponent,
