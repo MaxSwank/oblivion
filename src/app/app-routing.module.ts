@@ -19,7 +19,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'landing-page',
+    path: '',
     component: LandingPageComponent,
     data: {
       'title': "About me",

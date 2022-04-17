@@ -1,9 +1,147 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 /* @import "prismjs/themes/prism.css"; */
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 :root {
-    --boxshadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  --boxshadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14),
+    0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-dialog-container {
+  height: 100vh !important;
+  width: 990px !important;
+  background-color: black !important;
+  opacity: 70%;
+  padding: 0 !important;
+}
+
+.dialog-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .close-button {
+    position: absolute;
+    top: 46px;
+    right: 8px;
+    background: black;
+    color: white;
+    border: 6px solid white;
+    mat-icon {
+        position: relative;
+        bottom: 7px;
+    }
+  }
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 40px;
+
+    .preorder1 {
+      img {
+        height: 126px;
+        width: auto;
+        transition: 0.3s;
+        box-shadow: var(--boxshadow);
+        margin: 6px 0 0 12px;
+      }
+
+      img:hover {
+        transform: scale(1.02);
+        filter: brightness(110%);
+        transition: 0.3s;
+      }
+    }
+    h1 {
+      font-size: 20px;
+      color: black;
+      line-height: 40px;
+    }
+    .preorder2 {
+      margin-left: auto;
+      button {
+        height: 28px;
+        line-height: 28px;
+        margin: 6px;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: white;
+    .f-left {
+      margin-right: auto;
+      button {
+        color: blue;
+        text-decoration: underline;
+        mat-icon {
+          color: black;
+          margin-right: 5px;
+        }
+      }
+    }
+    .f-right {
+      .image-info {
+        mat-icon {
+          color: rgb(172, 172, 172);
+          font-size: 18px;
+          position: relative;
+          top: 5px;
+          left: 4px;
+        }
+      }
+      .info mat-icon {
+        color: black;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+button:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

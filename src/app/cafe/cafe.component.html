@@ -1,28 +1,63 @@
 <div class="cafe-container">
+  <header>
+    <a href="/order" class="preorder1">
+      <img src="../../assets/img/temp-book-cover.jpg" alt="" />
+    </a>    
+    <h1><strong>Oblivion</strong> by Robin Hemley</h1>
+    <a href="/order" class="preorder2">
+      <button mat-raised-button color="primary">Info/Pre-order</button>
+    </a>
+  </header>
   <div class="image-wrapper">
-    <img class="cafe-interior" src="../../assets/img/cafe-interior.jpg" alt="" />
+    <img
+      class="cafe-interior"
+      src="../../assets/img/cafe-interior.jpg"
+      alt=""
+    />
 
     <!-- modals -->
-    <div class="typewriter eye"></div>
-    <div class="window eye"></div>
-    <div class="wall-minor-authors eye"></div>
-    <div class="fancy-lady eye"></div>
+    <div class="typewriter eye" (click)="openTypewriterDialog()">
+      <button mat-icon-button color="primary" class="visibility" aria-label="Writing contest">
+        <mat-icon>visibility</mat-icon>
+      </button>
+    </div>
+    <div class="window eye" (click)="openWindowDialog()">
+      <button mat-icon-button color="primary" class="visibility" aria-label="Look through the window">
+        <mat-icon>visibility</mat-icon>
+      </button>
+    </div>
+    <div class="wall-minor-authors eye" (click)="openWallDialog()">
+      <button mat-icon-button color="primary" class="visibility" aria-label="Wall of Minor Authors">
+        <mat-icon>visibility</mat-icon>
+      </button>
+    </div>
+    <div class="fancy-lady eye" (click)="openCharacter1Dialog()"></div>
+    <div class="character2 eye temp" (click)="openCharacter2Dialog()"></div>
+    <div class="character3 eye temp" (click)="openCharacter3Dialog()"></div>
+    <div class="character4 eye temp" (click)="openCharacter4Dialog()"></div>
+    <div class="character5 eye temp" (click)="openCharacter5Dialog()"></div>
+    <div class="character6 eye temp" (click)="openCharacter6Dialog()"></div>
+    <div class="arbiter eye temp" (click)="openArbiterDialog()"></div>
     <!-- modals -->
-
-    <a href="/order">
-      <div class="preorder">
-        <img src="../../assets/img/temp-book-cover.jpg" alt="">
-      </div>
-    </a>
-    <a href="/order">
-      <div class="preorder2"></div>
-    </a>
-    <a href="/contact">
-      <div class="contact"></div>
-    </a>
-    <a href="/about">
-      <div class="info"></div>
-      <button mat-raised-button color="warn">yo mama</button>
-    </a>
   </div>
+  <footer>
+    <div class="f-left">
+      <a href="/contact" class="contact">
+        <button mat-button aria-label="contact-button">
+          <mat-icon>mail</mat-icon>Contact
+        </button>
+      </a>
+    </div>
+    <div class="f-right">
+      <span class="image-info">
+        <mat-icon>photo_camera</mat-icon>
+        <small>Art Deco Imperial Hotel, Prague c. 1910</small>
+      </span>
+      <a href="/about" class="info">
+        <button mat-icon-button aria-label="about button">
+          <mat-icon>help</mat-icon>
+        </button>
+      </a>
+    </div>
+  </footer>
 </div>
