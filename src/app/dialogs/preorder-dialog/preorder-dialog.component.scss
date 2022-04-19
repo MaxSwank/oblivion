@@ -1,0 +1,170 @@
+.preorder-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 13% 10% 5% 20%;
+  text-align: center;
+  position: relative;
+  height: 76%;
+  width: 70%;
+  .preorder-left {
+    filter: drop-shadow(2px 4px 6px black);
+    flex: 1;
+    .book-title {
+      background-color: var(--white-opacity);
+      padding-top: 16px;
+      h1 {
+        margin: 0;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 16px;
+        font-style: oblique;
+        margin: 0;
+      }
+      hr {
+        margin: 0 20%;
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+    .author-blurbs {
+      background-color: var(--white-opacity);
+      .carousel {
+        height: 200px;
+        width: 100%;
+        .blurb {
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+            p {
+                border: 1px solid green;
+            }
+        }
+      }
+    }
+    .yellow-section {
+      background-color: var(--white-opacity);
+      padding: 8px 16px;
+      .call-to-action1 {
+        background-color: rgb(220, 201, 106);
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 12px 5px;
+        .signup-form {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          mat-icon {
+            color: black;
+            font-size: 45px;
+            width: 45px;
+            height: 45px;
+            margin: 7px 8px 0 4px;
+          }
+          mat-form-field {
+            flex: 1;
+            transform: translateY(10px);
+            ::ng-deep .mat-form-field-wrapper {
+              .mat-form-field-infix {
+                background: white;
+                box-shadow: var(--boxshadow);
+              }
+            }
+          }
+          button {
+            background: rgb(198, 133, 36);
+            position: relative;
+            right: 6px;
+          }
+        }
+        .download-buttons {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+          margin: 8px;
+          button {
+            flex: 1;
+          }
+        }
+      }
+    }
+    .call-to-action2 {
+      background-color: var(--white-opacity);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 200px;
+      .audiobook {
+        position: relative;
+        width: 37%;
+        img {
+          height: 200px;
+          width: 200px;
+          object-fit: cover;
+          position: absolute;
+          top: 20px;
+          right: 0;
+        }
+        button {
+          position: absolute;
+          top: 20px;
+          right: 10px;
+          background: black;
+          color: white;
+          transform: scale(1.8);
+        }
+      }
+      .order-buttons {
+        flex: 1;
+        margin: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .book-order {
+          height: 70px;
+        }
+      }
+    }
+  }
+  .preorder-right {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    a {
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    .gradient-shadow {
+      position: absolute;
+      width: 152%;
+      height: 568px;
+      bottom: -62px;
+      left: 50%;
+      transform: translate(-50%);
+      background: rgb(0, 0, 0);
+      background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.7511379551820728) 58%,
+        rgba(255, 255, 255, 0) 84%
+      );
+      z-index: -1;
+    }
+  }
+  .close-button {
+    position: absolute;
+    top: 46px;
+    right: 8px;
+    background: black;
+    color: white;
+    border: 6px solid white;
+    mat-icon {
+      position: relative;
+      bottom: 7px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .cafe-container {
   height: auto;
-  width: 990px;
+  width: fit-content;
   max-width: 100vw;
   position: relative;
   overflow: hidden;
@@ -40,12 +40,9 @@
       line-height: 40px;
     }
     .preorder2 {
-      margin-left: auto;
-      button {
-        height: 28px;
-        line-height: 28px;
-        margin: 6px;
-      }
+      margin: 6px 6px 6px auto;
+      height: 28px;
+      line-height: 28px;
     }
   }
   .image-wrapper {
@@ -53,9 +50,8 @@
     position: relative;
     .cafe-interior {
       width: auto;
-      width: 990px;
       max-width: 100vw;
-      max-height: 100vh;
+      height: 99vh;
     }
     .eye {
       position: absolute;
@@ -63,7 +59,7 @@
       // border: 1px solid red;
     }
     div {
-      .visibility {        
+      .visibility {
         height: 30px;
         line-height: 30px;
         width: 30px;

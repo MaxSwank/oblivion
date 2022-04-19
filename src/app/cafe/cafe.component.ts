@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { PreorderDialogComponent } from '../dialogs/preorder-dialog/preorder-dialog.component';
 import { ArbiterDialogComponent } from './cafe-dialogs/arbiter-dialog/arbiter-dialog.component';
 import { Character1DialogComponent } from './cafe-dialogs/character1-dialog/character1-dialog.component';
 import { Character2DialogComponent } from './cafe-dialogs/character2-dialog/character2-dialog.component';
@@ -96,6 +97,14 @@ export class CafeComponent implements OnInit {
 
   openArbiterDialog() {
     const dialogRef = this.dialog.open(ArbiterDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openPreorderDialog() {
+    const dialogRef = this.dialog.open(PreorderDialogComponent);
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);

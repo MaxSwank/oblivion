@@ -1,12 +1,21 @@
 <div class="cafe-container">
   <header>
-    <a href="/order" class="preorder1">
-      <img src="../../assets/img/temp-book-cover.jpg" alt="" />
-    </a>    
+    <div class="preorder1">
+      <img
+        (click)="openPreorderDialog()"
+        src="../../assets/img/temp-book-cover.jpg"
+        alt=""
+      />
+    </div>
     <h1><strong>Oblivion</strong> by Robin Hemley</h1>
-    <a href="/order" class="preorder2">
-      <button mat-raised-button color="primary">Info/Pre-order</button>
-    </a>
+    <button
+      class="preorder2"
+      mat-raised-button
+      color="primary"
+      (click)="openPreorderDialog()"
+    >
+      Info/Pre-order
+    </button>
   </header>
   <div class="image-wrapper">
     <img
@@ -17,17 +26,32 @@
 
     <!-- modals -->
     <div class="typewriter eye" (click)="openTypewriterDialog()">
-      <button mat-icon-button color="primary" class="visibility" aria-label="Writing contest">
+      <button
+        mat-icon-button
+        color="primary"
+        class="visibility"
+        aria-label="Writing contest"
+      >
         <mat-icon>visibility</mat-icon>
       </button>
     </div>
     <div class="window eye" (click)="openWindowDialog()">
-      <button mat-icon-button color="primary" class="visibility" aria-label="Look through the window">
+      <button
+        mat-icon-button
+        color="primary"
+        class="visibility"
+        aria-label="Look through the window"
+      >
         <mat-icon>visibility</mat-icon>
       </button>
     </div>
     <div class="wall-minor-authors eye" (click)="openWallDialog()">
-      <button mat-icon-button color="primary" class="visibility" aria-label="Wall of Minor Authors">
+      <button
+        mat-icon-button
+        color="primary"
+        class="visibility"
+        aria-label="Wall of Minor Authors"
+      >
         <mat-icon>visibility</mat-icon>
       </button>
     </div>
@@ -53,11 +77,16 @@
         <mat-icon>photo_camera</mat-icon>
         <small>Art Deco Imperial Hotel, Prague c. 1910</small>
       </span>
-      <a href="/about" class="info">
-        <button mat-icon-button aria-label="about button">
-          <mat-icon>help</mat-icon>
-        </button>
-      </a>
+      <button
+        class="info"
+        mat-icon-button
+        aria-label="about button"
+        matTooltip="Info about Art Deco Imperial Hotel"
+        matTooltipPosition="left"
+        aria-label="Find more information about this hotel"
+      >
+        <mat-icon>help</mat-icon>
+      </button>
     </div>
   </footer>
 </div>
