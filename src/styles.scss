@@ -14,8 +14,10 @@ body {
 :root {
   --boxshadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14),
     0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-    
-  --white-opacity: rgba(255, 255, 255, 0.85);  
+
+  --white-opacity: rgba(255, 255, 255, 0.75);
+  --black-opacity: rgba(0, 0, 0, 0.8);
+  --sepia-opacity: rgba(112, 66, 20, 0.5);
 }
 
 mat-dialog-container {
@@ -88,7 +90,7 @@ mat-dialog-container {
 
   body {
     height: calc(100% - 80px);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--black-opacity);
   }
 
   footer {
@@ -151,4 +153,44 @@ button:hover {
   100% {
     opacity: 1;
   }
+}
+
+// scrollbar styles
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(138, 138, 138, 0.5);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+// slick carousel styles
+.slick-slider {
+  width: 88%;
+  margin: auto;
+}
+
+body .slick-prev,
+body .slick-next {
+  height: 45px;
+  width: 40px;
+  z-index: 100;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px !important;
+  color: black !important;
 }

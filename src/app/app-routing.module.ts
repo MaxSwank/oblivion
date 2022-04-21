@@ -6,6 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CafeComponent } from './cafe/cafe.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
+import { AuthorQuotesComponent } from './landing-page/author-quotes/author-quotes.component';
 
 
 const routes: Routes = [
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'author-quotes',
+    component: AuthorQuotesComponent
   },
   {
     path: 'about',

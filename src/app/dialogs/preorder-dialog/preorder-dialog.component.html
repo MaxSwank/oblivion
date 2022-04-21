@@ -10,42 +10,24 @@
       >
     </div>
     <div class="author-blurbs">
-      <div class="carousel">
-        <carousel>
-          <div class="blurb1 blurb">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iste
-              eaque eius assumenda nam, est ipsa labore porro atque saepe adipisci
-              debitis deserunt? Ipsa aut facilis, eum nobis aliquid odit.
-            </p>
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)"
+      >
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <div class="quote-text">
+            <i class="slide-quote">"{{ slide.quote }}"</i>
+            <br>
+            <p class="slide-author">- {{ slide.author }}</p>
           </div>
-          <div class="blurb2 blurb">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              perspiciatis molestias asperiores non alias minima sunt eveniet
-              corporis neque eum, ipsam earum assumenda. Odit nostrum beatae sint,
-              modi iure nulla?
-            </p>
-          </div>
-          <div class="blurb3 blurb">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              perspiciatis molestias asperiores non alias minima sunt eveniet
-              corporis neque eum, ipsam earum assumenda. Odit nostrum beatae sint,
-              modi iure nulla?
-            </p>
-          </div>
-          <div class="blurb4 blurb">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              perspiciatis molestias asperiores non alias minima sunt eveniet
-              corporis neque eum, ipsam earum assumenda. Odit nostrum beatae sint,
-              modi iure nulla?
-            </p>
-          </div>
-        </carousel>
-      </div>
-      <a href="#">See what other authors are saying</a>
+        </div>
+      </ngx-slick-carousel>
+      <a href="/author-quotes">See what other authors are saying</a>
     </div>
     <div class="yellow-section">
       <div class="call-to-action1">

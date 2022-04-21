@@ -1,0 +1,35 @@
+<div class="quotes-container">
+  <header>
+    <div class="preorder1">
+      <img
+        (click)="openPreorderDialog()"
+        src="../../assets/img/temp-book-cover.jpg"
+        alt=""
+      />
+    </div>
+    <h1><strong>Oblivion</strong> by Robin Hemley</h1>
+    <button
+      class="preorder2"
+      mat-raised-button
+      color="primary"
+      (click)="openPreorderDialog()"
+    >
+      Info/Pre-order
+    </button>
+  </header>
+  <div class="quotes-text">
+    <h1>Other authors - on <i>Oblivion:</i></h1>
+    <div class="overflow-container">
+      <div class="quotes" *ngFor="let word of words">
+        <p>
+          <i>{{ word.quote }}</i
+          ><br /><br />
+          {{ word.author }}
+        </p>
+      </div>
+    </div>
+    <a href="/cafe">
+      <button mat-stroked-button>Enter Cafe</button>
+    </a>
+  </div>
+</div>
