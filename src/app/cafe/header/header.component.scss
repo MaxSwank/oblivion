@@ -1,0 +1,52 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 40px;
+
+  .preorder1 {
+    img {
+      height: 126px;
+      width: auto;
+      transition: 0.3s;
+      box-shadow: var(--boxshadow);
+      margin: 6px 0 0 12px;
+    }
+
+    img:hover {
+      transform: scale(1.02);
+      filter: brightness(110%);
+      transition: 0.3s;
+    }
+  }
+  h1 {
+    font-size: 20px;
+    color: black;
+    line-height: 40px;
+  }
+  #mobile {
+    display: none;
+  }
+  .preorder2 {
+    margin: 6px 6px 6px auto;
+    height: 28px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    #desktop {
+      display: none;
+    }
+    #mobile {
+      display: block;
+    }
+  }
+}

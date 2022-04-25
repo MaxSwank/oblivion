@@ -2,50 +2,62 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 10% 10% 7% 20%;
   text-align: center;
   position: relative;
-  height: 76%;
-  width: 70%;
+  width: clamp(770px, 50vw, 900px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   .preorder-left {
     filter: drop-shadow(2px 4px 6px black);
     background-color: var(--white-opacity);
-    margin-bottom: 16px;
+    max-width: 50%;
     flex: 1;
-    .book-title {
-      padding-top: 16px;
-      h1 {
-        margin: 0;
-        font-weight: 700;
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 16px;
-        font-style: oblique;
-        margin: 0;
-      }
-      hr {
-        margin: 0 30% 8px;
-        border-style: groove;
-      }
-      span {
-        font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .box-header {
+      // min-height: 100px;
+      // height: 14vh;
+      flex: 60;
+      display: table;
+      margin: 16px auto 0;
+      .book-title {
+        display: table-cell;
+        vertical-align: middle;
+        h1 {
+          margin: 0;
+          font-weight: 700;
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 16px;
+          font-style: oblique;
+          margin: 0;
+        }
+        hr {
+          margin: 0 30% 8px;
+          border-style: groove;
+        }
+        span {
+          font-size: 16px;
+        }
       }
     }
     .author-blurbs {
-      width: 439px;
+      flex: 100;
       max-width: 100vw;
-      padding-bottom: 10px;
       .carousel {
-        padding: 20px 0 0;
         border-radius: 10px;
         .slide {
-          height: 158px;
+          min-height: 138px;
+          height: 18vh;
           display: table;
           .quote-text {
             display: table-cell;
             vertical-align: middle;
-            font-size: 22px;
+            font-size: 18px;
             i {
               display: -webkit-box;
               -webkit-line-clamp: 4;
@@ -67,24 +79,40 @@
       }
     }
     .yellow-section {
-      padding: 8px 16px;
+      padding: 4px 16px;
+      flex: 90;
       .call-to-action1 {
         background-color: rgb(220, 201, 106);
         border: 1px solid black;
         border-radius: 10px;
-        padding: 12px 5px;
+        padding: 0 6px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-x: auto;
+        position: relative;
+        .alert-message {
+          position: absolute;
+          top: 4px;
+          left: 50%;
+          transform: translate(-50%);
+        }
         .signup-form {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
+          flex: 1;
+          align-items: flex-end;
           mat-icon {
             color: black;
             font-size: 45px;
             width: 45px;
             height: 45px;
-            margin: 7px 8px 0 4px;
+            margin: 6px 4px 4px 0;
           }
           mat-form-field {
+            position: relative;
+            top: 3px;
             flex: 1;
             transform: translateY(10px);
             ::ng-deep .mat-form-field-wrapper {
@@ -94,19 +122,25 @@
               }
             }
           }
+
           button {
             background: rgb(198, 133, 36);
             position: relative;
             right: 6px;
+            margin: 0 auto;
+            height: 50px;
           }
         }
         .download-buttons {
           display: flex;
           flex-direction: row;
-          gap: 8px;
-          margin: 8px;
+          flex-wrap: nowrap;
+          flex: 1;
+          align-items: center;
           button {
-            flex: 1;
+            max-height: 45px;
+            margin: 0 auto;
+            width: fit-content;
           }
         }
       }
@@ -115,40 +149,58 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      height: 200px;
+      // min-height: 162px;
+      // height: 20vh;
+      flex: 100;
       .audiobook {
         position: relative;
-        width: 37%;
-        img {
-          height: 200px;
-          width: 200px;
-          object-fit: cover;
-          position: absolute;
-          top: 20px;
-          right: 0;
-        }
-        button {
-          position: absolute;
-          top: 20px;
-          right: 10px;
-          background: black;
-          color: white;
-          transform: scale(1.8);
+        flex: 1;
+        .ab-img {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            border-radius: 10px;
+            box-shadow: var(--boxshadow);
+          }
+          button {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            background: black;
+            color: white;
+            transform: scale(1.6);
+            box-shadow: var(--boxshadow);
+          }
         }
       }
       .order-buttons {
-        flex: 1;
+        flex: 2;
         margin: 18px;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin: auto;
         .book-order {
-          height: 70px;
-          font-size: 24px;
+          height: 50px;
+          font-size: 20px;
+          min-width: 80%;
+          margin: 0 auto;
         }
         .audiobook-order {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 700;
+          min-width: 80%;
+          margin: 0 auto;
+        }
+        span {
+          font-size: 12px;
         }
       }
     }
@@ -159,32 +211,42 @@
     position: relative;
     a {
       img {
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 100%;
+        border-radius: 5px;
+        transform: scale(1.05);
+        transform-origin: top left;
       }
     }
     .gradient-shadow {
       position: absolute;
       width: 500px;
       height: 500px;
-      bottom: -241px;
+      bottom: -64px;
+      transform-origin: bottom center;
       left: 50%;
-      transform: translate(-50%) scale(131%, 13%);
+      transform: translate(-50%) scale(150%, 13%);
       background: rgb(0, 0, 0);
-     background: radial-gradient(circle, black 21%, rgba(0, 0, 0, 0.7511379552) 44%, rgba(255, 255, 255, 0) 74%);
+      background: radial-gradient(
+        circle,
+        black 21%,
+        rgba(0, 0, 0, 0.65) 44%,
+        rgba(255, 255, 255, 0) 74%
+      );
       z-index: -1;
     }
   }
   .close-button {
     position: absolute;
-    top: 46px;
-    right: 8px;
+    top: 0px;
+    right: -24px;
     background: black;
     color: white;
-    border: 6px solid white;
+    border: 6px solid rgb(0, 0, 0);
     mat-icon {
       position: relative;
       bottom: 7px;
+      font-weight: 900;
     }
   }
 }

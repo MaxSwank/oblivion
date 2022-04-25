@@ -13,7 +13,7 @@ export class PreorderDialogComponent implements OnInit {
     },
     {
       quote:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
+        'Lorem ipsum dolor sit amet, asd asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
       author: 'Author',
     },
     {

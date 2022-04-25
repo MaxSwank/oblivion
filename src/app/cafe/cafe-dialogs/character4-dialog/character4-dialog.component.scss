@@ -1,0 +1,12 @@
+.dialog-container {
+  .character-dialog {
+    .dialog-right {
+      img {
+        right: -50%;
+        top: 171px;
+        transform: scale(8.5);
+        filter: drop-shadow(0 0 2px white);
+      }
+    }
+  }
+}

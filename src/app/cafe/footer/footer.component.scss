@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: white;
+    .f-left {
+      margin-right: auto;
+      button {
+        color: blue;
+        text-decoration: underline;
+        mat-icon {
+          color: black;
+          margin-right: 5px;
+        }
+      }
+    }
+    .f-right {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      .image-info {
+        mat-icon {
+          color: rgb(172, 172, 172);
+          font-size: 18px;
+          position: relative;
+          top: 5px;
+          left: 4px;
+        }
+      }
+      .info mat-icon {
+        color: black;
+        margin-bottom: 4px;
+      }
+    }
+  }

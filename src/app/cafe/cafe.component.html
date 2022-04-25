@@ -1,22 +1,5 @@
 <div class="cafe-container">
-  <header>
-    <div class="preorder1">
-      <img
-        (click)="openPreorderDialog()"
-        src="../../assets/img/temp-book-cover.jpg"
-        alt=""
-      />
-    </div>
-    <h1><strong>Oblivion</strong> by Robin Hemley</h1>
-    <button
-      class="preorder2"
-      mat-raised-button
-      color="primary"
-      (click)="openPreorderDialog()"
-    >
-      Info/Pre-order
-    </button>
-  </header>
+  <app-header></app-header>
   <div class="image-wrapper">
     <img
       class="cafe-interior"
@@ -64,29 +47,5 @@
     <div class="arbiter eye temp" (click)="openArbiterDialog()"></div>
     <!-- modals -->
   </div>
-  <footer>
-    <div class="f-left">
-      <a href="/contact" class="contact">
-        <button mat-button aria-label="contact-button">
-          <mat-icon>mail</mat-icon>Contact
-        </button>
-      </a>
-    </div>
-    <div class="f-right">
-      <span class="image-info">
-        <mat-icon>photo_camera</mat-icon>
-        <small>Art Deco Imperial Hotel, Prague c. 1910</small>
-      </span>
-      <button
-        class="info"
-        mat-icon-button
-        aria-label="about button"
-        matTooltip="Info about Art Deco Imperial Hotel"
-        matTooltipPosition="left"
-        aria-label="Find more information about this hotel"
-      >
-        <mat-icon>help</mat-icon>
-      </button>
-    </div>
-  </footer>
+  <app-footer></app-footer>
 </div>

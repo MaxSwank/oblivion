@@ -25,6 +25,8 @@ import { PreorderDialogComponent } from './dialogs/preorder-dialog/preorder-dial
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { AuthorQuotesComponent } from './landing-page/author-quotes/author-quotes.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { HeaderComponent } from './cafe/header/header.component';
+import { FooterComponent } from './cafe/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     Character6DialogComponent,
     ArbiterDialogComponent,
     PreorderDialogComponent,
-    AuthorQuotesComponent
+    AuthorQuotesComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

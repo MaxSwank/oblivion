@@ -1,45 +1,55 @@
 <div class="dialog-container">
-    <button
-      mat-mini-fab
-      mat-dialog-close
-      color="disabled"
-      aria-label="create"
-      class="close-button"
-    >
-      <mat-icon>close</mat-icon>
-    </button>
-    <header>
-        <a href="/order" class="preorder1">
-          <img src="../../assets/img/temp-book-cover.jpg" alt="" />
-        </a>    
-        <h1><strong>Oblivion</strong> by Robin Hemley</h1>
-        <a href="/order" class="preorder2">
-          <button mat-raised-button color="primary">Info/Pre-order</button>
-        </a>
-       </header>
+  <button
+    mat-mini-fab
+    mat-dialog-close
+    color="disabled"
+    aria-label="create"
+    class="close-button"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+  <app-header></app-header>
 
-  <body>
-    
+  <body class="character-dialog">
+    <div class="dialog-left">
+      <div class="carousel-container">
+        <h2>Character 3</h2>
+        <ngx-slick-carousel
+          class="dialog-carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+          (init)="slickInit($event)"
+          (breakpoint)="breakpoint($event)"
+          (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)"
+        >
+          <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <div class="quote-text">
+              <p class="slide-quote">"{{ slide.quote }}"</p>
+              <!-- <br />
+              <p class="slide-author">- {{ slide.author }}</p> -->
+            </div>
+          </div>
+        </ngx-slick-carousel>
+        <div class="bubble-footer">
+          <div class="audiobook">
+            <div class="ab-img">
+              <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
+              <button mat-icon-button>
+                <mat-icon>headset</mat-icon>
+              </button>
+            </div>
+          </div>
+          <p>
+            Talk to Café patrons to unravel this mystery and you could win a <strong>free copy of the Oblivion audiobook!</strong> 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-right">
+      <img src="../../../../assets/img/character3.png" alt="" />
+    </div>
   </body>
 
-  <footer>
-        <div class="f-left">
-          <a href="/contact" class="contact">
-            <button mat-button aria-label="contact-button">
-              <mat-icon>mail</mat-icon>Contact
-            </button>
-          </a>
-        </div>
-        <div class="f-right">
-          <span class="image-info">
-            <mat-icon>photo_camera</mat-icon>
-            <small>Art Deco Imperial Hotel, Prague c. 1910</small>
-          </span>
-          <a href="/about" class="info">
-            <button mat-icon-button aria-label="about button">
-              <mat-icon>help</mat-icon>
-            </button>
-          </a>
-        </div>
-      </footer>
-    </div>
+  <app-footer></app-footer>
+</div>

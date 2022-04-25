@@ -1,0 +1,27 @@
+.dialog-container {
+    .character-dialog {
+      flex-direction: row-reverse !important;
+      .dialog-left {
+        .carousel-container::after {
+          right: initial !important;
+          left: -100px;
+          border-left: initial !important;
+          border-right: 100px solid var(--speech-bubble);
+        }
+        .carousel-container {
+          .bubble-footer {
+            flex-direction: row-reverse !important;
+          }
+        }
+      }
+      .dialog-right {
+        img {
+            right: -49% !important;
+            top: 225px !important;
+            transform: scale(5) !important;
+            filter: drop-shadow(0 0 2px white);
+        }
+      }
+    }
+  }
+  

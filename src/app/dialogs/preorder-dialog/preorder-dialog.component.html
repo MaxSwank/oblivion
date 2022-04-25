@@ -1,13 +1,15 @@
 <div class="preorder-container">
   <div class="preorder-left">
-    <div class="book-title">
-      <h1>Oblivion</h1>
-      <h2>An After Autobiography</h2>
-      <hr />
-      <span
-        >Arriving <strong>June 1, 2022</strong> from
-        <strong>Robin Hemley</strong></span
-      >
+    <div class="box-header">
+      <div class="book-title">
+        <h1>Oblivion</h1>
+        <h2>An After Autobiography</h2>
+        <hr />
+        <span
+          >Arriving <strong>June 1, 2022</strong> from
+          <strong>Robin Hemley</strong></span
+        >
+      </div>
     </div>
     <div class="author-blurbs">
       <ngx-slick-carousel
@@ -22,7 +24,7 @@
         <div ngxSlickItem *ngFor="let slide of slides" class="slide">
           <div class="quote-text">
             <i class="slide-quote">"{{ slide.quote }}"</i>
-            <br>
+            <br />
             <p class="slide-author">- {{ slide.author }}</p>
           </div>
         </div>
@@ -30,11 +32,12 @@
       <a href="/author-quotes">See what other authors are saying</a>
     </div>
     <div class="yellow-section">
-      <div class="call-to-action1">
+      <div class="call-to-action1">        
+        <span class="alert-message">Receive info and alerts by email:</span>
         <div class="signup-form">
           <mat-icon>mail</mat-icon>
           <mat-form-field>
-            <mat-label> Receive info and alerts by email:</mat-label>
+            <mat-label>&nbsp;&nbsp;email address</mat-label>
             <input matInput type="text" />
           </mat-form-field>
           <button mat-raised-button>Sign Up</button>
@@ -53,10 +56,12 @@
     </div>
     <div class="call-to-action2">
       <div class="audiobook">
-        <img src="../../../assets/img/temp-book-cover.jpg" alt="" />
-        <button mat-icon-button>
-          <mat-icon>headset</mat-icon>
-        </button>
+        <div class="ab-img">
+          <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
+          <button mat-icon-button>
+            <mat-icon>headset</mat-icon>
+          </button>
+        </div>
       </div>
       <div class="order-buttons">
         <button mat-raised-button color="primary" class="book-order">
@@ -65,7 +70,10 @@
         <button mat-raised-button color="basic" class="audiobook-order">
           Pre-Order the Audiobook
         </button>
-        <span>Audiobook available from <strong>Publisher Name</strong></span>
+        <span
+          >Audiobook available from
+          <a href="#"><strong>Publisher Name</strong> </a></span
+        >
       </div>
     </div>
   </div>
