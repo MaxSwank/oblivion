@@ -27,6 +27,7 @@ import { AuthorQuotesComponent } from './landing-page/author-quotes/author-quote
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { HeaderComponent } from './cafe/header/header.component';
 import { FooterComponent } from './cafe/footer/footer.component';
+import { CafeHomeComponent } from './cafe/cafe-home/cafe-home.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FooterComponent } from './cafe/footer/footer.component';
     PreorderDialogComponent,
     AuthorQuotesComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CafeHomeComponent
   ],
   imports: [
     BrowserModule,

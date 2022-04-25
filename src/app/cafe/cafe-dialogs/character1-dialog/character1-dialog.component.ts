@@ -44,9 +44,12 @@ export class Character1DialogComponent implements OnInit {
     console.log('beforeChange');
   }
 
-  constructor() { }
+  constructor() {
+    console.log('hi');
+   }
 
   ngOnInit(): void {
+    console.log('hi');
   }
 
 }
