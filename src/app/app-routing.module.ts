@@ -1,3 +1,5 @@
+import { CafeHomeComponent } from './cafe/cafe-home/cafe-home.component';
+import { Character1DialogComponent } from './cafe/cafe-dialogs/character1-dialog/character1-dialog.component';
 import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
@@ -7,6 +9,7 @@ import { CafeComponent } from './cafe/cafe.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { AuthorQuotesComponent } from './landing-page/author-quotes/author-quotes.component';
+import { Character2DialogComponent } from './cafe/cafe-dialogs/character2-dialog/character2-dialog.component';
 
 
 const routes: Routes = [
@@ -29,7 +32,23 @@ const routes: Routes = [
   },
   {
     path: 'cafe',
-    component: CafeComponent,
+    component: CafeHomeComponent,
+    children: [
+      {
+        path: '',
+        component: CafeComponent,
+        children: [          
+          {
+            path: 'character1',
+            component: Character1DialogComponent
+          },
+          {
+            path: 'character2',
+            component: Character2DialogComponent
+          }
+        ]
+      }
+    ],
     data: {
       'title': 'Oblivion cafe',
       'desc': 'Stylish hotel cafe',
