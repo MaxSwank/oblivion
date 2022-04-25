@@ -1,11 +1,5 @@
 <div class="dialog-container">
-  <button
-    mat-mini-fab
-    mat-dialog-close
-    color="disabled"
-    aria-label="create"
-    class="close-button"
-  >
+  <button mat-mini-fab mat-dialog-close color="disabled" aria-label="create" class="close-button">
     <mat-icon>close</mat-icon>
   </button>
   <app-header></app-header>
@@ -14,15 +8,9 @@
     <div class="dialog-left">
       <div class="carousel-container">
         <h2>Character 4</h2>
-        <ngx-slick-carousel
-          class="dialog-carousel"
-          #slickModal="slick-carousel"
-          [config]="slideConfig"
-          (init)="slickInit($event)"
-          (breakpoint)="breakpoint($event)"
-          (afterChange)="afterChange($event)"
-          (beforeChange)="beforeChange($event)"
-        >
+        <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
+          (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)">
           <div ngxSlickItem *ngFor="let slide of slides" class="slide">
             <div class="quote-text">
               <p class="slide-quote">"{{ slide.quote }}"</p>
@@ -41,7 +29,8 @@
             </div>
           </div>
           <p>
-            Talk to Café patrons to unravel this mystery and you could win a <strong>free copy of the Oblivion audiobook!</strong> 
+            Talk to Café patrons to unravel this mystery and you could win a <strong>free copy of the Oblivion
+              audiobook!</strong>
           </p>
         </div>
       </div>

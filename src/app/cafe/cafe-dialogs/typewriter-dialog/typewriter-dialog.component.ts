@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./typewriter-dialog.component.scss']
 })
 export class TypewriterDialogComponent implements OnInit {
+  prompt = 'A writing prompt...'
 
   constructor() { }
 

@@ -20,6 +20,7 @@ body {
   --sepia-opacity: rgba(112, 66, 20, 0.5);
   --speech-bubble: rgb(204, 204, 204);
   --gray-text: rgb(92, 92, 92);
+  --bg-blue: rgba(17, 136, 255, 0.5);
 }
 
 mat-dialog-container {
@@ -40,7 +41,9 @@ mat-dialog-container {
 .dialog-container {
   height: 100%;
   width: 100%;
+  max-width: calc(99vh * 1.3862067) !important;
   position: relative;
+  margin: 0 auto;
   .close-button {
     position: absolute;
     top: 46px;
@@ -117,7 +120,7 @@ mat-dialog-container {
         }
       }
       .bubble-footer {
-        background: rgba(17, 136, 255, 0.5);
+        background: var(--bg-blue);
         height: fit-content;
         border-radius: 20px;
         color: rgb(0, 0, 103);

@@ -7,6 +7,7 @@ import { CafeComponent } from './cafe/cafe.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { AuthorQuotesComponent } from './landing-page/author-quotes/author-quotes.component';
+import { Character1DialogComponent } from './cafe/cafe-dialogs/character1-dialog/character1-dialog.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'character1',
+    component: Character1DialogComponent
   },
   {
     path: '',

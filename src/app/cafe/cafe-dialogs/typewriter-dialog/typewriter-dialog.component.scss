@@ -1,0 +1,22 @@
+.dialog-container {
+    body {
+        .writing-form {
+            width: 425px;
+            max-width: 80vw;
+            height: fit-content;
+            background-color: var(--speech-bubble);
+            margin: 24px auto;
+            box-shadow: var(--boxshadow);
+            text-align: center;
+            .form-top {
+                background: var(--bg-blue);
+                p {
+                    padding: 12px;
+                }
+            }
+            .form-bottom {
+                padding: 24px;
+            }
+        }
+    }
+}
