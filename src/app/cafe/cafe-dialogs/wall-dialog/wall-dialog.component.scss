@@ -1,0 +1,40 @@
+.dialog-container {
+    body {
+        h1 {
+            text-align: center;
+            background-color: white;
+            line-height: 48px;
+            padding: 0 24px;
+            width: fit-content;
+            margin: 40px auto 0;
+            font-size: 28px;
+            font-weight: 700 !important;
+        }
+        .author-wall {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 30px 100px;
+            .author {
+                width: calc(20% - 28px);
+                img {
+                    object-fit: cover;
+                    height: 250px;
+                    width: 100%;
+                    object-position: top;
+                    border: 8px solid black;
+                    background: white;
+                }
+                p {
+                    background: white;
+                    line-height: 24px;
+                    text-align: center;
+                    margin: 0 8px;
+                    width: 100%;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
