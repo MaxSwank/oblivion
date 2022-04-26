@@ -18,9 +18,11 @@ body {
   --white-opacity: rgba(255, 255, 255, 0.75);
   --black-opacity: rgba(0, 0, 0, 0.8);
   --sepia-opacity: rgba(112, 66, 20, 0.5);
-  --speech-bubble: rgb(204, 204, 204);
+  --speech-bubble: rgb(221, 221, 221);
   --gray-text: rgb(92, 92, 92);
   --bg-blue: rgba(17, 136, 255, 0.5);
+  --button-yellow: rgb(198, 133, 36);
+  --bg-yellow: rgb(220, 201, 106);
 }
 
 mat-dialog-container {
@@ -38,12 +40,20 @@ mat-dialog-container {
   max-width: unset !important;
 }
 
+.preorder-container {
+  z-index: 1;
+}
+
 .dialog-container {
   height: 100%;
   width: 100%;
   max-width: calc(99vh * 1.3862067) !important;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
   margin: 0 auto;
+  z-index: 1;;
   .close-button {
     position: absolute;
     top: 46px;
@@ -263,7 +273,7 @@ body .slick-next {
   opacity: 1 !important;
   position: relative;
   top: -3px;
-  left: -3px;
+  left: -5px;
 }
 
 .slick-prev:hover,

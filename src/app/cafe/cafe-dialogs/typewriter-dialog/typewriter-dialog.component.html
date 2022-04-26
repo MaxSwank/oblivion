@@ -1,6 +1,6 @@
 <div class="dialog-container">
-  <button mat-mini-fab mat-dialog-close color="disabled" aria-label="create" class="close-button">
-    <mat-icon>close</mat-icon>
+ <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
+    <mat-icon routerLink="../">close</mat-icon>
   </button>
   <app-header></app-header>
 
@@ -15,12 +15,13 @@
       </div>
       <div class="form-bottom">
         <h2>"{{ prompt }}"</h2>
-        <mat-form-field>
-          <mat-label>&nbsp;&nbsp;Start writing!</mat-label>
+        <mat-form-field class="writing-prompt">
+          <mat-label>&nbsp;&nbsp;&nbsp;&nbsp;. . . </mat-label>
           <input matInput type="text" />
         </mat-form-field>
-        <span>Enter your email address, so can we can notify you if your entry is
-          selected:</span>
+        <br>
+        <p>Enter your email address, so can we can notify you if your entry is
+          selected:</p>
         <mat-form-field>
           <mat-label>&nbsp;&nbsp;email address</mat-label>
           <input matInput type="text" />

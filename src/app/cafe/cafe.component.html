@@ -9,7 +9,7 @@
     />
 
     <!-- modals -->
-    <div class="typewriter eye" (click)="openTypewriterDialog()">
+    <div class="typewriter eye" routerLink="typewriter">
       <button
         mat-icon-button
         color="primary"
@@ -19,7 +19,7 @@
         <mat-icon>visibility</mat-icon>
       </button>
     </div>
-    <div class="window eye" (click)="openWindowDialog()">
+    <div class="window eye" routerLink="window">
       <button
         mat-icon-button
         color="primary"
@@ -29,7 +29,7 @@
         <mat-icon>visibility</mat-icon>
       </button>
     </div>
-    <div class="wall-minor-authors eye" (click)="openWallDialog()">
+    <div class="wall-minor-authors eye" routerLink="wall-of-authors">
       <button
         mat-icon-button
         color="primary"
@@ -42,11 +42,11 @@
     
     <div class="fancy-lady eye" routerLink="character1"></div>
     <div class="character2 eye temp" routerLink="character2"></div>
-    <div class="character3 eye temp" (click)="openCharacter3Dialog()"></div>
-    <div class="character4 eye temp" (click)="openCharacter4Dialog()"></div>
-    <div class="character5 eye temp" (click)="openCharacter5Dialog()"></div>
-    <div class="character6 eye temp" (click)="openCharacter6Dialog()"></div>
-    <div class="arbiter eye temp" (click)="openArbiterDialog()"></div>
+    <div class="character3 eye temp" routerLink="character3"></div>
+    <div class="character4 eye temp" routerLink="character4"></div>
+    <div class="character5 eye temp" routerLink="character5"></div>
+    <div class="character6 eye temp" routerLink="character6"></div>
+    <div class="arbiter eye temp" routerLink="arbiter"></div>
     <!-- modals -->
   </div>
   <app-footer></app-footer>

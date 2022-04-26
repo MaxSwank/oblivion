@@ -6,27 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./window-dialog.component.scss']
 })
 export class WindowDialogComponent implements OnInit {
-  slides = [
+  images = [
     {
-      quote: 'It always seems impossible until it\'s done.',
-      author: 'Nelson Mandela',
+      path: '../../../../assets/img/window.jpg',
+      caption: 'Caption: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
     },
     {
-      quote:
-        'Lorem ipsum dolor sit amet, asd asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
-      author: 'Author',
+      path: '../../../../assets/img/wall-bg.jpg',
+      caption: 'Caption: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
     },
     {
-      quote: 'test 3.',
-      author: 'Author',
+      path: '../../../../assets/img/temp-cafe.jpg',
+      caption: 'Caption: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
     },
     {
-      quote: 'test 4.',
-      author: 'Author',
+      path: '../../../../assets/img/temp-book-cover.jpg',
+      caption: 'Caption: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
     },
     {
-      quote: 'test 5.',
-      author: 'Author',
+      path: '../../../../assets/img/temp-building.png',
+      caption: 'Caption: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
     },
   ];
   slideConfig = { slidesToShow: 1, slidesToScroll: 1 };

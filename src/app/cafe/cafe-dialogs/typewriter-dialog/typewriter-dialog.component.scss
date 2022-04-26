@@ -1,5 +1,11 @@
 .dialog-container {
     body {
+        background-image: url(../../../../assets/img/typewriter.png);
+        background-size: cover;
+        padding: 5%;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        overflow-y: auto;
         .writing-form {
             width: 425px;
             max-width: 80vw;
@@ -7,15 +13,82 @@
             background-color: var(--speech-bubble);
             margin: 24px auto;
             box-shadow: var(--boxshadow);
-            text-align: center;
             .form-top {
                 background: var(--bg-blue);
                 p {
                     padding: 12px;
+                    text-align: center;
                 }
             }
             .form-bottom {
-                padding: 24px;
+                padding: 0 24px 24px;
+                text-align: center;
+                h2 {
+                    text-align: left;
+                }
+                mat-form-field {
+                    width: 100%;
+                    ::ng-deep .mat-form-field-flex {
+                        box-shadow: var(--boxshadow);
+                        background-color: white;
+                    }
+                    input {
+                        margin: 0 12px;
+                        width: calc(100% - 24px);
+                    }
+                }
+                .writing-prompt::before {
+                    content: '"';
+                    position: absolute;
+                    left: 5px;
+                    top: 10px;
+                    font-size: 22px;
+                    color: gray;
+                    z-index: 1;
+                }
+                .writing-prompt::after {
+                    content: '"';
+                    position: absolute;
+                    right: 5px;
+                    top: 10px;
+                    font-size: 22px;
+                    color: gray;
+                    z-index: 1;
+                }
+
+                p {
+                    font-size: 11px;
+                    white-space: normal;
+                    text-align: left;
+                    margin: 0;
+                }
+                section {
+                    margin: 20px auto 10px;
+                    mat-checkbox {
+                        white-space: normal;
+                        ::ng-deep span {
+                            white-space: normal;
+                            text-align: left;
+                        }
+                    }
+                }
+                button {
+                    background: var(--button-yellow);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .dialog-container {
+        body {
+            background-position: bottom;
+            padding: initial;
+            background-size: contain;
+            padding: 5% 0;
+            .writing-form {
+                margin: 60px auto;
             }
         }
     }

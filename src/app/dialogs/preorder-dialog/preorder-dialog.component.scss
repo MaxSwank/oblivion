@@ -50,6 +50,9 @@
       max-width: 100vw;
       .carousel {
         border-radius: 10px;
+        ::ng-deep .slick-prev {
+          left: -20px !important;
+        }
         .slide {
           min-height: 138px;
           height: 18vh;
@@ -82,7 +85,7 @@
       padding: 4px 16px;
       flex: 90;
       .call-to-action1 {
-        background-color: rgb(220, 201, 106);
+        background-color: var(--bg-yellow);
         border: 1px solid black;
         border-radius: 10px;
         padding: 0 6px;
@@ -124,7 +127,7 @@
           }
 
           button {
-            background: rgb(198, 133, 36);
+            background: var(--button-yellow);
             position: relative;
             right: 6px;
             margin: 0 auto;
@@ -227,12 +230,7 @@
       left: 50%;
       transform: translate(-50%) scale(150%, 13%);
       background: rgb(0, 0, 0);
-      background: radial-gradient(
-        circle,
-        black 21%,
-        rgba(0, 0, 0, 0.65) 44%,
-        rgba(255, 255, 255, 0) 74%
-      );
+      background: radial-gradient(circle, black 21%, rgba(0, 0, 0, 0.65) 44%, rgba(255, 255, 255, 0) 74%);
       z-index: -1;
     }
   }
