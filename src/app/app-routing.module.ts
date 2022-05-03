@@ -32,6 +32,17 @@ const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent,
+    children: [
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
+     
+    ],
     data: {
       'title': 'Oblivion home',
       'desc': 'Peer into the window and see what awaits',
@@ -102,21 +113,13 @@ const routes: Routes = [
     }
   },
   {
-    path: 'order',
-    component: OrderPageComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
     path: 'author-quotes',
     component: AuthorQuotesComponent
   },
   {
-    path: 'about',
-    component: AboutComponent
-  },
+    path: 'order',
+    component: OrderPageComponent
+  },  
   {
     path: '',
     component: LandingPageComponent
