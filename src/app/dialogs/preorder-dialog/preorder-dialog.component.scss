@@ -85,7 +85,7 @@
       padding: 4px 16px;
       flex: 90;
       .call-to-action1 {
-        background-color: var(--bg-yellow);
+        background-color: var(--ob-yellow);
         border: 1px solid black;
         border-radius: 10px;
         padding: 0 6px;
@@ -127,7 +127,7 @@
           }
 
           button {
-            background: var(--button-yellow);
+            background: var(--ob-yellow);
             position: relative;
             right: 6px;
             margin: 0 auto;

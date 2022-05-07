@@ -5,24 +5,45 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 :root {
-  --boxshadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14),
-    0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-
+  --boxshadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  --boxshadow-top: 0px 0px 2px 1px rgba(0,0,0,0.37);
+  --boxshadow-inset: 0px 3px 6px 3px rgba(0,0,0,0.37) inset;
   --white-opacity: rgba(255, 255, 255, 0.75);
   --black-opacity: rgba(0, 0, 0, 0.8);
   --sepia-opacity: rgba(112, 66, 20, 0.5);
   --speech-bubble: rgb(221, 221, 221);
   --gray-text: rgb(92, 92, 92);
   --bg-blue: rgba(17, 136, 255, 0.5);
-  --button-yellow: rgb(198, 133, 36);
-  --bg-yellow: rgb(220, 201, 106);
+  --ob-red: #b45552;
+  --ob-blue: #28485b;
+  --ob-darkblue: #153242;
+  --ob-yellow: #d9af53;
+  --ob-white: #ffffff; 
+  --lp-bg: #f2efe2;
+}
+
+button,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong,
+i,
+b,
+em {
+  font-family: p22-stickley-pro-text, serif !important;
 }
 
 mat-dialog-container {
@@ -53,7 +74,7 @@ mat-dialog-container {
   left: 50%;
   transform: translate(-50%);
   margin: 0 auto;
-  z-index: 1;;
+  z-index: 1;
   .close-button {
     position: absolute;
     top: 46px;
@@ -68,7 +89,7 @@ mat-dialog-container {
   }
 
   body {
-    height: calc(100% - 80px);
+    height: calc(100% - 69px);
     background-color: var(--black-opacity);
     padding-top: 40px;
   }

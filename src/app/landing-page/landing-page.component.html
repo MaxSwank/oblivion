@@ -1,15 +1,50 @@
-<!-- snapshot of cool hover/paralax effect -->
-
-<div class="container">
-  <div class="panel-left"></div>
-  <div class="panel-right"></div>
-  <div class="panel-center">
-    <a routerLink="cafe">
-      <button>Enter Cafe</button>
-    </a>
+<div class="lp-wrapper">
+  <div class="lp-container" [ngClass]="cafeZoom ? 'containerA' : 'containerB'">
+    <div class="bg-cafe">
+    </div>
+    <div class="cafe-container">
+      <div class="panel-left"></div>
+      <div class="panel-right"></div>
+      <div class="panel-center"></div>
+      <div class="text-container">
+        <img src="../../assets/img/cafe-title.png" alt="">
+      </div>
+      <div class="left-border janky"></div>
+      <div class="right-border janky"></div>
+      <div class="top-left-border janky"></div>
+      <div class="top-right-border janky"></div>
+      <div class="bottom-border janky"></div>
+      <div class="cafe-clip">
+        <div class="cafe-image">
+          <img src="../../assets/img/Cafe-color-photo.png" alt="">
+        </div>
+        <div class="cafe-bottom-border"></div>
+      </div>
+      <div class="butler-container">
+        <div class="butler-text">
+          <h4>Welcome to the Caf&eacute; of Minor Authors.</h4>
+          <p>There's a book release coming up soon.</p>
+          <p>The regulars are all talking about it. Which says <i>something,</i> I suppose.</p>
+        </div>
+        <img src="../../assets/img/Butler.png" alt="" class="butler">
+      </div>
+    </div>
+    <button class="enter" (click)="enterCafe()" mat-raised-button>
+      ENTER THE CAF&Eacute;
+    </button>
+    <div class="footer-content">
+      <div class="book-info">
+        <h1>Oblivion</h1>
+        <h2><i>An After Autobiography</i></h2>
+        <hr>
+        <span>Arriving <strong>&nbsp;JUNE 1&nbsp;</strong> from</span>
+        <h3>ROBIN HEMLEY</h3>
+        <div class="info-bottom">
+          <button routerLink="cafe/preorder" mat-raised-button>Learn More & Preorder</button>
+        </div>
+      </div>
+      <img src="../../assets/img/BookCover.png" alt="">
+    </div>
   </div>
-  <div class="interior"></div>
-  <div class="building">
-    
-  </div>
+  <app-footer></app-footer>
 </div>
