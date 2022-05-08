@@ -10,23 +10,28 @@ export class PreorderDialogComponent implements OnInit {
     {
       quote: 'It always seems impossible until it\'s done.',
       author: 'Nelson Mandela',
+      title: 'Title',
     },
     {
       quote:
         'Lorem ipsum dolor sit amet, asd asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
       author: 'Author',
+      title: 'Title',
     },
     {
       quote: 'test 3.',
       author: 'Author',
+      title: 'Title',
     },
     {
       quote: 'test 4.',
       author: 'Author',
+      title: 'Title',
     },
     {
       quote: 'test 5.',
       author: 'Author',
+      title: 'Title',
     },
   ];
   slideConfig = { slidesToShow: 1, slidesToScroll: 1 };

@@ -5,91 +5,58 @@
         <h1>Oblivion</h1>
         <h2>An After Autobiography</h2>
         <hr />
-        <span
-          >Arriving <strong>June 1, 2022</strong> from
-          <strong>Robin Hemley</strong></span
-        >
+        <span>Arriving<strong>&nbsp;&nbsp;JUNE 1, 2022&nbsp;&nbsp;</strong>from &nbsp;<h3>ROBIN HEMLEY</h3>
+        </span>
       </div>
     </div>
     <div class="author-blurbs">
-      <ngx-slick-carousel
-        class="carousel"
-        #slickModal="slick-carousel"
-        [config]="slideConfig"
-        (init)="slickInit($event)"
-        (breakpoint)="breakpoint($event)"
-        (afterChange)="afterChange($event)"
-        (beforeChange)="beforeChange($event)"
-      >
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+        (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
         <div ngxSlickItem *ngFor="let slide of slides" class="slide">
           <div class="quote-text">
-            <i class="slide-quote">"{{ slide.quote }}"</i>
+            <p class="slide-quote">"{{ slide.quote }}"</p>
             <br />
-            <p class="slide-author">- {{ slide.author }}</p>
+            <span class="slide-author">{{ slide.author }}</span><br>
+            <i class="slide-title">{{ slide.title }}</i>
           </div>
         </div>
       </ngx-slick-carousel>
-      <a href="/author-quotes">See what other authors are saying</a>
     </div>
-    <div class="yellow-section">
-      <div class="call-to-action1">        
-        <span class="alert-message">Receive info and alerts by email:</span>
-        <div class="signup-form">
-          <mat-icon>mail</mat-icon>
-          <mat-form-field>
-            <mat-label>&nbsp;&nbsp;email address</mat-label>
-            <input matInput type="text" />
-          </mat-form-field>
-          <button mat-raised-button>Sign Up</button>
-        </div>
-        <div class="download-buttons">
-          <button mat-raised-button color="basic">
-            <mat-icon>picture_as_pdf</mat-icon>
-            Download PDF
-          </button>
-          <button mat-raised-button color="basic">
-            <mat-icon>book</mat-icon>
-            Download ePub
-          </button>
-        </div>
+    <div class="email-form">
+      <span class="alert-message">Join the Oblivion email newsletter:</span>
+      <div class="signup-form">
+        <mat-icon>mail</mat-icon>
+        <mat-form-field>
+          <mat-label>&nbsp;&nbsp;email address</mat-label>
+          <input matInput type="text" />
+        </mat-form-field>
+        <button mat-raised-button>Sign Up</button>
       </div>
     </div>
-    <div class="call-to-action2">
-      <div class="audiobook">
-        <div class="ab-img">
-          <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
-          <!-- <audio #myAudio>
-            <source src="https://www.w3schools.com/jsref/horse.ogg" type="audio/ogg">
-            <source scr="https://www.w3schools.com/jsref/horse.mp3" type="audio/mpeg">
-            (click)="myAudio.play()"
-          </audio> -->
-          <button mat-icon-button>
-            <mat-icon>headset</mat-icon>
-          </button>
-        </div>
-      </div>
-      <div class="order-buttons">
-        <button mat-raised-button color="primary" class="book-order">
-          Pre-Order the Book
-        </button>
-        <button mat-raised-button color="basic" class="audiobook-order">
-          Pre-Order the Audiobook
-        </button>
-        <span
-          >Audiobook available from
-          <a href="#"><strong>Publisher Name</strong> </a></span
-        >
-      </div>
+    <div class="order-buttons">
+      <button mat-raised-button class="preview">
+        <mat-icon>picture_as_pdf</mat-icon>
+        <p>
+          <span>Preview</span><br>
+          PDF Download
+        </p>
+      </button>
+      <button mat-raised-button class="book-order">
+        Preorder
+      </button>
+    </div>
+    <div class="audiobook">
+      <span><a href="#">Audiobook available</a> from
+        <strong>Blackstone Publishing</strong></span>
     </div>
   </div>
   <div class="preorder-right">
     <a href="#">
-      <img src="../../../assets/img/temp-book-cover.jpg" alt="" />
+      <img src="../../../assets/img/BookCover.jpg" alt="" />
     </a>
-    <div class="gradient-shadow"></div>
   </div>
-
-<button mat-mini-fab color="disabled" aria-label="create" class="close-button">
+  <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
     <mat-icon routerLink="../">close</mat-icon>
   </button>
 </div>

@@ -6,10 +6,12 @@ html,
 body {
   height: 100%;
   overflow: hidden;
+  * {
+    font-family: p22-stickley-pro-text, serif;
+  }
 }
 body {
   margin: 0;
-  // font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 :root {
@@ -26,7 +28,7 @@ body {
   --ob-blue: #28485b;
   --ob-darkblue: #153242;
   --ob-yellow: #d9af53;
-  --ob-white: #ffffff; 
+  --ob-white: #fffffe; 
   --lp-bg: #f2efe2;
 }
 
@@ -281,6 +283,14 @@ body .slick-next {
   z-index: 100;
   background: white;
   border-radius: 50%;
+}
+
+body .slick-prev:before {
+  content: "\25C0" !important;
+}
+
+body .slick-next:before {
+  content: "\25B6" !important;
 }
 
 body .slick-next {
