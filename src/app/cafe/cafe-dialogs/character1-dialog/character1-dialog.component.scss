@@ -1,0 +1,15 @@
+body {
+    .dialog-left {
+        .carousel-container::after {
+            bottom: unset;
+            top: 35px;
+        }
+    }
+    .dialog-right {
+        img {
+            transform: scale(1.5) rotateY(180deg);
+            right: 0;
+            top: 56px;
+        }
+    }
+}
