@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-preorder-dialog',
   templateUrl: './preorder-dialog.component.html',
   styleUrls: ['./preorder-dialog.component.scss'],
 })
+
 export class PreorderDialogComponent implements OnInit {
+ 
+  infoSlide: boolean = true;
+
   slides = [
     {
       quote: 'It always seems impossible until it\'s done.',
@@ -49,7 +54,15 @@ export class PreorderDialogComponent implements OnInit {
     console.log('beforeChange');
   }
 
-  constructor() {}
+  constructor(private _router: Router) {}
 
   ngOnInit(): void {}
+
+  closeInfo() {
+    this.infoSlide = !this.infoSlide;
+    setTimeout(() => {
+      this._router.navigate(['/cafe']);
+    }, 500);
+  }
 }
+

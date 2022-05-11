@@ -16,8 +16,8 @@ body {
 
 :root {
   --boxshadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-  --boxshadow-top: 0px 0px 2px 1px rgba(0,0,0,0.37);
-  --boxshadow-inset: 0px 3px 6px 3px rgba(0,0,0,0.37) inset;
+  --boxshadow-top: 0px 0px 2px 1px rgba(0, 0, 0, 0.37);
+  --boxshadow-inset: 0px 3px 6px 3px rgba(0, 0, 0, 0.37) inset;
   --white-opacity: rgba(255, 255, 255, 0.75);
   --black-opacity: rgba(0, 0, 0, 0.8);
   --sepia-opacity: rgba(112, 66, 20, 0.5);
@@ -28,8 +28,14 @@ body {
   --ob-blue: #28485b;
   --ob-darkblue: #153242;
   --ob-yellow: #d9af53;
-  --ob-white: #fffffe; 
+  --ob-white: #fffffe;
   --lp-bg: #f2efe2;
+  --accent-mint: #5aa18f;
+  --accent-purple: #8f73b0;
+  --accent-red: #a0332c;
+  --accent-orange: #de7b38;
+  --accent-yellow: #f8d447;
+  --slick-fade: #94a4ad;
 }
 
 button,
@@ -77,6 +83,9 @@ mat-dialog-container {
   transform: translate(-50%);
   margin: 0 auto;
   z-index: 1;
+  app-header {
+    display: none;
+  }
   .close-button {
     position: absolute;
     top: 46px;
@@ -84,6 +93,7 @@ mat-dialog-container {
     background: black;
     color: white;
     border: 6px solid white;
+    z-index: 99;
     mat-icon {
       position: relative;
       bottom: 7px;
@@ -91,7 +101,7 @@ mat-dialog-container {
   }
 
   body {
-    height: calc(100% - 69px);
+    height: calc(100% - 64px);
     background-color: var(--black-opacity);
     padding-top: 40px;
   }
@@ -102,15 +112,18 @@ mat-dialog-container {
   flex-direction: row;
   .dialog-left {
     min-width: 80%;
+    position: relative;
     .carousel-container {
       background: var(--speech-bubble);
       border-radius: 20px;
       width: 650px;
-      max-width: 60vw;
+      max-width: 42vw;
       height: fit-content;
-      max-height: 70%;
-      margin: 80px auto;
-      position: relative;
+      max-height: 72%;
+      position: absolute;
+      top: 40%;
+      left: 44%;
+      transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
       h2 {
@@ -133,10 +146,10 @@ mat-dialog-container {
           }
         }
         .slick-prev {
-          left: -67px !important;
+          left: -60px !important;
         }
         .slick-next {
-          right: -67px !important;
+          right: -62px !important;
         }
         .slick-next,
         .slick-prev {
@@ -206,13 +219,14 @@ mat-dialog-container {
   }
   .dialog-right {
     flex: 1;
+    position: relative;
     img {
-      position: relative;
-      right: 25%;
-      top: 25px;
-      transform: scale(1.5);
-      transform-origin: top;
-      pointer-events: none;
+      position: absolute;
+      height: 85vh;
+      width: auto;
+      right: -180px;
+      bottom: 0;
+      transform-origin: bottom;
     }
   }
 }
@@ -285,8 +299,6 @@ body .slick-next {
   border-radius: 50%;
 }
 
-
-
 body .slick-next {
   margin-right: 4px;
 }
@@ -301,9 +313,19 @@ body .slick-next {
   left: -5px;
 }
 
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
-  background: white !important;
+// .slick-prev:hover,
+// .slick-prev:focus,
+// .slick-next:hover,
+// .slick-next:focus {
+//   background: white !important;
+// }
+
+.author-blurbs {
+  .slide:not(.slick-active) {
+    .quote-text {
+      transition: .7s;
+      transition-delay: 0s !important;
+      background-color: var(--slick-fade);
+    }
+  }
 }

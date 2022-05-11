@@ -1,5 +1,5 @@
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -7,7 +7,8 @@ header {
   gap: 10px;
   width: 100%;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--ob-white);
   height: 40px;
 
   .preorder1 {

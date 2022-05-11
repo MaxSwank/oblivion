@@ -1,10 +1,15 @@
 .dialog-container {
   .character-dialog {
-    .dialog-right {
-      img {
-        right: 76px;
-        top: 110px;
+    .dialog-left {
+      .carousel-container {
+        bottom: 335px;
       }
     }
+
+    //     .dialog-right {
+    //       img {
+    //         right: 76px;
+    //       }
+    //     }
   }
 }

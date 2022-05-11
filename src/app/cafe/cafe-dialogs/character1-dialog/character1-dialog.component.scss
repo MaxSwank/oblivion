@@ -1,15 +1,33 @@
 body {
+    flex-direction: row-reverse !important;
     .dialog-left {
+        .carousel-container {
+            left: 56%;
+            .bubble-footer {
+                flex-direction: row-reverse !important;
+                .audiobook {
+                    .ab-img {
+                        button {
+                            right: -20px;
+                        }
+                    }
+                }
+            }
+        }
         .carousel-container::after {
             bottom: unset;
-            top: 35px;
+            top: 45px;
+            right: unset;
+            left: -98px;
+            border-top: 40px solid transparent;
+            border-right: 100px solid var(--speech-bubble);
+            border-bottom: 40px solid transparent;
+            border-left: unset;
         }
     }
-    .dialog-right {
-        img {
-            transform: scale(1.5) rotateY(180deg);
-            right: 0;
-            top: 56px;
-        }
-    }
+    // .dialog-right {
+    //     img {
+    //         right: 0;
+    //     }
+    // }
 }

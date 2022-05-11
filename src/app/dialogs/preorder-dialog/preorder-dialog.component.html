@@ -1,4 +1,4 @@
-<div class="preorder-container">
+<div class="preorder-container" [ngClass]="infoSlide ? 'containerA' : 'containerB'">
   <div class="preorder-left">
     <div class="box-header">
       <div class="book-title">
@@ -26,7 +26,7 @@
     <div class="email-form">
       <span class="alert-message">Join the Oblivion email newsletter:</span>
       <div class="signup-form">
-        <mat-icon>mail</mat-icon>
+        <img src="../../../assets/img/envelope.png" alt="" class="mail">
         <mat-form-field>
           <mat-label>&nbsp;&nbsp;email address</mat-label>
           <input matInput type="text" />
@@ -36,7 +36,7 @@
     </div>
     <div class="order-buttons">
       <button mat-raised-button class="preview">
-        <mat-icon>picture_as_pdf</mat-icon>
+        <img src="../../../assets/img/acrobat.png" alt="">
         <p>
           <span>Preview</span><br>
           PDF Download
@@ -56,7 +56,7 @@
       <img src="../../../assets/img/BookCover.jpg" alt="" />
     </a>
   </div>
-  <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
-    <mat-icon routerLink="../">close</mat-icon>
+  <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeInfo()">
+    <mat-icon>close</mat-icon>
   </button>
 </div>
