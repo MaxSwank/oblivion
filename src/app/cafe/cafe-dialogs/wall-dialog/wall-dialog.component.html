@@ -1,5 +1,5 @@
 <div class="dialog-container">
-<button mat-mini-fab color="disabled" aria-label="create" class="close-button">
+  <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
     <mat-icon routerLink="../">close</mat-icon>
   </button>
   <app-header></app-header>
@@ -11,6 +11,16 @@
         <img src="{{ author.path }}" alt="">
         <p>{{ author.name }}</p>
       </div>
+    </div>
+    <div class="author-wall-mobile">
+      <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
+        (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let author of authors" class="slide">
+          <img src="{{ author.path }}" alt="">
+        <p>{{ author.name }}</p>
+        </div>
+      </ngx-slick-carousel>
     </div>
   </body>
 

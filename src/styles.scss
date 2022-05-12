@@ -101,7 +101,7 @@ mat-dialog-container {
   }
 
   body {
-    height: calc(100% - 64px);
+    height: calc(100% - 56px);
     background-color: var(--black-opacity);
     padding-top: 40px;
   }
@@ -113,6 +113,7 @@ mat-dialog-container {
   .dialog-left {
     min-width: 80%;
     position: relative;
+    z-index: 1;
     .carousel-container {
       background: var(--speech-bubble);
       border-radius: 20px;
@@ -231,6 +232,134 @@ mat-dialog-container {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .dialog-container::after {
+    content: "";
+    width: 100%;
+    height: 62px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .dialog-container {
+    z-index: 2;
+    .close-button {
+      top: unset;
+      bottom: 12px;
+      left: 50%;
+      right: unset;
+      transform: translate(-50%);
+    }
+    .slick-next,
+    .slick-prev {
+      position: fixed;
+      top: unset;
+      bottom: -8px;
+      height: 40px;
+      width: 40px;
+    }
+    .slick-next::before,
+    .slick-prev::before {
+      font-size: 35px !important;
+      top: 2px !important;
+      left: 0 !important;
+    }
+    .slick-next {
+      margin-right: 0;
+      right: 7%;
+    }
+    .slick-prev {
+      left: 7%;
+    }
+    app-footer {
+      display: none;
+    }
+  }
+  .character-dialog {
+    .dialog-left {
+      z-index: 3;
+      .carousel-container::after {
+        // border-top: 10px solid transparent;
+        // border-left: 20px solid var(--speech-bubble);
+        // border-bottom: 10px solid transparent;
+        border: none !important;
+        position: absolute;
+        right: -18px;
+        bottom: 219px;
+      }
+      .carousel-container {
+        max-height: 98% !important;
+        top: 30px !important;
+        left: 20px !important;
+        transform: initial !important;
+        h2 {
+          font-size: 8vw;
+          margin: 24px 10px;
+        }
+        .dialog-carousel {
+          font-size: 5vw;
+          .slick-next,
+          .slick-prev {
+            position: fixed;
+            top: unset !important;
+            bottom: -8px;
+            height: 40px;
+            width: 40px;
+          }
+          .slick-next::before,
+          .slick-prev::before {
+            font-size: 35px !important;
+            top: 5px !important;
+            left: 2px !important;
+            transform: initial !important;
+          }
+          .slick-next {
+            margin-right: 0;
+            right: 7% !important;
+          }
+          .slick-prev {
+            left: 7% !important;
+          }
+        }
+        .bubble-footer {
+          p {
+            margin: 12px;
+          }
+        }
+      }
+    }
+    .dialog-right {
+      img {
+        left: -100% !important;
+        height: 75vh;
+      }
+    }
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .character-dialog {
+    .dialog-left {
+      min-width: unset;
+      flex: 2;
+      .carousel-container {
+        max-width: 56vw;
+        left: 40px;
+        transform: translate(0%, -50%);
+      }
+    }
+    .dialog-right {
+      flex: 1;
+      img {
+        right: unset;
+        left: -190px;
+      }
+    }
+  }
+}
+
 @media screen and (max-aspect-ratio: 69/50) {
   mat-dialog-container {
     min-width: initial !important;
@@ -313,17 +442,17 @@ body .slick-next {
   left: -5px;
 }
 
-// .slick-prev:hover,
-// .slick-prev:focus,
-// .slick-next:hover,
-// .slick-next:focus {
-//   background: white !important;
-// }
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background: rgba(rgb(255, 255, 255), 0.2) !important;
+}
 
 .author-blurbs {
   .slide:not(.slick-active) {
     .quote-text {
-      transition: .7s;
+      transition: 0.7s;
       transition-delay: 0s !important;
       background-color: var(--slick-fade);
     }

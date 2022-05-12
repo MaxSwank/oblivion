@@ -10,6 +10,9 @@
             font-size: 28px;
             font-weight: 700 !important;
         }
+        .author-wall-mobile {
+            display: none;
+        }
         .author-wall {
             display: flex;
             flex-direction: row;
@@ -33,6 +36,64 @@
                     margin: 0 8px;
                     width: 100%;
                     font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .dialog-container {
+        body {
+            .author-wall {
+                padding: 30px;
+                gap: 20px;
+                .author {
+                    width: calc(25% - 18px);
+                    img {
+                        height: calc(33vh - 140px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dialog-container {
+        body {
+            h1 {
+                display: none;
+            }
+            .author-wall {
+                display: none;
+            }
+            .author-wall-mobile {
+                display: initial;
+                position: relative;
+                ::ng-deep .dialog-carousel {
+                    .slide {
+                        padding: 11vh 6vw;
+                        img {
+                            width: calc(76vw - 16px);
+                            height: 54vh;
+                            object-fit: cover;
+                            object-position: top;
+                            border: 8px solid black;
+                            background: white;
+                        }
+
+                        p {
+                            background: white;
+                            line-height: 24px;
+                            text-align: center;
+                            margin: 15px 8px;
+                            padding: 10px 0;
+                            width: calc(100% - 16px);
+                            font-weight: 700;
+                            font-size: 4.5vw;
+                        }
+                    }
                 }
             }
         }

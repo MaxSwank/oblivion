@@ -48,6 +48,21 @@ export class WallDialogComponent implements OnInit {
       name: 'Yitzhak Lowy',
     }
   ]
+  
+  slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
+
+  slickInit(e: any) {
+    console.log('slick initialized');
+  }
+  breakpoint(e: any) {
+    console.log('breakpoint');
+  }
+  afterChange(e: any) {
+    console.log('afterChange');
+  }
+  beforeChange(e: any) {
+    console.log('beforeChange');
+  }
 
   constructor() { }
 

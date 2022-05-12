@@ -6,7 +6,7 @@ header {
   flex-direction: row;
   gap: 10px;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   // background-color: rgba(255, 255, 255, 0.8);
   background-color: var(--ob-white);
   height: 40px;
@@ -61,4 +61,13 @@ header {
         }
       }
     }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    h1 {
+      font-size: 4.7vw;
+      white-space: nowrap;
+    }
+  }
 }
