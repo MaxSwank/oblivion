@@ -41,7 +41,10 @@ const routes: Routes = [
         path: 'contact',
         component: ContactComponent
       },
-     
+      {
+        path: 'preorder',
+        component: PreorderDialogComponent
+      }
     ],
     data: {
       'title': 'Oblivion home',

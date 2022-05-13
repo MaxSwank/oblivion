@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-preorder-dialog',
@@ -54,14 +55,15 @@ export class PreorderDialogComponent implements OnInit {
     console.log('beforeChange');
   }
 
-  constructor(private _router: Router) {}
+  constructor(private _router: Router, private location: Location) {}
 
   ngOnInit(): void {}
 
   closeInfo() {
     this.infoSlide = !this.infoSlide;
     setTimeout(() => {
-      this._router.navigate(['/cafe']);
+      this.location.back();
+      // this._router.navigate(['../']);
     }, 500);
   }
 }
