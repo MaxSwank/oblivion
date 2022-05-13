@@ -459,6 +459,7 @@
       max-width: 420px;
       top: 0;
       left: 0;
+      -webkit-animation: book-cover 1.5s forwards;
       animation: book-cover 1.5s forwards;
       transform-origin: top left;
       img {
@@ -476,11 +477,11 @@
         margin: auto 0 0;
       }
       65% {
-        transform: scale(1);
+        -webkit-transform: scale(1);
         margin: 0;
       }
       100% {
-        transform: scale(15%);
+        -webkit-transform: scale(.15);
         margin: 10px;
       }
     }
@@ -494,7 +495,7 @@
         margin: 0;
       }
       100% {
-        transform: scale(15%);
+        transform: scale(.15);
         margin: 10px;
       }
     }
