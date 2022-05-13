@@ -438,7 +438,7 @@
           width: 165px;
           font-size: 16px;
           margin: 0 !important;
-          ::ng-deep .mat-button-wrapper{
+          ::ng-deep .mat-button-wrapper {
             font-size: 24px !important;
             span {
               font-size: 24px !important;
@@ -470,6 +470,21 @@
         width: 100% !important;
       }
     }
+
+    @-webkit-keyframes book-cover {
+      0% {
+        margin: auto 0 0;
+      }
+      65% {
+        transform: scale(1);
+        margin: 0;
+      }
+      100% {
+        transform: scale(15%);
+        margin: 10px;
+      }
+    }
+
     @keyframes book-cover {
       0% {
         margin: auto 0 0;
