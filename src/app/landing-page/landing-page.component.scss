@@ -102,15 +102,15 @@
     @-webkit-keyframes opac-in {
       0% {
         opacity: 0;
-        -webkit-transform: translate(-50%, -50%) scale(.7);
+        -webkit-transform: translate(-50%, -50%) scale(0.7);
       }
       40% {
         opacity: 0.05;
-        -webkit-transform: translate(-50%, -50%) scale(.7);
+        -webkit-transform: translate(-50%, -50%) scale(0.7);
       }
       75% {
         opacity: 0.1;
-        -webkit-transform: translate(-50%, -50%) scale(.8);
+        -webkit-transform: translate(-50%, -50%) scale(0.8);
         clip-path: ellipse(45% 50%);
       }
       100% {
@@ -122,15 +122,15 @@
     @keyframes opac-in {
       0% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(.7);
+        transform: translate(-50%, -50%) scale(0.7);
       }
       40% {
         opacity: 0.05;
-        transform: translate(-50%, -50%) scale(.7);
+        transform: translate(-50%, -50%) scale(0.7);
       }
       75% {
         opacity: 0.1;
-        transform: translate(-50%, -50%) scale(.8);
+        transform: translate(-50%, -50%) scale(0.8);
         clip-path: ellipse(45% 50%);
       }
       100% {
@@ -246,8 +246,8 @@
       position: fixed;
       left: 50%;
       top: 50%;
-      -webkit-transform: translate(-50%, -50%) scale(.7);
-      transform: translate(-50%, -50%) scale(.7);
+      -webkit-transform: translate(-50%, -50%) scale(0.7);
+      transform: translate(-50%, -50%) scale(0.7);
       transform-origin: center;
       pointer-events: none;
       background-image: url(../../assets/img/cafe-interior.jpg);
@@ -256,6 +256,9 @@
       background-position: center;
     }
 
+    .cafe-mobile {
+      display: none;
+    }
     .cafe-container {
       min-width: 900px;
       min-height: 930px;
@@ -542,8 +545,8 @@
           position: absolute;
           top: 0;
           left: 0;
-          -webkit-transform: scaleX(.9) scaleY(1.04);
-          transform: scaleX(.9) scaleY(1.04);
+          -webkit-transform: scaleX(0.9) scaleY(1.04);
+          transform: scaleX(0.9) scaleY(1.04);
           z-index: 2;
           pointer-events: none;
           background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 66%, rgb(84, 3, 3) 72%);
@@ -649,6 +652,9 @@
       opacity: 1;
     }
 
+    .footer-mobile {
+      display: none;
+    }
     .footer-content {
       position: fixed;
       bottom: 10px;
@@ -671,7 +677,7 @@
         color: var(--ob-white);
 
         h1 {
-          margin: 20px 0 0;
+          padding: 20px 0 0;
           font-size: 36px;
         }
         h2 {
@@ -773,42 +779,322 @@
   .lp-wrapper {
     .lp-container {
       width: 100vw;
+      .bg-cafe {
+        display: none;
+      }
       .cafe-container {
-        top: 67%;
-        -webkit-transform: translate(-50%, -50%) scale(0.6);
-        transform: translate(-50%, -50%) scale(0.6);
-        .butler-container {
-          top: -40px;
-          left: 16%;
-          .butler-text {
-            left: initial;
-            right: -60%;
-            top: -260px;
-          }
-          .butler-text::after {
-            right: initial;
-            left: 25px;
-          }
+        display: none;
+      }
 
-          .butler-image {
-            max-width: initial;
-            width: 230px;
-            .podium {
-              top: 51%;
+      .cafe-mobile {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: calc(100vh - 24px);
+        width: 100vw;
+        .bg-mobile {
+          flex: 1;
+          background-image: url(../../assets/img/Cafe-color-photo.jpg);
+          background-size: cover;
+          background-position: 50%;
+        }
+        .butler-mobile {
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: calc(100vh - 266px);
+          position: absolute;
+          z-index: 2;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          .butler-left {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            .butler-text-mobile {
+              flex: 1;
+              position: relative;
+              .mobile-text {
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 10px 15px;
+                border-radius: 12px;
+                line-height: 1;
+                height: fit-content;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                width: calc(100% - 40px);
+
+                h4 {
+                  font-size: 6vw;
+                  line-height: 1;
+                }
+                p {
+                  font-size: 4vw;
+                  margin: 0 10px 12px;
+                  opacity: 0.7;
+                }
+              }
+
+              .mobile-text::after {
+                content: "";
+                height: 0;
+                width: 0;
+                position: absolute;
+                bottom: 0;
+                right: -14px;
+                border-top: 24px solid transparent;
+                border-bottom: 0px solid transparent;
+                border-left: 24px solid black;
+              }
+            }
+            .enter-mobile {
+              button {
+                padding: 4px 10px !important;
+                font-size: 5vw !important;
+                margin: 5vh 15vw 10vh 3vw;
+              }
+            }
+          }
+          .butler-right {
+            position: relative;
+            height: 100%;
+            flex: 2;
+            img {
+              position: absolute;
+              bottom: -15%;
+              left: -40%;
+              transform: rotateY(180deg);
+              height: 50vh;
+              width: auto;
+            }
+          }
+        }
+        .footer-mobile {
+          background: var(--ob-blue);
+          display: flex;
+          flex-direction: column;
+          box-shadow: var(--boxshadow);
+          z-index: 2;
+          .footer-top {
+            padding: 0 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            .footer-image {
+              position: relative;
+              img {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                width: 34vw;
+                height: auto;
+              }
+            }
+            .book-info-mobile {
+              flex: 1;
+              text-align: right;
+              color: var(--ob-white);
+              h1 {
+                padding: 20px 0 0;
+                font-size: 36px;
+              }
+              h2 {
+                margin: 0;
+              }
+              hr {
+                margin: 8px 5px 14px 50%;
+              }
+              h3 {
+                margin: 0 0 16px 0;
+                line-height: 20px;
+              }
+              span {
+                color: rgba(255, 255, 255, 0.4);
+                strong {
+                  color: var(--ob-white);
+                }
+              }
+            }
+          }
+          .footer-bottom {
+            width: 100vw;
+            height: fit-content;
+            padding: 7px 0;
+            background-color: var(--ob-darkblue);
+            border-bottom-left-radius: 5px;
+            text-align: center;
+            margin-bottom: 12px;
+            button {
+              width: 80%;
+              background-color: var(--ob-yellow);
+              font-weight: bold;
+              color: var(--ob-darkblue);
+              font-size: 16px;
             }
           }
         }
       }
     }
+    .enter {
+      display: none;
+    }
     .footer-content {
-      -webkit-transform: scale(0.7);
-      transform: scale(0.7);
-      transform-origin: bottom right;
-      right: 5px !important;
-      .book-info {
-        top: 0 !important;
-        transform: unset !important;
+      display: none;
+    }
+  }
+  // cafe smoke animation
+  .containerA {
+    .cafe-mobile {
+      .bg-mobile::before {
+        content: "";
+        height: 100%;
+        width: calc(100% + 200px);
+        position: absolute;
+        top: 0;
+        left: -200px;
+        background-image: url(../../assets/img/Smoke-1b.png);
+        background-repeat: repeat;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+        animation: smoke1 17s infinite alternate ease-in-out;
+        pointer-events: none;
+      }
+      .bg-mobile::after {
+        content: "";
+        height: 100%;
+        width: calc(100% + 200px);
+        position: absolute;
+        top: -50px;
+        right: -200px;
+        background-image: url(../../assets/img/Smoke-2b.png);
+        background-repeat: repeat;
+        z-index: 2;
+        mix-blend-mode: hard-light;
+        animation: smoke2 13s infinite alternate ease-in-out;
+        pointer-events: none;
+      }
+    }
+
+    @keyframes smoke1 {
+      0% {
+        left: -200px;
+        opacity: 0.6;
+        top: 0;
+      }
+      25% {
+        top: 0;
+        opacity: 0.3;
+      }
+      50% {
+        top: -25px;
+        opacity: 0.5;
+      }
+      75% {
+        top: -25px;
+        opacity: 0.2;
+      }
+      100% {
+        left: 0;
+        top: -50px;
+        opacity: 0.3;
+      }
+    }
+
+    @keyframes smoke2 {
+      0% {
+        right: -200px;
+        top: 0;
+        opacity: 0.2;
+      }
+      25% {
+        top: -15px;
+        opacity: 0.5;
+      }
+      50% {
+        top: -25px;
+        opacity: 0.3;
+      }
+      75% {
+        top: -45px;
+        opacity: 0.6;
+      }
+      100% {
+        right: 0;
+        top: -50px;
+        opacity: 0.4;
       }
     }
   }
 }
+
+@media screen and (orientation: portrait) and (max-height: 600px) {
+  .lp-wrapper {
+    .lp-container {
+      .cafe-mobile {
+        .butler-mobile {
+          .butler-left {
+            .butler-text-mobile {
+              .mobile-text::after {
+                bottom: 15%;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 15px solid black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// mobile landing page test poc
+// @media screen and (orientation: portrait) and (max-width: 600px) {
+//   .lp-wrapper {
+//     .lp-container {
+//       width: 100vw;
+//       .cafe-container {
+//         top: 67%;
+//         -webkit-transform: translate(-50%, -50%) scale(0.6);
+//         transform: translate(-50%, -50%) scale(0.6);
+//         .butler-container {
+//           top: -40px;
+//           left: 16%;
+//           .butler-text {
+//             left: initial;
+//             right: -60%;
+//             top: -260px;
+//           }
+//           .butler-text::after {
+//             right: initial;
+//             left: 25px;
+//           }
+
+//           .butler-image {
+//             max-width: initial;
+//             width: 230px;
+//             .podium {
+//               top: 51%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//     .footer-content {
+//       -webkit-transform: scale(0.7);
+//       transform: scale(0.7);
+//       transform-origin: bottom right;
+//       right: 5px !important;
+//       .book-info {
+//         top: 0 !important;
+//         transform: unset !important;
+//       }
+//     }
+//   }
+// }
