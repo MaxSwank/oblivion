@@ -95,26 +95,47 @@
     max-width: initial !important;
     width: initial !important;
     .bg-cafe {
+      -webkit-animation: opac-in 1.5s forwards;
       animation: opac-in 1.5s forwards;
       z-index: 1;
     }
-    @keyframes opac-in {
+    @-webkit-keyframes opac-in {
       0% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(70%);
+        -webkit-transform: translate(-50%, -50%) scale(.7);
       }
       40% {
         opacity: 0.05;
-        transform: translate(-50%, -50%) scale(70%);
+        -webkit-transform: translate(-50%, -50%) scale(.7);
       }
       75% {
         opacity: 0.1;
-        transform: translate(-50%, -50%) scale(80%);
+        -webkit-transform: translate(-50%, -50%) scale(.8);
         clip-path: ellipse(45% 50%);
       }
       100% {
         opacity: 0.5;
-        transform: translate(-50%, -50%) scale(100%);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        clip-path: ellipse(90% 90%);
+      }
+    }
+    @keyframes opac-in {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.7);
+      }
+      40% {
+        opacity: 0.05;
+        transform: translate(-50%, -50%) scale(.7);
+      }
+      75% {
+        opacity: 0.1;
+        transform: translate(-50%, -50%) scale(.8);
+        clip-path: ellipse(45% 50%);
+      }
+      100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
         clip-path: ellipse(90% 90%);
       }
     }
@@ -225,7 +246,8 @@
       position: fixed;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%) scale(70%);
+      -webkit-transform: translate(-50%, -50%) scale(.7);
+      transform: translate(-50%, -50%) scale(.7);
       transform-origin: center;
       pointer-events: none;
       background-image: url(../../assets/img/cafe-interior.jpg);
@@ -264,6 +286,7 @@
 
         .cafe-image {
           img {
+            -webkit-transform: translate(-20px) scale(1.02);
             transform: translate(-20px) scale(1.02);
             transition: 1s ease-in-out;
           }
@@ -277,6 +300,7 @@
 
       .panel-left:hover ~ .text-container {
         img {
+          -webkit-transform: rotateY(10deg) scale(1.02);
           transform: rotateY(10deg) scale(1.02);
           filter: drop-shadow(4px 0px 4px var(--lp-shadow-color));
           transition: 1s ease-in-out;
@@ -321,6 +345,7 @@
 
         .cafe-image {
           img {
+            -webkit-transform: translate(20px) scale(1.02);
             transform: translate(20px) scale(1.02);
             transition: 1s ease-in-out;
           }
@@ -334,6 +359,7 @@
 
       .panel-right:hover ~ .text-container {
         img {
+          -webkit-transform: rotateY(-10deg) scale(1.02);
           transform: rotateY(-10deg) scale(1.02);
           filter: drop-shadow(-4px 0px 4px var(--lp-shadow-color));
           transition: 1s ease-in-out;
@@ -374,6 +400,7 @@
       .panel-center:hover ~ .cafe-clip {
         .cafe-image {
           img {
+            -webkit-transform: scale(1.03);
             transform: scale(1.03);
             transition: 1s ease-in-out;
           }
@@ -382,6 +409,7 @@
 
       .panel-center:hover ~ .text-container {
         img {
+          -webkit-transform: scale(1.03);
           transform: scale(1.03);
           transition: 1s ease-in-out;
         }
@@ -390,6 +418,7 @@
       .panel-center:hover ~ .butler-container {
         .butler-image {
           .butler {
+            -webkit-transform: scale(1.01);
             transform: scale(1.01);
             transition: 1s ease-in-out;
           }
@@ -513,7 +542,8 @@
           position: absolute;
           top: 0;
           left: 0;
-          transform: scaleX(90%) scaleY(104%);
+          -webkit-transform: scaleX(.9) scaleY(1.04);
+          transform: scaleX(.9) scaleY(1.04);
           z-index: 2;
           pointer-events: none;
           background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 66%, rgb(84, 3, 3) 72%);
@@ -711,6 +741,7 @@
       width: 100vw;
       .cafe-container {
         top: 63%;
+        -webkit-transform: translate(-50%, -50%) scale(0.8);
         transform: translate(-50%, -50%) scale(0.8);
         .butler-container {
           top: 0;
@@ -744,6 +775,7 @@
       width: 100vw;
       .cafe-container {
         top: 67%;
+        -webkit-transform: translate(-50%, -50%) scale(0.6);
         transform: translate(-50%, -50%) scale(0.6);
         .butler-container {
           top: -40px;
@@ -769,6 +801,7 @@
       }
     }
     .footer-content {
+      -webkit-transform: scale(0.7);
       transform: scale(0.7);
       transform-origin: bottom right;
       right: 5px !important;
