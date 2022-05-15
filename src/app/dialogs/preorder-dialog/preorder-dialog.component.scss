@@ -33,8 +33,9 @@
 .preorder-container::before {
   content: "";
   height: 100vh;
+  // width: calc(99vh * 1.3862067) !important;
   width: 100vw;
-  background: rgba(rgb(255, 255, 255), 0.9);
+  background: var(--bg-opacity);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -89,10 +90,12 @@
   position: relative;
   // width: clamp(770px, 50vw, 900px);
   height: 80vh;
+  min-height: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
   .preorder-left {
     filter: drop-shadow(2px 4px 6px black);
     background-color: var(--ob-blue);
@@ -126,6 +129,7 @@
           font-size: 20px;
           font-style: italic;
           margin: 0;
+          letter-spacing: 1px;
         }
         hr {
           margin: 8px 34% 14px;
@@ -140,7 +144,7 @@
           h3 {
             margin: 0 0 16px 0;
             line-height: 20px;
-            color: var(--ob-white);
+            color: var(--ob-yellow);
           }
         }
       }
@@ -150,7 +154,7 @@
       flex: 1;
       ::ng-deep .carousel {
         border-radius: 10px;
-        height: 100%;
+        height: calc(100% - 26px);
         // width: calc(100% - 90px);
         width: 100%;
         .slick-list {
@@ -245,6 +249,13 @@
           content: "\25B6" !important;
         }
       }
+      button {
+        color: var(--ob-yellow);
+        transform: translateY(4px);
+        mat-icon {
+          transform: scaleX(1.5) translate(-5px, -1px);
+        }
+      }
     }
     .email-form {
       background-color: var(--ob-darkblue);
@@ -318,15 +329,15 @@
       button {
         color: #0d232f;
         flex: 1;
-        width: 165px;
         height: 58px;
-        padding: 0 4px;
         font-weight: 700;
+        width: 180px;
       }
       .preview {
         font-size: 20px;
         margin: 0 auto;
         background: linear-gradient(to bottom, #ccd4d7, #77878e);
+        width: 180px;
         ::ng-deep .mat-button-wrapper {
           display: flex;
           flex-direction: row;
@@ -348,10 +359,13 @@
         }
       }
       .book-order {
-        font-size: 26px;
         flex: 1;
-        text-align: center;
-        background: linear-gradient(to bottom, #f9e791, #efc137);
+        padding: 0 2px 0 30px !important;
+        ::ng-deep .mat-button-wrapper::before {
+          height: 56px !important;
+          top: -5px !important;
+          left: -44px !important;
+        }
       }
     }
     .audiobook {
@@ -381,23 +395,22 @@
         width: auto;
         transform-origin: center left;
         box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.75);
-        border-radius: 10px;
+        // border-radius: 10px;
       }
     }
   }
   .close-button {
     position: absolute;
-    top: -20px;
-    right: -30px;
-    color: black;
-    background: transparent;
+    top: 0px;
+    right: -50px;
+    color: var(--ob-white);
+    background: var(--black-opacity);
+    border-radius: 50%;
     box-shadow: none !important;
     animation: appear 1s forwards;
     animation-delay: 0.5s;
     opacity: 0;
     mat-icon {
-      position: relative;
-      bottom: 7px;
       font-weight: 900;
     }
   }
@@ -481,7 +494,7 @@
         margin: 0;
       }
       100% {
-        -webkit-transform: scale(.15);
+        -webkit-transform: scale(0.15);
         margin: 10px;
       }
     }
@@ -495,14 +508,14 @@
         margin: 0;
       }
       100% {
-        transform: scale(.15);
+        transform: scale(0.15);
         margin: 10px;
       }
     }
     .close-button {
       top: 8px;
       right: 0;
-      color: white;
+      color: var(--ob-white);
       animation: unset;
       opacity: 1;
     }

@@ -1,9 +1,22 @@
-// .dialog-container {
-//   .character-dialog {
-//     .dialog-right {
-//       img {
-//         right: 0;
-//       }
-//     }
-//   }
-// }
+body {
+    .dialog-left {
+        .carousel-container {
+            h2 {
+                color: var(--accent-purple);
+            }
+        }
+    }
+    ::ng-deep .slick-arrow {
+        border-radius: 0;
+        background-color: var(--accent-purple);
+        &::before {
+            color: var(--accent-purple);
+        }
+        &:focus {
+            background-color: var(--accent-purple) !important;
+        }
+        &:hover {
+            background-color: var(--accent-purple) !important;
+        }
+    }
+}

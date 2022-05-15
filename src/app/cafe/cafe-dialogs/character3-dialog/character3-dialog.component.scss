@@ -1,10 +1,26 @@
-// .dialog-container {
-//     .character-dialog {
-//       .dialog-right {
-//         img {
-//             right: 16px !important;
-//         }
-//       }
-//     }
-//   }
-  
+body {
+    .dialog-left{
+        .carousel-container::after {
+            filter: opacity(0.4) drop-shadow(0 0 0 var(--accent-yellow)) saturate(250%) brightness(90%);
+          }
+        .carousel-container {
+            background-color: var(--bg-accent-yellow);
+            h2 {
+                color: var(--accent-yellow);
+            }
+        }
+    }
+    ::ng-deep .slick-arrow {
+        border-radius: 0;
+        background-color: var(--accent-yellow);
+        &::before {
+            color: var(--accent-yellow);
+        }
+        &:focus {
+            background-color: var(--accent-yellow) !important;
+        }
+        &:hover {
+            background-color: var(--accent-yellow) !important;
+        }
+    }
+}

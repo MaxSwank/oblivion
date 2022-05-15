@@ -250,7 +250,7 @@
       transform: translate(-50%, -50%) scale(0.7);
       transform-origin: center;
       pointer-events: none;
-      background-image: url(../../assets/img/cafe-interior.jpg);
+      background-image: url(../../assets/img/cafe-art.jpg);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -584,7 +584,7 @@
         top: -228px;
         left: -65px;
         background-color: black;
-        color: white;
+        color: var(--ob-white);
         text-align: center;
         height: fit-content;
         width: 240px;
@@ -636,16 +636,16 @@
 
     .enter {
       background: rgb(0, 0, 0);
-      color: rgb(117, 38, 38);
+      color: var(--ob-white);
       opacity: 0.7;
-      padding: 4px 28px;
+      padding: 6px 28px 2px;
+      letter-spacing: 2px;
       font-size: 20px;
       border-radius: 12px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-shadow: 0 0 1px white;
     }
 
     .enter:hover {
@@ -678,10 +678,12 @@
 
         h1 {
           padding: 20px 0 0;
-          font-size: 36px;
+          font-size: 40px;
+          margin: 6px 0 0 0;
         }
         h2 {
           margin: 0;
+          letter-spacing: 2px;
         }
         hr {
           margin: 8px 105px 14px;
@@ -700,14 +702,15 @@
           width: 100%;
           height: fit-content;
           padding: 7px 0;
-          background-color: var(--ob-darkblue);
           border-bottom-left-radius: 5px;
           button {
-            width: 80%;
+            width: 90%;
             background-color: var(--ob-yellow);
             font-weight: bold;
-            color: var(--ob-darkblue);
+            color: var(--ob-blue);
             font-size: 16px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 0px var(--ob-blue);
           }
         }
       }
@@ -716,19 +719,20 @@
         width: auto;
         object-fit: contain;
         filter: drop-shadow(2px 3px 6px black);
+        transform: rotate(4deg) translate(-6px);
       }
     }
   }
 
-  ::ng-deep footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    .f-right {
-      display: none;
-    }
-  }
+  // ::ng-deep footer {
+  //   width: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   .f-right {
+  //     display: none;
+  //   }
+  // }
 }
 
 @media screen and (orientation: landscape) and (min-height: 950px) {
@@ -817,7 +821,7 @@
               position: relative;
               .mobile-text {
                 background-color: black;
-                color: white;
+                color: var(--ob-white);
                 text-align: center;
                 padding: 10px 15px;
                 border-radius: 12px;
@@ -857,6 +861,10 @@
                 padding: 4px 10px !important;
                 font-size: 5vw !important;
                 margin: 5vh 15vw 10vh 3vw;
+                background: rgb(0, 0, 0);
+                color: var(--ob-white);
+                opacity: 0.8;
+                letter-spacing: 2px;
               }
             }
           }

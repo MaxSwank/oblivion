@@ -116,7 +116,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'author-quotes',
+    path: 'reviews',
     component: AuthorQuotesComponent
   },
   {

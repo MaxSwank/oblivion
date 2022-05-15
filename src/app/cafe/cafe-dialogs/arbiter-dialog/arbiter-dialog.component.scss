@@ -1,26 +1,36 @@
 .dialog-container {
-    .character-dialog {
-      flex-direction: row-reverse !important;
-      .dialog-left {
-        .carousel-container::after {
-          right: initial !important;
-          left: -100px;
-          border-left: initial !important;
-          border-right: 100px solid var(--speech-bubble);
-        }
-        .carousel-container {
-          .bubble-footer {
-            flex-direction: row-reverse !important;
-          }
-        }
+  .character-dialog {
+    flex-direction: row-reverse !important;
+    .dialog-left {
+      .carousel-container {
+        h2 {
+          color: var(--accent-purple);
       }
-      .dialog-right {
-        img {
-            right: -28% !important;
-            top: 208px !important;
-            transform: scale(9.5) !important;
-            filter: drop-shadow(0 0 2px white);
-        }
+      }
+      .bubble-footer {
+        flex-direction: row-reverse !important;
+      }
+    }
+    .dialog-right {
+      img {
+        right: -28% !important;
+        top: 208px !important;
+        transform: scale(9.5) !important;
+        filter: drop-shadow(0 0 2px white);
       }
     }
   }
+  ::ng-deep .slick-arrow {
+    border-radius: 0;
+    background-color: var(--accent-purple);
+    &::before {
+      color: var(--accent-purple);
+    }
+    &:focus {
+      background-color: var(--accent-purple) !important;
+    }
+    &:hover {
+      background-color: var(--accent-purple) !important;
+    }
+  }
+}

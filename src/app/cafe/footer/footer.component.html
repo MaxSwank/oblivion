@@ -1,17 +1,18 @@
 <footer>
   <div class="f-left">
     <a routerLink="../contact" class="contact">
-      <button mat-button aria-label="contact-button">CONTACT
+      <button mat-button aria-label="contact-button">
+        <mat-icon>mail</mat-icon>
+        Contact
       </button>
     </a>
   </div>
   <div class="f-right" matTooltip="Info about Art Deco Imperial Hotel" matTooltipPosition="above"
     aria-label="Find more information about this hotel">
-    <mat-icon id="camera">photo_camera</mat-icon>
-    <span>Art Deco Imperial Hotel, Prague c. 1910
-    </span>
-    <button mat-icon-button aria-label="about button">
-      <mat-icon id="info">help</mat-icon>
+    <!-- <mat-icon id="camera">photo_camera</mat-icon> -->
+    <button mat-button aria-label="about button">
+      <mat-icon id="info">info</mat-icon>
+      <span id="artdeco">Art Deco Imperial Hotel, Prague c. 1910</span>
     </button>
   </div>
 </footer>

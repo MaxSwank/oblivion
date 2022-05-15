@@ -1,13 +1,8 @@
 <div class="dialog-container">
-  <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
-    <mat-icon routerLink="../">close</mat-icon>
-  </button>
-  <app-header></app-header>
-
-  <body class="character-dialog">
+    <body class="character-dialog">
     <div class="dialog-left">
       <div class="carousel-container">
-        <h2>Character 2</h2>
+        <h2>MAUDY GAMMITT</h2>
         <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
           (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
           (beforeChange)="beforeChange($event)">
@@ -18,7 +13,11 @@
               <p class="slide-author">- {{ slide.author }}</p> -->
             </div>
           </div>
-        </ngx-slick-carousel>
+        </ngx-slick-carousel>  
+        <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
+          <mat-icon routerLink="../">close</mat-icon>
+        </button>
+      </div>
         <div class="bubble-footer">
           <div class="audiobook">
             <div class="ab-img">
@@ -29,14 +28,12 @@
             </div>
           </div>
           <p>
-            Talk to Café patrons to unravel this mystery and you could win a <strong>free copy of the Oblivion
-              audiobook!</strong>
+            Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
           </p>
-        </div>
-      </div>
+        </div>    
     </div>
     <div class="dialog-right">
-      <img src="../../../../assets/img/else-lasker-schuller.png" alt="" />
+      <img src="../../../../assets/img/maudy-gammitt.png" alt="" />
     </div>
   </body>
 </div>

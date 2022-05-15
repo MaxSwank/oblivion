@@ -15,7 +15,7 @@
     height: fit-content;
     height: calc(84vh - 40px);
     background-color: var(--black-opacity);
-    color: white;
+    color: var(--ob-white);
     text-align: center;
     font-size: 18px;
     padding: 10% 10% 6%;
@@ -32,7 +32,7 @@
       p {
         padding: 35px 30px 20px;
         border-radius: 50%;
-        color: white;
+        color: var(--ob-white);
         background-color: var(--black-opacity);
         border: 15px solid transparent;
         position: relative;
@@ -104,7 +104,7 @@
     button {
         width: 100px;
         border: 1px solid white;
-        color: white;
+        color: var(--ob-white);
         margin: 0 auto;
     }
   }

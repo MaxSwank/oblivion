@@ -30,7 +30,7 @@
                     width: 100%;
                     ::ng-deep .mat-form-field-flex {
                         box-shadow: var(--boxshadow);
-                        background-color: white;
+                        background-color: var(--ob-white);
                     }
                     input {
                         margin: 0 12px;

@@ -17,6 +17,7 @@ body {
 :root {
   --boxshadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
   --boxshadow-top: 0px 0px 2px 1px rgba(0, 0, 0, 0.37);
+  --boxshadow-big: 0px 5px 32px 1px rgba(0, 0, 0, 0.75);
   --boxshadow-inset: 0px 3px 6px 3px rgba(0, 0, 0, 0.37) inset;
   --white-opacity: rgba(255, 255, 255, 0.75);
   --black-opacity: rgba(0, 0, 0, 0.8);
@@ -30,12 +31,19 @@ body {
   --ob-yellow: #d9af53;
   --ob-white: #fffffe;
   --lp-bg: #f2efe2;
+  --bg-opacity: rgba(242, 239, 226, 0.9);
   --accent-mint: #5aa18f;
+  --bg-accent-mint: #e8f0ee;
   --accent-purple: #8f73b0;
+  --bg-accent-purple: #ebe4f3;
   --accent-red: #a0332c;
+  --bg-accent-red: #fde4e2;
   --accent-orange: #de7b38;
+  --bg-accent-orange: #f7e0d1;
   --accent-yellow: #f8d447;
+  --bg-accent-yellow: #f7f1d9;
   --slick-fade: #94a4ad;
+  --footer-bg: #3e362d;
 }
 
 button,
@@ -52,6 +60,29 @@ i,
 b,
 em {
   font-family: p22-stickley-pro-text, serif !important;
+}
+
+.preorder-button {
+  background: linear-gradient(to bottom, #fff0a6, #e3b62d);
+  font-size: 26px;
+  padding-left: 46px !important;
+  overflow: hidden !important;
+  .mat-button-wrapper {
+    position: relative;
+    top: 2px;
+    font-weight: 700;
+  }
+  .mat-button-wrapper::before {
+    content: "";
+    height: 40px;
+    top: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    position: absolute;
+    left: -38px;
+    background-image: url(../src/assets/img/gaslamp.png);
+  }
 }
 
 mat-dialog-container {
@@ -83,7 +114,7 @@ mat-dialog-container {
   left: 50%;
   transform: translate(-50%);
   margin: 0 auto;
-  z-index: 1;
+  z-index: 3;
   app-header {
     display: none;
   }
@@ -92,7 +123,7 @@ mat-dialog-container {
     top: 46px;
     right: 8px;
     background: black;
-    color: white;
+    color: var(--ob-white);
     border: 6px solid white;
     z-index: 99;
     mat-icon {
@@ -103,7 +134,7 @@ mat-dialog-container {
 
   body {
     height: calc(100% - 64px);
-    background-color: var(--black-opacity);
+    background-color: var(--bg-opacity);
     padding-top: 40px;
   }
 }
@@ -115,23 +146,46 @@ mat-dialog-container {
     min-width: 80%;
     position: relative;
     z-index: 1;
+    .carousel-container::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(../../oblivion/src/assets/img/border.png);
+      background-size: cover;
+      pointer-events: none;
+    }
     .carousel-container {
-      background: var(--speech-bubble);
       border-radius: 20px;
-      width: 650px;
-      max-width: 42vw;
-      height: fit-content;
-      max-height: 72%;
+      height: 65vh;
+      width: 65vh;
       position: absolute;
       top: 40%;
       left: 44%;
       transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
+      .close-button {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        background: black;
+        border-color: transparent;
+        color: var(--ob-white);
+        z-index: 99;
+        mat-icon {
+          position: relative;
+          bottom: 7px;
+        }
+      }
+
       h2 {
         color: var(--gray-text);
         font-size: 32px;
-        margin: 24px 40px;
+        margin: 6.2vh 132px;
+        text-align: center;
       }
       .dialog-carousel {
         z-index: 999;
@@ -148,77 +202,103 @@ mat-dialog-container {
           }
         }
         .slick-prev {
-          left: -60px !important;
+          left: -16% !important;
         }
         .slick-next {
-          right: -62px !important;
+          right: -16.5% !important;
         }
-        .slick-next,
-        .slick-prev {
-          top: 100px !important;
-          height: 50px;
-          width: 50px;
-          &::before {
-            top: initial;
-            position: absolute;
-            top: 5px;
-            left: 50%;
-            transform: translate(-50%);
+        .slick-arrow {
+          top: 10px !important;
+          height: 40px;
+          width: 40px;
+          border-radius: 5px;
+          &:hover {
+            opacity: 0.7;
+            background-color: inherit;
           }
         }
-      }
-      .bubble-footer {
-        background: var(--bg-blue);
-        height: fit-content;
-        border-radius: 20px;
-        color: rgb(0, 0, 103);
-        display: flex;
-        flex-direction: row;
-        z-index: 1;
-        .audiobook {
-          height: fit-content;
-          width: fit-content;
-          object-fit: cover;
-          .ab-img {
-            position: relative;
-            img {
-              -webkit-transform: scale(1.4);
-              transform: scale(1.4);
-              height: 80px;
-              width: auto;
-              object-fit: cover;
-              transform-origin: center;
-              box-shadow: var(--boxshadow);
-            }
-            button {
-              position: absolute;
-              top: -30px;
-              right: -30px;
-              box-shadow: var(--boxshadow);
-              background-color: black;
-              color: white;
-              -webkit-transform: scale(1.3);
-              transform: scale(1.3);
-            }
-          }
+        .slick-next::before {
+          content: "\02c3";
         }
-        p {
-          flex: 1;
-          margin: 24px 40px 24px;
-          font-size: 16px;
+        .slick-prev::before {
+          content: "\02c2";
+        }
+        .slick-arrow::before {
+          color: white !important;
+          transform: translate(-50%) scaleX(0.7);
+          -webkit-text-stroke: 2px var(--ob-white);
+          top: initial;
+          position: absolute;
+          top: -7px;
+          left: 50%;
         }
       }
     }
-    .carousel-container::after {
+    .bubble-footer::before {
       content: "";
-      width: 0;
-      height: 0;
-      border-top: 40px solid transparent;
-      border-left: 100px solid var(--speech-bubble);
-      border-bottom: 40px solid transparent;
+      height: 130px;
+      width: 130px;
       position: absolute;
-      right: -98px;
-      bottom: 100px;
+      left: -102px;
+      top: 58%;
+      transform: translateY(-50%);
+      background-image: url(../../oblivion/src/assets/img/audiobook.png);
+      background-size: cover;
+      background-position: center;
+    }
+    .bubble-footer {
+      position: absolute;
+      bottom: 30px;
+      left: 44%;
+      transform: translate(-50%);
+      background: var(--ob-blue);
+      height: fit-content;
+      width: 520px;
+      max-width: 65vh;
+      display: flex;
+      flex-direction: row;
+      z-index: 1;
+      .audiobook {
+        height: fit-content;
+        width: fit-content;
+        object-fit: cover;
+        display: none;
+        .ab-img {
+          position: relative;
+          img {
+            -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+            height: 80px;
+            width: auto;
+            object-fit: cover;
+            transform-origin: center;
+            box-shadow: var(--boxshadow);
+          }
+          button {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            box-shadow: var(--boxshadow);
+            background-color: black;
+            color: var(--ob-white);
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+          }
+        }
+      }
+      p {
+        flex: 1;
+        margin: 8px 8px 8px 24px;
+        font-size: 22px;
+        font-family: "Open Sans", sans-serif !important;
+        color: rgba(255, 255, 255, 0.75);
+        letter-spacing: 1px;
+        line-height: 1.1;
+        a {
+          color: var(--ob-yellow);
+          font-weight: 700;
+        }
+      }
     }
   }
   .dialog-right {
@@ -228,9 +308,11 @@ mat-dialog-container {
       position: absolute;
       height: 85vh;
       width: auto;
-      right: -180px;
+      right: -27%;
       bottom: 0;
       transform-origin: bottom;
+      z-index: 1;
+      pointer-events: none;
     }
   }
 }
@@ -283,15 +365,7 @@ mat-dialog-container {
   .character-dialog {
     .dialog-left {
       z-index: 3;
-      .carousel-container::after {
-        // border-top: 10px solid transparent;
-        // border-left: 20px solid var(--speech-bubble);
-        // border-bottom: 10px solid transparent;
-        border: none !important;
-        position: absolute;
-        right: -18px;
-        bottom: 219px;
-      }
+
       .carousel-container {
         max-height: 98% !important;
         top: 30px !important;
@@ -326,10 +400,10 @@ mat-dialog-container {
             left: 7% !important;
           }
         }
-        .bubble-footer {
-          p {
-            margin: 12px;
-          }
+      }
+      .bubble-footer {
+        p {
+          margin: 12px;
         }
       }
     }
@@ -418,7 +492,7 @@ button:hover {
 
 // slick carousel styles
 .slick-slider {
-  width: 88%;
+  width: 75%;
   margin: auto;
 }
 
@@ -427,7 +501,7 @@ body .slick-next {
   height: 35px;
   width: 35px;
   z-index: 100;
-  background: white;
+  background: var(--ob-white);
   border-radius: 50%;
 }
 
@@ -445,10 +519,8 @@ body .slick-next {
   left: -5px;
 }
 
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
+.slick-arrow:hover,
+.slick-arrow:focus {
   background: rgba(rgb(255, 255, 255), 0.2) !important;
 }
 

@@ -1,35 +1,46 @@
 body {
     flex-direction: row-reverse !important;
     .dialog-left {
+        .carousel-container::after {
+            filter: opacity(0.4) drop-shadow(0 0 0 var(--accent-purple)) saturate(300%) brightness(90%);
+        }
         .carousel-container {
             left: 56%;
-            .bubble-footer {
-                flex-direction: row-reverse !important;
-                .audiobook {
-                    .ab-img {
-                        button {
-                            right: -20px;
-                        }
+            background-color: var(--bg-accent-purple);
+            h2 {
+                color: var(--accent-purple);
+            }
+        }
+        .bubble-footer {
+            left: 60%;
+            .audiobook {
+                .ab-img {
+                    button {
+                        right: -20px;
                     }
                 }
             }
         }
-        .carousel-container::after {
-            bottom: unset;
-            top: 45px;
-            right: unset;
-            left: -98px;
-            border-top: 40px solid transparent;
-            border-right: 100px solid var(--speech-bubble);
-            border-bottom: 40px solid transparent;
-            border-left: unset;
+    }
+    .dialog-right {
+        img {
+            right: -initial;
+            left: -22%;
         }
     }
-    // .dialog-right {
-    //     img {
-    //         right: 0;
-    //     }
-    // }
+    ::ng-deep .slick-arrow {
+        border-radius: 0;
+        background-color: var(--accent-purple);
+        &::before {
+            color: var(--accent-purple);
+        }
+        &:focus {
+            background-color: var(--accent-purple) !important;
+        }
+        &:hover {
+            background-color: var(--accent-purple) !important;
+        }
+    }
 }
 
 @media screen and (orientation: portrait) {

@@ -1,8 +1,4 @@
 <div class="dialog-container">
- <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
-    <mat-icon routerLink="../">close</mat-icon>
-  </button>
-  <app-header></app-header>
 
   <body class="character-dialog">
     <div class="dialog-left">
@@ -19,20 +15,22 @@
             </div>
           </div>
         </ngx-slick-carousel>
-        <div class="bubble-footer">
-          <div class="audiobook">
-            <div class="ab-img">
-              <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
-              <button mat-icon-button>
-                <mat-icon>headset</mat-icon>
-              </button>
-            </div>
+        <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
+          <mat-icon routerLink="../">close</mat-icon>
+        </button>
+      </div>
+      <div class="bubble-footer">
+        <div class="audiobook">
+          <div class="ab-img">
+            <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
+            <button mat-icon-button>
+              <mat-icon>headset</mat-icon>
+            </button>
           </div>
-          <p>
-            Talk to Café patrons to unravel this mystery and you could win a <strong>free copy of the Oblivion
-              audiobook!</strong>
-          </p>
         </div>
+        <p>
+          Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
+        </p>
       </div>
     </div>
     <div class="dialog-right">

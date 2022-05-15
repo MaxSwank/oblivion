@@ -5,19 +5,23 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 1;
-  background-color: var(--ob-red);
+  z-index: 4;
+  background-color: var(--footer-bg);
   box-shadow: var(--boxshadow-top);
-  height: 24px;
+  height: 28px;
   .f-left {
-    margin-right: auto;
+    margin-right: 12px;
     button {
       color: var(--ob-white);
       font-family: p22-stickley-pro-text, serif !important;
-      height: 24px;
-      line-height: 24px;
+      height: 28px;
+      line-height: 28px;
       margin-top: 2px;
-      font-size: 12px;
+      font-size: 16px;
+      mat-icon {
+        height: 28px;
+        margin-right: 2px;
+      }
     }
   }
   .f-right {
@@ -26,26 +30,28 @@ footer {
     text-overflow: ellipsis;
     font-family: p22-stickley-pro-text, serif !important;
     color: var(--ob-white) !important;
-    #camera {
-      font-size: 16px;
-      position: relative;
-      left: 4px;
-      top: 5px;
-      opacity: .5;
-      color: black;
-    }
-    span {
-      font-size: 11px;
-      position: relative;
-      bottom: .5px;
-    }
+    // #camera {
+    //   font-size: 16px;
+    //   position: relative;
+    //   left: 4px;
+    //   top: 5px;
+    //   opacity: .5;
+    //   color: black;
+    // }
     button {
-      height: 24px;
-      line-height: 24px;
+      height: 28px;
+      line-height: 28px;
       #info {
-        margin-bottom: 2px;
+        height: 28px;
         font-size: 20px;
+        line-height: 28px;
+        margin-right: 2px;
+      }
+      #artdeco {
+        position: relative;
+        top: 1.5px;
       }
     }
   }
+  
 }

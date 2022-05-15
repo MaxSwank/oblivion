@@ -8,17 +8,19 @@ header {
   width: 100%;
   z-index: 3;
   // background-color: rgba(255, 255, 255, 0.8);
-  background-color: var(--ob-white);
-  height: 40px;
+  background-color: var(--ob-blue);
+  height: 48px;
+  padding-top: 2px;
 
-  .preorder1 {
+  .gohome {
     img {
-      height: 126px;
+      height: 100px;
       width: auto;
       transition: 0.3s;
-      box-shadow: var(--boxshadow);
+      box-shadow: var(--boxshadow-big);
       margin: 6px 0 0 12px;
       cursor: pointer;
+      transform: rotate(-6deg) translateY(-12px);
     }
 
     img:hover {
@@ -29,16 +31,28 @@ header {
   }
   h1 {
     font-size: 20px;
-    color: black;
-    line-height: 40px;
+    line-height: 50px;
+    font-weight: 200;
+    color: rgba(rgb(255, 255, 255), 0.7);
+
+    small {
+      color: rgba(rgb(255, 255, 255), 0.7);
+    }
+
+    strong {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--ob-white);
+    }
+  }
+
+  .preorder-button {
+    margin: 2px 4px 2px auto;
+    height: 42px;
+    // line-height: 42px;
   }
   #mobile {
     display: none;
-  }
-  .preorder2 {
-    margin: 6px 6px 6px auto;
-    height: 28px;
-    line-height: 28px;
   }
 }
 
@@ -54,13 +68,13 @@ header {
 // }
 
 @media screen and (max-width: 900px) and(max-height: 900px) {
-    header {
-      .preorder1 {
-        img {
-          display: none;
-        }
+  header {
+    .preorder1 {
+      img {
+        display: none;
       }
     }
+  }
 }
 
 @media screen and (max-width: 500px) {
