@@ -41,6 +41,10 @@ footer {
     button {
       height: 28px;
       line-height: 28px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: calc(100vw - 122px);
       #info {
         height: 28px;
         font-size: 20px;

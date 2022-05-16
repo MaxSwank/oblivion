@@ -781,8 +781,14 @@
 
 @media screen and (orientation: portrait) and (max-width: 600px) {
   .lp-wrapper {
+    height: fit-content;
+    min-height: 100vh;
+    max-height: initial;
     .lp-container {
       width: 100vw;
+      height: fit-content;
+      min-height: 100vh;
+      max-height: initial;
       .bg-cafe {
         display: none;
       }
@@ -796,14 +802,17 @@
         position: relative;
         height: calc(100vh - 24px);
         width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
         .bg-mobile {
           flex: 1;
+          min-height: 356px;
           background-image: url(../../assets/img/Cafe-color-photo.jpg);
           background-size: cover;
           background-position: 50%;
         }
         .butler-mobile {
-          top: 0;
+          top: 16px;
           left: 0;
           width: 100vw;
           height: calc(100vh - 266px);
@@ -860,7 +869,7 @@
               button {
                 padding: 4px 10px !important;
                 font-size: 5vw !important;
-                margin: 5vh 15vw 10vh 3vw;
+                margin: 5vh 15vw 35% 15%;
                 background: rgb(0, 0, 0);
                 color: var(--ob-white);
                 opacity: 0.8;

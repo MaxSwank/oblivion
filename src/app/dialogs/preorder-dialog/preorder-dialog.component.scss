@@ -182,9 +182,7 @@
                 height: 100%;
                 width: 330px;
                 background-color: var(--slick-fade);
-                // transition: 1s;
-                // transition-delay: .7s;
-                // padding: 12px;
+                padding: 16px;
                 p {
                   display: -webkit-box;
                   -webkit-line-clamp: 4;
@@ -447,8 +445,8 @@
         gap: unset;
         margin: 0 !important;
         button {
-          max-width: calc(50% - 15px);
-          width: 165px;
+          width: 197px;
+          max-width: calc(50vw - 10px);
           font-size: 16px;
           margin: 0 !important;
           ::ng-deep .mat-button-wrapper {
@@ -523,18 +521,49 @@
 }
 
 @media screen and (orientation: portrait) and (max-width: 500px) {
+  .preorder-container::before {
+    display: none;
+  }
   .preorder-container {
+    height: fit-content;
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    min-height: 100vh;
+    background-color: var(--ob-blue);
+    .close-button {
+      top: 4px;
+      right: 4px;
+    }
     .preorder-left {
+      height: fit-content;
+      overflow-y: auto;
+      margin: 0 0 15px 0;
       .author-blurbs {
+        flex: initial;
         ::ng-deep .carousel {
           .slick-list {
             .slick-track {
               .slide {
                 padding: 0 30px;
+                .quote-text {
+                  display: flex;
+                  flex-direction: column;
+                  width: initial;
+                  height: 180px;
+                  justify-content: center;
+                }
               }
             }
           }
         }
+      }
+      .audiobook {
+        background-color: var(--ob-white);
+        padding: 6px 0;
+        position: initial;
+        bottom: initial;
       }
     }
   }
