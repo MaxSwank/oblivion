@@ -1,26 +1,32 @@
 body {
+    color: var(--accent-yellow);
     .dialog-left{
+            .carousel-container::before {
+              content: "";
+              background-color: currentColor;
+            }
         .carousel-container::after {
-            filter: opacity(0.4) drop-shadow(0 0 0 var(--accent-yellow)) saturate(250%) brightness(90%);
+            filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(250%) brightness(90%);
           }
         .carousel-container {
             background-color: var(--bg-accent-yellow);
             h2 {
-                color: var(--accent-yellow);
+                color: currentColor;
             }
         }
     }
     ::ng-deep .slick-arrow {
+        color: var(--accent-yellow);
         border-radius: 0;
-        background-color: var(--accent-yellow);
+        background-color: currentColor;
         &::before {
-            color: var(--accent-yellow);
+            color: currentColor;
         }
         &:focus {
-            background-color: var(--accent-yellow) !important;
+            background-color: currentColor !important;
         }
         &:hover {
-            background-color: var(--accent-yellow) !important;
+            background-color: currentColor !important;
         }
     }
 }

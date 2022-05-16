@@ -1,14 +1,19 @@
-body {
+::ng-deep body {
+    color: var(--accent-purple);
     flex-direction: row-reverse !important;
     .dialog-left {
+        .carousel-container::before {
+            content: "";
+            background-color: currentColor;
+        }
         .carousel-container::after {
-            filter: opacity(0.4) drop-shadow(0 0 0 var(--accent-purple)) saturate(300%) brightness(90%);
+            filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
         }
         .carousel-container {
             left: 56%;
             background-color: var(--bg-accent-purple);
             h2 {
-                color: var(--accent-purple);
+                color: currentColor;
             }
         }
         .bubble-footer {
@@ -29,16 +34,17 @@ body {
         }
     }
     ::ng-deep .slick-arrow {
+        color: var(--accent-purple);
         border-radius: 0;
-        background-color: var(--accent-purple);
+        background-color: currentColor;
         &::before {
-            color: var(--accent-purple);
+            color: currentColor;
         }
         &:focus {
-            background-color: var(--accent-purple) !important;
+            background-color: currentColor !important;
         }
         &:hover {
-            background-color: var(--accent-purple) !important;
+            background-color: currentColor !important;
         }
     }
 }

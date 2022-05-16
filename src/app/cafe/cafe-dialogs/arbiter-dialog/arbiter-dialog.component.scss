@@ -1,11 +1,16 @@
 .dialog-container {
+  color: var(--accent-purple);
   .character-dialog {
     flex-direction: row-reverse !important;
     .dialog-left {
+      .carousel-container::before {
+        content: "";
+        background-color: currentColor;
+      }
       .carousel-container {
         h2 {
-          color: var(--accent-purple);
-      }
+          color: currentColor;
+        }
       }
       .bubble-footer {
         flex-direction: row-reverse !important;
@@ -21,16 +26,17 @@
     }
   }
   ::ng-deep .slick-arrow {
+    color: var(--accent-purple);
     border-radius: 0;
-    background-color: var(--accent-purple);
+    background-color: currentColor;
     &::before {
-      color: var(--accent-purple);
+      color: currentColor;
     }
     &:focus {
-      background-color: var(--accent-purple) !important;
+      background-color: currentColor !important;
     }
     &:hover {
-      background-color: var(--accent-purple) !important;
+      background-color: currentColor !important;
     }
   }
 }
