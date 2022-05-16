@@ -146,6 +146,14 @@ mat-dialog-container {
     min-width: 80%;
     position: relative;
     z-index: 1;
+    .carousel-container::before {
+      content: "";
+      height: 10px;
+      width: 100%;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background-color: blue;
     .carousel-container::after {
       content: "";
       height: 100%;
