@@ -67,21 +67,31 @@ header {
 //   }
 // }
 
-@media screen and (max-width: 900px) and(max-height: 900px) {
+// @media screen and (max-width: 900px) and(max-height: 900px) {
+//   header {
+//     .preorder1 {
+//       background-color: transparent;
+//       img {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+@media screen and (max-width: 600px) {
   header {
-    .preorder1 {
-      img {
-        display: none;
+    position: relative;
+    h1 {
+      font-size: 4vw;
+      white-space: nowrap;
+      strong {
+        font-size: 8vw;
       }
     }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  header {
-    h1 {
-      font-size: 4.7vw;
-      white-space: nowrap;
+    .preorder-button {
+      position: absolute;
+      top: 50px;
+      right: 4px;
     }
   }
 }

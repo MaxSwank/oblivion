@@ -559,8 +559,18 @@
           }
         }
       }
+      .email-form {
+        text-align: left;
+        .alert-message {
+          text-align: initial;
+          text-indent: initial;
+          left: 43px;
+          right: initial;
+          position: relative;
+        }
+      }
       .audiobook {
-        background-color: var(--ob-white);
+        background-color: var(--lp-bg);
         padding: 6px 0;
         position: initial;
         bottom: initial;

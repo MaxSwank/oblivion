@@ -93,3 +93,13 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .dialog-container {
+        body {
+            .writing-form {
+                margin: 24px auto;
+            }
+        }
+    }
+}

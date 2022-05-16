@@ -143,6 +143,7 @@ mat-dialog-container {
 .character-dialog {
   display: flex;
   flex-direction: row;
+  overflow-x: hidden;
   .dialog-left {
     min-width: 80%;
     position: relative;
@@ -354,7 +355,8 @@ mat-dialog-container {
     z-index: 2;
   }
   .dialog-container {
-    z-index: 2;
+    height: calc(100vh - 78px);
+    top: 50px;
     .close-button {
       top: unset;
       bottom: 12px;
