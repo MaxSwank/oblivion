@@ -8,9 +8,10 @@
             line-height: 48px;
             padding: 15px 24px;
             width: fit-content;
-            margin: 40px auto 0;
-            font-size: 2.2vw;
+            margin: 60px auto 0;
+            font-size: 30px;
             font-weight: 700 !important;
+            box-shadow: var(--boxshadow);
         }
         .author-wall-mobile {
             display: none;
@@ -95,7 +96,6 @@
                             padding: 10px 0;
                             width: calc(100% - 16px);
                             font-weight: 700;
-                            font-size: 4.5vw;
                         }
                     }
                 }

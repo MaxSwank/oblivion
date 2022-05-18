@@ -473,7 +473,7 @@
       .left-border {
         height: 100%;
         width: 5%;
-        left: -1px;
+        left: 134px;
         top: 0;
         transform: rotate(2deg);
       }
@@ -812,7 +812,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        height: calc(100vh - 24px);
+        height: 100vh;
         width: 100vw;
         overflow-y: auto;
         overflow-x: hidden;
@@ -854,6 +854,7 @@
                 left: 10px;
                 width: calc(100% - 40px);
 
+                // !!!!! keep as VW font size -- it breaks small devices if it doesn't stay on two lines!!!
                 h4 {
                   font-size: 6vw;
                   line-height: 1;
@@ -864,6 +865,7 @@
                   opacity: 0.7;
                 }
               }
+                 // !!!!! keep as VW font size -- it breaks small devices if it doesn't stay on two lines!!!
 
               .mobile-text::after {
                 content: "";
@@ -880,7 +882,6 @@
             .enter-mobile {
               button {
                 padding: 4px 10px !important;
-                font-size: 5vw !important;
                 margin: 5vh 15vw 35% 15%;
                 background: rgb(0, 0, 0);
                 color: var(--ob-white);
@@ -935,6 +936,7 @@
               }
               h2 {
                 margin: 0;
+                font-size: 5vw; //note: keep at 5vw or else it will run into the book image on small devices//
               }
               hr {
                 margin: 8px 5px 14px 50%;
@@ -958,7 +960,7 @@
             background-color: var(--ob-darkblue);
             border-bottom-left-radius: 5px;
             text-align: center;
-            margin-bottom: 12px;
+            margin-bottom: 24px;
             button {
               width: 80%;
               background-color: var(--ob-yellow);
@@ -974,6 +976,9 @@
       display: none;
     }
     .footer-content {
+      display: none;
+    }    
+    app-footer {
       display: none;
     }
   }
