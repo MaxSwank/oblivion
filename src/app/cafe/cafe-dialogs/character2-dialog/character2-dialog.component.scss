@@ -15,11 +15,7 @@ body {
             }
         }
     }
-    .dialog-right {
-        img {
-            right: 0 !important;
-        }
-    }
+  
     ::ng-deep .slick-arrow {
         color: var(--accent-mint);
         border-radius: 0;

@@ -2,36 +2,37 @@
 
   <body class="character-dialog">
     <div class="dialog-left">
-      <div class="carousel-container">
-        <h2>The Arbiter</h2>
-        <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
-          (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-          (beforeChange)="beforeChange($event)">
-          <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-            <div class="quote-text">
-              <p class="slide-quote">"{{ slide.quote }}"</p>
-              <!-- <br />
+      <div class="left-container">
+        <div class="carousel-container">
+          <h2>The Arbiter</h2>
+          <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <div class="quote-text">
+                <p class="slide-quote">"{{ slide.quote }}"</p>
+                <!-- <br />
               <p class="slide-author">- {{ slide.author }}</p> -->
+              </div>
+            </div>
+          </ngx-slick-carousel>
+          <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
+            <mat-icon routerLink="../">close</mat-icon>
+          </button>
+        </div>
+        <div class="bubble-footer">
+          <div class="audiobook">
+            <div class="ab-img">
+              <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
+              <button mat-icon-button>
+                <mat-icon>headset</mat-icon>
+              </button>
             </div>
           </div>
-        </ngx-slick-carousel>
-        <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
-          <mat-icon routerLink="../">close</mat-icon>
-        </button>
-      </div>
-
-      <div class="bubble-footer">
-        <div class="audiobook">
-          <div class="ab-img">
-            <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
-            <button mat-icon-button>
-              <mat-icon>headset</mat-icon>
-            </button>
-          </div>
+          <p>
+            Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
+          </p>
         </div>
-        <p>
-          Talk to patrons to unravel the Café's mystery<br> and you could win a <a href="">free audiobook</a>!
-        </p>
       </div>
     </div>
     <div class="dialog-right">

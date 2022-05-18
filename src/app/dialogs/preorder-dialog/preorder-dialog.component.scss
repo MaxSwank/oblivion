@@ -141,10 +141,13 @@
           strong {
             color: var(--ob-white);
           }
-          h3 {
-            margin: 0 0 16px 0;
-            line-height: 20px;
-            color: var(--ob-yellow);
+          a {
+            text-decoration: none;
+            h3 {
+              margin: 0 0 16px 0;
+              line-height: 20px;
+              color: var(--ob-yellow);
+            }
           }
         }
       }
@@ -537,12 +540,18 @@
       right: 4px;
     }
     .preorder-left {
+      display: grid;
       height: fit-content;
       overflow-y: auto;
-      margin: 0 0 15px 0;
+      margin: 0 0 35px 0;
+      .box-header {
+        grid-row: 1;
+      }
       .author-blurbs {
-        flex: initial;
+        flex: unset;
+        grid-row: 4;
         ::ng-deep .carousel {
+          height: 212px;
           .slick-list {
             .slick-track {
               .slide {
@@ -560,6 +569,7 @@
         }
       }
       .email-form {
+        grid-row: 2;
         text-align: left;
         .alert-message {
           text-align: initial;
@@ -569,7 +579,11 @@
           position: relative;
         }
       }
+      .order-buttons {
+        grid-row: 3;
+      }
       .audiobook {
+        grid-row: 5;
         background-color: var(--lp-bg);
         padding: 6px 0;
         position: initial;

@@ -232,12 +232,10 @@
 
 @media screen and (orientation: portrait) {
   .cafe-container {
-    overflow-x: auto;
-    max-width: initial;
-    width: initial;
+    max-width: 100vw;
     height: 100%;
     .image-wrapper {
-      overflow: initial;
+      overflow-x: auto;
       max-width: initial;
       width: initial;
       height: 100%;
@@ -245,7 +243,8 @@
         max-width: initial;
         overflow: initial;
         width: auto;
-        height: 100%;
+        height: calc(100vh - 84px);
+        object-fit: cover;
       }
     }
   }

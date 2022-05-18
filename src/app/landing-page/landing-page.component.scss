@@ -313,20 +313,26 @@
       .panel-left:hover ~ .butler-container {
         filter: drop-shadow(14px 0 20px var(--lp-shadow-color));
         transition: 1s ease-in-out;
+        z-index: 100 !important;
         .butler-text {
           transform: rotate3d(5, 6, -12, -1deg) translate(5px);
           transition: 1s ease-in-out;
+          z-index: 100 !important;
         }
         .butler-text::after {
           transform: rotate3d(5, 6, 12, -1deg);
           transition: 1s ease-in-out;
+          z-index: 100 !important;
         }
         .butler-image {
+          z-index: 100 !important;
           .butler {
+            z-index: 100 !important;
             transform: rotate3d(5, 6, -12, -1deg);
             transition: 1s ease-in-out;
           }
           .podium {
+            z-index: 100 !important;
             transform: rotateY(0deg);
             transform: 1s ease-in-out;
           }
@@ -372,22 +378,28 @@
       .panel-right:hover ~ .butler-container {
         filter: drop-shadow(-14px 0 20px var(--lp-shadow-color));
         transition: 1s ease-in-out;
+        z-index: 100 !important;
         .butler-text {
           transform: rotate3d(5, 6, -12, 1deg) translate(-5px);
           transition: 1s ease-in-out;
+          z-index: 100 !important;
         }
         .butler-text::after {
           transform: rotate3d(5, 6, 12, 1deg);
           transition: 1s ease-in-out;
+          z-index: 100 !important;
         }
         .butler-image {
+          z-index: 100 !important;
           .butler {
             transform: rotate3d(5, 6, 12, -1deg);
             transition: 1s ease-in-out;
+            z-index: 100 !important;
           }
           .podium {
             transform: rotateY(12deg);
             transition: 1s ease-in-out;
+            z-index: 100 !important;
           }
         }
       }
@@ -661,7 +673,7 @@
       right: 15%;
       height: 250px;
       width: fit-content;
-      z-index: 2;
+      z-index: 5;
       .book-info {
         position: absolute;
         left: -295px;

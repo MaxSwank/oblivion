@@ -1,6 +1,8 @@
 <div class="dialog-container">
-    <body class="character-dialog">
+
+  <body class="character-dialog">
     <div class="dialog-left">
+      <div class="left-container">
       <div class="carousel-container">
         <h2>MAUDY GAMMITT</h2>
         <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
@@ -13,7 +15,7 @@
               <p class="slide-author">- {{ slide.author }}</p> -->
             </div>
           </div>
-        </ngx-slick-carousel>  
+        </ngx-slick-carousel>
         <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
           <mat-icon routerLink="../">close</mat-icon>
         </button>
@@ -28,12 +30,13 @@
             </div>
           </div>
           <p>
-            Talk to patrons to unravel the Café's mystery<br> and you could win a <a href="">free audiobook</a>!
+            Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
           </p>
-        </div>    
+        </div>
+      </div>
     </div>
     <div class="dialog-right">
-      <img src="../../../../assets/img/maudy-gammitt.png" alt="" />
+      <img src="../../../../assets/img/maudy-gammit.png" alt="" />
     </div>
   </body>
 </div>

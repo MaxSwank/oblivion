@@ -1,50 +1,52 @@
 ::ng-deep body {
     color: var(--accent-purple);
-    flex-direction: row-reverse !important;
-    .dialog-left {
-        .carousel-container::before {
-            content: "";
-            background-color: currentColor;
-        }
-        .carousel-container::after {
-            filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
-        }
-        .carousel-container {
-            left: 56%;
-            background-color: var(--bg-accent-purple);
-            h2 {
-                color: currentColor;
+    .character-dialog {
+        flex-direction: row-reverse !important;
+        .dialog-left {
+            .carousel-container::before {
+                content: "";
+                background-color: currentColor;
             }
-        }
-        .bubble-footer {
-            left: 60%;
-            .audiobook {
-                .ab-img {
-                    button {
-                        right: -20px;
+            .carousel-container::after {
+                filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
+            }
+            .carousel-container {
+                left: 56%;
+                background-color: var(--bg-accent-purple);
+                h2 {
+                    color: currentColor;
+                }
+            }
+            .bubble-footer {
+                left: 60%;
+                .audiobook {
+                    .ab-img {
+                        button {
+                            right: -20px;
+                        }
                     }
                 }
             }
         }
-    }
-    .dialog-right {
-        img {
-            right: -initial;
-            left: -22%;
+        .dialog-right {
+            img {
+                right: -initial;
+                left: -10%;
+            }
         }
-    }
-    ::ng-deep .slick-arrow {
-        color: var(--accent-purple);
-        border-radius: 0;
-        background-color: currentColor;
-        &::before {
-            color: currentColor;
-        }
-        &:focus {
-            background-color: currentColor !important;
-        }
-        &:hover {
-            background-color: currentColor !important;
+        ::ng-deep .slick-arrow {
+            color: var(--accent-purple);
+            border-radius: 0;
+            background-color: currentColor;
+            &::before {
+                color: currentColor;
+            }
+            &:focus {
+                background-color: currentColor !important;
+            }
+            &:hover {
+                background-color: currentColor !important;
+            }
         }
     }
 }

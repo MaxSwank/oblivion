@@ -1,12 +1,3 @@
 div {
-    background-color: var(--black-opacity);
-    animation: background-fade 1.5s;
-}
-@keyframes background-fade {
-    0% {
-        background-color: var(--lp-bg);
-    }
-    100% {
-        background-color: var(--black-opacity);
-    }
+    background-color: var(--lp-bg);
 }
