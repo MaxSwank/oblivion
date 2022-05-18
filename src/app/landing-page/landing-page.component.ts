@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class LandingPageComponent implements OnInit {
 
   cafeZoom: boolean = true;
+  hoverLeft: boolean = true;
+  hoverRight: boolean = true;
+  hoverCenter: boolean = true;
 
   constructor(private _router: Router) { }
 
@@ -22,4 +25,15 @@ export class LandingPageComponent implements OnInit {
     }, 1500);
   }
 
+  bangsLeft() {
+    this.hoverLeft = !this.hoverLeft;
+  }
+
+  bangsRight() {
+    this.hoverRight = !this.hoverRight;
+  }
+
+  bangsCenter() {
+    this.hoverCenter = !this.hoverCenter;
+  }
 }
