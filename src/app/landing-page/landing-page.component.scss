@@ -473,7 +473,7 @@
       .left-border {
         height: 100%;
         width: 5%;
-        left: 134px;
+        left: -1px;
         top: 0;
         transform: rotate(2deg);
       }
@@ -756,6 +756,19 @@
     }
   }
 }
+
+@media screen and (orientation: landscape) and (max-height: 700px) and (max-width: 1000px) {
+  .lp-wrapper {
+    max-height: initial;
+    height: 1000px;
+    max-width: initial;
+    width: 1000px;
+    overflow: auto;
+    position: absolute;
+  }
+}
+
+
 
 @media screen and (orientation: portrait) and (min-height: 928px) {
   .lp-wrapper {

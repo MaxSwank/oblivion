@@ -339,6 +339,14 @@ mat-dialog-container {
     }
   }
 }
+@media screen and (orientation: landscape) and (max-height: 700px) and (max-width: 1000px) {
+  html,
+  body {
+    height: fit-content;
+    overflow-y: auto;
+    overflow-x: initial;
+  }
+}
 
 @media screen and (max-width: 600px) {
   html,
@@ -346,9 +354,6 @@ mat-dialog-container {
     height: fit-content;
     overflow-y: auto;
     overflow-x: initial;
-    * {
-      font-family: p22-stickley-pro-text, serif;
-    }
   }
   .dialog-container::after {
     content: "";
