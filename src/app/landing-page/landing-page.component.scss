@@ -279,7 +279,7 @@
       }
 
       .panel-left:hover ~ .cafe-clip {
-        transform: rotateY(8deg);
+        transform: rotateY(8.5deg);
         transition: transform 1s ease-in-out;
 
         .cafe-image {
@@ -317,7 +317,7 @@
         // background: rgba(green, .2);
       }
       .panel-right:hover ~ .cafe-clip {
-        transform: rotateY(-8deg);
+        transform: rotateY(-8.5deg);
         transition: transform 1s ease-in-out;
 
         .cafe-image {
@@ -523,7 +523,7 @@
           left: 0;
           width: 100%;
           height: auto;
-          transform: rotateY(6deg);
+          // transform: rotateY(6deg);
           transition: 1s ease-in-out;
         }
       }
@@ -553,7 +553,7 @@
         }
         .podium {
           
-          transform: rotateY(0deg);
+          // transform: rotateY(0deg);
           transform: 1s ease-in-out;
         }
       }
@@ -582,7 +582,7 @@
           
         }
         .podium {
-          transform: rotateY(12deg);
+          // transform: rotateY(12deg);
           transition: 1s ease-in-out;
           
         }
@@ -598,7 +598,7 @@
           transition: 1s ease-in-out;
         }
         .podium {
-          transform: rotateY(6deg);
+          // transform: rotateY(6deg);
           transition: 1s ease-in-out;
         }
       }
