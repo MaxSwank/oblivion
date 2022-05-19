@@ -589,12 +589,12 @@
       .butler-image {
         
         .butler {
-          -webkit-transform: rotate3d(5, 6, -12, -1deg);
+          -sand-transform: rotate3d(5, 6, -12, -1deg);
           transform: rotate3d(5, 6, -12, -1deg);
           transition: 1s ease-in-out;
         }
         .podium {
-          -webkit-transform: rotateY(0deg);
+          -sand-transform: rotateY(0deg);
           transform: rotateY(0deg);
           transform: 1s ease-in-out;
         }
@@ -619,13 +619,13 @@
       .butler-image {
         
         .butler {
-          -webkit-transform: rotate3d(5, 6, 12, -1deg);
+          -sand-transform: rotate3d(5, 6, 12, -1deg);
           transform: rotate3d(5, 6, 12, -1deg);
           transition: 1s ease-in-out;
           
         }
         .podium {
-          -webkit-transform: rotateY(12deg);
+          -sand-transform: rotateY(12deg);
           transform: rotateY(12deg);
           transition: 1s ease-in-out;
           
@@ -642,7 +642,7 @@
           transition: 1s ease-in-out;
         }
         .podium {
-          -webkit-transform: rotateY(6deg);
+          -sand-transform: rotateY(6deg);
           transform: rotateY(6deg);
           transition: 1s ease-in-out;
         }
