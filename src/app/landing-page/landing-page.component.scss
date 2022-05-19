@@ -587,7 +587,7 @@
       }
       .butler-image {
         -webkit-transform: rotateY(10deg);
-        transform: rotateY(10deg);
+        transform: rotateY(8deg);
         transition: 1s ease-in-out;
       }
     }
@@ -609,7 +609,7 @@
       }
       .butler-image {
         -webkit-transform: rotateY(-10deg);
-        transform: rotateY(-10deg);
+        transform: rotateY(-8deg);
         transition: 1s ease-in-out;
       }
     }
