@@ -27,13 +27,19 @@ export class LandingPageComponent implements OnInit {
 
   bangsLeft() {
     this.hoverLeft = !this.hoverLeft;
+    this.hoverRight = false;
+    this.hoverCenter = false;
   }
 
   bangsRight() {
     this.hoverRight = !this.hoverRight;
+    this.hoverLeft = false;
+    this.hoverCenter = false;
   }
 
   bangsCenter() {
     this.hoverCenter = !this.hoverCenter;
+    this.hoverLeft = false;
+    this.hoverRight = false;    
   }
 }
