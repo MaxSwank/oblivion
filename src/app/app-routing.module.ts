@@ -1,5 +1,5 @@
 import { CafeHomeComponent } from './cafe/cafe-home/cafe-home.component';
-import { Character1DialogComponent } from './cafe/cafe-dialogs/character1-dialog/character1-dialog.component';
+import { Character1DialogComponent } from './cafe/cafe-dialogs/bangs-dialog/character1-dialog.component';
 import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
@@ -9,11 +9,11 @@ import { CafeComponent } from './cafe/cafe.component';
 import { OrderPageComponent } from './landing-page/order-page/order-page.component';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { AuthorQuotesComponent } from './landing-page/author-quotes/author-quotes.component';
-import { Character2DialogComponent } from './cafe/cafe-dialogs/character2-dialog/character2-dialog.component';
+import { Character2DialogComponent } from './cafe/cafe-dialogs/maudy-gammitt-dialog/character2-dialog.component';
 import { ArbiterDialogComponent } from './cafe/cafe-dialogs/arbiter-dialog/arbiter-dialog.component';
-import { Character3DialogComponent } from './cafe/cafe-dialogs/character3-dialog/character3-dialog.component';
-import { Character4DialogComponent } from './cafe/cafe-dialogs/character4-dialog/character4-dialog.component';
-import { Character5DialogComponent } from './cafe/cafe-dialogs/character5-dialog/character5-dialog.component';
+import { Character3DialogComponent } from './cafe/cafe-dialogs/gary-katsarida-dialog/character3-dialog.component';
+import { Character4DialogComponent } from './cafe/cafe-dialogs/josef-wosek-dialog/character4-dialog.component';
+import { Character5DialogComponent } from './cafe/cafe-dialogs/else-lasker-schuler-dialog/character5-dialog.component';
 import { Character6DialogComponent } from './cafe/cafe-dialogs/character6-dialog/character6-dialog.component';
 import { TypewriterDialogComponent } from './cafe/cafe-dialogs/typewriter-dialog/typewriter-dialog.component';
 import { WallDialogComponent } from './cafe/cafe-dialogs/wall-dialog/wall-dialog.component';
@@ -67,23 +67,23 @@ const routes: Routes = [
         component: CafeComponent,
         children: [
           {
-            path: 'character1',
+            path: 'bangs',
             component: Character1DialogComponent
           },
           {
-            path: 'character2',
+            path: 'maudy_gammitt',
             component: Character2DialogComponent
           },
           {
-            path: 'character3',
+            path: 'gary_katsarida',
             component: Character3DialogComponent
           },
           {
-            path: 'character4',
+            path: 'josef_wozek',
             component: Character4DialogComponent
           },
           {
-            path: 'character5',
+            path: 'else_lasker_schuler',
             component: Character5DialogComponent
           },
           {
@@ -95,7 +95,7 @@ const routes: Routes = [
             component: ArbiterDialogComponent
           },
           {
-            path: 'wall-of-authors',
+            path: 'wall-of-exceptionally-minor-authors',
             component: WallDialogComponent
           },
           {

@@ -1,34 +1,35 @@
 <div class="dialog-container">
-<div class="close-dialog" routerLink="../"></div>
-<body class="character-dialog">
+  <div class="close-dialog" routerLink="../"></div>
+  <body class="character-dialog">
     <div class="dialog-left">
       <div class="left-container">
         <div class="carousel-container">
-          <h2>Character 4</h2>
+          <h2>GARY KATSARIDA</h2>
           <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
             (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
             (beforeChange)="beforeChange($event)">
             <div ngxSlickItem *ngFor="let slide of slides" class="slide">
               <div class="quote-text">
+                <p class="slide-intro">{{ slide.intro }}</p>
                 <p class="slide-quote">"{{ slide.quote }}"</p>
-                <!-- <br />
-              <p class="slide-author">- {{ slide.author }}</p> -->
+              <p class="slide-author">&#8213; {{ slide.author }}</p>
+              <p class="slide-title">{{ slide.title }}</p>
               </div>
             </div>
           </ngx-slick-carousel>
-          <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
-            <mat-icon routerLink="../">close</mat-icon>
+          <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
+            <mat-icon>close</mat-icon>
           </button>
         </div>
         <div class="bubble-footer">
-          <div class="audiobook">
+             <!-- <div class="audiobook">
             <div class="ab-img">
               <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
               <button mat-icon-button>
                 <mat-icon>headset</mat-icon>
               </button>
             </div>
-          </div>
+          </div> --> 
           <p>
             Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
           </p>
@@ -36,7 +37,7 @@
       </div>
     </div>
     <div class="dialog-right">
-      <img src="../../../../assets/img/joseph-wozek.png" alt="" />
+      <img src="../../../../assets/img/gary-katsarida.png" alt="" />
     </div>
   </body>
 </div>

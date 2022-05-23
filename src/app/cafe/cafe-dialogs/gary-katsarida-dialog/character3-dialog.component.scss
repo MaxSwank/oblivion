@@ -1,24 +1,32 @@
 body {
-    color: var(--accent-mint);
+    color: var(--accent-yellow);
     flex-direction: row;
-    .dialog-left {
+    .dialog-left{
             .carousel-container::before {
               content: "";
               background-color: currentColor;
             }
         .carousel-container::after {
-            filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
+            filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(250%) brightness(90%);
           }
         .carousel-container {
-            background-color: var(--bg-accent-mint);
+            background-color: var(--bg-accent-yellow);
             h2 {
                 color: currentColor;
             }
+            .dialog-carousel {
+                .slide {
+                    .quote-text {
+                        .slide-intro {
+                            color: currentColor;
+                        }
+                    }
+                }
+            }
         }
     }
-  
     ::ng-deep .slick-arrow {
-        color: var(--accent-mint);
+        color: var(--accent-yellow);
         border-radius: 0;
         background-color: currentColor;
         &::before {

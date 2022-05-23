@@ -11,6 +11,15 @@
         h2 {
           color: currentColor;
         }
+        .dialog-carousel {
+          .slide {
+              .quote-text {
+                  .slide-intro {
+                      color: currentColor;
+                  }
+              }
+          }
+      }
       }
       .bubble-footer {
         flex-direction: row-reverse !important;

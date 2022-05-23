@@ -10,9 +10,10 @@
           (beforeChange)="beforeChange($event)">
           <div ngxSlickItem *ngFor="let slide of slides" class="slide">
             <div class="quote-text">
+              <p class="slide-intro">{{ slide.intro }}</p>
               <p class="slide-quote">"{{ slide.quote }}"</p>
-              <!-- <br />
-              <p class="slide-author">- {{ slide.author }}</p> -->
+              <p class="slide-author">&#8213; {{ slide.author }}</p>
+              <p class="slide-title">{{ slide.title }}</p>
             </div>
           </div>
         </ngx-slick-carousel>
@@ -21,14 +22,14 @@
         </button>
       </div>
         <div class="bubble-footer">
-          <div class="audiobook">
+            <!-- <div class="audiobook">
             <div class="ab-img">
               <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
               <button mat-icon-button>
                 <mat-icon>headset</mat-icon>
               </button>
             </div>
-          </div>
+          </div> -->
           <p>
             Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
           </p>

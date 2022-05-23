@@ -198,6 +198,7 @@ mat-dialog-container {
           margin: 0px 25% 0 auto;
           box-shadow: var(--boxshadow-medium);
           position: relative;
+          z-index: 1;
           .close-button {
             position: absolute;
             top: 0;
@@ -213,23 +214,39 @@ mat-dialog-container {
           }
 
           h2 {
-            color: var(--gray-text);
             font-size: 23px;
             margin: 9.6% 0;
             text-align: center;
           }
           .dialog-carousel {
-            color: black;
+            // color: black;
             z-index: 999;
             height: 60%;
             font-size: 36px;
-            font-weight: 700;
             line-height: 1.2;
             .slide {
               .quote-text {
-                p {
-                  // max-width: 320px;
-                  margin: 0 auto 40px;
+                .slide-intro {
+                  text-transform: uppercase;
+                  font-size: 18px;
+                  margin-bottom: 18px;
+                }
+                .slide-quote {
+                  font-size: 24px;
+                  color: black;
+                  font-style: italic;
+                  margin-bottom: 18px;
+                }
+                .slide-author {
+                  color: black;
+                  font-weight: 900;
+                  font-size: 18px;
+                  margin: 0 0 0 30px;
+                }
+                .slide-title {
+                  color: black;
+                  font-size: 18px;
+                  margin: 0 0 0 45px;
                 }
               }
             }
@@ -278,54 +295,54 @@ mat-dialog-container {
           background-image: url(../../oblivion/src/assets/img/audiobook.png);
           background-size: cover;
           background-position: center;
+          display: none;
         }
         .bubble-footer {
           height: fit-content;
-          width: 65vh;
-          margin: 4% 25% 0 auto;
+          width: 50vh;
+          margin: 0 31.5% 0 auto;
           background: var(--ob-blue);
           display: flex;
           flex-direction: row;
           border-radius: 5px;
-          z-index: 1;
+          z-index: 0;
           position: relative;
-          .audiobook {
-            height: fit-content;
-            width: fit-content;
-            object-fit: cover;
-            display: none;
-            .ab-img {
-              position: relative;
-              img {
-                -webkit-transform: scale(1.4);
-                transform: scale(1.4);
-                height: 80px;
-                width: auto;
-                object-fit: cover;
-                transform-origin: center;
-                box-shadow: var(--boxshadow);
-              }
-              button {
-                position: absolute;
-                top: -30px;
-                right: -30px;
-                box-shadow: var(--boxshadow);
-                background-color: black;
-                color: var(--ob-white);
-                -webkit-transform: scale(1.3);
-                transform: scale(1.3);
-              }
-            }
-          }
+          // .audiobook {
+          //   height: fit-content;
+          //   width: fit-content;
+          //   object-fit: cover;
+          //   .ab-img {
+          //     position: relative;
+          //     img {
+          //       -webkit-transform: scale(1.4);
+          //       transform: scale(1.4);
+          //       height: 80px;
+          //       width: auto;
+          //       object-fit: cover;
+          //       transform-origin: center;
+          //       box-shadow: var(--boxshadow);
+          //     }
+          //     button {
+          //       position: absolute;
+          //       top: -30px;
+          //       right: -30px;
+          //       box-shadow: var(--boxshadow);
+          //       background-color: black;
+          //       color: var(--ob-white);
+          //       -webkit-transform: scale(1.3);
+          //       transform: scale(1.3);
+          //     }
+          //   }
+          // }
           p {
             flex: 1;
-            margin: 8px 12px 8px 78px;
-            font-size: 20px;
+            margin: 18px 12px 12px;
+            font-size: 18px;
             font-family: "Open Sans", sans-serif !important;
             color: rgba(255, 255, 255, 0.75);
             letter-spacing: 1px;
             line-height: 1.1;
-            text-indent: -10px;
+            text-align: center;
             a {
               color: var(--ob-yellow);
               font-weight: 700;
