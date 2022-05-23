@@ -90,7 +90,8 @@
   position: relative;
   // width: clamp(770px, 50vw, 900px);
   height: 80vh;
-  min-height: 600px;
+  min-height: 720px;
+  max-height: 820px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -180,7 +181,6 @@
               .quote-text {
                 display: table-cell;
                 vertical-align: middle;
-                font-size: 20px;
                 border-radius: 10px;
                 height: 100%;
                 width: 330px;
@@ -188,12 +188,13 @@
                 padding: 16px;
                 p {
                   display: -webkit-box;
-                  -webkit-line-clamp: 4;
+                  -webkit-line-clamp: 8;
                   -webkit-box-orient: vertical;
                   overflow: hidden;
                   max-width: 320px;
                   margin: 0 auto;
-                  line-height: 1.2;
+                  line-height: 1.1;
+                  font-size: 17.5px
                 }
                 .slide-author {
                   white-space: nowrap;
@@ -203,9 +204,12 @@
                   margin: 0 auto;
                   color: #9f2626;
                   font-weight: 700;
+                  font-size: 18px;
                 }
-                i {
-                  font-size: 16px;
+                .slide-title {
+                  font-size: 14px;
+                  font-style: italic;
+                  line-height: 1.1;
                 }
               }
             }
@@ -390,7 +394,6 @@
     width: auto;
     position: relative;
     animation: slide 0.5s ease-in-out;
-    a {
       img {
         height: 100%;
         width: auto;
@@ -398,7 +401,6 @@
         box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.75);
         // border-radius: 10px;
       }
-    }
   }
   .close-button {
     position: absolute;

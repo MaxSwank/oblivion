@@ -28,6 +28,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { HeaderComponent } from './cafe/header/header.component';
 import { FooterComponent } from './cafe/footer/footer.component';
 import { CafeHomeComponent } from './cafe/cafe-home/cafe-home.component';
+import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { CafeHomeComponent } from './cafe/cafe-home/cafe-home.component';
     AuthorQuotesComponent,
     HeaderComponent,
     FooterComponent,
-    CafeHomeComponent
+    CafeHomeComponent,
+    ReviewsDialogComponent
   ],
   imports: [
     BrowserModule,

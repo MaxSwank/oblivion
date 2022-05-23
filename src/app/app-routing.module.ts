@@ -19,6 +19,7 @@ import { TypewriterDialogComponent } from './cafe/cafe-dialogs/typewriter-dialog
 import { WallDialogComponent } from './cafe/cafe-dialogs/wall-dialog/wall-dialog.component';
 import { WindowDialogComponent } from './cafe/cafe-dialogs/window-dialog/window-dialog.component';
 import { PreorderDialogComponent } from './dialogs/preorder-dialog/preorder-dialog.component';
+import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,10 @@ const routes: Routes = [
       {
         path: 'preorder',
         component: PreorderDialogComponent
+      },
+      {
+        path: 'reviews',
+        component: ReviewsDialogComponent
       }
     ],
     data: {
