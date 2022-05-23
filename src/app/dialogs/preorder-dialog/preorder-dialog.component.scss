@@ -405,7 +405,7 @@
   .close-button {
     position: absolute;
     top: 0px;
-    right: -50px;
+    right: 0px;
     color: var(--ob-white);
     background: var(--black-opacity);
     border-radius: 50%;
@@ -599,5 +599,11 @@
         bottom: initial;
       }
     }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 820px) {
+  .preorder-container {
+    z-index: 1000;
   }
 }

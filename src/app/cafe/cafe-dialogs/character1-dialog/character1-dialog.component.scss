@@ -1,54 +1,51 @@
 ::ng-deep body {
     color: var(--accent-purple);
-    .character-dialog {
-        flex-direction: row-reverse !important;
-        .dialog-left {
-            .left-container {
-                .carousel-container::before {
-                    content: "";
-                    background-color: currentColor;
+    flex-direction: row;
+    .dialog-left {
+        .left-container {
+            .carousel-container::before {
+                content: "";
+                background-color: currentColor;
+            }
+            .carousel-container::after {
+                filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
+            }
+            .carousel-container {
+                margin: 0px auto 0 25%;
+                background-color: var(--bg-accent-purple);
+                h2 {
+                    color: currentColor;
                 }
-                .carousel-container::after {
-                    filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
-                }
-                .carousel-container {
-                    margin: 0px auto 0 25%;
-                    background-color: var(--bg-accent-purple);
-                    h2 {
-                        color: currentColor;
-                    }
-                }
-                .bubble-footer {
-                    margin: 4% auto 0 25%;
-                    .audiobook {
-                        .ab-img {
-                            button {
-                                right: -20px;
-                            }
+            }
+            .bubble-footer {
+                margin: 4% auto 0 25%;
+                .audiobook {
+                    .ab-img {
+                        button {
+                            right: -20px;
                         }
                     }
                 }
             }
         }
-        .dialog-right {
-            img {
-                right: -initial;
-                left: -15%;
-            }
+    }
+    .dialog-right {
+        #bangs-img {
+            transform: translate(25%) rotateY(180deg) !important;
         }
-        ::ng-deep .slick-arrow {
-            color: var(--accent-purple);
-            border-radius: 0;
-            background-color: currentColor;
-            &::before {
-                color: currentColor;
-            }
-            &:focus {
-                background-color: currentColor !important;
-            }
-            &:hover {
-                background-color: currentColor !important;
-            }
+    }
+    ::ng-deep .slick-arrow {
+        color: var(--accent-purple);
+        border-radius: 0;
+        background-color: currentColor;
+        &::before {
+            color: currentColor;
+        }
+        &:focus {
+            background-color: currentColor !important;
+        }
+        &:hover {
+            background-color: currentColor !important;
         }
     }
 }

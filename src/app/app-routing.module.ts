@@ -65,7 +65,7 @@ const routes: Routes = [
       {
         path: '',
         component: CafeComponent,
-        children: [          
+        children: [
           {
             path: 'character1',
             component: Character1DialogComponent
@@ -108,7 +108,13 @@ const routes: Routes = [
           },
           {
             path: 'preorder',
-            component: PreorderDialogComponent
+            component: PreorderDialogComponent,
+            children: [
+              {
+                path: 'reviews',
+                component: ReviewsDialogComponent
+              }
+            ]
           }
         ]
       }
@@ -127,7 +133,7 @@ const routes: Routes = [
   {
     path: 'order',
     component: OrderPageComponent
-  },  
+  },
   {
     path: '',
     component: LandingPageComponent

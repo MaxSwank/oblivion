@@ -24,19 +24,20 @@
         filter: drop-shadow(0 0 2px white);
       }
     }
-  }
-  ::ng-deep .slick-arrow {
-    color: var(--accent-purple);
-    border-radius: 0;
-    background-color: currentColor;
-    &::before {
-      color: currentColor;
-    }
-    &:focus {
-      background-color: currentColor !important;
-    }
-    &:hover {
-      background-color: currentColor !important;
+
+    ::ng-deep .slick-arrow {
+      color: var(--accent-purple);
+      border-radius: 0;
+      background-color: currentColor;
+      &::before {
+        color: currentColor;
+      }
+      &:focus {
+        background-color: currentColor !important;
+      }
+      &:hover {
+        background-color: currentColor !important;
+      }
     }
   }
 }

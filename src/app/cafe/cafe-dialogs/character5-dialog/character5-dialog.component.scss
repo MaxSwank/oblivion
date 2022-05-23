@@ -1,5 +1,6 @@
 body {
     color: var(--accent-orange);
+    flex-direction: row;
     .dialog-left {
         .carousel-container::before {
             content: "";

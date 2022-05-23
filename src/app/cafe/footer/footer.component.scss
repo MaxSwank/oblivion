@@ -5,7 +5,7 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 4;
+  z-index: 999;
   background-color: var(--footer-bg);
   box-shadow: var(--boxshadow-top);
   height: 28px;

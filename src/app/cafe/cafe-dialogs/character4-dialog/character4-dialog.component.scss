@@ -1,6 +1,7 @@
 .dialog-container {
   color: var(--accent-red);
   .character-dialog {
+    flex-direction: row;
     .dialog-left {
       .carousel-container::before {
         content: "";
