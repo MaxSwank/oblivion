@@ -6,9 +6,12 @@
         &#8220;{{ review.quote }}&#8221;
       </p>
       <h2 class="author-name">
-        <a href="{{ review.url }}">
+        <a href="{{ review.url }}" *ngIf="review.url.length > 0; else noLink">
           &#8213; {{ review.author }}
         </a>
+        <ng-template #noLink>
+          &#8213; {{ review.author }}
+      </ng-template>
       </h2>
       <p class="author-title">
         {{ review.title }}
