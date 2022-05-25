@@ -45,23 +45,20 @@ const routes: Routes = [
       {
         path: 'preorder',
         component: PreorderDialogComponent,
-        data: {
-          'title': 'Oblivion Preorder',
-          'desc': 'Preorder Oblivion by Robin Hemley',
-          'url': 'https://mango-rock-072624310.1.azurestaticapps.net',
-          'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/temp-cafe.jpg'
-        }
-      },
-      {
-        path: 'reviews',
-        component: ReviewsDialogComponent,
         children: [
           {
-            path: 'preorder',
-            component: PreorderDialogComponent,
+            path: 'reviews',
+            component: ReviewsDialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           }
         ]
-      }
+      },
+      
     ],
     data: {
       'title': 'Oblivion home',
@@ -85,6 +82,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -95,6 +104,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -105,6 +126,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -115,6 +148,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -125,6 +170,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -135,6 +192,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -145,6 +214,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -155,6 +236,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -165,6 +258,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -175,6 +280,18 @@ const routes: Routes = [
               {
                 path: 'preorder',
                 component: PreorderDialogComponent,
+                children: [
+                  {
+                    path: 'reviews',
+                    component: ReviewsDialogComponent,
+                    children: [
+                      {
+                        path: 'preorder',
+                        component: PreorderDialogComponent,
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
