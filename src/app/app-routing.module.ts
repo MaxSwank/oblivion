@@ -44,7 +44,7 @@ const routes: Routes = [
       },
       {
         path: 'preorder',
-        component: PreorderDialogComponent
+        component: PreorderDialogComponent,
         data: {
           'title': 'Oblivion Preorder',
           'desc': 'Preorder Oblivion by Robin Hemley',
