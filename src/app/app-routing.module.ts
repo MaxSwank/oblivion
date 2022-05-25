@@ -45,10 +45,22 @@ const routes: Routes = [
       {
         path: 'preorder',
         component: PreorderDialogComponent
+        data: {
+          'title': 'Oblivion Preorder',
+          'desc': 'Preorder Oblivion by Robin Hemley',
+          'url': 'https://mango-rock-072624310.1.azurestaticapps.net',
+          'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/temp-cafe.jpg'
+        }
       },
       {
         path: 'reviews',
-        component: ReviewsDialogComponent
+        component: ReviewsDialogComponent,
+        children: [
+          {
+            path: 'preorder',
+            component: PreorderDialogComponent,
+          }
+        ]
       }
     ],
     data: {
@@ -68,43 +80,103 @@ const routes: Routes = [
         children: [
           {
             path: 'bangs',
-            component: Character1DialogComponent
+            component: Character1DialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'maudy_gammitt',
-            component: Character2DialogComponent
+            component: Character2DialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'gary_katsarida',
-            component: Character3DialogComponent
+            component: Character3DialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'josef_wozek',
-            component: Character4DialogComponent
+            component: Character4DialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'else_lasker_schuler',
-            component: Character5DialogComponent
+            component: Character5DialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'character6',
-            component: Character6DialogComponent
+            component: Character6DialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'arbiter',
-            component: ArbiterDialogComponent
+            component: ArbiterDialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'wall-of-exceptionally-minor-authors',
-            component: WallDialogComponent
+            component: WallDialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'typewriter',
-            component: TypewriterDialogComponent
+            component: TypewriterDialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'window',
-            component: WindowDialogComponent
+            component: WindowDialogComponent,
+            children: [
+              {
+                path: 'preorder',
+                component: PreorderDialogComponent,
+              }
+            ]
           },
           {
             path: 'preorder',
@@ -112,7 +184,13 @@ const routes: Routes = [
             children: [
               {
                 path: 'reviews',
-                component: ReviewsDialogComponent
+                component: ReviewsDialogComponent,
+                children: [
+                  {
+                    path: 'preorder',
+                    component: PreorderDialogComponent,
+                  }
+                ]
               }
             ]
           }
@@ -128,7 +206,13 @@ const routes: Routes = [
   },
   {
     path: 'reviews',
-    component: AuthorQuotesComponent
+    component: AuthorQuotesComponent,
+    children: [
+      {
+        path: 'preorder',
+        component: PreorderDialogComponent,
+      }
+    ]
   },
   {
     path: 'order',
@@ -136,7 +220,13 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: LandingPageComponent
+    component: LandingPageComponent,
+    children: [
+      {
+        path: 'preorder',
+        component: PreorderDialogComponent,
+      }
+    ]
   }
 ];
 
