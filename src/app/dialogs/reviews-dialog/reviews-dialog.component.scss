@@ -45,9 +45,9 @@
             }
         }
         .close-button {
-            position: absolute;
-            top: 0;
-            right: 0;
+            position: fixed;
+            top: 64px;
+            right: 200px;
         }
     }    
     .close-dialog {

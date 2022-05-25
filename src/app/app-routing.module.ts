@@ -493,12 +493,6 @@ const routes: Routes = [
                   'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/preorder/reviews',
                   'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                 },
-                children: [
-                  {
-                    path: 'preorder',
-                    component: PreorderDialogComponent,
-                  }
-                ]
               }
             ]
           }
