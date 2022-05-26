@@ -16,11 +16,10 @@
       <p class="author-title">
         {{ review.title }}
       </p>
+      <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeBlurbs()">
+        <mat-icon>close</mat-icon>
+      </button>
     </div>
-    <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeBlurbs()">
-      <mat-icon>close</mat-icon>
-    </button>
   </div>
   <div class="close-dialog" (click)="closeBlurbs()"></div>
 </div>
-<router-outlet></router-outlet>

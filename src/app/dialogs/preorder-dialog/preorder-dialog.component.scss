@@ -89,9 +89,7 @@
   text-align: center;
   position: relative;
   // width: clamp(770px, 50vw, 900px);
-  height: 80vh;
-  min-height: 720px;
-  max-height: 820px;
+  height: 720px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -186,6 +184,7 @@
                 width: 330px;
                 background-color: var(--slick-fade);
                 padding: 16px;
+                color: black;
                 p {
                   display: -webkit-box;
                   -webkit-line-clamp: 8;
@@ -370,7 +369,7 @@
           height: 56px !important;
           top: -5px !important;
           left: -44px !important;
-        }
+        } 
       }
     }
     .audiobook {
@@ -382,6 +381,7 @@
       opacity: 1;
       span {
         font-size: 18px;
+        color: black;
         a {
           color: #9f2626;
         }

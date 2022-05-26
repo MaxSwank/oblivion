@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; 
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-typewriter-dialog',
@@ -6,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./typewriter-dialog.component.scss']
 })
 export class TypewriterDialogComponent implements OnInit {
-  prompt = 'A writing prompt...'
 
-  constructor() { }
+  constructor(private _router: Router, private location: Location) { }
 
   ngOnInit(): void {
   }
+
+  closeTypewriter() {
+    this.location.back();
+  };
 
 }

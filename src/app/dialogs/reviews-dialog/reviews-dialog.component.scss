@@ -1,13 +1,17 @@
-.dialog-container {    
+.dialog-container {
+    z-index: 1000;
+    width: 100vw;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(242, 239, 226, 0.3);
     .reviews-container {
         color: var(--reviews-green);
         height: 84%;
-        width: 69%;
-        min-width: 860px;
-        max-width: 931px;
+        max-width: 100vw;
+        width: 870px;
         border-radius: 10px;
         border-top: 16px solid currentColor;
-        margin: 6% auto;
+        margin: 4.5% auto;
         background-color: var(--ob-white);
         text-align: left;
         box-shadow: var(--boxshadow-medium);
@@ -46,10 +50,11 @@
         }
         .close-button {
             position: fixed;
-            top: 64px;
-            right: 200px;
+            top: 102px;
+            right: calc(50% - 421px);
+            box-shadow: var(--boxshadow);
         }
-    }    
+    }
     .close-dialog {
         z-index: -1 !important;
     }
@@ -57,10 +62,10 @@
 
 @media screen and (orientation: landscape) and (max-height: 820px) {
     .dialog-container {
-      z-index: 1001;
-      .reviews-container {
-        margin: 1% auto;
-        height: 95%;
-      }
+        z-index: 1001;
+        .reviews-container {
+            margin: 2px auto;
+            height: 97vh;
+        }
     }
-  }
+}

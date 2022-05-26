@@ -73,12 +73,6 @@ const routes: Routes = [
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/preorder/reviews',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
             },
-            children: [
-              {
-                path: 'preorder',
-                component: PreorderDialogComponent,
-              }
-            ]
           }
         ]
       },      
@@ -99,12 +93,12 @@ const routes: Routes = [
         component: CafeComponent,
         children: [
           {
-            path: 'bangs',
+            path: 'john_kendrick_bangs',
             component: Character1DialogComponent,
             data: {
-              'title': 'Bangs',
-              'desc': 'Bangs — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/bangs',
+              'title': 'John Kendrick Bangs',
+              'desc': 'Tell the maître d’ about an imposter — Oblivion by Robin Hemley',
+              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/bangs.png'
             },
             children: [
@@ -114,7 +108,7 @@ const routes: Routes = [
                 data: {
                   'title': 'Oblivion Preorder',
                   'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/bangs/preorder',
+                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs/preorder',
                   'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                 },
                 children: [
@@ -124,15 +118,9 @@ const routes: Routes = [
                     data: {
                       'title': 'Oblivion Reviews',
                       'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/bangs/preorder/reviews',
+                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -167,12 +155,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/maudy_gammitt/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -207,12 +189,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/gary_katsarida/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -247,12 +223,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -287,12 +257,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/else_lasker_schuler/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -315,12 +279,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/character6/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -343,12 +301,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/arbiter/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -383,12 +335,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/wall_of_exceptionally_minor_authors/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -423,12 +369,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/typewriter/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -463,12 +403,6 @@ const routes: Routes = [
                       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/window/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
-                    children: [
-                      {
-                        path: 'preorder',
-                        component: PreorderDialogComponent,
-                      }
-                    ]
                   }
                 ]
               }
@@ -509,18 +443,6 @@ const routes: Routes = [
       'url': 'https://mango-rock-072624310.1.azurestaticapps.net/reviews',
       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
     },
-    children: [
-      {
-        path: 'preorder',
-        component: PreorderDialogComponent,
-        data: {
-          'title': 'Oblivion Preorder',
-          'desc': 'Preorder Oblivion by Robin Hemley',
-          'url': 'https://mango-rock-072624310.1.azurestaticapps.net/reviews/preorder',
-          'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-        },
-      }
-    ]
   },
 ];
 

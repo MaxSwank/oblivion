@@ -1,10 +1,51 @@
-<div class="dialog-container">
+<div class="dialog-container" style="height: calc(100% - 28px)">
+  <div class="contest-container">
+    <h1>WRITING CONTEST</h1>
+    <div class="contest-top">
+      <strong>Further the story and win <span>$100 USD</span> and an <span>autographed copy</span> of <em>Oblivion</em></strong>
+      <p>(Three runners up will receive a signed copy.)</p>
+    </div>
+    <div class="contest-bottom">
+      <span>Add up to <strong>250 words</strong> to this opening sentence:</span>
+      <p><i>“The asbestos factory, gifted to K by his ever-practical father, seemed merely an abstract concept until the
+          day that K decided on a whim to pay a visit to the building and the forlorn district in which it was located
+          ...”</i></p>
+      <form>
+        <mat-form-field class="entry-field">
+          <mat-label>&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet.</mat-label>
+          <input matInput type="text" />
+        </mat-form-field>
+        <mat-form-field class="name-field">
+          <mat-label>&nbsp;&nbsp;Name</mat-label>
+          <input matInput type="text" />
+        </mat-form-field>
+        <mat-form-field class="email-field">
+          <mat-label>&nbsp;&nbsp;Email address</mat-label>
+          <input matInput type="text" />
+        </mat-form-field>
+        <section>
+          <mat-checkbox>Add me to author Robim Hemley's <em>mailing list</em>.</mat-checkbox>
+        </section>
+        <button mat-raised-button>Submit</button>
+      </form>
+    </div>
+    <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeTypewriter()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="close-dialog" (click)="closeTypewriter()"></div>
+</div>
+
+
+
+
+
+
+<!-- <div class="dialog-container">
  <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
     <mat-icon routerLink="../">close</mat-icon>
   </button>
   <div class="close-dialog" routerLink="../"></div>
-  <!-- <app-header></app-header> -->
-
   <body>
     <div class="writing-form">
       <div class="form-top">
@@ -34,5 +75,7 @@
       </div>
        </div>
   </body>
-</div>
+</div> -->
+
+
 <router-outlet></router-outlet>
