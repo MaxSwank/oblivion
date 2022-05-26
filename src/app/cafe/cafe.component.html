@@ -2,22 +2,13 @@
 <div class="cafe-container">
   <app-header></app-header>
   <div class="image-wrapper">
-    <img
-      class="cafe-interior"
-      src="../../assets/img/cafe-art.jpg"
-      alt=""
-    />
+    <img class="cafe-interior" src="../../assets/img/cafe-art.jpg" alt="" />
 
     <!-- modals -->
     <div class="typewriter eye" routerLink="typewriter">
-      <!-- <button
-        mat-icon-button
-        color="primary"
-        class="visibility"
-        aria-label="Writing contest"
-      >
-        <mat-icon>visibility</mat-icon>
-      </button> -->
+      <button mat-button color="primary" aria-label="Writing contest">
+        <p>Writing <br> Contest</p>
+      </button>
     </div>
     <div class="window eye" routerLink="window">
       <!-- <button
@@ -30,16 +21,13 @@
       </button> -->
     </div>
     <div class="wall-minor-authors eye" routerLink="wall-of-exceptionally-minor-authors">
-      <!-- <button
-        mat-icon-button
-        color="primary"
-        class="visibility"
-        aria-label="Wall of Minor Authors"
-      >
-        <mat-icon>visibility</mat-icon>
-      </button> -->
+      <button mat-button color="primary" aria-label="Wall of Minor Authors">
+        <p> The Wall <br>
+          <em>of minor authors</em>
+        </p>
+      </button>
     </div>
-    
+
     <div class="bangs eye accent" routerLink="john_kendrick_bangs"></div>
     <div class="character2 eye accent" routerLink="maudy_gammitt"></div>
     <div class="character3 eye accent" routerLink="gary_katsarida"></div>
@@ -51,4 +39,3 @@
   </div>
   <app-footer></app-footer>
 </div>
-
