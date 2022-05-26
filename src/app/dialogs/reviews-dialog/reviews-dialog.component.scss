@@ -69,3 +69,27 @@
         }
     }
 }
+
+@media screen and (orientation: portrait) {
+    .dialog-container::after {
+        display: none;
+    }
+    .dialog-container {
+        top: 0;
+        .reviews-container {
+            height: 96%;
+            width: 96%;
+            margin: 2%;
+            .review {
+                margin: 0 10%;
+            }
+            .close-button {
+                left: initial;
+                bottom: initial;
+                transform: initial;
+                right: 4px;
+                top: 4px;
+            }
+        }
+    }
+}

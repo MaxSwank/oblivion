@@ -538,7 +538,7 @@
   }
   .preorder-container {
     height: fit-content;
-    position: initial;
+    z-index: 1000;
     top: initial;
     left: initial;
     transform: initial;
@@ -555,6 +555,11 @@
       margin: 0 0 35px 0;
       .box-header {
         grid-row: 1;
+        span {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
       }
       .author-blurbs {
         flex: unset;
