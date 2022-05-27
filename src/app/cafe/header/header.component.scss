@@ -88,9 +88,14 @@ header {
 //   }
 // }
 
+@media screen and (orientation: portrait) {
+  header {
+    position: fixed;
+  }  
+}
+
 @media screen and (max-width: 600px) {
   header {
-    position: relative;
     .gohome {
       display: none;
     }
