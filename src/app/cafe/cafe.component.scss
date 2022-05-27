@@ -47,32 +47,32 @@
     }
     .typewriter {
       left: 18.5%;
-      top: 61.5%;
+      top: 63.5%;
       height: 11.5%;
       width: 10%;
       border-radius: 30px;
       button {
         position: absolute;
-        top: -40%;
+        bottom: calc(100% + 14px);
         left: 17%;
         background-color: var(--ob-white);
         border: 1px solid #292929;
         outline: 6px solid var(--ob-white);
         border-radius: 0px;
-        padding: 0;
+        padding: 8% 8% 4%;
         animation: none;
         box-shadow: var(--boxshadow-medium);
         p {
         line-height: 20px;
-        margin: 8px 8px 2px;
+        margin: 0;
         color: black;
-        font-size: 20px;
+        font-size: 1.7vh;
       }
     }
     }
     .window {
       left: 25%;
-      top: 35%;
+      top: 29%;
       height: 21%;
       width: 13%;
       button {
@@ -82,26 +82,26 @@
     }
     .wall-minor-authors {
       left: 57%;
-      top: 31%;
+      top: 28%;
       height: 11%;
       width: 6%;
       button {
         position: absolute;
-        top: 5%;
+        bottom: 45%;
         background-color: var(--ob-white);
         border: 1px solid #292929;
         outline: 6px solid var(--ob-white);
         border-radius: 0px;
-        padding: 0;
+        padding: 8% 4% 4%;
         animation: none;
         box-shadow: var(--boxshadow-medium);
         p {
         line-height: 20px;
-        margin: 14px 8px 6px;
+        margin: 0;
         color: black;
-        font-size: 26px;
+        font-size: 2vh;
         em {
-          font-size: 16px;
+          font-size: 1.3vh;
         }
       }
     }
@@ -236,7 +236,7 @@
     }
     .character5 {
       right: 38.5%;
-      bottom: 46%;
+      bottom: 47.5%;
       height: 10%;
       width: 4%;
       transform: rotate(7deg);
@@ -272,11 +272,10 @@
 @media screen and (orientation: portrait) {
   .cafe-container {
     max-width: 100vw;
-    height: 100%;
+    height: 100%;    
+    overflow-x: auto;
     .image-wrapper {
-      overflow-x: auto;
       max-width: initial;
-      width: initial;
       height: 100%;
       .cafe-interior {
         max-width: initial;

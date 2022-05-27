@@ -308,33 +308,8 @@ mat-dialog-container {
           border-radius: 5px;
           z-index: 0;
           position: relative;
-          // .audiobook {
-          //   height: fit-content;
-          //   width: fit-content;
-          //   object-fit: cover;
-          //   .ab-img {
-          //     position: relative;
-          //     img {
-          //       -webkit-transform: scale(1.4);
-          //       transform: scale(1.4);
-          //       height: 80px;
-          //       width: auto;
-          //       object-fit: cover;
-          //       transform-origin: center;
-          //       box-shadow: var(--boxshadow);
-          //     }
-          //     button {
-          //       position: absolute;
-          //       top: -30px;
-          //       right: -30px;
-          //       box-shadow: var(--boxshadow);
-          //       background-color: black;
-          //       color: var(--ob-white);
-          //       -webkit-transform: scale(1.3);
-          //       transform: scale(1.3);
-          //     }
-          //   }
-          // }
+          animation: dropdown 1s ease-in;
+          top: 0;
           p {
             flex: 1;
             margin: 18px 12px 12px;
@@ -348,6 +323,14 @@ mat-dialog-container {
               color: var(--ob-yellow);
               font-weight: 700;
             }
+          }
+        }
+        @keyframes dropdown {
+          0% {
+            top: -50%;
+          }
+          100% {
+            top: 0;
           }
         }
       }
@@ -383,40 +366,46 @@ mat-dialog-container {
     overflow-y: auto;
     overflow-x: initial;
   }
-  .dialog-container::after {
-    content: "";
-    width: 100%;
-    height: 62px;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-  }
   .dialog-container {
     height: calc(100vh - 50px);
     top: 50px;
-    z-index: 5;
+    z-index: 1000;
     .close-button {
-      top: unset;
+      position: fixed !important;
+      top: unset !important;
       bottom: 12px;
       left: 50%;
       right: unset;
       transform: translate(-50%);
+      border: 2px solid white !important;
+      mat-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
-    .slick-next,
-    .slick-prev {
+    .slick-arrow {
       position: fixed;
       top: unset;
       bottom: -8px;
       height: 40px;
       width: 40px;
+      z-index: 9;
+      border-radius: 50% !important;
     }
     .slick-next::before,
     .slick-prev::before {
       font-size: 35px !important;
-      top: 2px !important;
-      left: 0 !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+    }
+    .slick-prev::before {
+      content: '⏴' !important;
+    }
+    .slick-next::before {
+      content: '⏵' !important;
     }
     .slick-next {
       margin-right: 0;
@@ -428,58 +417,152 @@ mat-dialog-container {
     app-footer {
       display: none;
     }
-  }
-  .character-dialog {
-    .dialog-left {
-      z-index: 3;
 
-      .carousel-container {
-        max-height: 98% !important;
-        top: 30px !important;
-        left: 20px !important;
-        transform: initial !important;
-        h2 {
-          margin: 24px 10px;
-        }
-        .dialog-carousel {
-          .slick-next,
-          .slick-prev {
-            position: fixed;
-            top: unset !important;
-            bottom: -8px;
-            height: 40px;
-            width: 40px;
+    .character-dialog {
+      flex-direction: column;
+      .dialog-left {
+        margin-top: 3px;
+        z-index: 5;
+        flex: 2;
+        height: initial;
+        justify-content: initial;
+        .left-container {
+          .carousel-container::before {
+            width: 94vw;
           }
-          .slick-next::before,
-          .slick-prev::before {
-            font-size: 35px !important;
-            top: 5px !important;
-            left: 2px !important;
-            transform: initial !important;
+          .carousel-container::after {
+            display: none;
           }
-          .slick-next {
-            margin-right: 0;
-            right: 7% !important;
+          .carousel-container {
+            max-height: initial;
+            max-width: initial;
+            top: initial;
+            left: initial !important;
+            transform: initial;
+            width: 94vw;
+            margin: 0 auto;
+            height: initial;
+            min-height: calc(47vh - 65px);
+
+            h2 {
+              margin: 18px auto 10px;
+              font-size: 22px;
+              text-decoration: underline;
+            }
+            .dialog-carousel {
+              width: 90%;
+              .slide {
+                .quote-text {
+                  .slide-intro {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                  }
+                  .slide-quote {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                  }
+                  .slide-author {
+                    margin: 0 0 0 10px;
+                  }
+                  .slide-title {
+                    font-size: 14px;
+                    margin: 0 0 6px 25px;
+                  }
+                }
+              }
+              .slick-next,
+              .slick-prev {
+                position: fixed;
+                top: unset !important;
+                bottom: -8px;
+                height: 40px;
+                width: 40px;
+              }
+              .slick-next {
+                margin-right: 0;
+                right: 7% !important;
+              }
+              .slick-prev {
+                left: 7% !important;
+              }
+            }
           }
-          .slick-prev {
-            left: 7% !important;
+          .bubble-footer {
+            width: 50vw;
+            margin: 0 auto 0 3%;
+            p {
+              margin: 16px 6px 6px;
+              font-size: 16px;
+            }
           }
         }
       }
-      .bubble-footer {
-        p {
-          margin: 12px;
-        }
+      .dialog-right::after {
+        content: "";
+        width: 100vw;
+        height: 62px;
+        background-color: black;
+        opacity: .8;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
       }
-    }
-    .dialog-right {
-      img {
-        left: -100% !important;
-        height: 75vh;
+      .dialog-right {
+        position: absolute;
+        bottom: 0;
+        right: -5%;
+        z-index: 3;
+        img {
+          position: relative;
+          right: initial;
+          bottom: initial;
+          left: initial;
+          transform: initial;
+          float: right;
+          left: 25px;
+        }
+        #bangs-img {
+          height: 53vh;
+          left: 0;
+        }
+        #gary-k {
+          height: 47vh;
+        }
+        #maudy-g {
+          height: 45vh;
+        }
+        #else-l {
+          height: 46vh;
+        }
+        #josef-w {
+          height: 48vh;
+        }
       }
     }
   }
 }
+
+@media screen and (max-width: 350px) {
+   .dialog-container {
+     .character-dialog {
+       .dialog-right {
+         #gary-k{
+           height: 35vh;
+         }
+         #maudy-g {
+           height: 33vh;
+         }
+         #else-l {
+           height: 33vh;
+         }
+         #josef-w {
+           height: 33vh;
+         }
+       }
+     }
+   }
+  }
 
 @media screen and (orientation: portrait) {
   .character-dialog {

@@ -1,5 +1,5 @@
 .dialog-container::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 220px;
     width: 220px;
@@ -11,7 +11,7 @@
     z-index: 1;
     top: 180px;
 }
-.dialog-container {    
+.dialog-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,8 +38,8 @@
         .contest-top {
             margin: 0 100px;
             padding: 4% 0;
-            border-bottom: 1px solid var(--gray-text);            
-            font-size: 24px;            
+            border-bottom: 1px solid var(--gray-text);
+            font-size: 24px;
             color: black;
             strong {
                 line-height: 1.2;
@@ -47,8 +47,8 @@
                     color: var(--contest-red);
                 }
             }
-            p {   
-                margin: 28px 0 0 0;       
+            p {
+                margin: 28px 0 0 0;
             }
         }
         .contest-bottom {
@@ -106,115 +106,29 @@
             top: 64px;
             right: 200px;
         }
-    }    
+    }
     .close-dialog {
         z-index: -1 !important;
     }
 }
 
-
-// .dialog-container {
-//     body {
-//         background-image: url(../../../../assets/img/typewriter.png);
-//         background-size: cover;
-//         padding: 5%;
-//         background-origin: content-box;
-//         background-repeat: no-repeat;
-//         overflow-y: auto;
-//         .writing-form {
-//             width: 425px;
-//             max-width: 80vw;
-//             height: fit-content;
-//             background-color: var(--speech-bubble);
-//             margin: 24px auto;
-//             box-shadow: var(--boxshadow);
-//             .form-top {
-//                 background: var(--bg-blue);
-//                 p {
-//                     padding: 12px;
-//                     text-align: center;
-//                 }
-//             }
-//             .form-bottom {
-//                 padding: 0 24px 24px;
-//                 text-align: center;
-//                 h2 {
-//                     text-align: left;
-//                 }
-//                 mat-form-field {
-//                     width: 100%;
-//                     ::ng-deep .mat-form-field-flex {
-//                         box-shadow: var(--boxshadow);
-//                         background-color: var(--ob-white);
-//                     }
-//                     input {
-//                         margin: 0 12px;
-//                         width: calc(100% - 24px);
-//                     }
-//                 }
-//                 .writing-prompt::before {
-//                     content: '"';
-//                     position: absolute;
-//                     left: 5px;
-//                     top: 10px;
-//                     font-size: 22px;
-//                     color: gray;
-//                     z-index: 1;
-//                 }
-//                 .writing-prompt::after {
-//                     content: '"';
-//                     position: absolute;
-//                     right: 5px;
-//                     top: 10px;
-//                     font-size: 22px;
-//                     color: gray;
-//                     z-index: 1;
-//                 }
-
-//                 p {
-//                     font-size: 11px;
-//                     white-space: normal;
-//                     text-align: left;
-//                     margin: 0;
-//                 }
-//                 section {
-//                     margin: 20px auto 10px;
-//                     mat-checkbox {
-//                         white-space: normal;
-//                         ::ng-deep span {
-//                             white-space: normal;
-//                             text-align: left;
-//                         }
-//                     }
-//                 }
-//                 button {
-//                     background: var(--ob-yellow);
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media screen and (orientation: portrait) {
-//     .dialog-container {
-//         body {
-//             background-position: bottom;
-//             padding: initial;
-//             background-size: contain;
-//             padding: 5% 0;
-//             .writing-form {
-//                 margin: 60px auto;
-//             }
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 500px) {
-//     .dialog-container {
-//         body {
-//             .writing-form {
-//                 margin: 24px auto;
-//             }
-//         }
-//     }
-// }
+@media screen and (orientation: portrait) and (max-width: 600px) {
+    .dialog-container {
+        .contest-container {
+            .contest-top,
+            .contest-bottom {
+                margin: 0 10%;
+                form {
+                    section {
+                        mat-checkbox {
+                            ::ng-deep .mat-checkbox-label {
+                                white-space: normal;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

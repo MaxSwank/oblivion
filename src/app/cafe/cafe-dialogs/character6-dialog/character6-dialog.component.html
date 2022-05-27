@@ -10,10 +10,10 @@
           (beforeChange)="beforeChange($event)">
           <div ngxSlickItem *ngFor="let slide of slides" class="slide">
             <div class="quote-text">
-              <p class="slide-intro">{{ slide.intro }}</p>
-              <p class="slide-quote">"{{ slide.quote }}"</p>
-              <p class="slide-author">&#8213; {{ slide.author }}</p>
-              <p class="slide-title">{{ slide.title }}</p>
+              <p class="slide-intro" *ngIf="slide.intro.length > 0">{{ slide.intro }}</p>
+                <p class="slide-quote">"{{ slide.quote }}"</p>
+              <p class="slide-author" *ngIf="slide.author.length > 0" [innerHTML]="slide.author"></p>
+              <p class="slide-title" *ngIf="slide.title.length > 0">{{ slide.title }}</p>
             </div>
           </div>
         </ngx-slick-carousel>
