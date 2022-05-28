@@ -347,6 +347,9 @@ mat-dialog-container {
         z-index: 1;
       }
     }
+    .character-footer-mobile {
+      display: none;
+    }
   }
 }
 @media screen and (orientation: landscape) and (max-height: 700px) and (max-width: 1000px) {
@@ -371,21 +374,7 @@ mat-dialog-container {
     z-index: 1000;
     position: absolute;
     overflow-y: auto;
-    .close-button {
-      position: fixed !important;
-      top: unset !important;
-      bottom: 12px;
-      left: 50%;
-      right: unset;
-      transform: translate(-50%);
-      border: 2px solid white !important;
-      mat-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
+    overflow-x: hidden;
     .slick-arrow {
       position: fixed;
       top: unset;
@@ -403,10 +392,10 @@ mat-dialog-container {
       transform: translate(-50%, -50%) !important;
     }
     .slick-prev::before {
-      content: '⏴' !important;
+      content: "⏴" !important;
     }
     .slick-next::before {
-      content: '⏵' !important;
+      content: "⏵" !important;
     }
     .slick-next {
       margin-right: 0;
@@ -418,10 +407,12 @@ mat-dialog-container {
     app-footer {
       display: none;
     }
+  }
 
+  .dialog-container {
+    overflow: hidden;
     .character-dialog {
       flex-direction: column;
-      margin-bottom: 50px;
       .dialog-left {
         margin-top: 3px;
         z-index: 5;
@@ -475,8 +466,9 @@ mat-dialog-container {
               .slick-next,
               .slick-prev {
                 position: fixed;
-                top: unset !important;
-                bottom: -8px;
+                top: 100% !important;
+                transform: translateY(-51px) !important;
+                bottom: initial !important;
                 height: 40px;
                 width: 40px;
               }
@@ -487,6 +479,9 @@ mat-dialog-container {
               .slick-prev {
                 left: 7% !important;
               }
+            }
+            .close-button {
+              display: none;
             }
           }
           .bubble-footer {
@@ -499,17 +494,17 @@ mat-dialog-container {
           }
         }
       }
-      .dialog-right::after {
-        content: "";
-        width: 100vw;
-        height: 62px;
-        background-color: black;
-        opacity: .8;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 4;
-      }
+      // .dialog-right::after {
+      //   content: "";
+      //   width: 100vw;
+      //   height: 62px;
+      //   background-color: black;
+      //   opacity: 0.8;
+      //   position: fixed;
+      //   bottom: 0;
+      //   left: 0;
+      //   z-index: 4;
+      // }
       .dialog-right {
         position: absolute;
         bottom: 0;
@@ -541,30 +536,54 @@ mat-dialog-container {
           height: 48vh;
         }
       }
+      .character-footer-mobile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 62px;
+        background-color: var(--black-opacity);
+        z-index: 3;
+        .close-button {
+          position: initial !important;
+          top: unset !important;
+          // bottom: 12px;
+          // left: 50%;
+          right: unset;
+          // transform: translate(-50%);
+          border: 2px solid white !important;
+          margin: auto;
+          mat-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 350px) {
-   .dialog-container {
-     .character-dialog {
-       .dialog-right {
-         #gary-k{
-           height: 35vh;
-         }
-         #maudy-g {
-           height: 33vh;
-         }
-         #else-l {
-           height: 33vh;
-         }
-         #josef-w {
-           height: 33vh;
-         }
-       }
-     }
-   }
+  .dialog-container {
+    .character-dialog {
+      .dialog-right {
+        #gary-k {
+          height: 35vh;
+        }
+        #maudy-g {
+          height: 33vh;
+        }
+        #else-l {
+          height: 33vh;
+        }
+        #josef-w {
+          height: 33vh;
+        }
+      }
+    }
   }
+}
 
 @media screen and (orientation: portrait) {
   .character-dialog {
