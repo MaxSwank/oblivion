@@ -1,5 +1,8 @@
 <div class="dialog-container" style="height: calc(100% - 28px)">
   <div class="contest-container">
+    <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeTypewriter()">
+      <mat-icon>close</mat-icon>
+    </button>
     <h1>WRITING CONTEST</h1>
     <div class="contest-top">
       <strong>Further the story and win <span>$100 USD</span> and an <span>autographed copy</span> of <em>Oblivion</em></strong>
@@ -29,9 +32,6 @@
         <button mat-raised-button>Submit</button>
       </form>
     </div>
-    <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeTypewriter()">
-      <mat-icon>close</mat-icon>
-    </button>
   </div>
   <div class="close-dialog" (click)="closeTypewriter()"></div>
 </div>

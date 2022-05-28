@@ -30,6 +30,15 @@
         box-shadow: var(--boxshadow-medium);
         overflow: auto;
         position: relative;
+        .close-button {
+            position: sticky !important;
+            top: 0 !important;
+            float: right;
+            right: initial !important;
+            left: initial !important;
+            bottom: initial !important;
+            transform: initial !important;
+        }
         h1 {
             margin: 5% 0 0;
             font-weight: 700;
@@ -101,11 +110,6 @@
                 }
             }
         }
-        .close-button {
-            position: fixed;
-            top: 64px;
-            right: 200px;
-        }
     }
     .close-dialog {
         z-index: -1 !important;
@@ -114,7 +118,10 @@
 
 @media screen and (orientation: portrait) and (max-width: 600px) {
     .dialog-container {
+        justify-content: initial;
         .contest-container {
+            max-height: 100%;
+            height: calc(100vh - 70px);
             .contest-top,
             .contest-bottom {
                 margin: 0 10%;
