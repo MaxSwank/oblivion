@@ -241,7 +241,8 @@
       width: 4%;
       transform: rotate(7deg);
       border-radius: 50%;
-      mix-blend-mode: soft-light;
+      mix-blend-mode: soft-light;      
+      border: 3px solid green;
     }
     .character5::before {
       background-image: url(../../assets/img/orange.png);
@@ -279,10 +280,10 @@
       height: 100vh;
       .cafe-interior {
         max-width: initial;
-        overflow: initial;
+        overflow: hidden;
         width: auto;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
   }
