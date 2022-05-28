@@ -5,7 +5,6 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
   * {
     font-family: p22-stickley-pro-text, serif;
   }
@@ -353,22 +352,10 @@ mat-dialog-container {
     display: none;
   }
 }
-@media screen and (orientation: landscape) and (max-height: 700px) and (max-width: 1000px) {
-  html,
-  body {
-    height: fit-content;
-    overflow-y: auto;
-    overflow-x: initial;
-  }
-}
+
 
 @media screen and (max-width: 600px) {
-  html,
-  body {
-    height: fit-content;
-    overflow-y: auto;
-    overflow-x: initial;
-  }
+ 
   .dialog-container {
     z-index: 1000;
     overflow-y: auto;
