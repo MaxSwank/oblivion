@@ -1,7 +1,7 @@
 .dialog-container {
   color: var(--accent-red);
   .character-dialog {
-    flex-direction: row;
+    // flex-direction: row;
     .dialog-left {
       .carousel-container::before {
         content: "";
@@ -17,21 +17,15 @@
         }
         .dialog-carousel {
           .slide {
-              .quote-text {
-                  .slide-intro {
-                      color: currentColor;
-                  }
+            .quote-text {
+              .slide-intro {
+                color: currentColor;
               }
+            }
           }
-      }
+        }
       }
     }
-
-    //     .dialog-right {
-    //       img {
-    //         right: 76px;
-    //       }
-    //     }
   }
   ::ng-deep .slick-arrow {
     color: var(--accent-red);

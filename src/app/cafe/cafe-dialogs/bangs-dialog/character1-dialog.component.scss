@@ -58,18 +58,3 @@
         }
     }
 }
-
-@media screen and (orientation: portrait) {
-    body {
-        .dialog-left {
-            .carousel-container {
-                left: 50px;
-            }
-        }
-        .dialog-right {
-            img {
-                left: -260px;
-            }
-        }
-    }
-}

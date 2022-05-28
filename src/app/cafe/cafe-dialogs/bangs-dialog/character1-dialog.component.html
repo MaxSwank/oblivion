@@ -1,4 +1,5 @@
 <div class="dialog-container">
+  <app-header></app-header>
   <div class="close-dialog" routerLink="../"></div>
 
   <body class="character-dialog">
@@ -41,11 +42,11 @@
     <div class="dialog-right">
       <img id="bangs-img" src="../../../../assets/img/bangs-pod.png" alt="" />
     </div>
-    <footer class="character-footer-mobile">
-      <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
-        <mat-icon>close</mat-icon>
-      </button>
-    </footer>
   </body>
+  <footer class="character-footer-mobile">
+    <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
+      <mat-icon>close</mat-icon>
+    </button>
+  </footer>
 </div>
 <router-outlet></router-outlet>

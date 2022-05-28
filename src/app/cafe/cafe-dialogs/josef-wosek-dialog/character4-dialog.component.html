@@ -1,6 +1,8 @@
 <div class="dialog-container">
-<div class="close-dialog" routerLink="../"></div>
-<body class="character-dialog">
+  <app-header></app-header>
+  <div class="close-dialog" routerLink="../"></div>
+
+  <body class="character-dialog">
     <div class="dialog-left">
       <div class="left-container">
         <div class="carousel-container">
@@ -12,8 +14,8 @@
               <div class="quote-text">
                 <p class="slide-intro" *ngIf="slide.intro.length > 0">{{ slide.intro }}</p>
                 <p class="slide-quote">"{{ slide.quote }}"</p>
-              <p class="slide-author" *ngIf="slide.author.length > 0" [innerHTML]="slide.author"></p>
-              <p class="slide-title" *ngIf="slide.title.length > 0">{{ slide.title }}</p>
+                <p class="slide-author" *ngIf="slide.author.length > 0" [innerHTML]="slide.author"></p>
+                <p class="slide-title" *ngIf="slide.title.length > 0">{{ slide.title }}</p>
               </div>
             </div>
           </ngx-slick-carousel>
@@ -22,7 +24,7 @@
           </button>
         </div>
         <div class="bubble-footer">
-            <!-- <div class="audiobook">
+          <!-- <div class="audiobook">
             <div class="ab-img">
               <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
               <button mat-icon-button>
@@ -39,11 +41,11 @@
     <div class="dialog-right">
       <img id="josef-w" src="../../../../assets/img/josef-wozek.png" alt="" />
     </div>
-    <footer class="character-footer-mobile">
-      <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
-        <mat-icon>close</mat-icon>
-      </button>
-    </footer>
   </body>
+  <footer class="character-footer-mobile">
+    <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
+      <mat-icon>close</mat-icon>
+    </button>
+  </footer>
 </div>
 <router-outlet></router-outlet>

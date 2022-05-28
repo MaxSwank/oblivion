@@ -307,9 +307,9 @@ mat-dialog-container {
           flex-direction: row;
           border-radius: 5px;
           z-index: 0;
-          position: relative;
-          animation: dropdown 1s ease-in;
-          top: 0;
+          position: absolute;
+          bottom: 0;
+          animation: dropdown 1s ease-in forwards;
           p {
             flex: 1;
             margin: 18px 12px 12px;
@@ -327,10 +327,10 @@ mat-dialog-container {
         }
         @keyframes dropdown {
           0% {
-            top: -50%;
+            transform: translateY(0%);
           }
           100% {
-            top: 0;
+            transform: translateY(100%);
           }
         }
       }
@@ -348,9 +348,9 @@ mat-dialog-container {
         z-index: 1;
       }
     }
-    .character-footer-mobile {
-      display: none;
-    }
+  }
+  .character-footer-mobile {
+    display: none;
   }
 }
 @media screen and (orientation: landscape) and (max-height: 700px) and (max-width: 1000px) {
@@ -370,10 +370,7 @@ mat-dialog-container {
     overflow-x: initial;
   }
   .dialog-container {
-    height: calc(100vh - 50px);
-    top: 50px;
     z-index: 1000;
-    position: absolute;
     overflow-y: auto;
     overflow-x: hidden;
     .slick-arrow {
@@ -412,12 +409,18 @@ mat-dialog-container {
 
   .dialog-container {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    app-header {
+      display: block;
+    }
     .character-dialog {
       flex-direction: column;
+      overflow: hidden;
       .dialog-left {
         margin-top: 3px;
         z-index: 5;
-        flex: 2;
+        flex: unset;
         height: initial;
         justify-content: initial;
         .left-container {
@@ -495,70 +498,59 @@ mat-dialog-container {
           }
         }
       }
-      // .dialog-right::after {
-      //   content: "";
-      //   width: 100vw;
-      //   height: 62px;
-      //   background-color: black;
-      //   opacity: 0.8;
-      //   position: fixed;
-      //   bottom: 0;
-      //   left: 0;
-      //   z-index: 4;
-      // }
       .dialog-right {
-        position: absolute;
-        bottom: 0;
-        right: -5%;
-        z-index: 3;
+        position: relative;
+        z-index: 5;
         img {
-          position: relative;
+          position: absolute;
           right: initial;
           bottom: initial;
           left: initial;
           transform: initial;
           float: right;
-          left: 25px;
+          right: -20vw;
+          bottom: -12px;
         }
         #bangs-img {
-          height: 53vh;
-          left: 0;
+          height: 50vh;
+          right: 8vw;
         }
         #gary-k {
-          height: 47vh;
+          height: 43vh;
+          right: -22vw;
         }
         #maudy-g {
-          height: 45vh;
+          height: 40vh;
         }
         #else-l {
-          height: 46vh;
+          height: 42vh;
         }
         #josef-w {
-          height: 48vh;
+          height: 43vh;
         }
       }
-      .character-footer-mobile {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        height: 62px;
-        background-color: var(--black-opacity);
-        z-index: 3;
-        .close-button {
-          position: initial !important;
-          top: unset !important;
-          // bottom: 12px;
-          // left: 50%;
-          right: unset;
-          // transform: translate(-50%);
-          border: 2px solid white !important;
-          margin: auto;
-          mat-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
+    }
+    .character-footer-mobile {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      min-height: 62px;
+      background-color: black;
+      z-index: 3;
+      .close-button {
+        position: initial !important;
+        top: unset !important;
+        // bottom: 12px;
+        // left: 50%;
+        right: unset;
+        // transform: translate(-50%);
+        border: 2px solid white !important;
+        margin: auto;
+        mat-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
     }
@@ -569,17 +561,24 @@ mat-dialog-container {
   .dialog-container {
     .character-dialog {
       .dialog-right {
+        img {
+          right: -10vw !important;
+        }
+        #bangs-img {
+          height: 48vh;
+          right: 8vw !important;
+        }
         #gary-k {
-          height: 35vh;
+          height: 32vh;
         }
         #maudy-g {
-          height: 33vh;
+          height: 29vh;
         }
         #else-l {
-          height: 33vh;
+          height: 30vh;
         }
         #josef-w {
-          height: 33vh;
+          height: 29vh;
         }
       }
     }
