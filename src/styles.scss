@@ -337,6 +337,7 @@ mat-dialog-container {
     }
     .dialog-right {
       flex: 1;
+      pointer-events: none;
       img {
         position: absolute;
         height: 85vh;
