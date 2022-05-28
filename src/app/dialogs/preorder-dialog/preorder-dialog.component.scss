@@ -544,6 +544,9 @@
     transform: initial;
     min-height: 100vh;
     background-color: var(--ob-blue);
+    .close-dialog {
+      background-color: var(--ob-blue) !important;
+    }
     .close-button {
       top: 4px;
       right: 4px;
