@@ -345,7 +345,6 @@ mat-dialog-container {
         bottom: 0;
         transform: translate(25%);
         z-index: 1;
-        pointer-events: none;
       }
     }
   }
@@ -370,6 +369,8 @@ mat-dialog-container {
     height: calc(100vh - 50px);
     top: 50px;
     z-index: 1000;
+    position: absolute;
+    overflow-y: auto;
     .close-button {
       position: fixed !important;
       top: unset !important;
@@ -420,6 +421,7 @@ mat-dialog-container {
 
     .character-dialog {
       flex-direction: column;
+      margin-bottom: 50px;
       .dialog-left {
         margin-top: 3px;
         z-index: 5;
