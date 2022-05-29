@@ -411,7 +411,7 @@ mat-dialog-container {
       margin: 0;
       .dialog-left {
         margin-top: 3px;
-        z-index: 5;
+        z-index: 6;
         flex: unset;
         height: initial;
         justify-content: initial;
@@ -541,7 +541,11 @@ mat-dialog-container {
       flex-wrap: nowrap;
       min-height: 62px;
       background-color: black;
-      z-index: 3;
+      z-index: 5;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
       .close-button {
         position: initial !important;
         top: unset !important;
