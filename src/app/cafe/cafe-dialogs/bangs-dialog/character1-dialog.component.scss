@@ -1,62 +1,67 @@
 .dialog-container {
-::ng-deep body {
-    color: var(--accent-purple);
-    flex-direction: row;
-    .dialog-left {
-        .left-container {
-            .carousel-container::before {
-                content: "";
-                background-color: currentColor;
-            }
-            .carousel-container::after {
-                filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
-            }
-            .carousel-container {
-                background-color: var(--bg-accent-purple);
-                h2 {
-                    color: currentColor;
+    ::ng-deep body {
+        color: var(--accent-purple);
+        flex-direction: row;
+        .dialog-left {
+            .left-container {
+                .carousel-container {
+                    background-color: var(--bg-accent-purple);
+                    h2 {
+                        color: currentColor;
+                    }
+                    .textfields {
+                     margin: 0 10%;
+                     mat-radio-group {
+                         display: flex;
+                         flex-direction: row;
+                         mat-radio-button {
+                             flex: 1;
+                         }
+                     }
+                     .name-field {
+                         width: 40%;
+                         float: left;
+                     }
+                     .email-field {
+                         width: 55%;
+                         float: right;
+                     }
+                     button {
+                         margin: 20px auto;
+                     }
+                    }
                 }
-                .dialog-carousel {
-                    .slide {
-                        .quote-text {
-                            .slide-intro {
-                                color: currentColor;
+                .bubble-footer {
+                    .audiobook {
+                        .ab-img {
+                            button {
+                                right: -20px;
                             }
                         }
                     }
                 }
             }
-            .bubble-footer {
-                .audiobook {
-                    .ab-img {
-                        button {
-                            right: -20px;
-                        }
-                    }
-                }
+        }
+        .dialog-right {
+            #bangs-img {
+                transform: translate(25%) rotateY(180deg) !important;
+            }
+        }
+        ::ng-deep .slick-arrow {
+            color: var(--accent-purple);
+            border-radius: 0;
+            background-color: currentColor;
+            &::before {
+                color: currentColor;
+            }
+            &:focus {
+                background-color: currentColor !important;
+            }
+            &:hover {
+                background-color: currentColor !important;
             }
         }
     }
-    .dialog-right {
-        #bangs-img {
-            transform: translate(25%) rotateY(180deg) !important;
-        }
-    }
-    ::ng-deep .slick-arrow {
-        color: var(--accent-purple);
-        border-radius: 0;
-        background-color: currentColor;
-        &::before {
-            color: currentColor;
-        }
-        &:focus {
-            background-color: currentColor !important;
-        }
-        &:hover {
-            background-color: currentColor !important;
-        }
-    }
-}
 
     .character-footer-mobile::before,
     .character-footer-mobile::after {

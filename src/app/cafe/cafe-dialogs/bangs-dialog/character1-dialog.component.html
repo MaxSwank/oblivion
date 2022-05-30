@@ -6,33 +6,37 @@
     <div class="dialog-left">
       <div class="left-container">
         <div class="carousel-container">
-          <h2>BANGS</h2>
-          <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
-            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-            (beforeChange)="beforeChange($event)">
-            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-              <div class="quote-text">
-                <p class="slide-quote">"{{ slide.quote }}"</p>
-                <p class="slide-author">&#8213; {{ slide.author }}</p>
-                <!-- <p class="slide-title">{{ slide.title }}</p> -->
-                <!-- <br />
-              <p class="slide-author">- {{ slide.author }}</p> -->
-              </div>
-            </div>
-          </ngx-slick-carousel>
+          <h2>JOHN KENDRICK BANGS</h2>
+          <div class="textfields">
+          <p>Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
+            embarrassing clerical error. Something must be done at once. Who has been misplaced? </p>
+            <form>
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Maudy</mat-radio-button>
+                <mat-radio-button value="2">Gary</mat-radio-button>
+                <mat-radio-button value="3">Jósef</mat-radio-button>
+                <mat-radio-button value="4">Else</mat-radio-button>
+              </mat-radio-group>
+              <br>
+              <mat-form-field class="name-field">
+                <mat-label>&nbsp;&nbsp;Name</mat-label>
+                <input matInput type="text" />
+              </mat-form-field>
+              <mat-form-field class="email-field">
+                <mat-label>&nbsp;&nbsp;Email address</mat-label>
+                <input matInput type="text" />
+              </mat-form-field>
+              <section>
+                <mat-checkbox>Add me to author Robim Hemley's <em>mailing list</em>.</mat-checkbox>
+              </section>
+            </form>
+            <button mat-raised-button>Submit</button>
+          </div>
           <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
             <mat-icon>close</mat-icon>
           </button>
         </div>
         <div class="bubble-footer">
-          <!-- <div class="audiobook">
-            <div class="ab-img">
-              <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
-              <button mat-icon-button>
-                <mat-icon>headset</mat-icon>
-              </button>
-            </div>
-          </div> -->
           <p>
             Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
           </p>
