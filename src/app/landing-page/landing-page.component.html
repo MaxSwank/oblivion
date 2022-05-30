@@ -3,21 +3,6 @@
   <div class="lp-container" [ngClass]="cafeZoom ? 'containerA' : 'containerB'">
     <div class="bg-cafe">
     </div>
-    <div class="cafe-container">
-      <div class="panel-left" (mouseover)="bangsLeft()"></div>
-      <div class="panel-right" (mouseover)="bangsRight()"></div>
-      <div class="panel-center" (mouseover)="bangsCenter()"></div>
-      <div class="text-container">
-        <img src="../../assets/img/cafe-title.png" alt="">
-      </div>
-      <div class="bottom-border janky"></div>
-      <div class="cafe-clip">
-        <div class="cafe-image">
-          <img src="../../assets/img/Cafe-color-photo.jpg" alt="">
-        </div>
-        <div class="cafe-bottom-border"></div>
-      </div>
-    </div>
     <div class="butler-container" [ngClass]="{ class1 : hoverLeft, class2 : hoverRight, class3 : hoverCenter }">
       <div class="butler-text">
         <h4>Welcome to the Caf&eacute; of Minor Authors.</h4>
@@ -25,10 +10,24 @@
         <p>The regulars are all talking about it. Which says <i>something,</i> I suppose.</p>
       </div>
       <div class="butler-image">
-        <img src="../../assets/img/bangs-pod.png" alt="" class="butler">
-        <img src="../../assets/img/podium.png" alt="" class="podium">
+        <img src="../../assets/img/bangs-pod-color.png" alt="" class="butler">
       </div>
     </div>
+    <div class="cafe-container">
+      <button class="enter" (click)="enterCafe()" mat-raised-button>
+      </button>
+      <div class="arch">
+        <img src="../../assets/img/arch.png" alt="">
+      </div>
+      <div class="panel-left"></div>
+      <div class="panel-right"></div>
+      <div class="panel-center"></div>
+      <div class="cafe-clip">
+        <div class="cafe-image">
+          <img src="../../assets/img/cafe-home.jpg" alt="">
+        </div>
+      </div>
+    </div>    
     <div class="cafe-mobile">
       <div class="bg-mobile"></div>
       <div class="butler-mobile">
@@ -66,12 +65,8 @@
         <div class="footer-bottom">
           <button routerLink="preorder" mat-raised-button>Learn More & Preorder</button>
         </div>
-
       </div>
     </div>
-    <button class="enter" (click)="enterCafe()" mat-raised-button>
-      Enter the Caf&eacute;
-    </button>
     <div class="footer-content">
       <div class="book-info">
         <h1>Oblivion</h1>
@@ -80,7 +75,7 @@
         <span class="pre-launch">Arriving <strong>&nbsp;JUNE 1&nbsp;</strong> from</span>
         <h3>ROBIN HEMLEY</h3>
         <div class="info-bottom">
-          <button routerLink="preorder" mat-raised-button>Learn More & Preorder</button>
+          <button routerLink="preorder" mat-raised-button>Learn More & Order</button>
         </div>
       </div>
       <img src="../../assets/img/BookCover.jpg" alt="">

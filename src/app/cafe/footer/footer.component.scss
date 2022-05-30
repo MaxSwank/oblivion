@@ -6,6 +6,9 @@ footer {
   background-color: var(--footer-bg);
   box-shadow: var(--boxshadow-top);
   height: 28px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   .f-left {
     margin-right: 12px;
     button {

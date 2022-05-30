@@ -19,10 +19,10 @@ export class LandingPageComponent implements OnInit {
   }
 
   enterCafe() {
-    this.cafeZoom = !this.cafeZoom;
+    // this.cafeZoom = !this.cafeZoom;
     setTimeout(() => {
       this._router.navigate(['/cafe']);
-    }, 1500);
+    }, 0);
   }
 
   bangsLeft() {
