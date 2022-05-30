@@ -13,8 +13,8 @@
         <img src="../../assets/img/bangs-pod-color.png" alt="" class="butler">
       </div>
     </div>
-    <div class="cafe-container">
-      <button class="enter" (click)="enterCafe()" mat-raised-button>
+    <div class="cafe-container" (click)="enterCafe()">
+      <button class="enter" mat-raised-button>
       </button>
       <div class="arch">
         <img src="../../assets/img/arch.png" alt="">
@@ -49,7 +49,7 @@
           <img src="../../assets/img/bangs-pod.png" alt="" class="mobile-butler">
         </div>
       </div>
-      <div class="footer-mobile">
+      <div class="footer-mobile" routerLink="preorder">
         <div class="footer-top">
           <div class="footer-image">
             <img src="../../assets/img/BookCover.jpg" alt="">
@@ -67,7 +67,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-content">
+    <div class="footer-content" routerLink="preorder">
       <div class="book-info">
         <h1>Oblivion</h1>
         <h2><i>An After Autobiography</i></h2>

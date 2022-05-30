@@ -177,6 +177,7 @@
     .footer-content {
       animation: opac 1.5s forwards;
       transition: 1.5s;
+      cursor: pointer;
     }
   }
 
@@ -447,6 +448,7 @@
       display: none;
     }
     .footer-content {
+      cursor: pointer;
       position: fixed;
       bottom: 10px;
       right: 50px;
@@ -563,6 +565,7 @@
       }
     }
     .footer-content {
+      cursor: pointer;
       right: 25px !important;
     }
   }
