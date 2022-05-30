@@ -234,7 +234,13 @@
 @media screen and (orientation: portrait) {
   .cafe-container {
     overflow-x: auto;
+    .image-wrapper {
+      img {
+        transform: translateY(6%) !important;
+      }
+    }
     .typewriter {
+      top: 72.5% !important;
       .desktop-typewriter {
         display: none;
       }
@@ -264,6 +270,9 @@
           font-size: 18px;
         }
       }
+    }
+    .window {
+      top: 59% !important;
     }
     .wall-minor-authors {
       display: none;
