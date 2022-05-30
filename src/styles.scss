@@ -2,6 +2,10 @@
 /* @import "prismjs/themes/prism.css"; */
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+@font-face {
+  font-family: "noto";
+  src: url(../../oblivion/src/assets/fonts/NotoSans-Bold.ttf);
+}
 html,
 body {
   height: 100%;
@@ -289,10 +293,10 @@ mat-dialog-container {
               color: white !important;
               transform: translate(-50%, -50%) scaleX(0.7);
               -webkit-text-stroke: 2px var(--ob-white);
-              font-family: "Open Sans", sans-serif !important;
+              // font-family: "Open Sans", sans-serif !important;
+              font-family: "noto" !important;
               top: initial;
               position: absolute;
-              font-family: auto;
               top: 50%;
               left: 50%;
               height: 40px;
@@ -391,6 +395,7 @@ mat-dialog-container {
       top: 50% !important;
       left: 50% !important;
       transform: translate(-50%, -50%) !important;
+      opacity: 0;
     }
     .slick-prev::before {
       content: "⏴" !important;
@@ -401,9 +406,11 @@ mat-dialog-container {
     .slick-next {
       margin-right: 0;
       right: 7%;
+      animation: initial;
     }
     .slick-prev {
       left: 7%;
+      animation: initial;
     }
     app-footer {
       height: initial;
@@ -477,6 +484,12 @@ mat-dialog-container {
                   }
                 }
               }
+              .slick-arrow:hover {
+                opacity: 0 !important;
+              }
+              .slick-arrow:focus {
+                opacity: 0 !important;
+              }
               .slick-next,
               .slick-prev {
                 position: fixed;
@@ -485,7 +498,8 @@ mat-dialog-container {
                 bottom: initial !important;
                 height: 40px;
                 width: 40px;
-                display: none !important;
+                opacity: 0;
+                // display: none !important;
               }
               .slick-next {
                 margin-right: 0;
@@ -597,10 +611,11 @@ mat-dialog-container {
       color: white;
       height: 40px;
       width: 40px;
-      line-height: 40px;
-      font-size: 40px;
+      line-height: 70px;
+      font-size: 55px;
       text-align: center;
-      font-family: "Open Sans", sans-serif !important;
+      // font-family: "Open Sans", sans-serif !important;
+      font-family: "noto" !important;
       color: white !important;
       -webkit-text-stroke: 2px var(--ob-white);
     }
