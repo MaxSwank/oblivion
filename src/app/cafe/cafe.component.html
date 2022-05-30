@@ -1,10 +1,8 @@
 <router-outlet></router-outlet>
 <app-header></app-header>
-<div class="cafe-container">
+<div class="cafe-container" #cafecontainer>
   <div class="image-wrapper">
     <img class="cafe-interior" src="../../assets/img/cafe-bg.jpg" alt="" />
-
-    <!-- modals -->
     <div class="typewriter eye" routerLink="typewriter">
       <button class="desktop-typewriter" mat-button color="primary" aria-label="Writing contest">
         <p>Writing <br> Contest</p>
@@ -15,16 +13,7 @@
         <p>Writing <br> Contest</p>
       </button>
     </div>
-
     <div class="window eye" routerLink="window">
-      <!-- <button
-        mat-icon-button
-        color="primary"
-        class="visibility"
-        aria-label="Look through the window"
-      >
-        <mat-icon>visibility</mat-icon>
-      </button> -->
     </div>
     <div class="wall-minor-authors eye" routerLink="wall-of-exceptionally-minor-authors">
       <button mat-button color="primary" aria-label="Wall of Minor Authors">
@@ -42,25 +31,21 @@
         </button>
       </div>
     </div>
-
     <div class="bangs eye accent">
-      <img src="../../assets/img/bangs-full.png" alt="" routerLink="john_kendrick_bangs">
+      <img src="../../assets/img/bangs-full.png" alt="bangs" routerLink="john_kendrick_bangs">
     </div>
     <div class="character2 eye accent">
-      <img src="../../assets/img/maudy-black.png" alt="" routerLink="maudy_gammitt">
+      <img src="../../assets/img/maudy-black.png" alt="maudy" routerLink="maudy_gammitt">
     </div>
     <div class="character3 eye accent">
-      <img src="../../assets/img/gary-black.png" alt="" routerLink="gary_katsarida">
+      <img src="../../assets/img/gary-black.png" alt="gary" routerLink="gary_katsarida">
     </div>
     <div class="character4 eye accent">
-      <img src="../../assets/img/josef-black.png" alt="" routerLink="josef_wozek">
+      <img src="../../assets/img/josef-black.png" alt="josef" routerLink="josef_wozek">
     </div>
     <div class="character5 eye accent">
-      <img src="../../assets/img/else-black.png" alt="" routerLink="else_lasker_schuler">
+      <img src="../../assets/img/else-black.png" alt="else" routerLink="else_lasker_schuler">
     </div>
-    <!-- <div class="character6 eye temp" routerLink="character6"></div>
-    <div class="arbiter eye temp" routerLink="arbiter"></div> -->
-    <!-- modals -->
   </div>
 </div>
 <app-footer></app-footer>

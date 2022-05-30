@@ -234,6 +234,7 @@
 @media screen and (orientation: portrait) {
   .cafe-container {
     overflow-x: auto;
+    scroll-behavior: smooth;
     .image-wrapper {
       img {
         transform: translateY(6%) !important;
