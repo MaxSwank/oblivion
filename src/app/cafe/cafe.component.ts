@@ -9,6 +9,6 @@ export class CafeComponent implements OnInit {
   @ViewChild('cafecontainer') cafeContainer: ElementRef;
 
   ngOnInit() { 
-    setTimeout(() =>  this.cafeContainer.nativeElement.scrollLeft += 450, 300);
+    setTimeout(() =>  this.cafeContainer.nativeElement.scrollLeft += 350, 300);
   }
 }
