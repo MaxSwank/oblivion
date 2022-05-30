@@ -165,6 +165,9 @@ mat-dialog-container {
 .dialog-container {
   display: flex;
   flex-direction: column;
+  app-header {
+    z-index: 1;
+  }
   .character-dialog {
     flex: 1;
     display: flex;
@@ -296,9 +299,9 @@ mat-dialog-container {
               // font-family: "Open Sans", sans-serif !important;
               font-family: "noto" !important;
               top: initial;
-              position: absolute;
-              top: 50%;
-              left: 50%;
+              line-height: 70px;
+              font-size: 55px !important;
+              left: initial;
               height: 40px;
             }
           }
