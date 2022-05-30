@@ -378,7 +378,7 @@ mat-dialog-container {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (orientation: portrait) and (max-width: 600px) {
   .dialog-container {
     z-index: 1000;
     overflow-y: auto;
@@ -631,6 +631,7 @@ mat-dialog-container {
       .dialog-right {
         img {
           right: -10vw !important;
+          transform: translateY(10%);
         }
         #bangs-img {
           height: 48vh;
@@ -647,6 +648,87 @@ mat-dialog-container {
         }
         #josef-w {
           height: 29vh;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .window-body {
+    overflow: auto;
+    .dialog-carousel {
+      margin-top: 0 !important;
+      .slick-next {
+        right: 0 !important;
+      }
+      .slick-prev {
+        left: 0 !important;
+      }
+    }
+  }
+  .preorder-container {
+    top: 0 !important;
+    left: 0 !important;
+    transform: initial !important;
+    .preorder-right {
+      img {
+        height: auto !important;
+        width: calc(100vw - 420px) !important;
+      }
+    }
+  }
+  .contest-container {
+    min-height: 100%;
+  }
+  .cafe-container {
+    overflow-y: auto !important;
+    .image-wrapper {
+      min-height: 350px;
+    }
+  }
+  .dialog-container {
+    app-header {
+      display: none;
+    }
+    .character-dialog {
+      .dialog-left {
+        justify-content: start;
+        margin-top: 5px;
+        .left-container {
+          .carousel-container {
+            .dialog-carousel {
+              .slide {
+                .quote-text {
+                  overflow: auto;
+                  max-height: 36vh;
+                  .slide-intro {
+                    display: none;
+                  }
+                  .slide-quote,
+                  .slide-author {
+                    font-size: 16px;
+                  }
+
+                  .slide-title {
+                    display: none;
+                  }
+                }
+              }
+              .slick-prev {
+                left: -27% !important;
+              }
+              .slick-next {
+                right: -27% !important;
+              }
+            }
+          }
+          .bubble-footer {
+            width: 65vh;
+            p {
+              font-size: 13px;
+            }
+          }
         }
       }
     }
