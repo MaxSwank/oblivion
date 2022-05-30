@@ -1,3 +1,4 @@
+.dialog-container {
 ::ng-deep body {
     color: var(--accent-purple);
     flex-direction: row;
@@ -56,5 +57,11 @@
         &:hover {
             background-color: currentColor !important;
         }
+    }
+}
+
+    .character-footer-mobile::before,
+    .character-footer-mobile::after {
+        background-color: var(--accent-purple) !important;
     }
 }

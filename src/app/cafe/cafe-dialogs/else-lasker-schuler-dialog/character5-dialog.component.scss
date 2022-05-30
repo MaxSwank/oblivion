@@ -1,3 +1,4 @@
+.dialog-container {
 body {
     color: var(--accent-orange);
     flex-direction: row;
@@ -39,5 +40,10 @@ body {
         &:hover {
             background-color: currentColor !important;
         }
+    }
+}
+    .character-footer-mobile::before,
+    .character-footer-mobile::after {
+        background-color: var(--accent-orange) !important;
     }
 }

@@ -1,43 +1,50 @@
-body {
-    color: var(--accent-mint);
-    flex-direction: row;
-    .dialog-left {
+.dialog-container {
+    body {
+        color: var(--accent-mint);
+        flex-direction: row;
+        .dialog-left {
             .carousel-container::before {
-              content: "";
-              background-color: currentColor;
+                content: "";
+                background-color: currentColor;
             }
-        .carousel-container::after {
-            filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
-          }
-        .carousel-container {
-            background-color: var(--bg-accent-mint);
-            h2 {
-                color: currentColor;
+            .carousel-container::after {
+                filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(300%) brightness(90%);
             }
-            .dialog-carousel {
-                .slide {
-                    .quote-text {
-                        .slide-intro {
-                            color: currentColor;
+            .carousel-container {
+                background-color: var(--bg-accent-mint);
+                h2 {
+                    color: currentColor;
+                }
+                .dialog-carousel {
+                    .slide {
+                        .quote-text {
+                            .slide-intro {
+                                color: currentColor;
+                            }
                         }
                     }
                 }
             }
         }
+
+        ::ng-deep .slick-arrow {
+            color: var(--accent-mint);
+            border-radius: 0;
+            background-color: currentColor;
+            &::before {
+                color: currentColor;
+            }
+            &:focus {
+                background-color: currentColor !important;
+            }
+            &:hover {
+                background-color: currentColor !important;
+            }
+        }
     }
-  
-    ::ng-deep .slick-arrow {
-        color: var(--accent-mint);
-        border-radius: 0;
-        background-color: currentColor;
-        &::before {
-            color: currentColor;
-        }
-        &:focus {
-            background-color: currentColor !important;
-        }
-        &:hover {
-            background-color: currentColor !important;
-        }
+
+    .character-footer-mobile::before,
+    .character-footer-mobile::after {
+        background-color: var(--accent-mint) !important;
     }
 }

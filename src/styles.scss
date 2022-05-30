@@ -545,6 +545,7 @@ mat-dialog-container {
       min-height: 62px;
       background-color: black;
       z-index: 5;
+      position: relative;
       // position: fixed;
       // bottom: 0;
       // left: 0;
@@ -565,6 +566,26 @@ mat-dialog-container {
           transform: translate(-50%, -50%);
         }
       }
+    }
+    .character-footer-mobile::before {
+      content: "⏴";
+      left: 7%;
+    }
+    .character-footer-mobile::after {
+      content: "⏵";
+      right: 7%;
+    }
+    .character-footer-mobile::after,
+    .character-footer-mobile::before {
+      position: absolute;
+      bottom: 10px;
+      border-radius: 50%;
+      pointer-events: none;
+      color: white;
+      height: 40px;
+      width: 40px;
+      font-size: 40px;
+      line-height: 48px;
     }
   }
 }

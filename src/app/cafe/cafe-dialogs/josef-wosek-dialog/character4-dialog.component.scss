@@ -41,4 +41,8 @@
       background-color: currentColor !important;
     }
   }
+  .character-footer-mobile::before,
+  .character-footer-mobile::after {
+      background-color: var(--accent-red) !important;
+  }
 }
