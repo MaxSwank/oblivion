@@ -29,6 +29,7 @@ import { HeaderComponent } from './cafe/header/header.component';
 import { FooterComponent } from './cafe/footer/footer.component';
 import { CafeHomeComponent } from './cafe/cafe-home/cafe-home.component';
 import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.
     HeaderComponent,
     FooterComponent,
     CafeHomeComponent,
-    ReviewsDialogComponent
+    ReviewsDialogComponent 
   ],
   imports: [
     BrowserModule,
@@ -63,7 +64,9 @@ import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.
     MaterialModule,
     BrowserAnimationsModule,
     SlickCarouselModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
