@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; 
 import { Location } from '@angular/common';
 
 @Component({
@@ -9,13 +8,12 @@ import { Location } from '@angular/common';
 })
 export class TypewriterDialogComponent implements OnInit {
 
-  constructor(private _router: Router, private location: Location) { }
+  constructor(private location: Location) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   closeTypewriter() {
     this.location.back();
   };
-
 }

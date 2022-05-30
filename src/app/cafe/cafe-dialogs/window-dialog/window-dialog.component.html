@@ -5,9 +5,7 @@
   <!-- <app-header></app-header> -->
 
   <body class="window-body">
-    <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
-    (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-    (beforeChange)="beforeChange($event)">
+    <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig">
     <div ngxSlickItem *ngFor="let image of images" class="slide">
       <div class="window-images">
         <img src="{{ image.path }}">

@@ -1,6 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-
 
 @Component({
   selector: 'app-cafe',
@@ -11,6 +9,6 @@ export class CafeComponent implements OnInit {
   @ViewChild('cafecontainer') cafeContainer: ElementRef;
 
   ngOnInit() { 
-    setTimeout(() =>  this.cafeContainer.nativeElement.scrollLeft += 500, 400);
+    setTimeout(() =>  this.cafeContainer.nativeElement.scrollLeft += 450, 300);
   }
 }

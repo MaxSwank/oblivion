@@ -7,9 +7,7 @@
       <div class="left-container">
         <div class="carousel-container">
           <h2>JÓSEF WOZEK</h2>
-          <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig"
-            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-            (beforeChange)="beforeChange($event)">
+          <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem *ngFor="let slide of slides" class="slide">
               <div class="quote-text">
                 <p class="slide-intro" *ngIf="slide.intro.length > 0">{{ slide.intro }}</p>
@@ -24,14 +22,6 @@
           </button>
         </div>
         <div class="bubble-footer">
-          <!-- <div class="audiobook">
-            <div class="ab-img">
-              <img src="../../../assets/img/temp-book-cover-sm.jpg" alt="" />
-              <button mat-icon-button>
-                <mat-icon>headset</mat-icon>
-              </button>
-            </div>
-          </div> -->
           <p>
             Talk to patrons to unravel the Café's mystery and you could win a <a href="">free audiobook</a>!
           </p>
