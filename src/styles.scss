@@ -283,7 +283,7 @@ mat-dialog-container {
               -webkit-text-stroke: 2px var(--ob-white);
               top: initial;
               position: absolute;
-              font-family: auto;
+              font-family: "Open Sans", sans-serif !important;
               top: 50%;
               left: 50%;
             }
@@ -568,11 +568,11 @@ mat-dialog-container {
       }
     }
     .character-footer-mobile::before {
-      content: "⏴";
+      content: "\23F4";
       left: 7%;
     }
     .character-footer-mobile::after {
-      content: "⏵";
+      content: "\23F5";
       right: 7%;
     }
     .character-footer-mobile::after,
