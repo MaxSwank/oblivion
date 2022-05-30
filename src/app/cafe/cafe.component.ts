@@ -21,7 +21,9 @@ import { WindowDialogComponent } from './cafe-dialogs/window-dialog/window-dialo
 export class CafeComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.scrollTo(0, -200);
+  }
 
   openTypewriterDialog() {
     const dialogRef = this.dialog.open(TypewriterDialogComponent);
