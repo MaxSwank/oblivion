@@ -20,8 +20,7 @@
       transform: translateY(-1%);
       transform-origin: center;
     }
- 
-    
+
     .eye {
       position: absolute;
       // border: 1px solid red;
@@ -56,7 +55,7 @@
       animation: img-hover 1.5s ease-out;
     }
     .typewriter {
-      left: 18.5%;
+      left: 15.5%;
       top: 69.5%;
       height: 11.5%;
       width: 8.5%;
@@ -65,7 +64,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-image: url(../../assets/img/typewriter-cafe.png);
-      button {
+      .desktop-typewriter {
         position: absolute;
         bottom: calc(100% + 14px);
         left: 17%;
@@ -84,9 +83,13 @@
         }
       }
     }
+    .mobile-div {
+      display: none;
+    }
+
     .window {
       left: 38%;
-      top: 55.5%;
+      top: 56.5%;
       height: 3%;
       width: 6%;
       background-image: url(../../assets/img/playbill.png);
@@ -127,6 +130,11 @@
         animation: img-hover 1.5s ease-out;
       }
     }
+
+    .wall-mobile {
+      display: none;
+    }
+
     .bangs {
       left: 73.5%;
       top: 33.1%;
@@ -226,6 +234,77 @@
 @media screen and (orientation: portrait) {
   .cafe-container {
     overflow-x: auto;
+    .typewriter {
+      .desktop-typewriter {
+        display: none;
+      }
+    }
+    .mobile-div {
+      display: block !important;
+      position: relative;
+      bottom: 33%;
+      left: 16%;
+      width: 90%;
+      z-index: 9;
+      button {
+        position: sticky;
+        left: 10%;
+        background-color: var(--ob-white);
+        border: 1px solid #292929;
+        outline: 6px solid var(--ob-white);
+        border-radius: 0px;
+        padding: 10px 10px 6px;
+        animation: none;
+        box-shadow: var(--boxshadow-medium);
+        width: 91px;
+        p {
+          line-height: 20px;
+          margin: 0;
+          color: black;
+          font-size: 18px;
+        }
+      }
+    }
+    .wall-minor-authors {
+      display: none;
+    }
+    .wall-mobile {
+      display: block !important;
+      position: absolute;
+      left: 0;
+      top: 14%;
+      height: fit-content;
+      width: 100%;
+      // border: 1px solid red;
+      transform: translate(3%);
+      div {
+        position: sticky;
+        width: 46%;
+        left: 56%;
+        // border: 1px solid blue;
+        button {
+          position: sticky;
+          left: 0;
+          right: 0;
+          background-color: var(--ob-white);
+          border: 1px solid #292929;
+          outline: 6px solid var(--ob-white);
+          border-radius: 0px;
+          padding: 10px 10px 6px;
+          animation: none;
+          box-shadow: var(--boxshadow-medium);
+          p {
+            line-height: 20px;
+            margin: 0;
+            color: black;
+            font-size: 18px;
+            em {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
