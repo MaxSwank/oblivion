@@ -1,3 +1,7 @@
+.header-preorder {
+  position: fixed;
+  z-index: 4;
+}
 .containerB {
   .preorder-left {
     animation: fadeout 0.3s forwards ease-out !important;
