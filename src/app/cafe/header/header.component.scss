@@ -52,22 +52,23 @@ header {
       }
     }
   }
-
-  .reviews-button {
-    margin: 2px 4px 2px auto;
-    height: 42px;
-    // line-height: 42px;
-  }
-  .preorder-button {
-    margin: 2px 4px 2px auto;
-    height: 42px;
-    // line-height: 42px;
+  .buttons-container {
+    margin-left: auto;
+    .reviews-button {
+      margin: 2px 4px;
+      height: 42px;
+      // line-height: 42px;
+    }
+    .preorder-button {
+      margin: 2px 4px;
+      height: 42px;
+      // line-height: 42px;
+    }
   }
   #mobile {
     display: none;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   header {
