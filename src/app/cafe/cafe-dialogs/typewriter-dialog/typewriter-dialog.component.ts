@@ -32,14 +32,15 @@ export class TypewriterDialogComponent implements OnInit {
     const formData = { "name": this.typewriterForm.value['name'], 
                        "email": this.typewriterForm.value['email'], 
                        "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : ''),
-                       "_url": "https://mango-rock-072624310.1.azurestaticapps.net",
+                       "_url": "https://www.oblivion.cafe/",
                        "_subject": "Oblivion Contest Submission" };
+                       
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-    this.httpClient.post('https://formsubmit.co/ajax/oblivion.by.robin.hemley@gmail.com', formData, httpOptions)
+    this.httpClient.post('https://formsubmit.co/oblivion.by.robin.hemley@gmail.com', formData, httpOptions)
       .subscribe((response) => { 
         console.log("Response:", response); 
         this.location.back();
