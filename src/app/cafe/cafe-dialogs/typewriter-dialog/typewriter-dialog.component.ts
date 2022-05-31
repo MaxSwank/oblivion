@@ -34,15 +34,14 @@ export class TypewriterDialogComponent implements OnInit {
                        "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : ''),
                        "_url": "https://www.oblivion.cafe/",
                        "_subject": "Oblivion Contest Submission" };
-                       
+
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-    this.httpClient.post('https://formsubmit.co/oblivion.by.robin.hemley@gmail.com', formData, httpOptions)
-      .subscribe((response) => { 
-        console.log("Response:", response); 
+    this.httpClient.post('https://formsubmit.co/457bcf42af5ec0b2de887fc89f30b371', formData, httpOptions)
+      .subscribe((response) => {
         this.location.back();
       }, (error) => console.log("Error:", error));
   }
