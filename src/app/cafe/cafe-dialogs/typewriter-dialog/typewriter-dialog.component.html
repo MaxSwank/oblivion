@@ -15,7 +15,16 @@
           day that K decided on a whim to pay a visit to the building and the forlorn district in which it was located
           ...”</i>
       </p>
-      <form [formGroup]="typewriterForm">
+      <form method="POST" action="https://formsubmit.co/oblivion.by.robin.hemley@gmail.com"
+        enctype="multipart/form-data">
+        <input type="hidden" name="_url" value="https://mango-rock-072624310.1.azurestaticapps.net">
+        <input type="hidden" name="_subject" value="Oblivion Contest Submission">
+        <input type="text" name="text" placeholder="Name">
+        <input type="email" name="email" placeholder="Your email">
+        <textarea name="message" placeholder="Contest Submission"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <!-- <form [formGroup]="typewriterForm">
         <input type="hidden" name="_url" value="https://mango-rock-072624310.1.azurestaticapps.net">
         <input type="hidden" name="_subject" value="Oblivion Contest Submission">
         <mat-form-field class="entry-field">
@@ -40,7 +49,7 @@
           (click)="onSubmit()">
           Submit
         </button>
-      </form>
+      </form> -->
     </div>
   </div>
   <div class="close-dialog" (click)="closeTypewriter()"></div>
