@@ -3,7 +3,7 @@
     width: 100vw;
     max-width: 100vw !important;
     height: 100vh !important;
-    background-color: rgba(242, 239, 226, 0.3);
+    background-color: var(bg-opacity);
     .reviews-container {
         color: var(--reviews-green);
         height: 84%;

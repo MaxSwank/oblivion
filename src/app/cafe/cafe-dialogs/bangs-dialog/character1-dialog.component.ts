@@ -6,30 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character1-dialog.component.scss']
 })
 export class Character1DialogComponent implements OnInit {
-  slides = [
-    {
-      quote: 'It always seems impossible until it\'s done.',
-      author: 'Nelson Mandela',
-    },
-    {
-      quote:
-        'Lorem ipsum dolor sit amet, asd asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf consectetur adipisicing elit. Illo eaque nihil ab qui voluptates',
-      author: 'Author',
-    },
-    {
-      quote: 'test 3.',
-      author: 'Author',
-    },
-    {
-      quote: 'test 4.',
-      author: 'Author',
-    },
-    {
-      quote: 'test 5.',
-      author: 'Author',
-    },
-  ];
-  slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
 
   ngOnInit() {
   }

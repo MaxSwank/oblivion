@@ -79,7 +79,7 @@
           line-height: 20px;
           margin: 0;
           color: black;
-          font-size: 1.7vh;
+          font-size: 20px;
         }
       }
     }
@@ -113,16 +113,16 @@
         border: 1px solid #292929;
         outline: 6px solid var(--ob-white);
         border-radius: 0px;
-        padding: 8% 4% 4%;
+        padding: 8% 8% 4%;
         animation: none;
         box-shadow: var(--boxshadow-medium);
         p {
-          line-height: 20px;
+          line-height: 16px;
           margin: 0;
           color: black;
-          font-size: 2vh;
+          font-size: 20px;
           em {
-            font-size: 1.3vh;
+            font-size: 14px;
           }
         }
       }
