@@ -15,11 +15,16 @@ export class HeaderComponent implements OnInit {
   }
 
   routeToPreorder() {
-    this.router.navigate([this.router.url + "/preorder"]);
+    if (this.router.url.includes('reviews')) {
+      this.router.navigate([this.router.url.replace('/reviews', '') + '/preorder']);
+    } else {
+      this.router.navigate([this.router.url + '/preorder']);
+    }
+
   }
 
   routeToReviews() {
-    this.router.navigate([this.router.url.replace('/preorder/', '') + "/reviews"]);
+    this.router.navigate([this.router.url.replace('/preorder/', '').replace('/reviews', '') + '/reviews']);
   }
 
 }
