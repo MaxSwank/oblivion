@@ -52,12 +52,11 @@ export class Character1DialogComponent implements OnInit {
     const formData = {
       "name": this.bangsForm.value['name'],
       "email": this.bangsForm.value['email'],
-      "message": 'Name: ' + this.bangsForm.value['name'] + 'Email: ' + this.bangsForm.value['email'] + ' selected misplaced author ' + this.bangsForm.value['misplacedAuthor'] + (this.bangsForm.value['addToMailingList'] == true ? ' Please also add me to the mailing list!' : ''),
-      "_url": "https://www.oblivion.cafe/",
+      "message": 'Selected author: ' + this.bangsForm.value['misplacedAuthor'] + (this.bangsForm.value['addToMailingList'] == true ? ' Please also add me to the mailing list!' : ''),
+      "_url": "https://www.oblivion.cafe",
       "_subject": "Misplaced Author Selection"
     };
 
-    console.log(formData);
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'

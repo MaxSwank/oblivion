@@ -33,7 +33,7 @@ export class TypewriterDialogComponent implements OnInit {
       "name": this.typewriterForm.value['name'],
       "email": this.typewriterForm.value['email'],
       "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'] == true ? ' Please also add me to the mailing list!' : ''),
-      "_url": "https://www.oblivion.cafe/",
+      "_url": "https://www.oblivion.cafe",
       "_subject": "Oblivion Contest Submission"
     };
 
