@@ -84,28 +84,6 @@ const routes: Routes = [
         component: CafeComponent,
         children: [
           {
-            path: 'john_kendrick_bangs',
-            component: Character1DialogComponent,
-            data: {
-              'title': 'John Kendrick Bangs',
-              'desc': 'Tell the maître d’ about an imposter — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/bangs.png'
-            },
-            children: [
-              {
-                path: 'preorder',
-                component: PreorderDialogComponent,
-                data: {
-                  'title': 'Oblivion Preorder',
-                  'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                }
-              }
-            ]
-          },
-          {
             path: 'reviews',
             component: ReviewsDialogComponent,
             data: {
@@ -116,6 +94,16 @@ const routes: Routes = [
             },
           },
           {
+            path: 'john_kendrick_bangs',
+            component: Character1DialogComponent,
+            data: {
+              'title': 'John Kendrick Bangs',
+              'desc': 'Tell the maître d’ about an imposter — Oblivion by Robin Hemley',
+              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs',
+              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/bangs.png'
+            }
+          },          
+          {
             path: 'maudy_gammitt',
             component: Character2DialogComponent,
             data: {
@@ -123,31 +111,7 @@ const routes: Routes = [
               'desc': 'Maudy Gammitt — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/maudy_gammitt',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/maudy-gammitt.png'
-            },
-            children: [
-              {
-                path: 'preorder',
-                component: PreorderDialogComponent,
-                data: {
-                  'title': 'Oblivion Preorder',
-                  'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/maudy_gammitt/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                },
-                children: [
-                  {
-                    path: 'reviews',
-                    component: ReviewsDialogComponent,
-                    data: {
-                      'title': 'Oblivion Reviews',
-                      'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/maudy_gammitt/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                    },
-                  }
-                ]
-              }
-            ]
+            }
           },
           {
             path: 'gary_katsarida',
@@ -157,31 +121,7 @@ const routes: Routes = [
               'desc': 'Gary Katsarida — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/gary_katsarida',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/gary-katsarida.png'
-            },
-            children: [
-              {
-                path: 'preorder',
-                component: PreorderDialogComponent,
-                data: {
-                  'title': 'Oblivion Preorder',
-                  'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/gary_katsarida/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                },
-                children: [
-                  {
-                    path: 'reviews',
-                    component: ReviewsDialogComponent,
-                    data: {
-                      'title': 'Oblivion Reviews',
-                      'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/gary_katsarida/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                    },
-                  }
-                ]
-              }
-            ]
+            }
           },
           {
             path: 'josef_wozek',
@@ -191,31 +131,7 @@ const routes: Routes = [
               'desc': 'Jósef Wozek — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/josef-wozek.png'
-            },
-            children: [
-              {
-                path: 'preorder',
-                component: PreorderDialogComponent,
-                data: {
-                  'title': 'Oblivion Preorder',
-                  'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                },
-                children: [
-                  {
-                    path: 'reviews',
-                    component: ReviewsDialogComponent,
-                    data: {
-                      'title': 'Oblivion Reviews',
-                      'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                    },
-                  }
-                ]
-              }
-            ]
+            }
           },
           {
             path: 'else_lasker_schuler',
@@ -225,31 +141,7 @@ const routes: Routes = [
               'desc': 'Else Lasker-Schüler — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/else_lasker_schuler',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/else-lasker-schuler.png'
-            },
-            children: [
-              {
-                path: 'preorder',
-                component: PreorderDialogComponent,
-                data: {
-                  'title': 'Oblivion Preorder',
-                  'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/else_lasker_schuler/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                },
-                children: [
-                  {
-                    path: 'reviews',
-                    component: ReviewsDialogComponent,
-                    data: {
-                      'title': 'Oblivion Reviews',
-                      'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/else_lasker_schuler/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                    },
-                  }
-                ]
-              }
-            ]
+            }
           },
           {
             path: 'character6',
