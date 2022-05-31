@@ -1,6 +1,7 @@
 <div class="dialog-container">
   <app-header></app-header>
   <div class="close-dialog" routerLink="../"></div>
+
   <body class="character-dialog">
     <div class="dialog-left">
       <div class="left-container">
@@ -9,7 +10,7 @@
           <div class="textfields">
             <p>Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
               embarrassing clerical error. Something must be done at once. Who has been misplaced? </p>
-            <form [formGroup]="bangsForm">
+            <form [formGroup]="bangsForm" method="POST">
               <mat-radio-group aria-label="Select an option" formControlName="misplacedAuthor">
                 <mat-radio-button value="Maudy" tabindex="1">Maudy</mat-radio-button>
                 <mat-radio-button value="Gary" tabindex="2">Gary</mat-radio-button>
@@ -38,6 +39,16 @@
                 (click)="onSubmit()">
                 Submit
               </button>
+              <!--  <button mat-raised-button [disabled]="!bangsForm.valid" tabindex="4"
+                [ngStyle]="{ 'background': bangsForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }">
+                <a *ngIf="bangsForm.valid;else placeholder" style="text-decoration: none;color:white"
+                  href="mailto:robinhemley@gmail.com?subject=Oblivion%20Content%20Submission&body=Name:%20{{ bangsForm.value['name'] }}%0D%0A%0D%0AEmail:%20{{ bangsForm.value['email'] }}{{ bangsForm.value['addToMailingList'] == true ? '%0D%0A%0D%0APlease%20add%20me%20to%20the %20mailing%20list!' : '' }}%0D%0A%0D%0AMisplaced%20Author:%20{{ bangsForm.value['misplacedAuthor'] }}">
+                  Submit
+                </a>
+                <ng-template #placeholder>
+                  Submit
+                </ng-template>
+              </button> -->
             </form>
           </div>
           <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
