@@ -243,8 +243,8 @@ mat-dialog-container {
           z-index: 1;
           .close-button {
             position: absolute;
-            top: 0;
-            right: -40px;
+            top: -11px;
+            right: -16px;
             background: black;
             border-color: transparent;
             color: var(--ob-white);
