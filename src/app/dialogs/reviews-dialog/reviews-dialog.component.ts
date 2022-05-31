@@ -162,7 +162,11 @@ export class ReviewsDialogComponent implements OnInit {
   }
 
   closeBlurbs() {
-    this.location.back();
+    if (this._router.url.includes('/cafe')) {
+      this._router.navigate(['/cafe'])
+    } else {
+      this.location.back();
+    }
   };
 }
 

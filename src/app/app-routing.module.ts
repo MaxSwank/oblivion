@@ -62,20 +62,18 @@ const routes: Routes = [
           'desc': 'Preorder Oblivion by Robin Hemley',
           'url': 'https://mango-rock-072624310.1.azurestaticapps.net/preorder',
           'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-        },
-        children: [
-          {
-            path: 'reviews',
-            component: ReviewsDialogComponent,
-            data: {
-              'title': 'Oblivion Reviews',
-              'desc': 'Reviews of Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/preorder/reviews',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-            },
-          }
-        ]
-      },      
+        }
+      },
+      {
+        path: 'reviews',
+        component: ReviewsDialogComponent,
+        data: {
+          'title': 'Oblivion Reviews',
+          'desc': 'Reviews of Oblivion by Robin Hemley',
+          'url': 'https://mango-rock-072624310.1.azurestaticapps.net/preorder/reviews',
+          'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+        }
+      },
     ],
   },
   {
@@ -110,21 +108,19 @@ const routes: Routes = [
                   'desc': 'Preorder Oblivion by Robin Hemley',
                   'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs/preorder',
                   'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                },
-                children: [
-                  {
-                    path: 'reviews',
-                    component: ReviewsDialogComponent,
-                    data: {
-                      'title': 'Oblivion Reviews',
-                      'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
-                    },
-                  }
-                ]
+                }
               }
             ]
+          },
+          {
+            path: 'reviews',
+            component: ReviewsDialogComponent,
+            data: {
+              'title': 'Oblivion Reviews',
+              'desc': 'Reviews of Oblivion by Robin Hemley',
+              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs/preorder/reviews',
+              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+            },
           },
           {
             path: 'maudy_gammitt',
@@ -162,13 +158,13 @@ const routes: Routes = [
           },
           {
             path: 'gary_katsarida',
-            component: Character3DialogComponent,     
+            component: Character3DialogComponent,
             data: {
               'title': 'Gary Katsarida',
               'desc': 'Gary Katsarida — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/gary_katsarida',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/gary-katsarida.png'
-            },       
+            },
             children: [
               {
                 path: 'preorder',
@@ -202,7 +198,7 @@ const routes: Routes = [
               'desc': 'Jósef Wozek — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/josef-wozek.png'
-            },     
+            },
             children: [
               {
                 path: 'preorder',
@@ -236,7 +232,7 @@ const routes: Routes = [
               'desc': 'Else Lasker-Schüler — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/else_lasker_schuler',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/else-lasker-schuler.png'
-            }, 
+            },
             children: [
               {
                 path: 'preorder',
@@ -447,9 +443,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-imports: [RouterModule.forRoot(routes, { 
-  relativeLinkResolution: 'corrected',
-  anchorScrolling: 'enabled' })],
-exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, {
+    relativeLinkResolution: 'corrected',
+    anchorScrolling: 'enabled'
+  })],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

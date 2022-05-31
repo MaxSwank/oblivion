@@ -76,6 +76,27 @@ em {
 //   display: none !important;
 // }
 
+.reviews-button {
+  background: linear-gradient(to bottom, #cdd7dd, #7b96a4);
+  font-size: 26px;
+  overflow: hidden !important;
+  .mat-button-wrapper {
+    position: relative;
+    top: 2px;
+    font-weight: 700;
+  }
+  .mat-button-wrapper::before {
+    content: "";
+    height: 40px;
+    top: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    position: absolute;
+    left: -18px;
+  }
+}
+
 .preorder-button {
   background: linear-gradient(to bottom, #fff0a6, #e3b62d);
   font-size: 26px;

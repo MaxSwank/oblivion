@@ -34,7 +34,6 @@ header {
     color: rgba(rgb(255, 255, 255), 0.7);
     cursor: pointer;
 
-
     small {
       color: currentColor;
     }
@@ -54,6 +53,11 @@ header {
     }
   }
 
+  .reviews-button {
+    margin: 2px 4px 2px auto;
+    height: 42px;
+    // line-height: 42px;
+  }
   .preorder-button {
     margin: 2px 4px 2px auto;
     height: 42px;
@@ -76,6 +80,9 @@ header {
     #mobile {
       display: block;
       margin-left: 12px;
+    }
+    .reviews-button {
+      margin: 2px 10px 2px auto;
     }
     .preorder-button {
       margin: 2px 10px 2px auto;
