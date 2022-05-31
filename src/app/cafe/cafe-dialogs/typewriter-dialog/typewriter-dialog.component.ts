@@ -42,7 +42,7 @@ export class TypewriterDialogComponent implements OnInit {
         'Content-Type': 'application/json'
       })
     };
-    this.httpClient.post('https://formsubmit.co/457bcf42af5ec0b2de887fc89f30b371', formData, httpOptions)
+    this.httpClient.post('https://formsubmit.co/oblivion.by.robin.hemley@gmail.com', formData, httpOptions)
       .subscribe((response) => {
         console.log("Response:", response);
         this.location.back();
