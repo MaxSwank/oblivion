@@ -165,9 +165,9 @@ export class ReviewsDialogComponent implements OnInit {
     if (this._router.url.includes('/cafe')) {
       this._router.navigate(['/cafe'])
     } else {
-      this.location.back();
+      this._router.navigate(['/'])
     }
-  };
+  }
 }
 
 

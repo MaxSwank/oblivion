@@ -29,13 +29,15 @@ export class TypewriterDialogComponent implements OnInit {
   };
 
   onSubmit() {
-    const formData = { "name": this.typewriterForm.value['name'], "email": this.typewriterForm.value['email'], "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : '') };
+    const formData = { "name": this.typewriterForm.value['name'], 
+                       "email": this.typewriterForm.value['email'], 
+                       "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : '') };
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
-    this.httpClient.post('https://formsubmit.co/ajax/4402e7e4da7a4f0fb268d67af20af0e4', formData, httpOptions)
+    this.httpClient.post('https://formsubmit.co/457bcf42af5ec0b2de887fc89f30b371', formData, httpOptions)
       .subscribe(
         (response) => console.log("Response:", response), (error) => console.log("Error:", error));
   }
