@@ -17,7 +17,7 @@ import { Character5DialogComponent } from './cafe/cafe-dialogs/else-lasker-schul
 import { Character6DialogComponent } from './cafe/cafe-dialogs/character6-dialog/character6-dialog.component';
 import { TypewriterDialogComponent } from './cafe/cafe-dialogs/typewriter-dialog/typewriter-dialog.component';
 import { WallDialogComponent } from './cafe/cafe-dialogs/wall-dialog/wall-dialog.component';
-import { WindowDialogComponent } from './cafe/cafe-dialogs/window-dialog/window-dialog.component';
+import { WindowDialogComponent } from './cafe/cafe-dialogs/playbill-dialog/window-dialog.component';
 import { PreorderDialogComponent } from './dialogs/preorder-dialog/preorder-dialog.component';
 import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.component';
 
@@ -124,7 +124,7 @@ const routes: Routes = [
             }
           },
           {
-            path: 'josef_wozek',
+            path: 'jozef_wozek',
             component: Character4DialogComponent,
             data: {
               'title': 'Jósef Wozek',

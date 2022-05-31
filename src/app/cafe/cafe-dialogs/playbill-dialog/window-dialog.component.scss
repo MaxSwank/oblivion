@@ -1,0 +1,86 @@
+.dialog-container::before {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 152px;
+    background-image: url(../../../../assets/img/playbill.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: calc(50% - 425px);
+    transform: rotate(8deg);
+    z-index: 1;
+    top: 57%;
+}
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    .playbill-container {
+        color: var(--ob-blue);
+        height: calc(100vh - 130px);
+        max-height: 800px;
+        width: 650px;
+        max-width: 100vw;
+        border-radius: 10px;
+        border-top: 16px solid currentColor;
+        margin: 20px auto 40px;
+        background-color: var(--ob-white);
+        text-align: left;
+        box-shadow: var(--boxshadow-medium);
+        overflow: auto;
+        position: relative;
+        .close-button {
+            position: fixed;
+            top: 60px !important;
+            right: calc(50% - 338px) !important;
+            left: initial !important;
+            bottom: initial !important;
+            transform: initial !important;
+        }
+        h1 {
+            margin: 32px 100px 4%;
+            font-weight: 700;
+            text-align: center;
+            font-size: 24px;
+            color: currentColor;
+        }
+        .playbill-top {
+            width: auto;
+            margin: 0 100px;
+            img {
+                max-width: 100%;
+            }
+        }
+        .playbill-bottom {
+            margin: 0 100px;
+            padding: 4% 0;
+            color: black;
+            span {
+                font-size: 18px;
+            }
+            p {
+                font-size: 20px;
+                margin: 16px 0;
+                line-height: 1.5;
+            }
+        }
+    }
+    .close-dialog {
+        z-index: -1 !important;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 600px) {
+    .dialog-container {
+        justify-content: initial;
+        .playbill-container {
+            max-height: 100%;
+            height: calc(100vh - 70px);
+            .playbill-top,
+            .playbill-bottom {
+                margin: 0 10%;
+            }
+        }
+    }
+}
