@@ -10,18 +10,18 @@
         <p>The regulars are all talking about it. Which says <i>something,</i> I suppose.</p>
       </div>
       <div class="butler-image">
-        <img src="../../assets/img/bangs-pod-color.png" alt="" class="butler">
+        <img src="../../assets/img/bangs-pod-color2.png" alt="" class="butler">
       </div>
     </div>
-    <div class="cafe-container" (click)="enterCafe()">
-      <button class="enter" mat-raised-button>
+    <div class="cafe-container">
+      <button class="enter" (click)="enterCafe()" mat-raised-button>ENTER <br> <span>The Café</span>
       </button>
       <div class="arch">
         <img src="../../assets/img/arch.png" alt="">
       </div>
-      <div class="panel-left"></div>
-      <div class="panel-right"></div>
-      <div class="panel-center"></div>
+      <div class="panel-left" (click)="enterCafe()"></div>
+      <div class="panel-right" (click)="enterCafe()"></div>
+      <div class="panel-center" (click)="enterCafe()"></div>
       <div class="cafe-clip">
         <div class="cafe-image">
           <img src="../../assets/img/cafe-home.jpg" alt="">

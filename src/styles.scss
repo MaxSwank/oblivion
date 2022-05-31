@@ -149,6 +149,12 @@ mat-dialog-container {
   z-index: 0;
 }
 
+.signed-copy {
+  * {
+    font-family: Helvetica, sans-serif !important;
+  }
+}
+
 // .dialog-container {
 //   height: 100vh;
 //   wi  top: 0;
@@ -548,7 +554,7 @@ mat-dialog-container {
             animation: dropdown-mobile 1s ease-in forwards;
             p {
               margin: 16px 6px 6px;
-              font-size: 16px;
+              font-size: 14px;
             }
           }
           @keyframes dropdown-mobile {
@@ -653,6 +659,19 @@ mat-dialog-container {
 @media screen and (max-width: 350px) {
   .dialog-container {
     .character-dialog {
+      .dialog-left {
+        .carousel-container {
+          .dialog-carousel {
+            .slide {
+              .quote-text {
+                .slide-intro {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
       .dialog-right {
         img {
           right: -10vw !important;

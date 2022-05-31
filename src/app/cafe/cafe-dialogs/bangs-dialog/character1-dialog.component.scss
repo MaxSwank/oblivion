@@ -10,25 +10,61 @@
                         color: currentColor;
                     }
                     .textfields {
-                     margin: 0 10%;
-                     mat-radio-group {
-                         display: flex;
-                         flex-direction: row;
-                         mat-radio-button {
-                             flex: 1;
-                         }
-                     }
-                     .name-field {
-                         width: 40%;
-                         float: left;
-                     }
-                     .email-field {
-                         width: 55%;
-                         float: right;
-                     }
-                     button {
-                         margin: 20px auto;
-                     }
+                        margin: 0 10%;
+                        color: black;
+                        p {
+                            font-size: 22px;
+                            line-height: 1.2;
+                        }
+                        form {
+                            padding-bottom: 65px;
+                            position: relative;
+                            mat-radio-group {
+                                display: flex;
+                                flex-direction: row;
+                                font-size: 20px;
+                                font-weight: 700;
+                                margin: 20px auto 10px;
+                                mat-radio-button {
+                                    flex: 1;
+                                    ::ng-deep .mat-radio-outer-circle {
+                                        border-color: rgb(29, 106, 142);
+                                    }
+                                }
+                            }
+
+                            mat-form-field {
+                                margin-bottom: 10px;
+                                ::ng-deep .mat-form-field-wrapper {
+                                    .mat-form-field-flex {
+                                        border: 1px solid rgb(29, 106, 142);
+                                        border-radius: 5px;
+                                    }
+                                }
+                            }
+                            .name-field {
+                                width: 40%;
+                                float: left;
+                            }
+                            .email-field {
+                                width: 55%;
+                                float: right;
+                            }
+                            section {
+                                text-align: center;
+                            }
+                            button {
+                                position: absolute;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translate(-50%);
+                                font-size: 26px;
+                                padding: 6px 20px 2px;
+                                border-radius: 5px;
+                                color: var(--ob-white);
+                                background: linear-gradient(to bottom, #3a6884, #192c38);
+                            }
+                        }
                     }
                 }
                 .bubble-footer {

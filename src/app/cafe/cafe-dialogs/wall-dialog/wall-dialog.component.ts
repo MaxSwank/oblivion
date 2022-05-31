@@ -9,7 +9,7 @@ export class WallDialogComponent implements OnInit {
   authors = [
     {
       path: '../../../../assets/img/author3.png',
-      name: 'Leon “Smoky” Dilentanti',
+      name: 'Leon “Smoky” Dilletanti',
     },
     {
       path: '../../../../assets/img/author4.png',

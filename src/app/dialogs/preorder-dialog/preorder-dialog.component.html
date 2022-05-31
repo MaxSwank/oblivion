@@ -7,14 +7,17 @@
         <h1>Oblivion</h1>
         <h2>An After Autobiography</h2>
         <hr />
-        <span class="pre-launch">Arriving<strong>&nbsp;&nbsp;JUNE 1, 2022&nbsp;&nbsp;</strong>from &nbsp;<a href="https://robinhemley.com/" target="_blank">
-            <h3>ROBIN HEMLEY⏵</h3>
+        <span class="pre-launch">Arriving<strong>&nbsp;&nbsp;JUNE 1, 2022&nbsp;&nbsp;</strong>from &nbsp;<a
+            href="https://robinhemley.com/" target="_blank">
+            <h3>ROBIN HEMLEY <mat-icon>arrow_right</mat-icon>
+            </h3>
           </a>
         </span>
         <span class="launch"><a href="https://robinhemley.com/" target="_blank" style="width: 100%">
-          <h3>ROBIN HEMLEY⏵</h3>
-        </a> 
-      </span>
+            <h3>ROBIN HEMLEY <mat-icon>arrow_right</mat-icon>
+            </h3>
+          </a>
+        </span>
       </div>
     </div>
     <div class="author-blurbs">
@@ -23,14 +26,14 @@
           <div class="quote-text">
             <p class="slide-quote">"{{ slide.quote }}"</p>
             <br />
-              <p class="slide-author">{{ slide.author }}</p>
-              <p class="slide-title">{{ slide.title }}</p>
+            <p class="slide-author">{{ slide.author }}</p>
+            <p class="slide-title">{{ slide.title }}</p>
           </div>
         </div>
       </ngx-slick-carousel>
       <a routerLink="../reviews">
         <button mat-button>
-          Read all reviews⏵
+          Read all reviews <mat-icon>arrow_right</mat-icon>
         </button>
       </a>
     </div>
@@ -46,13 +49,15 @@
       </div>
     </div>
     <div class="order-buttons">
-      <button mat-raised-button class="preview">
-        <img src="../../../assets/img/acrobat.png" alt="">
-        <p>
-          <span>Preview</span><br>
-          PDF Download
-        </p>
-      </button>
+      <a href="https://robinhemley.com/contact-1">
+        <button mat-raised-button class="preview">
+          <img src="../../../assets/img/envelope.png" alt="">
+          <p>
+            <span>Sign Up</span><br>
+            For the newsletter
+          </p>
+        </button>
+      </a>
       <a href="https://bookshop.org/books/oblivion-9781637527818/9781637527818">
         <button mat-raised-button class="book-order preorder-button">
           Order
@@ -60,12 +65,13 @@
       </a>
     </div>
     <div class="audiobook">
-      <span><a href="#">Audiobook available</a> from
+      <span><a href="https://www.amazon.com/Audible-Oblivion-An-After-Autobiography/dp/B09VCTZ7V2">Audiobook</a>
+        available from
         <strong>Blackstone Publishing</strong></span>
     </div>
   </div>
   <div class="preorder-right">
-      <img src="../../../assets/img/BookCover.jpg" alt="" />
+    <img src="../../../assets/img/BookCover.jpg" alt="" />
   </div>
   <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeInfo()">
     <mat-icon>close</mat-icon>

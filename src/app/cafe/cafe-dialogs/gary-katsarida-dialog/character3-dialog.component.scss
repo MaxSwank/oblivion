@@ -1,6 +1,6 @@
 .dialog-container {
 body {
-    color: var(--accent-yellow);
+    color: var(--accent-orange);
     flex-direction: row;
     .dialog-left{
             .carousel-container::before {
@@ -11,7 +11,7 @@ body {
             filter: opacity(0.4) drop-shadow(0 0 0 currentColor) saturate(250%) brightness(90%);
           }
         .carousel-container {
-            background-color: var(--bg-accent-yellow);
+            background-color: var(--bg-accent-orange);
             h2 {
                 color: currentColor;
             }
@@ -27,7 +27,7 @@ body {
         }
     }
     ::ng-deep .slick-arrow {
-        color: var(--accent-yellow);
+        color: var(--accent-orange);
         border-radius: 0;
         background-color: currentColor;
         &::before {
@@ -43,6 +43,6 @@ body {
 }
     .character-footer-mobile::before,
     .character-footer-mobile::after {
-        background-color: var(--accent-yellow) !important;
+        background-color: var(--accent-orange) !important;
     }
 }
