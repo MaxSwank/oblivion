@@ -23,13 +23,6 @@ import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.
 
 
 const routes: Routes = [
-  // {
-  //   path: 'test',
-  //   component: TestComponent,
-  //   data: {
-  //     'title': 'testing'
-  //   }
-  // },
   {
     path: '',
     component: LandingPageComponent,
