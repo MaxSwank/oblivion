@@ -41,7 +41,7 @@ export class WallDialogComponent implements OnInit {
     },
     {
       path: '../../../../assets/img/author8.png',
-      name: 'Josef Wozek',
+      name: 'Jozef Wozek',
     },
     {
       path: '../../../../assets/img/character6.png',

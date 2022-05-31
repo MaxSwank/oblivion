@@ -17,7 +17,7 @@ import { Character5DialogComponent } from './cafe/cafe-dialogs/else-lasker-schul
 import { Character6DialogComponent } from './cafe/cafe-dialogs/character6-dialog/character6-dialog.component';
 import { TypewriterDialogComponent } from './cafe/cafe-dialogs/typewriter-dialog/typewriter-dialog.component';
 import { WallDialogComponent } from './cafe/cafe-dialogs/wall-dialog/wall-dialog.component';
-import { WindowDialogComponent } from './cafe/cafe-dialogs/window-dialog/window-dialog.component';
+import { WindowDialogComponent } from './cafe/cafe-dialogs/playbill-dialog/window-dialog.component';
 import { PreorderDialogComponent } from './dialogs/preorder-dialog/preorder-dialog.component';
 import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.component';
 
@@ -191,13 +191,13 @@ const routes: Routes = [
             ]
           },
           {
-            path: 'josef_wozek',
+            path: 'jozef_wozek',
             component: Character4DialogComponent,
             data: {
-              'title': 'Jósef Wozek',
-              'desc': 'Jósef Wozek — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/josef-wozek.png'
+              'title': 'Józef Wozek',
+              'desc': 'Józef Wozek — Oblivion by Robin Hemley',
+              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/jozef_wozek',
+              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/jozef-wozek.png'
             },
             children: [
               {
@@ -206,7 +206,7 @@ const routes: Routes = [
                 data: {
                   'title': 'Oblivion Preorder',
                   'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek/preorder',
+                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/jozef_wozek/preorder',
                   'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                 },
                 children: [
@@ -216,7 +216,7 @@ const routes: Routes = [
                     data: {
                       'title': 'Oblivion Reviews',
                       'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek/preorder/reviews',
+                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/jozef_wozek/preorder/reviews',
                       'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
                     },
                   }

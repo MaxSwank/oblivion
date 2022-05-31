@@ -8,10 +8,10 @@
         color: var(--reviews-green);
         height: 84%;
         max-width: 100vw;
-        width: 870px;
+        width: 650px;
         border-radius: 10px;
         border-top: 16px solid currentColor;
-        margin: calc(4.5% - 50px) auto;
+        margin: 20px auto 40px;
         background-color: var(--ob-white);
         text-align: left;
         box-shadow: var(--boxshadow-medium);
@@ -50,9 +50,12 @@
         }
         .close-button {
             position: fixed;
-            top: 102px;
-            right: calc(50% - 421px);
-            box-shadow: var(--boxshadow);
+            top: 60px !important;
+            right: calc(50% - 338px) !important;
+            left: initial !important;
+            bottom: initial !important;
+            transform: initial !important;
+            box-shadow: none !important;
         }
     }
     .close-dialog {

@@ -419,6 +419,8 @@
             object-position: 0 94%;
             filter: blur(2px) brightness(.75);
             transition: 1s;
+            position: relative;
+            left: 15px;
           }
 
           .panel-left:hover ~ img {

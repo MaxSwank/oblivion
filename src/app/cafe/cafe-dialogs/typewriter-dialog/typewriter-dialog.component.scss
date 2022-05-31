@@ -14,39 +14,37 @@
 .dialog-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100vh !important;
     .contest-container {
         color: var(--contest-red);
         height: calc(100vh - 130px);
         max-height: 800px;
-        width: 700px;
+        width: 650px;
         max-width: 100vw;
         border-radius: 10px;
         border-top: 16px solid currentColor;
-        margin: 0 auto;
+        margin: 20px auto 40px;
         background-color: var(--ob-white);
         text-align: left;
         box-shadow: var(--boxshadow-medium);
         overflow: auto;
         position: relative;
         .close-button {
-            position: sticky !important;
-            top: 0 !important;
-            float: right;
-            right: initial !important;
+            position: fixed;
+            top: 60px !important;
+            right: calc(50% - 338px) !important;
             left: initial !important;
             bottom: initial !important;
             transform: initial !important;
         }
         h1 {
-            margin: 5% 0 0;
+            margin: 32px 0 4%;
             font-weight: 700;
             text-align: center;
         }
         .contest-top {
             margin: 0 100px;
-            padding: 4% 0;
+            padding: 0 0 4%;
             border-bottom: 1px solid var(--gray-text);
             font-size: 24px;
             color: black;

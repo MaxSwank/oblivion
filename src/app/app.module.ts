@@ -12,7 +12,7 @@ import { OrderPageComponent } from './landing-page/order-page/order-page.compone
 import { ScullyInterceptModule } from 'scully-interceptor';
 import { MaterialModule } from './material.module';
 import { TypewriterDialogComponent } from './cafe/cafe-dialogs/typewriter-dialog/typewriter-dialog.component';
-import { WindowDialogComponent } from './cafe/cafe-dialogs/window-dialog/window-dialog.component';
+import { WindowDialogComponent } from './cafe/cafe-dialogs/playbill-dialog/window-dialog.component';
 import { WallDialogComponent } from './cafe/cafe-dialogs/wall-dialog/wall-dialog.component';
 import { Character1DialogComponent } from './cafe/cafe-dialogs/bangs-dialog/character1-dialog.component';
 import { Character2DialogComponent } from './cafe/cafe-dialogs/maudy-gammitt-dialog/character2-dialog.component';
