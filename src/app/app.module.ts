@@ -30,7 +30,6 @@ import { FooterComponent } from './cafe/footer/footer.component';
 import { CafeHomeComponent } from './cafe/cafe-home/cafe-home.component';
 import { ReviewsDialogComponent } from './dialogs/reviews-dialog/reviews-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +53,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     CafeHomeComponent,
-    ReviewsDialogComponent 
+    ReviewsDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -13,11 +13,12 @@
       <span>Add up to <strong>250 words</strong> to this opening sentence:</span>
       <p><i>“The asbestos factory, gifted to K by his ever-practical father, seemed merely an abstract concept until the
           day that K decided on a whim to pay a visit to the building and the forlorn district in which it was located
-          ...”</i></p>
+          ...”</i>
+      </p>
       <form [formGroup]="typewriterForm">
         <mat-form-field class="entry-field">
           <mat-label>&nbsp;&nbsp;&nbsp;&nbsp;Contest Submission</mat-label>
-          <input matInput type="text" formControlName="submission" maxlength="250" tabindex="0" />
+          <textarea matInput type="text" formControlName="message" maxlength="250" tabindex="0"></textarea>
         </mat-form-field>
         <mat-form-field class="name-field">
           <mat-label>&nbsp;&nbsp;Name</mat-label>
@@ -33,61 +34,13 @@
           </mat-checkbox>
         </section>
         <button mat-raised-button [disabled]="!typewriterForm.valid" tabindex="4"
-          [ngStyle]="{ 'background': typewriterForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }">
-          <a *ngIf="typewriterForm.valid;else placeholder" style="text-decoration: none;color:white"
-            href="mailto:robinhemley@gmail.com?subject=Oblivion%20Content%20Submission&body=Name:%20{{ typewriterForm.value['submission'] }}{{ typewriterForm.value['addToMailingList'] == true ? '%0D%0A%0D%0APlease%20add%20me%20to%20the %20mailing%20list!' : '' }}%0D%0A%0D%0AContest%20Submission:%0D%0A%0D%0A{{ typewriterForm.value['submission'] }}">
-            Submit
-          </a>
-          <ng-template #placeholder>
-            Submit
-          </ng-template>
+          [ngStyle]="{ 'background': typewriterForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }"
+          (click)="onSubmit()">
+          Submit
         </button>
       </form>
     </div>
   </div>
   <div class="close-dialog" (click)="closeTypewriter()"></div>
 </div>
-
-
-
-
-
-
-<!-- <div class="dialog-container">
- <button mat-mini-fab color="disabled" aria-label="create" class="close-button">
-    <mat-icon routerLink="../">close</mat-icon>
-  </button>
-  <div class="close-dialog" routerLink="../"></div>
-  <body>
-    <div class="writing-form">
-      <div class="form-top">
-        <p>
-          <strong>How would you finish this sentence, inspired by Kafka’s
-            writing?</strong>
-          5 entries will be selected to win a free copy of Oblivion
-        </p>
-      </div>
-      <div class="form-bottom">
-        <h2>"{{ prompt }}"</h2>
-        <mat-form-field class="writing-prompt">
-          <mat-label>&nbsp;&nbsp;&nbsp;&nbsp;. . . </mat-label>
-          <input matInput type="text" />
-        </mat-form-field>
-        <br>
-        <p>Enter your email address, so can we can notify you if your entry is
-          selected:</p>
-        <mat-form-field>
-          <mat-label>&nbsp;&nbsp;email address</mat-label>
-          <input matInput type="text" />
-        </mat-form-field>
-        <section>
-          <mat-checkbox>Also send me marketing information about Oblivion.</mat-checkbox>
-        </section>
-        <button mat-raised-button>Submit</button>
-      </div>
-       </div>
-  </body>
-</div> -->
-
-
 <router-outlet></router-outlet>

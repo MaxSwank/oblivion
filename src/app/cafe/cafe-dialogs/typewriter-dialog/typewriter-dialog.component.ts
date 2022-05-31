@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-typewriter-dialog',
@@ -11,9 +12,9 @@ export class TypewriterDialogComponent implements OnInit {
 
   typewriterForm: FormGroup;
 
-  constructor(private location: Location, private fb: FormBuilder) {
+  constructor(private location: Location, private fb: FormBuilder, public httpClient: HttpClient) {
     this.typewriterForm = fb.group({
-      'submission': new FormControl('', Validators.required),
+      'message': new FormControl('', Validators.required),
       'name': new FormControl('', Validators.required),
       'email': new FormControl('', Validators.required),
       'addToMailingList': new FormControl('')
@@ -26,4 +27,16 @@ export class TypewriterDialogComponent implements OnInit {
   closeTypewriter() {
     this.location.back();
   };
+
+  onSubmit() {
+    const formData = { "name": this.typewriterForm.value['name'], "email": this.typewriterForm.value['email'], "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : '') };
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    this.httpClient.post('https://formsubmit.co/ajax/4402e7e4da7a4f0fb268d67af20af0e4', formData, httpOptions)
+      .subscribe(
+        (response) => console.log("Response:", response), (error) => console.log("Error:", error));
+  }
 }
