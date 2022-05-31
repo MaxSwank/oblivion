@@ -31,7 +31,9 @@ export class TypewriterDialogComponent implements OnInit {
   onSubmit() {
     const formData = { "name": this.typewriterForm.value['name'], 
                        "email": this.typewriterForm.value['email'], 
-                       "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : '') };
+                       "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : ''),
+                       "_url": "https://mango-rock-072624310.1.azurestaticapps.net",
+                       "_subject": "Oblivion Contest Submission" };
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
