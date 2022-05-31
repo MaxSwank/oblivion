@@ -1,36 +1,42 @@
 <div class="dialog-container">
   <app-header></app-header>
   <div class="close-dialog" routerLink="../"></div>
-
   <body class="character-dialog">
     <div class="dialog-left">
       <div class="left-container">
         <div class="carousel-container">
           <h2>JOHN KENDRICK BANGS</h2>
           <div class="textfields">
-          <p>Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
-            embarrassing clerical error. Something must be done at once. Who has been misplaced? </p>
-            <form>
-              <mat-radio-group aria-label="Select an option">
-                <mat-radio-button value="1">Maudy</mat-radio-button>
-                <mat-radio-button value="2">Gary</mat-radio-button>
-                <mat-radio-button value="3">Józef</mat-radio-button>
-                <mat-radio-button value="4">Else</mat-radio-button>
+            <p>Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
+              embarrassing clerical error. Something must be done at once. Who has been misplaced? </p>
+            <form [formGroup]="bangsForm">
+              <mat-radio-group aria-label="Select an option" formControlName="misplacedAuthor">
+                <mat-radio-button value="Maudy" tabindex="1">Maudy</mat-radio-button>
+                <mat-radio-button value="Gary" tabindex="2">Gary</mat-radio-button>
+                <mat-radio-button value="Jósef" tabindex="3">Jósef</mat-radio-button>
+                <mat-radio-button value="Else" tabindex="4">Else</mat-radio-button>
               </mat-radio-group>
               <br>
               <mat-form-field class="name-field">
                 <mat-label>&nbsp;&nbsp;Name</mat-label>
-                <input matInput type="text" />
+                <input matInput type="text" formControlName="name" tabindex="5" />
               </mat-form-field>
               <mat-form-field class="email-field">
                 <mat-label>&nbsp;&nbsp;Email address</mat-label>
-                <input matInput type="text" />
+                <input matInput type="text" formControlName="email" tabindex="6" />
               </mat-form-field>
               <section>
-                <mat-checkbox>Add me to author Robim Hemley's <em>mailing list</em>.</mat-checkbox>
+                <mat-checkbox formControlName="addToMailingList" tabindex="7">Add me to author Robim Hemley's
+                  <em>mailing
+                    list</em>.
+                </mat-checkbox>
               </section>
+              <button mat-raised-button tabindex="8"
+                [ngStyle]="{ 'background': bangsForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }"
+                (click)="onSubmit()">
+                Submit
+              </button>
             </form>
-            <button mat-raised-button>Submit</button>
           </div>
           <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
             <mat-icon>close</mat-icon>

@@ -29,11 +29,13 @@ export class TypewriterDialogComponent implements OnInit {
   };
 
   onSubmit() {
-    const formData = { "name": this.typewriterForm.value['name'], 
-                       "email": this.typewriterForm.value['email'], 
-                       "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'].length > 0 ? ' Please add me to the mailing list!' : ''),
-                       "_url": "https://www.oblivion.cafe/",
-                       "_subject": "Oblivion Contest Submission" };
+    const formData = {
+      "name": this.typewriterForm.value['name'],
+      "email": this.typewriterForm.value['email'],
+      "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'] == true ? ' Please also add me to the mailing list!' : ''),
+      "_url": "https://www.oblivion.cafe",
+      "_subject": "Oblivion Contest Submission"
+    };
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -41,9 +43,12 @@ export class TypewriterDialogComponent implements OnInit {
       })
     };
     this.httpClient.post('https://formsubmit.co/457bcf42af5ec0b2de887fc89f30b371', formData, httpOptions)
-      .subscribe((response) => { 
-        console.log("Response:", response); 
+      .subscribe((response) => {
+        console.log("Response:", response);
         this.location.back();
-      }, (error) => console.log("Error:", error));
+      }, (error) => {
+        console.log("Error:", error);
+        this.location.back();
+      });
   }
 }
