@@ -58,12 +58,12 @@
                     border: 1px solid black;
                     transform: translateY(-40px);
                 }
-                
+
                 .info-container {
                     position: absolute;
                     top: -15px;
                     right: -30px;
-                    
+
                     button {
                         background-color: white;
                         mat-icon {
@@ -74,7 +74,7 @@
                         }
                     }
                     .info-text::after {
-                        content: '';
+                        content: "";
                         position: absolute;
                         height: 0;
                         width: 0;
@@ -131,6 +131,10 @@
 
 @media screen and (max-width: 600px) {
     .dialog-container {
+        .close-button {
+            right: 4px;
+            top: 4px;
+        }
         body {
             h1 {
                 display: none;
@@ -143,9 +147,9 @@
                 position: relative;
                 ::ng-deep .dialog-carousel {
                     .slide {
-                        padding: 11vh 6vw;
+                        padding: 4vh 6vw;
                         img {
-                            width: calc(76vw - 16px);
+                            width: calc(76vw - 53px);
                             height: 54vh;
                             object-fit: cover;
                             object-position: top;
@@ -153,17 +157,64 @@
                             background: var(--ob-white);
                         }
 
-                        p {
+                        .author-name-mobile {
                             background: var(--ob-white);
-                            line-height: 24px;
+                            line-height: 1.1;
                             text-align: center;
-                            margin: 15px 8px;
-                            padding: 10px 0;
-                            width: calc(100% - 16px);
+                            margin: 0 calc(3% + 8px);
+                            width: 94%;
                             font-weight: 700;
+                            font-size: 20px;
+                            padding: 8px 0;
+                            border: 1px solid black;
+                            transform: translateY(-40px);
+                        }
+                        .info-container {
+                            .info-text {
+                                background: black;
+                                color: white;
+                                width: calc(76vw - 53px);
+                                height: auto;
+                                padding: 10px 8px 2px;
+                                border-radius: 10px;
+                                text-align: center;
+                                z-index: 100;
+                                position: relative;
+                                bottom: 20px;
+                                h2 {
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    margin: 10px auto;
+                                }
+                                p {
+                                    font-size: 16px;
+                                    line-height: 1.2;
+                                }
+                            }
                         }
                     }
                 }
+            }
+        }
+        ::ng-deep ngx-slick-carousel {
+            .slick-arrow {
+                bottom: 50% !important;
+                background-color: black !important;
+            }
+            .slick-prev {
+                left: 5px !important;
+                right: initial !important;
+            }
+            .slick-next {
+                left: initial !important;
+                right: 5px !important;
+            }
+            .slick-next::before,
+            .slick-prev::before {
+                top: -3px !important;
+                left: 0 !important;
+                transform: initial !important;
+                color: white !important;
             }
         }
     }
