@@ -2,23 +2,33 @@
   <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
     <mat-icon>close</mat-icon>
   </button>
-  <div class="close-dialog" routerLink="../"></div>
+
   <body>
-    <h1>Wall of Exceptionally Minor Authors</h1>
+    <h1><i>The Wall of</i><br>Exceptionally Minor Authors</h1>
     <div class="author-wall">
-      <div class="author" *ngFor="let author of authors">
+      <div class="author" *ngFor="let author of authors" (click)="showInfo()">
         <img src="{{ author.path }}" alt="">
-        <p>{{ author.name }}</p>
+        <p class="author-name">{{ author.name }}<br>
+          {{ author.name2 }}</p>
+        <div class="info-container" (click)="showInfo()">
+          <button mat-icon-button (click)="showInfo()">
+            <mat-icon>info</mat-icon>
+          </button>
+          <div class="info-text" *ngIf="textVisible">
+            <h2>{{ author.name }} {{author.name2 }}</h2>
+            <p>{{ author.bio }} <i>{{ author.bio2 }}</i>{{ author.bio3 }}</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="author-wall-mobile">
       <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor="let author of authors" class="slide">
           <img src="{{ author.path }}" alt="">
-        <p>{{ author.name }}</p>
+          <p>{{ author.name }}</p>
         </div>
       </ngx-slick-carousel>
-       </div>
+    </div>
   </body>
 </div>
 <router-outlet></router-outlet>
