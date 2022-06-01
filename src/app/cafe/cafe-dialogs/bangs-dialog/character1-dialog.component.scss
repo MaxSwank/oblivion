@@ -22,6 +22,8 @@
                             mat-radio-group {
                                 display: flex;
                                 flex-direction: row;
+                                flex-wrap: wrap;
+                                gap: 6px;
                                 font-size: 20px;
                                 font-weight: 700;
                                 margin: 20px auto 10px;
@@ -52,6 +54,9 @@
                             }
                             section {
                                 text-align: center;
+                                ::ng-deep .mat-checkbox-label {
+                                    white-space: normal;
+                                }
                             }
                             button {
                                 position: absolute;
@@ -101,6 +106,23 @@
 
     .character-footer-mobile::before,
     .character-footer-mobile::after {
-        background-color: var(--accent-purple) !important;
+        display: none;
     }
+}
+
+@media screen and (orientation: portrait) and (max-width: 700px) {
+ .dialog-container {
+     body {
+         .dialog-left {
+             .left-container {
+                 .carousel-container {
+                    overflow-y: auto;
+                    overflow-x: hidden;;
+                    max-height: 50vh;
+                    padding-bottom: 20px;
+                 }
+             }
+         }
+     }
+ }   
 }

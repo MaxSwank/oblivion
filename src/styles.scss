@@ -408,7 +408,7 @@ mat-dialog-container {
   }
 }
 
-@media screen and (orientation: portrait) and (max-width: 600px) {
+@media screen and (orientation: portrait) {
   .dialog-container {
     z-index: 1000;
     overflow-y: auto;
@@ -582,8 +582,8 @@ mat-dialog-container {
         }
         #bangs-img {
           height: 50vh;
-          right: 8vw;
-          bottom: -37px !important;
+          right: -6vw;
+          bottom: -95px !important;
         }
         #gary-k {
           height: 43vh;
@@ -679,7 +679,6 @@ mat-dialog-container {
         }
         #bangs-img {
           height: 48vh;
-          right: 8vw !important;
         }
         #gary-k {
           height: 32vh;
@@ -797,6 +796,35 @@ mat-dialog-container {
         left: -190px;
       }
     }
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 601px) {
+  .dialog-container {
+    .character-dialog {
+      .dialog-left {
+        .left-container {
+        .carousel-container::before {
+          max-width: 500px;
+        }
+        .carousel-container {
+          max-width: 500px !important;
+        }
+        .bubble-footer {
+          left: 50% !important;
+          transform: translate(-50%) !important;
+          animation: initial !important;
+          bottom: -56px !important;
+          margin: 0 auto;
+        }
+      }
+    }
+    .dialog-right {
+      img {
+        right: 0 !important;
+      }
+    }
+  }
   }
 }
 
