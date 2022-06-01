@@ -16,39 +16,31 @@
           day that K decided on a whim to pay a visit to the building and the forlorn district in which it was located
           ...”</i>
       </p>
-      <form [formGroup]="typewriterForm" method="POST">
+      <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
         <mat-form-field class="entry-field">
           <mat-label>&nbsp;&nbsp;&nbsp;&nbsp;Contest Submission</mat-label>
-          <textarea matInput type="text" formControlName="message" maxlength="250" tabindex="1"></textarea>
+          <textarea matInput type="text" formControlName="message" required maxlength="250" tabindex="1"></textarea>
         </mat-form-field>
         <mat-form-field class="name-field">
           <mat-label>&nbsp;&nbsp;Name</mat-label>
-          <input matInput type="text" formControlName="name" tabindex="2" />
+          <input matInput type="text" [formControl]="name" tabindex="2" required />
         </mat-form-field>
         <mat-form-field class="email-field">
           <mat-label>&nbsp;&nbsp;Email address</mat-label>
-          <input matInput type="text" formControlName="email" tabindex="3" />
+          <input matInput type="text" [formControl]="email" tabindex="3" />
+          <mat-error *ngIf="email.invalid">Please enter a valid email</mat-error>
         </mat-form-field>
         <section>
           <mat-checkbox formControlName="addToMailingList" tabindex="4">Add me to author Robin Hemley's <em>mailing
               list</em>.
           </mat-checkbox>
         </section>
-        <button mat-raised-button [disabled]="!typewriterForm.valid" tabindex="5"
-          [ngStyle]="{ 'background': typewriterForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }"
+        <button mat-raised-button [disabled]="isLoading" tabindex="5" type="submit"
+          [ngStyle]="{ 'background': form.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }"
           (click)="onSubmit()">
           Submit
         </button>
-        <!-- <button mat-raised-button [disabled]="!typewriterForm.valid" tabindex="4"
-          [ngStyle]="{ 'background': typewriterForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }">
-          <a *ngIf="typewriterForm.valid;else placeholder" style="text-decoration: none;color:white"
-            href="mailto:robinhemley@gmail.com?subject=Oblivion%20Content%20Submission&body=Name:%20{{ typewriterForm.value['name'] }}%0D%0A%0D%0AEmail:%20{{ typewriterForm.value['email'] }}{{ typewriterForm.value['addToMailingList'] == true ? '%0D%0A%0D%0APlease%20add%20me%20to%20the %20mailing%20list!' : '' }}%0D%0A%0D%0AContest%20Submission:%0D%0A%0D%0A{{ typewriterForm.value['message'] }}">
-            Submit
-          </a>
-          <ng-template #placeholder>
-            Submit
-          </ng-template>
-        </button> -->
+        <input [formControl]="honeypot" class="hidden" type="text" style="display:none" />
       </form>
     </div>
   </div>

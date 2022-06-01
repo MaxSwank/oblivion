@@ -23,7 +23,7 @@
     </div>
     <div class="author-wall-mobile">
       <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let author of authors" class="slide">
+        <div ngxSlickItem *ngFor="let author of authors;let i = index" class="slide">
           <img src="{{ author.path }}" alt="">
           <p class="author-name-mobile">{{ author.name }}<br>{{ author.name2 }}</p>
           <div class="info-container">
