@@ -144,7 +144,7 @@ export class PreorderDialogComponent implements OnInit {
     this.infoSlide = !this.infoSlide;
     setTimeout(() => {
       this.location.back();
-    }, 500);
+    }, 0);
   }
 }
 

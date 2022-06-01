@@ -513,7 +513,7 @@ mat-dialog-container {
             h2 {
               margin: 18px auto 10px;
               font-size: 22px;
-              text-decoration: underline;
+              font-weight: 700;
             }
             .dialog-carousel {
               width: 90%;
@@ -727,10 +727,10 @@ mat-dialog-container {
       }
     }
     .bangs-text {
-      transform: scale(.6);
+      transform: scale(.65);
       transform-origin: bottom left;
-      width: 262px !important;
-      top: -180px !important;
+      width: 219px !important;
+      top: -164px !important;
       left: -21px !important;
     }
   }
