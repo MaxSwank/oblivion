@@ -63,6 +63,12 @@
     }
 }
 
+.header-reviews {
+    ::ng-deep .reviews-button {
+        background: #DBE7EF !important;
+    }
+}
+
 @media screen and (orientation: landscape) and (max-height: 820px) {
     .dialog-container {
         z-index: 1001;

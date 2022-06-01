@@ -1,6 +1,9 @@
 .header-preorder {
   position: fixed;
   z-index: 4;
+  ::ng-deep .preorder-button {
+    background: #FFE84E !important;
+  }
 }
 .containerB {
   .preorder-left {
@@ -268,7 +271,7 @@
         transform: translateY(4px);
         font-family: Helvetica, sans-serif !important;
         ::ng-deep span {
-          font-family: Helvetica, sans-serif !important;;
+          font-family: Helvetica, sans-serif !important;
         }
         mat-icon {
           transform: scaleX(1.5) translate(-5px, -1px);
@@ -355,7 +358,7 @@
       .preview {
         font-size: 20px;
         margin: 0 auto;
-        background: linear-gradient(to bottom, #ccd4d7, #77878e);
+        background: linear-gradient(to top, #8297A4, #CFD7DC);
         width: 180px;
         img {
           height: 44px;
@@ -559,6 +562,7 @@
     background-color: var(--ob-blue);
     .close-dialog {
       background-color: var(--ob-blue) !important;
+      pointer-events: none;
     }
     .close-button {
       top: 4px;

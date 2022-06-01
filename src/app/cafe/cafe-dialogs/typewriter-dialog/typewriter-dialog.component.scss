@@ -140,6 +140,9 @@
         .contest-container {
             max-height: 100%;
             height: calc(100vh - 70px);
+            .close-button {
+                right: 0 !important;
+            }
             .contest-top,
             .contest-bottom {
                 margin: 0 10%;
