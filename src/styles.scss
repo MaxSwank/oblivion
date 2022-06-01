@@ -804,27 +804,27 @@ mat-dialog-container {
     .character-dialog {
       .dialog-left {
         .left-container {
-        .carousel-container::before {
-          max-width: 500px;
+          .carousel-container::before {
+            max-width: 500px;
+          }
+          .carousel-container {
+            max-width: 500px !important;
+          }
+          .bubble-footer {
+            left: 50% !important;
+            transform: translate(-50%) !important;
+            animation: initial !important;
+            bottom: -56px !important;
+            margin: 0 auto;
+          }
         }
-        .carousel-container {
-          max-width: 500px !important;
-        }
-        .bubble-footer {
-          left: 50% !important;
-          transform: translate(-50%) !important;
-          animation: initial !important;
-          bottom: -56px !important;
-          margin: 0 auto;
+      }
+      .dialog-right {
+        img {
+          right: 0 !important;
         }
       }
     }
-    .dialog-right {
-      img {
-        right: 0 !important;
-      }
-    }
-  }
   }
 }
 
@@ -834,10 +834,15 @@ mat-dialog-container {
   }
 }
 
+button {
+  transition: 0.5s ease-out;
+  background: 
+}
 button:hover {
-  opacity: 1;
-  -webkit-animation: flash 1.5s;
-  animation: flash 1.5s;
+  animation: none !important;
+  background: rgba($color: #000000, $alpha: 0.15);
+  border-radius: 0;
+  transition: 0s;
 }
 
 @-webkit-keyframes flash {
