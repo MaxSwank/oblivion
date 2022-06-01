@@ -711,6 +711,8 @@
           flex-direction: column;
           box-shadow: var(--boxshadow);
           z-index: 2;
+          transform: translateY(-40px);
+          padding-bottom: 40px;
           .footer-top {
             padding: 0 24px;
             flex: 1;
