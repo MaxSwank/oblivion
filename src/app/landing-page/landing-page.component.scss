@@ -43,7 +43,7 @@
       0% {
         left: -200px;
         opacity: 0.6;
-       bottom: 0;
+        bottom: 0;
       }
       25% {
         bottom: 0;
@@ -224,7 +224,7 @@
       -webkit-transform: translate(-50%);
       transform: translate(-50%);
       height: fit-content;
-      width: fit-content;      
+      width: fit-content;
       z-index: 5;
       pointer-events: none;
       filter: drop-shadow(0 0 20px var(--lp-shadow-color));
@@ -280,7 +280,7 @@
     }
 
     .cafe-container::before {
-      content: '';
+      content: "";
       height: 629px;
       width: 895px;
       border-top: calc((100vh - 630px) / 2) solid var(--lp-bg);
@@ -303,7 +303,7 @@
       display: grid;
       grid-template-columns: auto 300px 300px 300px auto;
       grid-template-rows: 1fr 631.7px 1fr;
-      
+
       .enter {
         height: 58px;
         width: 118px;
@@ -350,7 +350,6 @@
       }
 
       .panel-left:hover ~ .cafe-clip {
-
         .cafe-image {
           img {
             -webkit-transform: translate(-10px);
@@ -375,11 +374,10 @@
         // background: rgba(green, .2);
       }
       .panel-right:hover ~ .cafe-clip {
-
         .cafe-image {
           img {
-            -webkit-transform: translate(-20px);
-            transform: translate(-20px);
+            -webkit-transform: translate(-15px);
+            transform: translate(-15px);
             transition: 1s ease-in-out;
           }
         }
@@ -398,7 +396,6 @@
         border-top-left-radius: 12%;
         border-top-right-radius: 12%;
         margin: 33% 0 9%;
-
       }
       .panel-center:hover ~ .cafe-clip {
         .cafe-image {
@@ -430,7 +427,7 @@
             height: 100%;
             width: 100%;
             object-position: 0 94%;
-            filter: blur(2px) brightness(.75);
+            filter: blur(2px) brightness(0.75);
             transition: 1s;
             position: relative;
             left: 15px;
@@ -456,8 +453,6 @@
         }
       }
     }
-
-  
 
     .footer-mobile {
       display: none;
@@ -513,7 +508,7 @@
           border-bottom-left-radius: 5px;
           button {
             width: 90%;
-            background-color: var(--ob-yellow);
+            background: linear-gradient(to bottom, #fff0a6, #e3b62d);
             font-weight: bold;
             color: var(--ob-blue);
             font-size: 16px;
@@ -541,17 +536,6 @@
   //     display: none;
   //   }
   // }
-}
-
-@media screen and (orientation: landscape) and (max-height: 700px) and (max-width: 1000px) {
-  .lp-wrapper {
-    max-height: initial;
-    height: 1000px;
-    max-width: initial;
-    width: 1000px;
-    overflow: auto;
-    position: absolute;
-  }
 }
 
 // @media screen and (orientation: portrait) and (min-height: 928px) {
@@ -590,6 +574,7 @@
   .lp-wrapper {
     height: fit-content;
     min-height: 100vh;
+    height: -webkit-fill-available;
     max-height: initial;
     position: relative;
     .lp-container {
@@ -618,7 +603,7 @@
         .bg-mobile {
           flex: 1;
           min-height: 356px;
-          background-image: url(../../assets/img/Cafe-color-photo.jpg);
+          background-image: url(../../assets/img/cafe-bg.jpg);
           background-size: cover;
           background-position: 50%;
         }
@@ -648,7 +633,7 @@
                 line-height: 1;
                 height: fit-content;
                 position: absolute;
-                top: 50%;
+                top: 37%;
                 transform: translateY(-50%);
                 right: 0;
                 width: calc(100% - 40px);
@@ -664,6 +649,24 @@
                   margin: 0 10px 12px;
                   opacity: 0.7;
                 }
+                .enter-mobile {
+                  button {
+                    height: 58px;
+                    width: 118px;
+                    background: var(-ob-white);
+                    border: 3px solid var(--accent-red);
+                    color: var(--accent-red);
+                    line-height: 20px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    padding: 3px 0 0;
+                    margin: 0 auto;
+                    span {
+                      color: black;
+                      font-size: 19pt;
+                    }
+                  }
+                }
               }
               // !!!!! keep as VW font size -- it breaks small devices if it doesn't stay on two lines!!!
 
@@ -672,21 +675,11 @@
                 height: 0;
                 width: 0;
                 position: absolute;
-                bottom: 0;
+                bottom: 28%;
                 right: -14px;
-                border-top: 24px solid transparent;
-                border-bottom: 0px solid transparent;
-                border-left: 24px solid black;
-              }
-            }
-            .enter-mobile {
-              button {
-                padding: 4px 10px !important;
-                margin: 5vh 15vw 35% 15%;
-                background: rgb(0, 0, 0);
-                color: var(--ob-white);
-                opacity: 0.8;
-                letter-spacing: 2px;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 15px solid black;
               }
             }
           }
@@ -762,10 +755,10 @@
             border-bottom-left-radius: 5px;
             text-align: center;
             margin: 0 auto 24px;
-            
+
             button {
               width: 80%;
-              background-color: var(--ob-yellow);
+              background: linear-gradient(to bottom, #fff0a6, #e3b62d);
               font-weight: bold;
               color: var(--ob-darkblue);
               font-size: 16px;
@@ -869,22 +862,291 @@
   }
 }
 
-@media screen and (orientation: portrait) and (max-height: 600px) {
+@media screen and (orientation: landscape) and (max-height: 700px) and (max-width: 900px) {
   .lp-wrapper {
+    max-height: initial;
+    height: 100vh;
+    max-width: initial;
+    width: 100vw;
+    overflow-y: auto;
+    position: absolute;
     .lp-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .butler-container {
+        display: none;
+      }
+      .cafe-container::before {
+        display: none;
+      }
+      .cafe-container {
+        display: none;
+      }
       .cafe-mobile {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .bg-mobile {
+          flex: 1;
+          min-height: 356px;
+          background-image: url(../../assets/img/cafe-bg.jpg);
+          background-size: cover;
+          background-position: 50%;
+        }
         .butler-mobile {
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100%;
+          position: absolute;
+          z-index: 3;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
           .butler-left {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
             .butler-text-mobile {
+              min-height: 230px;
+              position: relative;
+              .mobile-text {
+                background-color: black;
+                color: var(--ob-white);
+                text-align: center;
+                padding: 10px 15px;
+                border-radius: 12px;
+                line-height: 1;
+                height: fit-content;
+                position: absolute;
+                top: 10px;
+                right: -38px;
+                width: calc(100% - 40px);
+                max-width: 200px;
+
+                // !!!!! keep as VW font size -- it breaks small devices if it doesn't stay on two lines!!!
+                h4 {
+                  font-size: 20px;
+                  line-height: 1;
+                }
+                p {
+                  font-size: 16px;
+                  margin: 0 10px 12px;
+                  opacity: 0.7;
+                }
+                .enter-mobile {
+                  button {
+                    height: 58px;
+                    width: 118px;
+                    background: var(-ob-white);
+                    border: 3px solid var(--accent-red);
+                    color: var(--accent-red);
+                    line-height: 20px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    padding: 3px 0 0;
+                    margin: 0 auto;
+                    span {
+                      color: black;
+                      font-size: 19pt;
+                    }
+                  }
+                }
+              }
+              // !!!!! keep as VW font size -- it breaks small devices if it doesn't stay on two lines!!!
+
               .mobile-text::after {
-                bottom: 15%;
-                border-top: 10px solid transparent;
-                border-bottom: 10px solid transparent;
-                border-left: 15px solid black;
+                content: "";
+                height: 0;
+                width: 0;
+                position: absolute;
+                bottom: 123px;
+                right: -14px;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 24px solid black;
               }
             }
           }
+          .butler-right {
+            position: relative;
+            height: 100%;
+            flex: 2;
+            img {
+              position: absolute;
+              top: 15%;
+              left: 9%;
+              transform: rotateY(180deg);
+              height: 125vh;
+              width: auto;
+            }
+          }
         }
+        .footer-mobile {
+          background: var(--ob-blue);
+          display: flex;
+          flex-direction: column;
+          box-shadow: var(--boxshadow);
+          z-index: 4;
+          .footer-top {
+            padding: 0 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            .footer-image {
+              img {
+                position: fixed;
+                bottom: 2vh;
+                left: 2vh;
+                width: auto;
+                height: 96vh;
+              }
+            }
+            .book-info-mobile {
+              flex: 1;
+              text-align: right;
+              color: var(--ob-white);
+              h1 {
+                padding: 20px 0 0;
+                font-size: 36px;
+              }
+              h2 {
+                margin: 0;
+                font-size: 5vw; //note: keep at 5vw or else it will run into the book image on small devices//
+              }
+              hr {
+                margin: 8px 5px 14px 50%;
+              }
+              h3 {
+                margin: 0 0 16px 0;
+                line-height: 20px;
+              }
+              span {
+                color: rgba(255, 255, 255, 0.4);
+                strong {
+                  color: var(--ob-white);
+                }
+              }
+            }
+          }
+          .footer-bottom {
+            height: fit-content;
+            padding: 7px 0;
+            border-bottom-left-radius: 5px;
+            text-align: center;
+            position: fixed;
+            bottom: 5px;
+            left: 3vh;
+
+            button {
+              width: calc((96vh * 0.624685) - 9px);
+              background: linear-gradient(to bottom, #fff0a6, #e3b62d);
+              font-weight: bold;
+              color: var(--ob-darkblue);
+              font-size: 16px;
+              margin-right: 30px;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    .enter {
+      display: none;
+    }
+    .footer-content {
+      display: none;
+    }
+    app-footer {
+      display: none;
+    }
+  }
+  // cafe smoke animation
+  .containerA {
+    .cafe-mobile {
+      .bg-mobile::before {
+        content: "";
+        height: 130%;
+        width: calc(100% + 200px);
+        position: absolute;
+        top: 0;
+        left: -200px;
+        background-image: url(../../assets/img/Smoke-1b.png);
+        background-repeat: repeat;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+        animation: smoke1 17s infinite alternate ease-in-out;
+        pointer-events: none;
+      }
+      .bg-mobile::after {
+        content: "";
+        height: 130%;
+        width: calc(100% + 200px);
+        position: absolute;
+        top: -50px;
+        right: -200px;
+        background-image: url(../../assets/img/Smoke-2b.png);
+        background-repeat: repeat;
+        z-index: 2;
+        mix-blend-mode: hard-light;
+        animation: smoke2 13s infinite alternate ease-in-out;
+        pointer-events: none;
+      }
+    }
+
+    @keyframes smoke1 {
+      0% {
+        left: -200px;
+        opacity: 0.6;
+        top: 0;
+      }
+      25% {
+        top: 0;
+        opacity: 0.3;
+      }
+      50% {
+        top: -25px;
+        opacity: 0.5;
+      }
+      75% {
+        top: -25px;
+        opacity: 0.2;
+      }
+      100% {
+        left: 0;
+        top: -50px;
+        opacity: 0.3;
+      }
+    }
+
+    @keyframes smoke2 {
+      0% {
+        right: -200px;
+        top: 0;
+        opacity: 0.2;
+      }
+      25% {
+        top: -15px;
+        opacity: 0.5;
+      }
+      50% {
+        top: -25px;
+        opacity: 0.3;
+      }
+      75% {
+        top: -45px;
+        opacity: 0.6;
+      }
+      100% {
+        right: 0;
+        top: -50px;
+        opacity: 0.4;
       }
     }
   }

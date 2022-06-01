@@ -113,26 +113,26 @@ export class PreorderDialogComponent implements OnInit {
       author: 'Tim Tomlinson',
       title: 'Author of This is Not Happening to You',
     },
-    {
-      quote: 'A man travels a lot and as often returns home, though not without feeling a bit of a dybbuk, reinhabiting and repossessing his old body and self.  In his travels, meanwhile, through time as well as space, he also finds himself inhabiting his great-grandmother when she was a winsome, wannabe actress in Prague, at the same time, as it happens, that a young Kafka was just beginning to inhabit himself, but not without a boost from a devoted dybbuk you might mistake for Robin Hemley.  And so rescued from oblivion this fine novel, aglow with warmth, wisdom, and speculation.',
-      author: 'David Hamilton',
-      title: 'Author of Deep River and A Certain Arc',
-    },
-    {
-      quote: '‘Only the living can manipulate facts,’ Robin Hemley’s bibliophilic friend Jozef warns us. In his latest literary experiment, Oblivion, An After Autobiography, Hemley does just that, becoming a mythological dybbuk, except Hemley’s intentions here are not malicious, but delightful and sly. Kafka will roll in his grave, perhaps in laughter.',
-      author: 'Dinty W. Moore',
-      title: 'Author of To Hell With It',
-    },
-    {
-      quote: 'Irony and humility in this cafe of broken and unbroken dreams. Get me a table, a schnapps! I want to drink and read.',
-      author: 'David Lazar',
-      title: 'Author of Celeste Holm Syndrome and co-editor of 21st Century Essays',
-    },
-    {
-      quote: 'Now that time is starting up again (after more than a dozen months of sequestration’s superseding sleepy gear-slipping déjà vu-ing) Master Horologist, Robin Hemley’s time machine of a book, Oblivion, materializes out of the occluded tick-tocked atmosphere, initiating portals and wormholes of asymmetrical chronologies in non-Euclidian parallel realities in which only he could effortlessly jewel and tinker. Oblivion is a hack of a hack, an analogue Borgesian Zoom webinar made up of glitchy matrices and disturbing disturbances in the field. Hemley animates the palimpsests of all our encrusted sacred texts, and he pentimentoes every moment of every memoranda filed away in our misty mimetic mementoes.',
-      author: 'Michael Martone',
-      title: 'Author of The Complete Writings of Art Smith, The Bird Boy of Fort Wayne, Edited by Michael Martone and The Moon Over Wapakoneta',
-    },
+    // {
+    //   quote: 'A man travels a lot and as often returns home, though not without feeling a bit of a dybbuk, reinhabiting and repossessing his old body and self.  In his travels, meanwhile, through time as well as space, he also finds himself inhabiting his great-grandmother when she was a winsome, wannabe actress in Prague, at the same time, as it happens, that a young Kafka was just beginning to inhabit himself, but not without a boost from a devoted dybbuk you might mistake for Robin Hemley.  And so rescued from oblivion this fine novel, aglow with warmth, wisdom, and speculation.',
+    //   author: 'David Hamilton',
+    //   title: 'Author of Deep River and A Certain Arc',
+    // },
+    // {
+    //   quote: '‘Only the living can manipulate facts,’ Robin Hemley’s bibliophilic friend Jozef warns us. In his latest literary experiment, Oblivion, An After Autobiography, Hemley does just that, becoming a mythological dybbuk, except Hemley’s intentions here are not malicious, but delightful and sly. Kafka will roll in his grave, perhaps in laughter.',
+    //   author: 'Dinty W. Moore',
+    //   title: 'Author of To Hell With It',
+    // },
+    // {
+    //   quote: 'Irony and humility in this cafe of broken and unbroken dreams. Get me a table, a schnapps! I want to drink and read.',
+    //   author: 'David Lazar',
+    //   title: 'Author of Celeste Holm Syndrome and co-editor of 21st Century Essays',
+    // },
+    // {
+    //   quote: 'Now that time is starting up again (after more than a dozen months of sequestration’s superseding sleepy gear-slipping déjà vu-ing) Master Horologist, Robin Hemley’s time machine of a book, Oblivion, materializes out of the occluded tick-tocked atmosphere, initiating portals and wormholes of asymmetrical chronologies in non-Euclidian parallel realities in which only he could effortlessly jewel and tinker. Oblivion is a hack of a hack, an analogue Borgesian Zoom webinar made up of glitchy matrices and disturbing disturbances in the field. Hemley animates the palimpsests of all our encrusted sacred texts, and he pentimentoes every moment of every memoranda filed away in our misty mimetic mementoes.',
+    //   author: 'Michael Martone',
+    //   title: 'Author of The Complete Writings of Art Smith, The Bird Boy of Fort Wayne, Edited by Michael Martone and The Moon Over Wapakoneta',
+    // },
   ];
   slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
 

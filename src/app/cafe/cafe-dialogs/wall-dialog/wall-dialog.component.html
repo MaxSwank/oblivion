@@ -6,18 +6,12 @@
   <body>
     <h1><i>The Wall of</i><br>Exceptionally Minor Authors</h1>
     <div class="author-wall">
-      <div class="author" *ngFor="let author of authors" (click)="showInfo()">
+      <div class="author" *ngFor="let author of authors">
         <img src="{{ author.path }}" alt="">
         <p class="author-name">{{ author.name }}<br>
           {{ author.name2 }}</p>
-        <div class="info-container" (click)="showInfo()">
-          <button mat-icon-button (click)="showInfo()">
-            <mat-icon>info</mat-icon>
-          </button>
-          <div class="info-text" *ngIf="textVisible">
-            <h2>{{ author.name }} {{author.name2 }}</h2>
-            <p>{{ author.bio }} <i>{{ author.bio2 }}</i>{{ author.bio3 }}</p>
-          </div>
+        <div class="info-text">
+          <p>{{ author.bio }} <i>{{ author.bio2 }}</i>{{ author.bio3 }}</p>
         </div>
       </div>
     </div>
@@ -25,8 +19,8 @@
       <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor="let author of authors" class="slide">
           <img src="{{ author.path }}" alt="">
-          <p class="author-name-mobile">{{ author.name }}<br>{{ author.name2 }}</p>
           <div class="info-container">
+            <p class="author-name-mobile">{{ author.name }}<br>{{ author.name2 }}</p>
             <div class="info-text">
               <p>{{ author.bio }} <i>{{ author.bio2 }}</i>{{ author.bio3 }}</p>
             </div>

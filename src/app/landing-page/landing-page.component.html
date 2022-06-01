@@ -27,7 +27,7 @@
           <img src="../../assets/img/cafe-home.jpg" alt="">
         </div>
       </div>
-    </div>    
+    </div>
     <div class="cafe-mobile">
       <div class="bg-mobile"></div>
       <div class="butler-mobile">
@@ -37,12 +37,11 @@
               <h4>Welcome to the Caf&eacute; of Minor Authors.</h4>
               <p>There's a book release coming up soon.</p>
               <p>The regulars are all talking about it. Which says <i>something,</i> I suppose.</p>
+              <div class="enter-mobile">
+                <button (click)="enterCafe()" mat-raised-button>ENTER <br> <span>The Café</span>
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="enter-mobile">
-            <button (click)="enterCafe()" mat-raised-button>
-              Enter the Caf&eacute;
-            </button>
           </div>
         </div>
         <div class="butler-right">
@@ -63,7 +62,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <button routerLink="preorder" mat-raised-button>Learn More & Preorder</button>
+          <button routerLink="preorder" mat-raised-button>Learn More & Order</button>
         </div>
       </div>
     </div>
