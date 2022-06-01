@@ -23,6 +23,7 @@
         }
 
         .dialog-left {
+            z-index: 2 !important;
             .left-container {
                 .carousel-container {
                     background-color: var(--bg-accent-purple);
@@ -121,8 +122,10 @@
         }
 
         .dialog-right {
+            z-index: 1 !important;
             #bangs-img {
                 transform: translate(25%) rotateY(180deg) !important;
+                z-index: 99 !important;
             }
         }
 
