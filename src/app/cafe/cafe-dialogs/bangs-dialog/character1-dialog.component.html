@@ -10,8 +10,8 @@
           <div class="textfields">
             <p>Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
               embarrassing clerical error. Something must be done at once. Who has been misplaced? </p>
-            <form [formGroup]="bangsForm" method="POST">
-              <mat-radio-group aria-label="Select an option" formControlName="misplacedAuthor">
+            <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+              <mat-radio-group aria-label="Select an option" [formControl]="misplacedAuthor">
                 <mat-radio-button value="Maudy" tabindex="1">Maudy</mat-radio-button>
                 <mat-radio-button value="Gary" tabindex="2">Gary</mat-radio-button>
                 <mat-radio-button value="Jósef" tabindex="3">Jósef</mat-radio-button>
@@ -19,36 +19,29 @@
               </mat-radio-group>
               <br>
               <hr>
-              <br>  
+              <br>
               <mat-form-field class="name-field">
                 <mat-label>&nbsp;&nbsp;Name</mat-label>
-                <input matInput type="text" formControlName="name" tabindex="5" />
+                <input matInput type="text" [formControl]="name" required tabindex="5" />
               </mat-form-field>
               <mat-form-field class="email-field">
                 <mat-label>&nbsp;&nbsp;Email address</mat-label>
-                <input matInput type="text" formControlName="email" tabindex="6" />
+                <input matInput type="text" [formControl]="email" required tabindex="6" />
               </mat-form-field>
               <section>
-                <mat-checkbox formControlName="addToMailingList" tabindex="7">Add me to author Robin Hemley's
+                <mat-checkbox [formControl]="addToMailingList" tabindex="7">Add me to author Robin Hemley's
                   <em>mailing
                     list</em>.
                 </mat-checkbox>
               </section>
-              <button mat-raised-button tabindex="8"
-                [ngStyle]="{ 'background': bangsForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }"
-                (click)="onSubmit()">
+              <button mat-raised-button [disabled]="isLoading" tabindex="8" type="submit"
+                [ngStyle]="{ 'background': form.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }">
                 Submit
               </button>
-              <!--  <button mat-raised-button [disabled]="!bangsForm.valid" tabindex="4"
-                [ngStyle]="{ 'background': bangsForm.valid ? 'linear-gradient(to bottom, #3a6884, #192c38)' : 'linear-gradient(to bottom, #d3d4d4, #969898)' }">
-                <a *ngIf="bangsForm.valid;else placeholder" style="text-decoration: none;color:white"
-                  href="mailto:robinhemley@gmail.com?subject=Oblivion%20Content%20Submission&body=Name:%20{{ bangsForm.value['name'] }}%0D%0A%0D%0AEmail:%20{{ bangsForm.value['email'] }}{{ bangsForm.value['addToMailingList'] == true ? '%0D%0A%0D%0APlease%20add%20me%20to%20the %20mailing%20list!' : '' }}%0D%0A%0D%0AMisplaced%20Author:%20{{ bangsForm.value['misplacedAuthor'] }}">
-                  Submit
-                </a>
-                <ng-template #placeholder>
-                  Submit
-                </ng-template>
-              </button> -->
+              <input [formControl]="honeypot" class="hidden" type="text" style="display:none" />
+              <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+                <span>{{responseMessage}}</span>
+              </div>
             </form>
           </div>
           <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
@@ -56,7 +49,7 @@
           </button>
         </div>
         <div class="bubble-footer">
-        <p class="signed-copy">
+          <p class="signed-copy">
             <strong>Something is amiss.</strong> Talk to patrons to unravel the Café's mystery and receive a
             <strong style="color: var(--ob-yellow)"><u>signed copy</u></strong> of the book!
           </p>

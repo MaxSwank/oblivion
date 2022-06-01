@@ -2,23 +2,48 @@
     ::ng-deep body {
         color: var(--accent-purple);
         flex-direction: row;
+
+        .hidden {
+            display: none
+        }
+        .visible {
+            display: block
+        }
+        .center-text {
+            text-align: center
+        }
+        form.contact {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+
         .dialog-left {
             .left-container {
                 .carousel-container {
                     background-color: var(--bg-accent-purple);
+
                     h2 {
                         color: currentColor;
                     }
+
                     .textfields {
                         margin: 0 10%;
                         color: black;
+
                         p {
                             font-size: 22px;
                             line-height: 1.2;
                         }
+
                         form {
                             padding-bottom: 65px;
                             position: relative;
+
                             mat-radio-group {
                                 display: flex;
                                 flex-direction: row;
@@ -27,8 +52,10 @@
                                 font-size: 20px;
                                 font-weight: 700;
                                 margin: 20px auto 10px;
+
                                 mat-radio-button {
                                     flex: 1;
+
                                     ::ng-deep .mat-radio-outer-circle {
                                         border-color: rgb(29, 106, 142);
                                     }
@@ -37,6 +64,7 @@
 
                             mat-form-field {
                                 margin-bottom: 10px;
+
                                 ::ng-deep .mat-form-field-wrapper {
                                     .mat-form-field-flex {
                                         border: 1px solid rgb(29, 106, 142);
@@ -44,20 +72,25 @@
                                     }
                                 }
                             }
+
                             .name-field {
                                 width: 40%;
                                 float: left;
                             }
+
                             .email-field {
                                 width: 55%;
                                 float: right;
                             }
+
                             section {
                                 text-align: center;
+
                                 ::ng-deep .mat-checkbox-label {
                                     white-space: normal;
                                 }
                             }
+
                             button {
                                 position: absolute;
                                 bottom: 0;
@@ -72,6 +105,7 @@
                         }
                     }
                 }
+
                 .bubble-footer {
                     .audiobook {
                         .ab-img {
@@ -83,21 +117,26 @@
                 }
             }
         }
+
         .dialog-right {
             #bangs-img {
                 transform: translate(25%) rotateY(180deg) !important;
             }
         }
+
         ::ng-deep .slick-arrow {
             color: var(--accent-purple);
             border-radius: 0;
             background-color: currentColor;
+
             &::before {
                 color: currentColor;
             }
+
             &:focus {
                 background-color: currentColor !important;
             }
+
             &:hover {
                 background-color: currentColor !important;
             }
@@ -111,18 +150,19 @@
 }
 
 @media screen and (orientation: portrait) and (max-width: 700px) {
- .dialog-container {
-     body {
-         .dialog-left {
-             .left-container {
-                 .carousel-container {
-                    overflow-y: auto;
-                    overflow-x: hidden;;
-                    max-height: 50vh;
-                    padding-bottom: 20px;
-                 }
-             }
-         }
-     }
- }   
+    .dialog-container {
+        body {
+            .dialog-left {
+                .left-container {
+                    .carousel-container {
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        ;
+                        max-height: 50vh;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
