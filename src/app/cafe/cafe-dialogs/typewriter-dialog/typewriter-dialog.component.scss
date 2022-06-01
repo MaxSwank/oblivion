@@ -12,6 +12,26 @@
     top: 180px;
 }
 .dialog-container {
+
+    .hidden {
+        display: none
+    }
+    .visible {
+        display: block
+    }
+    .center-text {
+        text-align: center
+    }
+    form.contact {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
     display: flex;
     flex-direction: column;
     height: 100vh !important;

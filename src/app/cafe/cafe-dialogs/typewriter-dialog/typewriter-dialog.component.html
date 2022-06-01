@@ -17,6 +17,9 @@
           ...”</i>
       </p>
       <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+        <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+          <span>{{responseMessage}}</span>
+        </div>
         <mat-form-field class="entry-field">
           <mat-label>&nbsp;&nbsp;&nbsp;&nbsp;Contest Submission</mat-label>
           <textarea matInput type="text" formControlName="message" required maxlength="250" tabindex="1"></textarea>
@@ -31,7 +34,7 @@
           <mat-error *ngIf="email.invalid">Please enter a valid email</mat-error>
         </mat-form-field>
         <section>
-          <mat-checkbox formControlName="addToMailingList" tabindex="4">Add me to author Robin Hemley's <em>mailing
+          <mat-checkbox [formControl]="addToMailingList" tabindex="4">Add me to author Robin Hemley's <em>mailing
               list</em>.
           </mat-checkbox>
         </section>

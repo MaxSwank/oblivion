@@ -12,22 +12,18 @@ export class TypewriterDialogComponent implements OnInit {
 
   form: FormGroup;
   name: FormControl = new FormControl("", [Validators.required]);
+  addToMailingList: FormControl = new FormControl("");
   email: FormControl = new FormControl("", [Validators.required, Validators.email]);
   message: FormControl = new FormControl("", [Validators.required, Validators.maxLength(256)]);
-  honeypot: FormControl = new FormControl(""); // we will use this to prevent spam
-  submitted: boolean = false; // show and hide the success message
-  isLoading: boolean = false; // disable the submit button if we're loading
-  responseMessage: string; // the response message to show to the user
+  honeypot: FormControl = new FormControl("");
+  submitted: boolean = false;
+  isLoading: boolean = false;
+  responseMessage: string;
 
   constructor(private location: Location, private formBuilder: FormBuilder, public httpClient: HttpClient) {
-    /* this.typewriterForm = fb.group({
-      'message': new FormControl('', Validators.required),
-      'name': new FormControl('', Validators.required),
-      'email': new FormControl('', Validators.required),
-      'addToMailingList': new FormControl('')
-    }) */
     this.form = this.formBuilder.group({
       name: this.name,
+      addToMailingList: this.addToMailingList,
       email: this.email,
       message: this.message,
       honeypot: this.honeypot
@@ -45,17 +41,19 @@ export class TypewriterDialogComponent implements OnInit {
     if (this.form.status == "VALID" && this.honeypot.value == "") {
       this.form.disable(); // disable the form if it's valid to disable multiple submissions
       var formData: any = new FormData();
-      formData.append("name", this.form.get("name").value);
-      formData.append("email", this.form.get("email").value);
-      formData.append("message", this.form.get("message").value) + (this.form.value['addToMailingList'] == true ? ' Please also add me to the mailing list!' : '');
+      formData.append("Name", this.form.get("name").value);
+      formData.append("Email", this.form.get("email").value);
+      formData.append("Message", this.form.get("message").value) + (this.form.value['addToMailingList'] == true ? ' Please also add me to the mailing list!' : '');
+      formData.append("Contest", 'True');
+      formData.append("Misplaced Author", '');
+      formData.append("Add To Mailing List", this.form.value['addToMailingList'] == true ? 'True' : '');
       this.isLoading = true; // sending the post request async so it's in progress
       this.submitted = false; // hide the response message on multiple submits
       this.httpClient.post("https://script.google.com/macros/s/AKfycbz6wN0cm95LoSXdqzSiZEH1Xfdr3_LNWUwx1qgzmw/exec", formData).subscribe(
         (response: any) => {
-          console.log(response);
           // choose the response message
           if (response["result"] == "success") {
-            this.responseMessage = "Thanks for the message! I'll get back to you soon!";
+            this.responseMessage = "Thank you for your submission!";
           } else {
             this.responseMessage = "Oops! Something went wrong... Reload the page and try again.";
           }
@@ -74,28 +72,4 @@ export class TypewriterDialogComponent implements OnInit {
       );
     }
   }
-
-  /* onSubmit() {
-    const formData = {
-      "name": this.typewriterForm.value['name'],
-      "email": this.typewriterForm.value['email'],
-      "message": this.typewriterForm.value['message'] + (this.typewriterForm.value['addToMailingList'] == true ? ' Please also add me to the mailing list!' : ''),
-      "_url": "https://www.oblivion.cafe",
-      "_subject": "Oblivion Contest Submission"
-    };
-
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    this.httpClient.post('https://formsubmit.co/457bcf42af5ec0b2de887fc89f30b371', formData, httpOptions)
-      .subscribe((response) => {
-        console.log("Response:", response);
-        this.location.back();
-      }, (error) => {
-        console.log("Error:", error);
-        this.location.back();
-      });
-  } */
 }
