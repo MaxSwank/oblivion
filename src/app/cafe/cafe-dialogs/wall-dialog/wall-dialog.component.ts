@@ -59,7 +59,7 @@ export class WallDialogComponent implements OnInit {
     },
     {
       path: '../../../../assets/img/jozef-wozek.jpg',
-      name: 'Jósef',
+      name: 'Józef',
       name2: 'Wozek',
       bio: 'Chicago poet and author of many conceived-of-but-never-written histories of subjects as wide ranging as the Yiddish Theater in Europe to book binding techniques of 19th century Poland.',
       bio2: '',

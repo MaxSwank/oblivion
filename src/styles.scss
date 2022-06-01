@@ -77,7 +77,7 @@ em {
 // }
 
 .reviews-button {
-  background: linear-gradient(to top, #8297A4 , #CFD7DC );
+  background: linear-gradient(to top, #8297a4, #cfd7dc);
   font-size: 26px;
   overflow: hidden !important;
   .mat-button-wrapper {
@@ -98,7 +98,7 @@ em {
 }
 
 .preorder-button {
-  background: linear-gradient(to top, #EFC137, #F9E790);
+  background: linear-gradient(to top, #efc137, #f9e790);
   font-size: 26px;
   padding-left: 46px !important;
   overflow: hidden !important;
@@ -201,6 +201,7 @@ mat-dialog-container {
     display: flex;
     flex-direction: row;
     width: calc(99vh * 1.3862067) !important;
+    min-width: 900px;
     margin: auto;
     height: auto;
     .dialog-left {
@@ -242,7 +243,9 @@ mat-dialog-container {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
           height: 65vh;
+          min-height: 530px;
           width: 65vh;
+          min-width: 530px;
           margin: 0px auto;
           box-shadow: var(--boxshadow-medium);
           position: relative;
@@ -284,6 +287,16 @@ mat-dialog-container {
                   color: black;
                   font-style: italic;
                   margin-bottom: 18px;
+                  em {
+                    font-style: normal;
+                  }
+                }
+                .slide-clue {
+                  font-size: 30px;
+                  color: black;
+                  em {
+                    font-style: italic;
+                  }
                 }
                 .slide-author {
                   color: black;
@@ -505,8 +518,11 @@ mat-dialog-container {
                     margin-bottom: 10px;
                   }
                   .slide-quote {
-                    font-size: 18px;
+                    font-size: 16px;
                     margin-bottom: 10px;
+                  }
+                  .slide-clue {
+                    font-size: 20px;
                   }
                   .slide-author {
                     margin: 0 0 0 10px;
@@ -698,6 +714,20 @@ mat-dialog-container {
 }
 
 @media screen and (orientation: landscape) and (max-height: 600px) {
+  .cafe-container {
+    .wall-minor-authors {
+      button {
+        left: -50px !important;
+      }
+    }
+    .bangs-text {
+      transform: scale(.6);
+      transform-origin: bottom left;
+      width: 262px !important;
+      top: -180px !important;
+      left: -21px !important;
+    }
+  }
   .window-body {
     overflow: auto;
     .dialog-carousel {
@@ -714,6 +744,11 @@ mat-dialog-container {
     top: 0 !important;
     left: 0 !important;
     transform: initial !important;
+    .close-button {
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+    }
     .preorder-right {
       img {
         height: auto !important;
@@ -723,6 +758,7 @@ mat-dialog-container {
   }
   .contest-container {
     min-height: 100%;
+    margin: 0 auto !important;
   }
   .cafe-container {
     overflow-y: auto !important;
@@ -738,6 +774,7 @@ mat-dialog-container {
       .dialog-left {
         justify-content: start;
         margin-top: 5px;
+        transform: scale(.7) !important;
         .left-container {
           .carousel-container {
             .dialog-carousel {
@@ -773,6 +810,19 @@ mat-dialog-container {
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 765px) {
+  .dialog-container {
+    .character-dialog {
+      .dialog-left {
+        justify-content: start;
+        margin-top: 25px;
+        transform: scale(.8);
+        transform-origin: top;
       }
     }
   }
@@ -834,34 +884,46 @@ mat-dialog-container {
   }
 }
 
+@media screen and (hover: none) and (pointer: coarse) {
+  .slick-arrow:hover,
+  .slick-arrow:focus {
+    opacity: 1 !important;
+  }
+}
+
+.slick-arrow,
+.slick-arrow,
 button {
-  transition: 0.5s;
+  opacity: 1;
+  transition: 0.5s !important;
 }
+
+.slick-arrow:focus,
+.slick-arrow:hover,
 button:hover {
-  animation: flash !important;
-  transition: 1.5s;
-  opacity: .6;
+  transition: 0s !important;
+  opacity: 0.6;
 }
 
-@-webkit-keyframes flash {
-  0% {
-    opacity: 0.6;
-  }
+// @-webkit-keyframes flash {
+//   0% {
+//     opacity: 0.6;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-@keyframes flash {
-  0% {
-    opacity: 0.6;
-  }
+// @keyframes flash {
+//   0% {
+//     opacity: 0.6;
+//   }
 
-  100% {
-    opacity: 1;
-  }
-}
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
 // scrollbar styles
 /* width */
@@ -911,13 +973,6 @@ body .slick-next {
   position: relative;
   top: -3px;
   left: -5px;
-}
-
-.slick-arrow:hover {
-  background: rgba(rgb(255, 255, 255), 0.7) !important;
-}
-.slick-arrow:focus {
-  background: rgba(rgb(255, 255, 255), 0.2) !important;
 }
 
 .author-blurbs {

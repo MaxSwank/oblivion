@@ -127,8 +127,8 @@ const routes: Routes = [
             path: 'jozef_wozek',
             component: Character4DialogComponent,
             data: {
-              'title': 'Jósef Wozek',
-              'desc': 'Jósef Wozek — Oblivion by Robin Hemley',
+              'title': 'Józef Wozek',
+              'desc': 'Józef Wozek — Oblivion by Robin Hemley',
               'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek',
               'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/josef-wozek.png'
             }

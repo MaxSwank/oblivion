@@ -10,10 +10,11 @@
           <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem *ngFor="let slide of slides" class="slide">
               <div class="quote-text">
-                <p class="slide-intro" *ngIf="slide.intro.length > 0">{{ slide.intro }}</p>
-                <p class="slide-quote">&ldquo;{{ slide.quote }}"</p>
-                <p class="slide-author" *ngIf="slide.author.length > 0" [innerHTML]="slide.author"></p>
-                <p class="slide-title" *ngIf="slide.title.length > 0">{{ slide.title }}</p>
+                <p class="slide-intro" *ngIf="slide.intro.length > 0" [innerHTML]="slide.intro"></p> 
+                <p class="slide-quote" *ngIf="slide.quote.length > 0">&ldquo;<span [innerHTML]="slide.quote"></span>&rdquo;</p>
+                <p class="slide-clue" *ngIf="slide.clue.length > 0" [innerHTML]="slide.clue"></p>
+                <p class="slide-author" *ngIf="slide.author.length > 0">{{ slide.author }}</p>
+                <p class="slide-title" *ngIf="slide.title.length > 0" [innerHTML]="slide.title"></p>                
               </div>
             </div>
           </ngx-slick-carousel>

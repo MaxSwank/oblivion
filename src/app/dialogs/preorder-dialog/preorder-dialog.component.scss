@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 4;
   ::ng-deep .preorder-button {
-    background: #FFE84E !important;
+    background: #ffe84e !important;
   }
 }
 .containerB {
@@ -220,7 +220,6 @@
                 }
                 .slide-title {
                   font-size: 14px;
-                  font-style: italic;
                   line-height: 1.1;
                 }
               }
@@ -230,7 +229,7 @@
         .slick-prev,
         .slick-next {
           height: 100%;
-          width: 30px;
+          width: 45px;
           z-index: 100;
           background: var(--slick-fade);
           color: transparent;
@@ -358,7 +357,7 @@
       .preview {
         font-size: 20px;
         margin: 0 auto;
-        background: linear-gradient(to top, #8297A4, #CFD7DC);
+        background: linear-gradient(to top, #8297a4, #cfd7dc);
         width: 180px;
         img {
           height: 44px;
@@ -418,6 +417,7 @@
       // border-radius: 10px;
     }
   }
+
   .close-button {
     position: absolute;
     top: -13px;
@@ -426,19 +426,8 @@
     background: var(--black-opacity);
     border-radius: 50%;
     box-shadow: none !important;
-    animation: appear 1s forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
     mat-icon {
       font-weight: 900;
-    }
-  }
-  @keyframes appear {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
     }
   }
 }

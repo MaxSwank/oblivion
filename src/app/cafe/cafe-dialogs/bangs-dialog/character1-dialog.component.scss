@@ -26,6 +26,7 @@
             .left-container {
                 .carousel-container {
                     background-color: var(--bg-accent-purple);
+                
 
                     h2 {
                         color: currentColor;
@@ -95,6 +96,7 @@
                                 position: absolute;
                                 bottom: 0;
                                 left: 50%;
+                                z-index: 1;
                                 transform: translate(-50%);
                                 font-size: 26px;
                                 padding: 6px 20px 2px;

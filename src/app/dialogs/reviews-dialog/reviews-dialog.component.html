@@ -3,24 +3,22 @@
   <div class="reviews-container">
     <h1>REVIEWS</h1>
     <div class="review" *ngFor="let review of reviews">
-      <p class="review-text">
-        &#8220;{{ review.quote }}&#8221;
-      </p>
+      <p class="review-text">&#8220;<span [innerHTML]="review.quote"></span>&#8221;</p>
       <h2 class="author-name">
         <a href="{{ review.url }}" *ngIf="review.url.length > 0; else noLink">
           &#8213; {{ review.author }}
         </a>
         <ng-template #noLink>
           &#8213; {{ review.author }}
-      </ng-template>
+        </ng-template>
       </h2>
-      <p class="author-title">
+      <p class="author-title" [innerHTML]="review.title">
         {{ review.title }}
       </p>
-      <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeBlurbs()">
-        <mat-icon>close</mat-icon>
-      </button>
     </div>
+    <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeBlurbs()">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
   <div class="close-dialog" (click)="closeBlurbs()"></div>
 </div>

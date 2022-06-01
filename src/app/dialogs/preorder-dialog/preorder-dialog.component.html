@@ -24,10 +24,10 @@
       <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
         <div ngxSlickItem *ngFor="let slide of slides" class="slide">
           <div class="quote-text">
-            <p class="slide-quote">&ldquo;{{ slide.quote }}"</p>
+            <p>&ldquo;<span class="slide-quote" [innerHTML]="slide.quote"></span>&rdquo;</p>
             <br />
             <p class="slide-author">{{ slide.author }}</p>
-            <p class="slide-title">{{ slide.title }}</p>
+            <p class="slide-title" [innerHTML]="slide.title"></p> 
           </div>
         </div>
       </ngx-slick-carousel>

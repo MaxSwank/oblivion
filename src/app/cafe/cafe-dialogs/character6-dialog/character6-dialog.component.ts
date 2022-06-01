@@ -13,6 +13,7 @@ export class Character6DialogComponent implements OnInit {
     {
       intro: '',
       quote: '',
+            clue: '',
       author: '',
       title: '',
     },
@@ -22,6 +23,7 @@ export class Character6DialogComponent implements OnInit {
     {
       intro: '',
       quote: '',
+            clue: '',
     },
     {
       quote: '',
@@ -29,6 +31,7 @@ export class Character6DialogComponent implements OnInit {
     {
       intro: '',
       quote: '',
+            clue: '',
     },
     {
       quote: '',
@@ -36,6 +39,7 @@ export class Character6DialogComponent implements OnInit {
     {
       intro: '',
       quote: '',
+            clue: '',
     },
   ];
   slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
