@@ -160,3 +160,16 @@
         }
     }
 }
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .dialog-container {
+        .contest-container {
+          min-height: 100%;
+          margin: 0 auto !important;
+          .close-button {
+            top: 0 !important;
+            right: 0 !important;
+          }
+        }
+      }
+}

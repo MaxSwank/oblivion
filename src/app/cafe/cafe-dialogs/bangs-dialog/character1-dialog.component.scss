@@ -168,3 +168,19 @@
         }
     }
 }
+
+@media screen and (orientation: portrait) {
+    .dialog-container {
+        body {
+            .dialog-left {
+                .left-container {
+                    .carousel-container {
+                        button {
+                            bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

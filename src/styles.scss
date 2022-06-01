@@ -222,6 +222,7 @@ mat-dialog-container {
           content: "";
           height: 10px;
           width: 65vh;
+          min-width: 530px;
           position: absolute;
           bottom: -10px;
           left: 0;
@@ -426,6 +427,7 @@ mat-dialog-container {
     z-index: 1000;
     overflow-y: auto;
     overflow-x: hidden;
+    min-width: initial;
     .slick-arrow {
       position: fixed;
       top: unset;
@@ -471,6 +473,7 @@ mat-dialog-container {
     display: flex;
     flex-direction: column;
     height: initial;
+    min-width: initial;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     .character-dialog {
@@ -478,6 +481,7 @@ mat-dialog-container {
       overflow: hidden;
       width: initial !important;
       margin: 0;
+      min-width: initial;
       .dialog-left {
         margin-top: 3px;
         z-index: 6;
@@ -489,6 +493,7 @@ mat-dialog-container {
           width: 100vw;
           .carousel-container::before {
             width: 94vw;
+            min-width: initial;
           }
           .carousel-container::after {
             display: none;
@@ -496,6 +501,7 @@ mat-dialog-container {
           .carousel-container {
             max-height: initial;
             max-width: initial;
+            min-width: initial;
             top: initial;
             left: initial !important;
             transform: initial;
@@ -756,10 +762,7 @@ mat-dialog-container {
       }
     }
   }
-  .contest-container {
-    min-height: 100%;
-    margin: 0 auto !important;
-  }
+
   .cafe-container {
     overflow-y: auto !important;
     .image-wrapper {
@@ -772,9 +775,13 @@ mat-dialog-container {
     }
     .character-dialog {
       .dialog-left {
-        justify-content: start;
-        margin-top: 5px;
-        transform: scale(.7) !important;
+        justify-content: start !important;
+        margin-top: 7px !important;
+        transform: scale(.5) translateY(-50%) !important;
+        transform-origin: top !important;
+        position: fixed !important;
+        left: 0 !important;
+        top: 41% !important;
         .left-container {
           .carousel-container {
             .dialog-carousel {
@@ -805,10 +812,19 @@ mat-dialog-container {
           }
           .bubble-footer {
             width: 65vh;
+            min-width: 530px;
+            bottom: 10px !important;
             p {
               font-size: 13px;
             }
           }
+        }
+      }
+      .dialog-right {
+        img {
+          position: fixed !important;
+          bottom: 0 !important;
+          right: 14% !important;
         }
       }
     }
