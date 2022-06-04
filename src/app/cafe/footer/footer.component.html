@@ -7,12 +7,15 @@
       </button>
     </a>
   </div>
-  <div class="f-right" matTooltip="Info about Art Deco Imperial Hotel" matTooltipPosition="above"
-    aria-label="Find more information about this hotel">
+  <div class="f-right">
+    <div class="hotel-info" *ngIf="infoVisible">
+      <p>The artwork of the Café Interior is based on the <a href="https://www.hotel-imperial.cz/en/">Art Deco Imperial Hotel</a> in Prague — a beautiful example of
+        WWI-era café culture, and a hotel at which Franz Kafka was known to stay.</p>
+    </div>
     <!-- <mat-icon id="camera">photo_camera</mat-icon> -->
-    <button mat-button aria-label="about button">
+    <button mat-button aria-label="about button" (click)="showInfo()">
       <mat-icon id="info">info</mat-icon>
-      <span id="artdeco">Art Deco Imperial Hotel, Prague c. 1910</span>
+      <span id="artdeco">Art Deco Imperial Hotel, Prague</span>
     </button>
   </div>
 </footer>

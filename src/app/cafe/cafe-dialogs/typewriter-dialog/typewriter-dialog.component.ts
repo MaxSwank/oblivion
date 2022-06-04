@@ -14,11 +14,12 @@ export class TypewriterDialogComponent implements OnInit {
   name: FormControl = new FormControl("", [Validators.required]);
   addToMailingList: FormControl = new FormControl("");
   email: FormControl = new FormControl("", [Validators.required, Validators.email]);
-  message: FormControl = new FormControl("", [Validators.required, Validators.maxLength(256)]);
+  message: FormControl = new FormControl("", [Validators.required, Validators.maxLength(3000)]);
   honeypot: FormControl = new FormControl("");
   submitted: boolean = false;
   isLoading: boolean = false;
   responseMessage: string;
+  infoVisible: boolean = false;
 
   constructor(private location: Location, private formBuilder: FormBuilder, public httpClient: HttpClient) {
     this.form = this.formBuilder.group({
@@ -71,5 +72,9 @@ export class TypewriterDialogComponent implements OnInit {
         }
       );
     }
+  }
+  
+  showInfo() {
+    this.infoVisible = !this.infoVisible;
   }
 }

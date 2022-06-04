@@ -12,15 +12,14 @@
     top: 180px;
 }
 .dialog-container {
-
     .hidden {
-        display: none
+        display: none;
     }
     .visible {
-        display: block
+        display: block;
     }
     .center-text {
-        text-align: center
+        text-align: center;
     }
     form.contact {
         display: flex;
@@ -49,6 +48,38 @@
         box-shadow: var(--boxshadow-medium);
         overflow: auto;
         position: relative;
+        .info-button {
+            position: fixed;
+            top: 225px;
+            left: calc(50% - 378px);
+            height: fit-content;
+            z-index: 1000;
+            mat-icon {
+                position: absolute;
+                top: -37px;
+                left: 60px;
+                width: 24px;
+            }
+            p {
+                width: 200px;
+                background-color: black;
+                color: white;
+                padding: 16px;
+                border-radius: 10px;
+            }
+            p::after {
+                content: "";
+                height: 0px;
+                width: 0px;
+                position: absolute;
+                top: -10px;
+                right: 63%;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid black;
+            }
+        }
+
         .close-button {
             position: fixed;
             top: 60px !important;
@@ -64,7 +95,7 @@
         }
         .contest-top {
             margin: 0 100px;
-            padding: 0 0 4%;
+            padding: 0 0 6%;
             border-bottom: 1px solid var(--gray-text);
             font-size: 24px;
             color: black;
@@ -76,18 +107,23 @@
             }
             p {
                 margin: 28px 0 0 0;
+                line-height: 1.2;
             }
         }
         .contest-bottom {
             margin: 0 100px;
-            padding: 4% 0;
+            padding: 7% 0;
             color: black;
             span {
-                font-size: 18px;
+                font-size: 16px;
+                font-family: Helvetica, sans-serif !important;
+                strong {
+                    font-family: Helvetica, sans-serif !important;
+                }
             }
             p {
                 font-size: 26px;
-                margin: 16px 0;
+                margin: 8px 0 32px;
                 line-height: 1.5;
             }
             form {
@@ -110,7 +146,7 @@
                     font-size: 18px;
                 }
                 button {
-                    margin: 16px auto;
+                    margin: 16px auto 38px;
                     font-size: 26px;
                     padding: 6px 20px 2px;
                     border-radius: 5px;
@@ -123,8 +159,24 @@
                         .mat-form-field-flex {
                             border: 1px solid #192c38;
                             border-radius: 5px;
+                            .mat-form-field-infix {
+                                textarea {
+                                    height: 260px;
+                                }
+                            }
                         }
                     }
+                }
+            }
+            .fine-print {
+                text-align: center;
+                & * {
+                    font-family: Helvetica, sans-serif !important;
+                    color: #333;
+                }
+                small {
+                    text-align: center;
+                    line-height: 1;
                 }
             }
         }
@@ -147,6 +199,12 @@
             .contest-bottom {
                 margin: 0 10%;
                 form {
+                    .name-field {
+                        width: 100%;
+                    }
+                    .email-field {
+                        width: 100%;
+                    }
                     section {
                         mat-checkbox {
                             ::ng-deep .mat-checkbox-label {
@@ -164,12 +222,12 @@
 @media screen and (orientation: landscape) and (max-height: 600px) {
     .dialog-container {
         .contest-container {
-          min-height: 100%;
-          margin: 0 auto !important;
-          .close-button {
-            top: 0 !important;
-            right: 0 !important;
-          }
+            min-height: 100%;
+            margin: 0 auto !important;
+            .close-button {
+                top: 0 !important;
+                right: 0 !important;
+            }
         }
-      }
+    }
 }

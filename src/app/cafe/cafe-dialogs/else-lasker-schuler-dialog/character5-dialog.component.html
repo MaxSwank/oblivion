@@ -6,7 +6,12 @@
     <div class="dialog-left">
       <div class="left-container">
         <div class="carousel-container">
-          <h2>ELSE LASKER-SCHÜLER</h2>
+          <h2 (click)="showInfo()"><span>ELSE LASKER-SCHÜLER
+            <mat-icon  style="color: black">info</mat-icon>
+          </span> </h2>
+        <div class="else-info" *ngIf="infoVisible">
+          <p>Else Lasker-Schüler (1869–1945) was a Proto-Performance and lyric poet, beloved by many in her time, though loathed by Franz Kafka.</p>
+        </div>
           <ngx-slick-carousel class="dialog-carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem *ngFor="let slide of slides" class="slide">
               <div class="quote-text">

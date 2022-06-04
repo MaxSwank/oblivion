@@ -28,9 +28,33 @@
                 .carousel-container {
                     background-color: var(--bg-accent-purple);
                 
-
                     h2 {
                         color: currentColor;
+                        cursor: pointer;
+                    }
+
+                    .bangs-info {
+                        position: absolute;
+                        top: 97px;
+                        right: 2px;
+                        height: fit-content;
+                        width: 200px;
+                        background-color: black;
+                        color: white;
+                        padding: 16px;
+                        border-radius: 10px;
+                        z-index: 1;
+                    }
+                    .bangs-info::after {
+                        content: '';
+                        height: 0px;
+                        width: 0px;
+                        position: absolute;
+                        top: -10px;
+                        right: 63%;
+                        border-left: 15px solid transparent;
+                        border-right: 15px solid transparent;
+                        border-bottom: 15px solid black;
                     }
 
                     .textfields {
@@ -178,6 +202,12 @@
             .dialog-left {
                 .left-container {
                     .carousel-container {
+                        .bangs-info {
+                            top: 64px;
+                        }
+                        .bangs-info::after {
+                            right: 22%;
+                        }
                         button {
                             bottom: 5px;
                             

@@ -21,22 +21,115 @@
       transform-origin: center;
     }
 
+    .accent img {
+      position: absolute;
+      z-index: 1;
+    }
+    .accent::before {
+      content: "";
+      position: absolute;
+      transform: translate(-50%);
+      background-image: url(../../assets/img/nouveau-halo.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 0;
+      animation: rotation 45s infinite linear;
+      mix-blend-mode: overlay;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    .accent::after {
+      content: "";
+      position: absolute;
+      transform: translate(-50%);
+      background-image: url(../../assets/img/nouveau-halo.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 0;
+      animation: rotation 45s infinite reverse linear;
+      mix-blend-mode: overlay;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    .bangs::before {
+      background-image: url(../../assets/img/bangs-haleau.png);
+      height: 6vw;
+      width: 6vw;
+      top: -12%;
+      left: 49%;
+    }
+    .character2::before {
+      height: 15vw;
+      width: 15vw;
+      top: -10%;
+      left: 55%;
+    }
+    .character3::before {
+      height: 10vw;
+      width: 10vw;
+      top: -10%;
+      left: 46%;
+    }
+    .character4::before {
+      height: 8vw;
+      width: 8vw;
+      top: -8%;
+      left: 46%;
+    }
+    .character5::before {
+      height: 2.1vw;
+      width: 2.1vw;
+      top: -9%;
+      opacity: 1;
+      left: 62%;
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: translate(-50%) rotate(0deg);
+        // filter: drop-shadow(0 0 0px blue);
+      }
+      // 10% {
+      //   filter: drop-shadow(0 0 5px orange);
+      // }
+      // 20% {
+      //   filter: drop-shadow(0 0 0px blue);
+      // }
+      // 30% {
+      //   filter: drop-shadow(0 0 5px orange);
+      // }
+      // 40% {
+      //   filter: drop-shadow(0 0 0px blue);
+      // }
+      // 50% {
+      //   filter: drop-shadow(0 0 5px orange);
+      // }
+      // 60% {
+      //   filter: drop-shadow(0 0 0px blue);
+      // }
+      // 70% {
+      //   filter: drop-shadow(0 0 5px orange);
+      // }
+      // 80% {
+      //   filter: drop-shadow(0 0 0px blue);
+      // }
+      // 90% {
+      //   filter: drop-shadow(0 0 5px orange);
+      // }
+      100% {
+        transform: translate(-50%) rotate(360deg);
+        // filter: drop-shadow(0 0 0px blue);
+      }
+    }
+
     .eye {
       position: absolute;
       // border: 1px solid red;
       img {
         cursor: pointer;
         &:hover {
-          animation: img-hover 1.5s ease-out;
+          filter: brightness(150%);
         }
-      }
-    }
-    @keyframes img-hover {
-      0% {
-        opacity: 0.5;
-      }
-      100% {
-        opacity: 1;
       }
     }
     div {
@@ -51,8 +144,26 @@
         left: 50%;
       }
     }
-    .typewriter:hover {
-      animation: img-hover 1.5s ease-out;
+    .desktop-typewriter:hover ~ .typewriter {
+      filter: brightness(150%);
+    }
+    .desktop-typewriter {
+      position: absolute;
+      bottom: 32%;
+      left: 16.5%;
+      background-color: var(--ob-white);
+      border: 1px solid #292929;
+      outline: 6px solid var(--ob-white);
+      border-radius: 0px;
+      padding: 8px;
+      animation: none;
+      box-shadow: var(--boxshadow-medium);
+      p {
+        line-height: 20px;
+        margin: 0;
+        color: black;
+        font-size: 20px;
+      }
     }
     .typewriter {
       left: 15.5%;
@@ -64,24 +175,6 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-image: url(../../assets/img/typewriter-cafe.png);
-      .desktop-typewriter {
-        position: absolute;
-        bottom: calc(100% + 14px);
-        left: 17%;
-        background-color: var(--ob-white);
-        border: 1px solid #292929;
-        outline: 6px solid var(--ob-white);
-        border-radius: 0px;
-        padding: 8% 8% 4%;
-        animation: none;
-        box-shadow: var(--boxshadow-medium);
-        p {
-          line-height: 20px;
-          margin: 0;
-          color: black;
-          font-size: 20px;
-        }
-      }
     }
     .mobile-div {
       display: none;
@@ -97,8 +190,24 @@
       background-repeat: no-repeat;
       cursor: pointer;
     }
-    .window:hover {
-      animation: img-hover 1.5s ease-out;
+    .window:hover,
+    .typewriter:hover {
+      filter: brightness(150%);
+    }
+
+    .desktop-typewriter:hover {
+      animation: initial;
+      opacity: initial;
+      filter: brightness(95%);
+      transition: 0s !important;
+    }
+    .wall-minor-authors {
+      button:hover {
+        animation: initial;
+        opacity: initial;
+        filter: brightness(95%);
+        transition: 0s !important;
+      }
     }
 
     .wall-minor-authors {
@@ -126,9 +235,6 @@
           }
         }
       }
-      &:hover {
-        animation: img-hover 1.5s ease-out;
-      }
     }
 
     .wall-mobile {
@@ -140,6 +246,9 @@
       top: 33.1%;
       width: 5%;
       height: 25.7%;
+      img:hover {
+        filter: brightness(110%);
+      }
       img {
         height: 100%;
         width: auto;
@@ -284,15 +393,47 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     .image-wrapper {
+      .bangs::before {
+        background-image: url(../../assets/img/bangs-haleau.png);
+        height: 10vh;
+        width: 10vh;
+        top: -4%;
+        left: 49%;
+      }
+      .character2::before {
+        height: 18vh;
+        width: 18vh;
+        top: -1%;
+        left: 55%;
+      }
+      .character3::before {
+        height: 15vh;
+        width: 15vh;
+        top: -3%;
+        left: 46%;
+      }
+      .character4::before {
+        height: 12vh;
+        width: 12vh;
+        top: -2%;
+        left: 44%;
+      }
+      .character5::before {
+        height: 3.3vh;
+        width: 3.3vh;
+        top: -4%;
+        opacity: 1;
+        left: 62%;
+      }
       img {
         transform: translateY(6%) !important;
       }
     }
+    .desktop-typewriter {
+      display: none;
+    }
     .typewriter {
       top: 72.5% !important;
-      .desktop-typewriter {
-        display: none;
-      }
     }
     .mobile-div {
       display: block !important;
@@ -330,13 +471,14 @@
       display: block !important;
       position: absolute;
       left: 0;
-      top: 14%;
+      top: 18%;
       height: fit-content;
       width: 100%;
       div {
         position: sticky;
         width: 43%;
         left: 56%;
+        padding-right: 30%;
         button {
           position: sticky;
           left: 10%;
@@ -403,7 +545,6 @@
   }
 }
 
-
 @media screen and (orientation: portrait) and (min-height: 600px) and (max-height: 700px) {
   .cafe-container {
     .image-wrapper {
@@ -433,7 +574,6 @@
     }
   }
 }
-
 
 @media screen and (orientation: portrait) and (min-height: 1384px) {
   .cafe-container {

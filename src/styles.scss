@@ -69,6 +69,12 @@ em {
   font-family: p22-stickley-pro-text, serif !important;
 }
 
+mat-form-field {
+  * {
+    font-family: Helvetica, sans-serif !important;
+  }
+}
+
 .pre-launch {
   display: none !important;
 }

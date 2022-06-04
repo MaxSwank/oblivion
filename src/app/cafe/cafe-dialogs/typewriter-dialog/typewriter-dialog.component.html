@@ -1,14 +1,20 @@
 <div class="dialog-container" style="height: calc(100% - 28px)">
   <app-header></app-header>
   <div class="contest-container">
+    <div class="info-button">
+      <mat-icon (click)="showInfo()" style="color: black">info</mat-icon>
+      <p  *ngIf="infoVisible"> The Oliver No. 5 (produced 1907–1914) was Franz Kafka’s writing instrument of choice. The Oliver Typewriter Co.
+        billed it as “the ‘last word’ in typewriters—a Symphony in Steel. It is scientific in principle, flawless in
+        construction, accurate in adjustment, splendidly efficient in operation.”</p>
+    </div>
     <button mat-mini-fab color="disabled" aria-label="create" class="close-button" (click)="closeTypewriter()">
       <mat-icon>close</mat-icon>
     </button>
     <h1>WRITING CONTEST</h1>
     <div class="contest-top">
-      <strong>Further the story and win <span>$100 USD</span> and an <span>autographed copy</span> of
-        <em>Oblivion</em></strong>
-      <p>(Three runners up will receive a signed copy.)</p>
+      <strong>Further the story and win <span>a $100 gift card</span> and an <span>autographed copy</span> of
+        <em>Oblivion</em></strong>.
+      <p>(Three runners up will receive a signed copy. Entries due September 1, 2022.)</p>
     </div>
     <div class="contest-bottom">
       <span>Add up to <strong>250 words</strong> to this opening sentence:</span>
@@ -22,7 +28,7 @@
         </div>
         <mat-form-field class="entry-field">
           <mat-label>&nbsp;&nbsp;&nbsp;&nbsp;Contest Submission</mat-label>
-          <textarea matInput type="text" formControlName="message" required maxlength="250" tabindex="1"></textarea>
+          <textarea matInput type="text" formControlName="message" required maxlength="3000" tabindex="1"></textarea>
         </mat-form-field>
         <mat-form-field class="name-field">
           <mat-label>&nbsp;&nbsp;Name</mat-label>
@@ -45,6 +51,13 @@
         </button>
         <input [formControl]="honeypot" class="hidden" type="text" style="display:none" />
       </form>
+      <div class="fine-print">
+        <small><strong>The Café of Minor Authors</strong> is proud to offer a gift card to <a
+            href="https://bookshop.org/">Bookshop.org</a> in support of
+          independent bookstores and brilliant-but-as-yet-unheralded authors. <strong>All submissions due September 1,
+            2022.</strong>
+          Winners will be contacted via email.</small>
+      </div>
     </div>
   </div>
   <div class="close-dialog" (click)="closeTypewriter()"></div>

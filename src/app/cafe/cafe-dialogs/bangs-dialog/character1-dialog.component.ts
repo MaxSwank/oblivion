@@ -9,6 +9,8 @@ import { Location } from '@angular/common';
   styleUrls: ['./character1-dialog.component.scss']
 })
 export class Character1DialogComponent implements OnInit {
+  infoVisible: boolean = false;
+
   slides = [
     {
       quote: 'It always seems impossible until it\'s done.',
@@ -91,5 +93,9 @@ export class Character1DialogComponent implements OnInit {
         }
       );
     }
+  }
+
+  showInfo() {
+    this.infoVisible = !this.infoVisible;
   }
 }

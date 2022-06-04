@@ -25,20 +25,41 @@ footer {
     }
   }
   .f-right {
-    display: none;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: p22-stickley-pro-text, serif !important;
     color: var(--ob-white) !important;
-    // #camera {
-    //   font-size: 16px;
-    //   position: relative;
-    //   left: 4px;
-    //   top: 5px;
-    //   opacity: .5;
-    //   color: black;
-    // }
+    .hotel-info {
+      position: absolute;
+      top: -174px;
+      left: 86px;
+      height: fit-content;
+      width: 200px;
+      background-color: black;
+      color: white;
+      padding: 16px;
+      border-radius: 10px;
+      z-index: 1;
+      p {
+        white-space: normal;
+        a {
+          color: white;
+          font-weight: 700;
+        }
+      }
+    }
+    .hotel-info::after {
+      content: "";
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      bottom: -10px;
+      right: 63%;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid black;
+    }
     button {
       height: 28px;
       line-height: 28px;
@@ -59,4 +80,3 @@ footer {
     }
   }
 }
-

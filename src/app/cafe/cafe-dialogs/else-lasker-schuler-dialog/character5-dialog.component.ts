@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character5-dialog.component.scss']
 })
 export class Character5DialogComponent implements OnInit {
+  infoVisible: boolean = false;
+  
   slides = [
     {
       intro: '',
@@ -70,5 +72,8 @@ export class Character5DialogComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  showInfo() {
+    this.infoVisible = !this.infoVisible;
+  }
 }
