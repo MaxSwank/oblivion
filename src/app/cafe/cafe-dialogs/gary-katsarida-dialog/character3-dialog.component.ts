@@ -18,7 +18,7 @@ export class Character3DialogComponent implements OnInit {
       intro: 'Did you know <strong>Chinelo</strong> says:',
       quote: 'Charming, starkly brilliant, and very funny, Robin Hemley’s <em>Oblivion</em> is a meditation on writing and the writer’s life, on family, on grief, on death as a second chance — ultimately, on hope … I savored every page.',
       clue: '',
-      author: '&#8213; <em>Chinelo Okparanta</em>',
+      author: 'Chinelo Okparanta',
       title: 'Author of <em>Under the Udala Trees</em> and <em>Harry Sylvester Bird</em>'
     },
     {
