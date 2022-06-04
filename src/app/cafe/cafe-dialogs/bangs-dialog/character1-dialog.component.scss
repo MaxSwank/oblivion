@@ -4,13 +4,13 @@
         flex-direction: row;
 
         .hidden {
-            display: none
+            display: none;
         }
         .visible {
-            display: block
+            display: block;
         }
         .center-text {
-            text-align: center
+            text-align: center;
         }
         form.contact {
             display: flex;
@@ -27,7 +27,7 @@
             .left-container {
                 .carousel-container {
                     background-color: var(--bg-accent-purple);
-                
+
                     h2 {
                         color: currentColor;
                         cursor: pointer;
@@ -46,7 +46,7 @@
                         z-index: 1;
                     }
                     .bangs-info::after {
-                        content: '';
+                        content: "";
                         height: 0px;
                         width: 0px;
                         position: absolute;
@@ -58,9 +58,24 @@
                     }
 
                     .textfields {
-                        margin: 0 10%;
+                        margin: 0 5% 0 11%;
                         color: black;
-
+                        overflow-y: auto;
+                        max-height: calc(100% - 203px);
+                        padding-right: 24px;
+                        padding-bottom: 24px;
+                        .contest-top {
+                            margin: 0;
+                            padding: 0 0 6%;
+                            font-size: 24px;
+                            color: black;
+                            strong {
+                                line-height: 1.2;
+                                span {
+                                    color: var(--contest-red);
+                                }
+                            }
+                        }
                         p {
                             font-size: 22px;
                             line-height: 1.2;
@@ -114,6 +129,7 @@
 
                                 ::ng-deep .mat-checkbox-label {
                                     white-space: normal;
+                                    line-height: 1.2;
                                 }
                             }
 
@@ -128,6 +144,15 @@
                                 border-radius: 5px;
                                 color: var(--ob-white);
                                 background: linear-gradient(to bottom, #3a6884, #192c38);
+                            }
+                        }
+                        .fine-print {
+                            margin-top: 12px;
+                            text-align: center;
+                            line-height: 1.2;
+                            & * {
+                                font-family: Helvetica, sans-serif !important;
+                                color: #333;
                             }
                         }
                     }
@@ -186,7 +211,6 @@
                     .carousel-container {
                         overflow-y: auto;
                         overflow-x: hidden;
-                        ;
                         max-height: 48vh;
                         padding-bottom: 20px;
                     }
@@ -202,6 +226,9 @@
             .dialog-left {
                 .left-container {
                     .carousel-container {
+                        .textfields {
+                            max-height: initial;
+                        }
                         .bangs-info {
                             top: 64px;
                         }
@@ -210,7 +237,6 @@
                         }
                         button {
                             bottom: 5px;
-                            
                         }
                     }
                 }
@@ -223,7 +249,7 @@
     .dialog-container {
         body {
             .dialog-left::after {
-                content: '';
+                content: "";
                 background-image: url(../../../../assets/img/bangs-bust.png);
                 background-size: contain;
                 position: absolute;
@@ -232,7 +258,6 @@
                 left: 73%;
                 height: 181vh;
                 width: 100%;
-
             }
             .dialog-right {
                 img {

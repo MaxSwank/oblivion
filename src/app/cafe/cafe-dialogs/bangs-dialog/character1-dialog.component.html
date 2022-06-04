@@ -7,15 +7,19 @@
       <div class="left-container">
         <div class="carousel-container">
           <h2 (click)="showInfo()"><span>JOHN KENDRICK BANGS
-              <mat-icon  style="color: black">info</mat-icon>
+              <mat-icon style="color: black">info</mat-icon>
             </span> </h2>
           <div class="bangs-info" *ngIf="infoVisible">
             <p>American author and editor John Kendrick Bangs (1862–1922) is credited with giving status to the
               literary subgenre “Bangsian fantasy,” which sets its stories predominantly in the afterlife.</p>
           </div>
           <div class="textfields">
-            <p>Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
-              embarrassing clerical error. Something must be done at once. Who has been misplaced? </p>
+            <div class="contest-top">
+              <strong>Talk to the patrons, solve the mystery, and enter to win an <span>autographed copy</span> of
+                <em>Oblivion</em></strong>.
+            </div>
+            <p>&ldquo;Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
+              embarrassing clerical error. Something must be done at once. Who has been misplaced?&rdquo;</p>
             <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
               <mat-radio-group aria-label="Select an option" [formControl]="misplacedAuthor">
                 <mat-radio-button value="Maudy" tabindex="1">Maudy</mat-radio-button>
@@ -49,6 +53,11 @@
                 <span>{{responseMessage}}</span>
               </div>
             </form>
+            <div class="fine-print">
+              <small><strong>All submissions due September 1,
+                  2022.</strong>
+                Winners will be contacted via email.</small>
+            </div>
           </div>
           <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
             <mat-icon>close</mat-icon>

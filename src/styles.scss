@@ -951,6 +951,8 @@ button:hover {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  position: relative;
+  left: 20px;
 }
 
 /* Track */
