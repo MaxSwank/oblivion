@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +14,15 @@ export class LandingPageComponent implements OnInit {
   hoverRight: boolean = true;
   hoverCenter: boolean = true;
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private metaService: Meta, private titleService: Title) {
+    this.titleService.setTitle('Oblivion Cafe');
+    this.metaService.updateTag({ name: 'description', content: 'Oblivion Cafe' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Oblivion Cafe' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/BookCover.jpg' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '975' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '1572' });
+  }
 
   ngOnInit(): void {
   }
