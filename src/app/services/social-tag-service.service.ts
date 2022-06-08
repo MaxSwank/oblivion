@@ -51,11 +51,11 @@ export class SocialTagsService {
             this.titleService.setTitle(this.data['title']);
             const description = this.data['desc'] ? this.data['desc'] : this.tagDescription;
             this.meta.updateTag({ name: 'description', content: description });
-            this.meta.updateTag({ name: 'image', content: this.urlPrefix + '/' + this.data['image'] });
+            this.meta.updateTag({ name: 'image', content: this.data['image'] });
             this.meta.updateTag({ name: 'og:title', content: this.data['title'] });
             this.meta.updateTag({ name: 'og:description', content: description });
             this.meta.updateTag({ name: 'og:type', content: 'website' });
-            this.meta.updateTag({ name: 'og:image', content: this.urlPrefix + '/' + this.data['image'] });
+            this.meta.updateTag({ name: 'og:image', content: this.data['image'] });
             this.meta.updateTag({ name: 'og:image:width', content: this.data['width'] });
             this.meta.updateTag({ name: 'og:image:height', content: this.data['height'] });
           }
