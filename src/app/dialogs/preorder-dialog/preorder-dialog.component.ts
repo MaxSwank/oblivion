@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-preorder-dialog',
@@ -136,7 +137,15 @@ export class PreorderDialogComponent implements OnInit {
   ];
   slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
 
-  constructor(private _router: Router, private location: Location) { }
+  constructor(private _router: Router, private location: Location, private metaService: Meta, private titleService: Title) {
+    this.titleService.setTitle('Order Oblivion');
+    this.metaService.updateTag({ name: 'description', content: 'Order Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Order Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/BookCover.jpg' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/preorder' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '975' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '1572' });
+  }
 
   ngOnInit() { }
 
