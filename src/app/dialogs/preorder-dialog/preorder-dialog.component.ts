@@ -144,7 +144,7 @@ export class PreorderDialogComponent implements OnInit {
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/BookCover.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/preorder' });
     this.metaService.updateTag({ property: 'og:image:width', content: '975' });
-    this.metaService.updateTag({ property: 'og:image:width', content: '1572' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1572' });
   }
 
   ngOnInit() { }

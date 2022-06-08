@@ -16,7 +16,7 @@ export class WindowDialogComponent implements OnInit {
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/typewriter.png' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/window' });
     this.metaService.updateTag({ property: 'og:image:width', content: '220' });
-    this.metaService.updateTag({ property: 'og:image:width', content: '230' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '230' });
   }
 
   ngOnInit() {

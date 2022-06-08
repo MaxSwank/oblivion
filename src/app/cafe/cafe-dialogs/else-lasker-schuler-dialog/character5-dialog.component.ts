@@ -76,7 +76,7 @@ export class Character5DialogComponent implements OnInit {
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/else-lasker-schuler.png' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/else_lasker_schuler' });
     this.metaService.updateTag({ property: 'og:image:width', content: '1324' });
-    this.metaService.updateTag({ property: 'og:image:width', content: '1536' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1536' });
   }
 
   ngOnInit() {

@@ -74,7 +74,7 @@ export class Character3DialogComponent implements OnInit {
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/gary-katsarida.png' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/gary_katsarida' });
     this.metaService.updateTag({ property: 'og:image:width', content: '1324' });
-    this.metaService.updateTag({ property: 'og:image:width', content: '1536' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1536' });
   }
 
   ngOnInit() {

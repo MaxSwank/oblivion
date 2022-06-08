@@ -54,7 +54,7 @@ export class Character1DialogComponent implements OnInit {
     this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/bangs-pod-color.png' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/john_kendrick_bangs' });
     this.metaService.updateTag({ property: 'og:image:width', content: '569' });
-    this.metaService.updateTag({ property: 'og:image:width', content: '1292' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1292' });
     
     this.form = this.formBuilder.group({
       name: this.name,
