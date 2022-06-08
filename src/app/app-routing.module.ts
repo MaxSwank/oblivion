@@ -29,22 +29,22 @@ const routes: Routes = [
     data: {
       'title': 'Oblivion home',
       'desc': 'Peer into the window and see what awaits',
-      'url': 'https://mango-rock-072624310.1.azurestaticapps.net',
-      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/temp-cafe.jpg'
+      'url': 'https://www.oblivion.cafe',
+      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+      'width': '975',
+      'height': '1572'
     },
     children: [
-      {
-        path: 'about',
-        component: AboutComponent
-      },
       {
         path: 'contact',
         component: ContactComponent,
         data: {
           'title': 'Oblivion contact',
           'desc': 'Contact for Oblivion by Robin Hemley',
-          'url': 'https://mango-rock-072624310.1.azurestaticapps.net/contact',
-          'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+          'url': 'https://www.oblivion.cafe/contact',
+          'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+          'width': '975',
+          'height': '1572'
         }
       },
       {
@@ -53,8 +53,10 @@ const routes: Routes = [
         data: {
           'title': 'Oblivion Preorder',
           'desc': 'Preorder Oblivion by Robin Hemley',
-          'url': 'https://mango-rock-072624310.1.azurestaticapps.net/preorder',
-          'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+          'url': 'https://www.oblivion.cafe/preorder',
+          'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+          'width': '975',
+          'height': '1572'
         }
       },
       {
@@ -63,8 +65,10 @@ const routes: Routes = [
         data: {
           'title': 'Oblivion Reviews',
           'desc': 'Reviews of Oblivion by Robin Hemley',
-          'url': 'https://mango-rock-072624310.1.azurestaticapps.net/preorder/reviews',
-          'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+          'url': 'https://www.oblivion.cafe/preorder/reviews',
+          'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+          'width': '975',
+          'height': '1572'
         }
       },
     ],
@@ -75,8 +79,10 @@ const routes: Routes = [
     data: {
       'title': 'Oblivion Cafe',
       'desc': 'Welcome to the Café of Minor Authors — Oblivion by Robin Hemley',
-      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe',
-      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+      'url': 'https://www.oblivion.cafe/cafe',
+      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+      'width': '975',
+      'height': '1572'
     },
     children: [
       {
@@ -89,8 +95,10 @@ const routes: Routes = [
             data: {
               'title': 'Oblivion Reviews',
               'desc': 'Reviews of Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs/preorder/reviews',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+              'url': 'https://www.oblivion.cafe/cafe/john_kendrick_bangs/preorder/reviews',
+              'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+              'width': '975',
+              'height': '1572'
             },
           },
           {
@@ -99,8 +107,10 @@ const routes: Routes = [
             data: {
               'title': 'John Kendrick Bangs',
               'desc': 'Tell the maître d’ about an imposter — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/john_kendrick_bangs',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/bangs.png'
+              'url': 'https://www.oblivion.cafe/cafe/john_kendrick_bangs',
+              'image': 'https://www.oblivion.cafe/assets/img/bangs-pod-color.png',
+              'width': '180',
+              'height': '420'
             }
           },          
           {
@@ -109,8 +119,10 @@ const routes: Routes = [
             data: {
               'title': 'Maudy Gammitt',
               'desc': 'Maudy Gammitt — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/maudy_gammitt',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/maudy-gammitt.png'
+              'url': 'https://www.oblivion.cafe/cafe/maudy_gammitt',
+              'image': 'https://www.oblivion.cafe/assets/img/maudy-gammitt.png',
+              'width': '1324',
+              'height': '1536'
             }
           },
           {
@@ -119,8 +131,10 @@ const routes: Routes = [
             data: {
               'title': 'Gary Katsarida',
               'desc': 'Gary Katsarida — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/gary_katsarida',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/gary-katsarida.png'
+              'url': 'https://www.oblivion.cafe/cafe/gary_katsarida',
+              'image': 'https://www.oblivion.cafe/assets/img/gary-katsarida.png',
+              'width': '1324',
+              'height': '1536'
             }
           },
           {
@@ -129,8 +143,10 @@ const routes: Routes = [
             data: {
               'title': 'Józef Wozek',
               'desc': 'Józef Wozek — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/josef_wozek',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/josef-wozek.png'
+              'url': 'https://www.oblivion.cafe/cafe/josef_wozek',
+              'image': 'https://www.oblivion.cafe/assets/img/jozef-wozek.png',
+              'width': '1324',
+              'height': '1536'
             }
           },
           {
@@ -139,8 +155,10 @@ const routes: Routes = [
             data: {
               'title': 'Else Lasker-Schüler',
               'desc': 'Else Lasker-Schüler — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/else_lasker_schuler',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/else-lasker-schuler.png'
+              'url': 'https://www.oblivion.cafe/cafe/else_lasker_schuler',
+              'image': 'https://www.oblivion.cafe/assets/img/else-lasker-schuler.png',
+              'width': '1324',
+              'height': '1536'
             }
           },
           {
@@ -157,8 +175,10 @@ const routes: Routes = [
                     data: {
                       'title': 'Oblivion Reviews',
                       'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/character6/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                      'url': 'https://www.oblivion.cafe/character6/preorder/reviews',
+                      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+                      'width': '975',
+                      'height': '1572'
                     },
                   }
                 ]
@@ -179,8 +199,10 @@ const routes: Routes = [
                     data: {
                       'title': 'Oblivion Reviews',
                       'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/arbiter/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                      'url': 'https://www.oblivion.cafe/arbiter/preorder/reviews',
+                      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+                      'width': '975',
+                      'height': '1572'
                     },
                   }
                 ]
@@ -193,8 +215,10 @@ const routes: Routes = [
             data: {
               'title': 'Wall of Exceptionally Minor Authors',
               'desc': 'Wall of Exceptionally Minor Authors — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/wall_of_exceptionally_minor_authors/',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+              'url': 'https://www.oblivion.cafe/cafe/wall_of_exceptionally_minor_authors/',
+              'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+              'width': '975',
+              'height': '1572'
             },
             children: [
               {
@@ -203,8 +227,10 @@ const routes: Routes = [
                 data: {
                   'title': 'Oblivion Preorder',
                   'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/wall_of_exceptionally_minor_authors/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                  'url': 'https://www.oblivion.cafe/cafe/wall_of_exceptionally_minor_authors/preorder',
+                  'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+                  'width': '975',
+                  'height': '1572'
                 },
                 children: [
                   {
@@ -213,8 +239,10 @@ const routes: Routes = [
                     data: {
                       'title': 'Oblivion Reviews',
                       'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/wall_of_exceptionally_minor_authors/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                      'url': 'https://www.oblivion.cafe/cafe/wall_of_exceptionally_minor_authors/preorder/reviews',
+                      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+                      'width': '975',
+                      'height': '1572'
                     },
                   }
                 ]
@@ -227,8 +255,10 @@ const routes: Routes = [
             data: {
               'title': 'Typewriter',
               'desc': 'Enter to Win — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/typewriter/',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/typewriter.png'
+              'url': 'https://www.oblivion.cafe/cafe/typewriter/',
+              'image': 'https://www.oblivion.cafe/assets/img/typewriter.png',
+              'width': '220',
+              'height': '230'
             },
             children: [
               {
@@ -237,8 +267,10 @@ const routes: Routes = [
                 data: {
                   'title': 'Oblivion Preorder',
                   'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/typewriter/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                  'url': 'https://www.oblivion.cafe/cafe/typewriter/preorder',
+                  'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+                  'width': '975',
+                  'height': '1572'
                 },
                 children: [
                   {
@@ -247,8 +279,10 @@ const routes: Routes = [
                     data: {
                       'title': 'Oblivion Reviews',
                       'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/typewriter/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                      'url': 'https://www.oblivion.cafe/cafe/typewriter/preorder/reviews',
+                      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg',
+                      'width': '975',
+                      'height': '1572'
                     },
                   }
                 ]
@@ -261,8 +295,8 @@ const routes: Routes = [
             data: {
               'title': 'Window to Prague',
               'desc': 'A view on Kafka’s Prague — Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/window/',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/typewriter.png'
+              'url': 'https://www.oblivion.cafe/cafe/window/',
+              'image': 'https://www.oblivion.cafe/assets/img/typewriter.png'
             },
             children: [
               {
@@ -271,8 +305,8 @@ const routes: Routes = [
                 data: {
                   'title': 'Oblivion Preorder',
                   'desc': 'Preorder Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/window/preorder',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                  'url': 'https://www.oblivion.cafe/cafe/window/preorder',
+                  'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg'
                 },
                 children: [
                   {
@@ -281,8 +315,8 @@ const routes: Routes = [
                     data: {
                       'title': 'Oblivion Reviews',
                       'desc': 'Reviews of Oblivion by Robin Hemley',
-                      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/window/preorder/reviews',
-                      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                      'url': 'https://www.oblivion.cafe/cafe/window/preorder/reviews',
+                      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg'
                     },
                   }
                 ]
@@ -295,8 +329,8 @@ const routes: Routes = [
             data: {
               'title': 'Oblivion Preorder',
               'desc': 'Preorder Oblivion by Robin Hemley',
-              'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/preorder',
-              'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+              'url': 'https://www.oblivion.cafe/cafe/preorder',
+              'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg'
             },
             children: [
               {
@@ -305,8 +339,8 @@ const routes: Routes = [
                 data: {
                   'title': 'Oblivion Reviews',
                   'desc': 'Reviews of Oblivion by Robin Hemley',
-                  'url': 'https://mango-rock-072624310.1.azurestaticapps.net/cafe/preorder/reviews',
-                  'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+                  'url': 'https://www.oblivion.cafe/cafe/preorder/reviews',
+                  'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg'
                 },
               }
             ]
@@ -321,8 +355,8 @@ const routes: Routes = [
     data: {
       'title': 'Oblivion Reviews',
       'desc': 'Reviews of Oblivion by Robin Hemley',
-      'url': 'https://mango-rock-072624310.1.azurestaticapps.net/reviews',
-      'image': 'https://mango-rock-072624310.1.azurestaticapps.net/assets/img/BookCover.jpg'
+      'url': 'https://www.oblivion.cafe/reviews',
+      'image': 'https://www.oblivion.cafe/assets/img/BookCover.jpg'
     },
   },
 ];

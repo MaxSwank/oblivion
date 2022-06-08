@@ -36,11 +36,8 @@ export class SocialTagsService {
     ).subscribe(() => {
       this.scully.getCurrent().subscribe(
         link => {
-          this.meta.updateTag({ name: 'twitter:url', content: this.urlPrefix + this.router.url });
           this.meta.updateTag({ name: 'og:url', content: this.urlPrefix + this.router.url });
           this.meta.updateTag({ name: 'og:site_name', property: 'og:site_name', content: this.siteName });
-          this.meta.updateTag({ name: 'twitter:creator', content: this.userTwitter });
-          this.meta.updateTag({ name: 'twitter:site', content: this.userTwitter });
           if (link?.title) {
             this.titleService.setTitle(link.title);
             this.meta.updateTag({ name: 'description', content: link['description'] });
@@ -50,21 +47,17 @@ export class SocialTagsService {
             this.meta.updateTag({ name: 'og:type', property: 'og:type', content: 'article' });
             this.meta.updateTag({ name: 'article:section', property: 'article:section', content: (link['keywords'] as string[])[0] });
             this.meta.updateTag({ name: 'og:image', content: this.urlPrefix + '/' + link['photo'] });
-            this.meta.updateTag({ name: 'twitter:title', content: link.title.substring(0, 69) });
-            this.meta.updateTag({ name: 'twitter:description', content: (link['description'] as string).substring(0, 123) });
-            this.meta.updateTag({ name: 'twitter:image', content: this.urlPrefix + '/' + link['photo'] });
           } else {
             this.titleService.setTitle(this.data['title']);
             const description = this.data['desc'] ? this.data['desc'] : this.tagDescription;
             this.meta.updateTag({ name: 'description', content: description });
-            this.meta.updateTag({ name: 'image', content: this.urlPrefix + '/' + this.tagImage });
+            this.meta.updateTag({ name: 'image', content: this.urlPrefix + '/' + this.data['image'] });
             this.meta.updateTag({ name: 'og:title', content: this.data['title'] });
             this.meta.updateTag({ name: 'og:description', content: description });
             this.meta.updateTag({ name: 'og:type', content: 'website' });
-            this.meta.updateTag({ name: 'og:image', content: this.urlPrefix + '/' + this.tagImage });
-            this.meta.updateTag({ name: 'twitter:title', content: this.data['title'] });
-            this.meta.updateTag({ name: 'twitter:description', content: description.substring(0, 123) });
-            this.meta.updateTag({ name: 'twitter:image', content: this.urlPrefix + '/' + this.tagImage });
+            this.meta.updateTag({ name: 'og:image', content: this.urlPrefix + '/' + this.data['image'] });
+            this.meta.updateTag({ name: 'og:image:width', content: this.data['width'] });
+            this.meta.updateTag({ name: 'og:image:height', content: this.data['height'] });
           }
         });
     });
