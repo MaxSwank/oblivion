@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-wall-dialog',
@@ -15,7 +16,7 @@ export class WallDialogComponent implements OnInit {
       name2: 'Winterhoven',
       bio: 'Author of the best-selling (in his mind) ',
       bio2: 'Blackhawk Exchange',
-      bio3: ' series.' 
+      bio3: ' series.'
     },
     {
       path: '../../../../assets/img/maudy-gammitt.jpg',
@@ -64,7 +65,7 @@ export class WallDialogComponent implements OnInit {
       bio: 'Chicago poet and author of many conceived-of-but-never-written histories of subjects as wide ranging as the Yiddish Theater in Europe to book binding techniques of 19th century Poland.',
       bio2: '',
       bio3: ''
-    },  
+    },
     {
       path: '../../../../assets/img/leon-dilletanti.jpg',
       name: 'Leon “Smoky”',
@@ -72,7 +73,7 @@ export class WallDialogComponent implements OnInit {
       bio: 'Author of the world’s longest poem,',
       bio2: 'It’s a Drag',
       bio3: ', rejected by Guinness Book of World Records for being something, but definitely not a poem.'
-    },    
+    },
     {
       path: '../../../../assets/img/else-lasker-schuler.jpg',
       name: 'Else',
@@ -90,10 +91,17 @@ export class WallDialogComponent implements OnInit {
       bio3: ', a book claiming Copernicus was wrong, after all.'
     },
   ]
-  
   slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
 
-  constructor() { }
+  constructor(private metaService: Meta, private titleService: Title) {
+    this.titleService.setTitle('Wall of Exceptionally Minor Authors');
+    this.metaService.updateTag({ name: 'description', content: 'Wall of Exceptionally Minor Authors — Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Wall of Exceptionally Minor Authors — Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/BookCover.jpg' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/wall_of_exceptionally_minor_authors' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '975' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1572' });
+  }
 
   ngOnInit() {
   }

@@ -7,8 +7,4 @@ import { SocialTagsService } from './services/social-tag-service.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  public constructor(private tagsService: SocialTagsService) {
-    this.tagsService.setTitleAndTags();
-  }
 }

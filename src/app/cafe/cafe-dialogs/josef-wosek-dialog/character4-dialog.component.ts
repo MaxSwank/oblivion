@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-character4-dialog',
@@ -66,7 +67,15 @@ export class Character4DialogComponent implements OnInit {
   ];
   slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
 
-  constructor() { }
+  constructor(private metaService: Meta, private titleService: Title) {
+    this.titleService.setTitle('John Kendrick Bangs');
+    this.metaService.updateTag({ name: 'description', content: 'John Kendrick Bangs' });
+    this.metaService.updateTag({ property: 'og:title', content: 'John Kendrick Bangs' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/jozef-wozek.png' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/jozef_wozek' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '1324' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1536' });
+  }
 
   ngOnInit(): void {
   }

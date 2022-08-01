@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-character1-dialog',
@@ -46,7 +47,15 @@ export class Character1DialogComponent implements OnInit {
   isLoading: boolean = false;
   responseMessage: string;
 
-  constructor(private location: Location, private formBuilder: FormBuilder, public httpClient: HttpClient) {
+  constructor(private location: Location, private formBuilder: FormBuilder, public httpClient: HttpClient, private metaService: Meta, private titleService: Title) {
+    this.titleService.setTitle('John Kendrick Bangs');
+    this.metaService.updateTag({ name: 'description', content: 'Tell the maître d’ about an imposter — Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Tell the maître d’ about an imposter — Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/bangs-pod-color.png' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/john_kendrick_bangs' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '569' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1292' });
+    
     this.form = this.formBuilder.group({
       name: this.name,
       addToMailingList: this.addToMailingList,

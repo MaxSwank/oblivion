@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-reviews-dialog',
@@ -156,7 +156,16 @@ export class ReviewsDialogComponent implements OnInit {
     },
   ];
 
-  constructor(private _router: Router, private location: Location) { }
+
+  constructor(private _router: Router, private metaService: Meta, private titleService: Title) {
+    this.titleService.setTitle('Oblivion Reviews');
+    this.metaService.updateTag({ name: 'description', content: 'Oblivion Reviews' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Oblivion Reviews' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/BookCover.jpg' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/reviews' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '975' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '1572' });
+  }
 
   ngOnInit(): void {
   }

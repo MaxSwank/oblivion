@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-typewriter-dialog',
@@ -21,7 +22,15 @@ export class TypewriterDialogComponent implements OnInit {
   responseMessage: string;
   infoVisible: boolean = false;
 
-  constructor(private location: Location, private formBuilder: FormBuilder, public httpClient: HttpClient) {
+   constructor(private location: Location, private formBuilder: FormBuilder, public httpClient: HttpClient, private metaService: Meta, private titleService: Title) {
+    this.titleService.setTitle('Typewriter');
+    this.metaService.updateTag({ name: 'description', content: 'Enter to Win — Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:title', content: 'Enter to Win — Oblivion by Robin Hemley' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://www.oblivion.cafe/assets/img/typewriter.png' });
+    this.metaService.updateTag({ property: 'og:url', content: 'https://www.oblivion.cafe/cafe/typewriter' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '220' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '230' });
+    
     this.form = this.formBuilder.group({
       name: this.name,
       addToMailingList: this.addToMailingList,
