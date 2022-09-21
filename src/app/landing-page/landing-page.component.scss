@@ -314,7 +314,7 @@
         width: 118px;
         position: fixed;
         left: 50.9%;
-        bottom: calc((100vh - 631px) / 2);
+        bottom: max(calc((100vh - 631px)/2), 40px);
         transform: translate(-50%);
         background-color: var(-ob-white);
         z-index: 100;
