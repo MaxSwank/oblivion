@@ -20,7 +20,7 @@ jobs:
           submodules: true
       - name: Build And Deploy Angular and Scully
         id: buildangularscully
-        run: npm install --legacy-peer-deps && npm run build -- --prod && npx scully --scanRoutes
+        run: npm install --force && npm run build -- --prod && npx scully --scanRoutes
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -37,7 +37,7 @@ jobs:
         env:
           PRE_BUILD_COMMAND: "./scripts/setup-puppeteer.sh"
           ###### End of Repository/Build Configurations ######
-          
+
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
