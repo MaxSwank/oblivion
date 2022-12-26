@@ -3,7 +3,8 @@
   <div class="contest-container">
     <div class="info-button">
       <mat-icon (click)="showInfo()" style="color: black">info</mat-icon>
-      <p  *ngIf="infoVisible"> The Oliver No. 5 (produced 1907–1914) was Franz Kafka’s writing instrument of choice. The Oliver Typewriter Co.
+      <p *ngIf="infoVisible"> The Oliver No. 5 (produced 1907–1914) was Franz Kafka’s writing instrument of choice. The
+        Oliver Typewriter Co.
         billed it as “the ‘last word’ in typewriters—a Symphony in Steel. It is scientific in principle, flawless in
         construction, accurate in adjustment, splendidly efficient in operation.”</p>
     </div>
@@ -12,9 +13,7 @@
     </button>
     <h1>WRITING CONTEST</h1>
     <div class="contest-top">
-      <strong>Further the story and win <span>a $100 gift card</span> and an <span>autographed copy</span> of
-        <em>Oblivion</em></strong>.
-      <p>(Three runners up will receive a signed copy. Entries due December 1, 2022.)</p>
+      <strong>The writing contest has closed. (But enjoy <span>Ben Nardolililli’s</span> winning entry below!)</strong>
     </div>
     <div class="contest-bottom">
       <span>Add up to <strong>250 words</strong> to this opening sentence:</span>
@@ -22,7 +21,23 @@
           day that K decided on a whim to pay a visit to the building and the forlorn district in which it was located
           ...”</i>
       </p>
-      <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+      <p id="winner">
+        It was the middle of a typical Bohemian winter whose dry and airy embrace reminded K of the way
+        his governess Jaroslava would pinch his nostrils in the morning to wake him up for Latin lessons at the
+        Gymnasium Franz Jozef. Despite the abundance of beggars, drunk Moravians, and amputated children, the manager of
+        the factory, Herr Samsa was doing his best to spread holiday cheer through the quarter. Samsa once had a smaller
+        asbestos business of his own, but it was unable to compete with the factory after it adopted the labor-saving
+        devices of one Dr. Rossum. Now, he was standing over the company creche, sprinkling asbestos over the manger,
+        magi, and barn animals. K watched as he grabbed a handful of the wooly material out of a bag tucked under his
+        arm and ground it between his fingers. The results piled up and began to imitate the aftermath of a rare
+        Palestinian blizzard. One flake fell on the head of the infant savior, and Samsa quickly brushed it aside. He
+        noticed K and explained that snow could never fall on Christ because of his halo. Samsa added that he was unsure
+        if such a spiritual device could melt asbestos, especially if it came from the factory K
+        had just been gifted.
+        <br><br>
+        — Ben Nardolililli
+      </p>
+     <!--  <form [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
         <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
           <span>{{responseMessage}}</span>
         </div>
@@ -50,14 +65,14 @@
           Submit
         </button>
         <input [formControl]="honeypot" class="hidden" type="text" style="display:none" />
-      </form>
-      <div class="fine-print">
+      </form> -->
+<!--       <div class="fine-print">
         <small><strong>The Café of Minor Authors</strong> is proud to offer a gift card to <a
             href="https://bookshop.org/">Bookshop.org</a> in support of
           independent bookstores and brilliant-but-as-yet-unheralded authors. <strong>All submissions due December 1,
             2022.</strong>
           Winners will be contacted via email.</small>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="close-dialog" (click)="closeTypewriter()"></div>

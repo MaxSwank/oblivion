@@ -15,8 +15,7 @@
           </div>
           <div class="textfields">
             <div class="contest-top">
-              <strong>Talk to the patrons, solve the mystery, and enter to win an <span>autographed copy</span> of
-                <em>Oblivion</em></strong>.
+              <strong>Talk to the patrons in order to solve the mystery.</strong>
             </div>
             <p>&ldquo;Oh, dear. Are you suggesting that one of our patrons is in fact... <i>a major author</i>? What an
               embarrassing clerical error. Something must be done at once. Who has been misplaced?&rdquo;</p>
@@ -49,14 +48,13 @@
                 Submit
               </button>
               <input [formControl]="honeypot" class="hidden" type="text" style="display:none" />
-              <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+              <div *ngIf="submitted" class="center-text">
                 <span>{{responseMessage}}</span>
               </div>
             </form>
-            <div class="fine-print">
-              <small><strong>All submissions due December 1,
-                  2022.</strong>
-                Winners will be contacted via email.</small>
+             <div class="fine-print">
+              <small>Congratulations to <strong>Jane Hirshfield</strong> and <strong>Patti Meredith</strong>
+                who first solved the mystery, winning a signed copy of <i>Oblivion</i>!</small>
             </div>
           </div>
           <button mat-mini-fab color="disabled" aria-label="create" class="close-button" routerLink="../">
@@ -65,8 +63,9 @@
         </div>
         <div class="bubble-footer">
           <p class="signed-copy">
-            <strong>Something is amiss.</strong> Talk to patrons to unravel the Café's mystery and receive a
-            <strong style="color: var(--ob-yellow)"><a routerLink="../">signed copy</a></strong> of the book!
+            <strong>Something is amiss.</strong> Talk to patrons to
+            <strong style="color: var(--ob-yellow)"><a routerLink="/cafe/john_kendrick_bangs">unravel the Café's
+                mystery</a>.</strong>
           </p>
         </div>
       </div>

@@ -83,9 +83,12 @@ export class Character1DialogComponent implements OnInit {
       this.httpClient.post("https://script.google.com/macros/s/AKfycbz6wN0cm95LoSXdqzSiZEH1Xfdr3_LNWUwx1qgzmw/exec", formData).subscribe(
         (response: any) => {
           // choose the response message
-          if (response["result"] == "success") {
-            this.responseMessage = "Thank you for your submission!";
-          } else {
+          if (response["result"] == "success" && this.form.value.misplacedAuthor == 'Else') {
+            this.responseMessage = "Congratulations, you\u2019ve found the misplaced author!";
+          } else if (response["result"] == "success" && this.form.value.misplacedAuthor !== 'Else') {
+            this.responseMessage = "You\u2019re mistaken; this author has every right to be here.";
+          } 
+          else {
             this.responseMessage = "Oops! Something went wrong... Reload the page and try again.";
           }
           this.form.enable(); // re enable the form after a success
@@ -101,6 +104,8 @@ export class Character1DialogComponent implements OnInit {
           console.log(error);
         }
       );
+      
+    console.log(this.form.value.misplacedAuthor);
     }
   }
 
